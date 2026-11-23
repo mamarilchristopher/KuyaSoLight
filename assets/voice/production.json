@@ -11,9 +11,9 @@
  "approvedBy": "CHRIS (Owner)",
  "approvedAt": "2026-11-24T04:19:23+08:00",
  "settings": {
-  "stability": 0.4,
+  "stability": 0.28,
   "similarity_boost": 0.8,
-  "style": 0.35,
+  "style": 0.7,
   "use_speaker_boost": true
  },
  "seed": 4242,
@@ -69,5 +69,7 @@
    "note": "relaxed, Bisaya accent"
   }
  ],
- "samples": "/mnt/project-files/kuya-solight/audio/elevenlabs-greeting/"
+ "samples": "/mnt/project-files/kuya-solight/audio/elevenlabs-greeting/",
+ "speed": 1.12,
+ "energyNote": "2026-11-24 04:32 Manila: owner asked for more energy; raised from stability 0.4/style 0.35/speed 1.0 to level L2 (0.28/0.7/1.12). Options L1-L3 in /mnt/project-files/kuya-solight/audio/juan-energy/."
 }

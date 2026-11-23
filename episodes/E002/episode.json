@@ -32,13 +32,13 @@
   "voiceId": "1ZA0KgPdD0Tns6SR4FVQ",
   "model": "eleven_multilingual_v2",
   "settings": {
-   "stability": 0.4,
+   "stability": 0.28,
    "similarity_boost": 0.8,
-   "style": 0.35,
+   "style": 0.7,
    "use_speaker_boost": true
   },
   "seed": 4242,
-  "speed": 1.0
+  "speed": 1.12
  },
  "cues": [
   {

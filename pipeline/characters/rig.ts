@@ -69,8 +69,13 @@ export function hand(x: number, y: number, dir: number, size: number, kind: Arm[
   const st = sw > 0 ? `stroke="${outline}" stroke-width="${sw}" stroke-linejoin="round"` : '';
   let shape = '';
   if (kind === 'point') {
-    shape = `<path d="M${-s * 0.55},${-s * 0.2} Q${-s * 0.6},${s * 0.7} 0,${s * 0.75} Q${s * 0.6},${s * 0.7} ${s * 0.55},${-s * 0.2} Z" fill="${skin}" ${st}/>` +
-      `<rect x="${-s * 0.17}" y="${s * 0.5}" width="${s * 0.34}" height="${s * 1.05}" rx="${s * 0.17}" fill="${skin}" ${st}/>`;
+    // "Point" = open-palm presenting gesture: all four fingers together, extended toward the target, thumb alongside.
+    // Never a single extended finger (reads as rude, and index-finger pointing is impolite in PH culture).
+    const creases = [-0.22, 0, 0.22].map((fx) => `<line x1="${r2(fx * s)}" y1="${r2(s * 0.62)}" x2="${r2(fx * s)}" y2="${r2(s * 1.12)}" stroke="${outline}" stroke-width="${r2(Math.max(1, sw * 0.6))}" stroke-linecap="round" opacity="0.55"/>`).join('');
+    shape = `<rect x="${r2(-s * 0.46)}" y="${r2(s * 0.3)}" width="${r2(s * 0.92)}" height="${r2(s * 0.95)}" rx="${r2(s * 0.3)}" fill="${skin}" ${st}/>` +
+      `<ellipse cx="0" cy="${r2(s * 0.28)}" rx="${r2(s * 0.54)}" ry="${r2(s * 0.46)}" fill="${skin}" ${st}/>` +
+      `<rect x="${r2(-s * 0.44)}" y="${r2(s * 0.38)}" width="${r2(s * 0.88)}" height="${r2(s * 0.3)}" fill="${skin}"/>` + creases +
+      `<rect x="${side > 0 ? r2(-s * 0.78) : r2(s * 0.38)}" y="${r2(s * 0.1)}" width="${r2(s * 0.4)}" height="${r2(s * 0.22)}" rx="${r2(s * 0.11)}" fill="${skin}" ${st} transform="rotate(${side > 0 ? 55 : -55} ${side > 0 ? r2(-s * 0.55) : r2(s * 0.55)} ${r2(s * 0.2)})"/>`;
   } else if (kind === 'fist') {
     shape = `<ellipse cx="0" cy="${s * 0.25}" rx="${s * 0.56}" ry="${s * 0.55}" fill="${skin}" ${st}/>`;
   } else {

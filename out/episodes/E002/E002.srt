@@ -1,53 +1,53 @@
 1
-00:00:00,250 --> 00:00:02,860
+00:00:00,250 --> 00:00:02,580
 May solar ka, pero may
 Meralco bill ka pa rin?
 
 2
-00:00:03,210 --> 00:00:05,700
+00:00:02,930 --> 00:00:05,860
 Hello, SoSmart viewers!
 Kuya SoLight 'to!
 
 3
-00:00:06,050 --> 00:00:08,800
+00:00:06,210 --> 00:00:08,660
 Sa typical
 self-consumption setup,
 
 4
-00:00:08,880 --> 00:00:13,510
+00:00:08,740 --> 00:00:12,290
 tumutulong ang solar sa
 daytime electricity use mo.
 
 5
-00:00:13,810 --> 00:00:15,996
+00:00:12,590 --> 00:00:14,740
 Pero kapag kulang
 ang solar generation,
 
 6
-00:00:16,076 --> 00:00:18,306
+00:00:14,820 --> 00:00:16,710
 o gabi na at wala
 kang battery,
 
 7
-00:00:18,386 --> 00:00:21,176
+00:00:16,790 --> 00:00:19,020
 puwede ka pa ring kumuha
 ng kuryente sa grid.
 
 8
-00:00:21,476 --> 00:00:24,626
+00:00:19,320 --> 00:00:22,100
 May mga bill charges din
 na hindi basta nawawala.
 
 9
-00:00:24,876 --> 00:00:28,986
+00:00:22,350 --> 00:00:25,720
 Kaya hindi dapat mangako
 ng automatic zero bill.
 
 10
-00:00:29,386 --> 00:00:34,796
+00:00:26,120 --> 00:00:31,650
 Dahil ang gusto ni Kuya SoLight…
 naka-solar ka na, SoSmart ka pa!
 
 11
-00:00:35,146 --> 00:00:37,626
+00:00:32,000 --> 00:00:34,020
 Life is SoLight with Solar.
