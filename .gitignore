@@ -1,0 +1,8 @@
+node_modules/
+.models/
+data/studio.db*
+web/dist/
+out/**/*.silent.mp4
+out/**/*_frames/
+out/**/tts-job.json
+.cache/

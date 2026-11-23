@@ -1,0 +1,19 @@
+{
+  "characterId": "KSL",
+  "name": "Kuya SoLight",
+  "version": "1.0",
+  "status": "approved",
+  "approvedBy": "CHRIS (Owner)",
+  "approvedAt": "2026-11-24T03:22:45+08:00",
+  "approvalRecord": "Owner chose Direction A (Friendly Solar Expert) on 2026-11-24 03:11 Manila, then look A1 at 03:22 Manila, in the project chat.",
+  "sourceVariant": "KSL-A1",
+  "rigModule": "pipeline/characters/variantsA.ts (A1 = CFG_A from pipeline/characters/styles.ts)",
+  "lockedTraits": {
+    "construction": "Soft-vector 2D, even 4px outline #17202c, rounded shapes, big expressive eyes",
+    "proportions": { "headRadius": 92, "headHeightRadius": 100, "shoulderHalfWidth": 122, "footY": 1200, "localBox": "600x1500" },
+    "skin": "#C98B5E", "skinShade": "#A86E46", "hair": "#22160F (side-part, swept)", "eyes": "brown iris #3a2416",
+    "outfit": { "standard": "Navy polo #0B3B7A, gold V collar + sleeve trims + hem stripe #F5AE0B, gold 'KUYA' name tag, slate trousers #3a4658, dark shoes #2b2b2b" },
+    "noLogoOnClothing": true
+  },
+  "changePolicy": "No generator or editor may change face, proportions, hair, skin or outfit colours. Any change requires a new version number and owner approval."
+}

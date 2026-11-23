@@ -1,0 +1,73 @@
+{
+ "provider": "ElevenLabs",
+ "model": "eleven_multilingual_v2",
+ "status": "approved",
+ "selected": {
+  "sample": "E6",
+  "name": "Juan - Clear, Muffled, and Friendly",
+  "voiceId": "1ZA0KgPdD0Tns6SR4FVQ",
+  "greetingSpeed": 1.15
+ },
+ "approvedBy": "CHRIS (Owner)",
+ "approvedAt": "2026-11-24T04:19:23+08:00",
+ "settings": {
+  "stability": 0.4,
+  "similarity_boost": 0.8,
+  "style": 0.35,
+  "use_speaker_boost": true
+ },
+ "seed": 4242,
+ "licence": "ElevenLabs Voice Library Addendum (https://elevenlabs.io/vla): commercial use on a paid plan. Each candidate is a professional voice clone shared by the voice owner, with a 730-day notice period (access continues 2 years after the owner stops sharing).",
+ "candidates": [
+  {
+   "sample": "E1",
+   "name": "Arcel - Casual Filipino Tech Vlogger",
+   "voiceId": "wfC9TpCSCTGAwxF7hSNi",
+   "greetingSpeed": 1.0,
+   "note": "early 30s, warm Taglish"
+  },
+  {
+   "sample": "E2",
+   "name": "Rezz - Calm & Friendly",
+   "voiceId": "5Q7Prc4RWUSqufejYCQ5",
+   "greetingSpeed": 1.0,
+   "note": "warm, Taglish"
+  },
+  {
+   "sample": "E3",
+   "name": "Harlemus Ludaeus - Cheerful and Friendly",
+   "voiceId": "eHwFaqBVL1SQRABgFjT5",
+   "greetingSpeed": 1.15,
+   "note": "cheerful, code-switching"
+  },
+  {
+   "sample": "E4",
+   "name": "Kuya Jerry - Friendly and Encouraging",
+   "voiceId": "2kNWn6KWNBcxf4GSXv5J",
+   "greetingSpeed": 1.1,
+   "note": "explainer"
+  },
+  {
+   "sample": "E5",
+   "name": "DenMark - The Handsome Youth",
+   "voiceId": "yidvTbWQBwvHZFXLZiPy",
+   "greetingSpeed": 1.1,
+   "note": "younger, energetic"
+  },
+  {
+   "sample": "E6",
+   "name": "Juan - Clear, Muffled, and Friendly",
+   "voiceId": "1ZA0KgPdD0Tns6SR4FVQ",
+   "greetingSpeed": 1.15,
+   "note": "warm, neutral Tagalog"
+  },
+  {
+   "sample": "E7",
+   "name": "Davie Dabs - Friendly and Encouraging",
+   "voiceId": "MIWz5nzn9F2CYPIedIPx",
+   "greetingSpeed": 1.15,
+   "note": "relaxed, Bisaya accent"
+  }
+ ],
+ "samples": "/mnt/project-files/kuya-solight/audio/elevenlabs-greeting/"
+}

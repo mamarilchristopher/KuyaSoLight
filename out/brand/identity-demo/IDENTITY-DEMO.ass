@@ -1,0 +1,22 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Kuya,Inter ExtraBold,52,&H00FFFFFF&,&H00FFFFFF&,&H262E1A0B&,&H262E1A0B&,0,0,0,0,100,100,0,0,3,16,0,2,80,150,520
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:01.85,0:00:04.42,Kuya,,0,0,0,,{\fad(60,60)}Hello, {\c&H002CB8EA&}SoSmart{\c&H00FFFFFF&} viewers!\NKuya {\c&H002CB8EA&}SoLight{\c&H00FFFFFF&} 'to!
+Dialogue: 0,0:00:07.17,0:00:09.74,Kuya,,0,0,0,,{\fad(60,60)}Hello, {\c&H002CB8EA&}SoSmart{\c&H00FFFFFF&} viewers!\NKuya {\c&H002CB8EA&}SoLight{\c&H00FFFFFF&} 'to!
+Dialogue: 0,0:00:12.49,0:00:15.06,Kuya,,0,0,0,,{\fad(60,60)}Hello, {\c&H002CB8EA&}SoSmart{\c&H00FFFFFF&} viewers!\NKuya {\c&H002CB8EA&}SoLight{\c&H00FFFFFF&} 'to!
+Dialogue: 0,0:00:17.56,0:00:21.90,Kuya,,0,0,0,,{\fad(60,60)}Dahil ang gusto ni Kuya SoLight…\Nnaka-solar ka na, {\c&H002CB8EA&}SoSmart{\c&H00FFFFFF&} ka pa!
+Dialogue: 0,0:00:22.02,0:00:23.76,Kuya,,0,0,0,,{\fad(60,60)}Life is SoLight with Solar.
+Dialogue: 0,0:00:26.76,0:00:31.10,Kuya,,0,0,0,,{\fad(60,60)}Dahil ang gusto ni Kuya SoLight…\Nnaka-solar ka na, {\c&H002CB8EA&}SoSmart{\c&H00FFFFFF&} ka pa!
+Dialogue: 0,0:00:31.22,0:00:32.95,Kuya,,0,0,0,,{\fad(60,60)}Life is SoLight with Solar.
+Dialogue: 0,0:00:35.95,0:00:40.30,Kuya,,0,0,0,,{\fad(60,60)}Dahil ang gusto ni Kuya SoLight…\Nnaka-solar ka na, {\c&H002CB8EA&}SoSmart{\c&H00FFFFFF&} ka pa!
+Dialogue: 0,0:00:40.42,0:00:42.15,Kuya,,0,0,0,,{\fad(60,60)}Life is SoLight with Solar.

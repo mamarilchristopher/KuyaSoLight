@@ -1,0 +1,362 @@
+{
+ "id": "E002",
+ "title": "Bakit May Bill Pa Rin Kahit May Solar?",
+ "pillar": "B",
+ "template": "T05-energy-flow",
+ "audience": "Homeowners considering or already using grid-connected solar (Meralco franchise area)",
+ "premise": "Even with solar, a grid-connected home still imports electricity when solar is short or at night, and some bill items remain, so 'automatic zero bill' promises are misleading.",
+ "hooks": [
+  {
+   "type": "curiosity",
+   "text": "Bakit may bill pa rin kahit may solar na?"
+  },
+  {
+   "type": "direct-question",
+   "text": "May solar ka, pero may Meralco bill ka pa rin?"
+  },
+  {
+   "type": "myth-busting",
+   "text": "Zero bill agad kapag nag-solar? Hindi ganoon kasimple."
+  }
+ ],
+ "chosenHook": 1,
+ "hookRationale": "Direct question mirrors the viewer's real situation, makes no claim of its own and is the approved-direction script's opening.",
+ "openingPattern": "A-question-first",
+ "greetingId": "greet-default",
+ "catchphraseId": "close-signature",
+ "scriptBasis": "Approved-direction script from master spec §11 with V1.1 brand lines substituted (opening 'Hello, SoSmart viewers! Kuya SoLight 'to!', closing signature catchphrase + exact tagline).",
+ "scriptVersion": 2,
+ "voice": {
+  "engine": "elevenlabs",
+  "name": "Juan - Clear, Muffled, and Friendly",
+  "voiceId": "1ZA0KgPdD0Tns6SR4FVQ",
+  "model": "eleven_multilingual_v2",
+  "settings": {
+   "stability": 0.4,
+   "similarity_boost": 0.8,
+   "style": 0.35,
+   "use_speaker_boost": true
+  },
+  "seed": 4242,
+  "speed": 1.0
+ },
+ "cues": [
+  {
+   "id": "c01",
+   "scene": "hook",
+   "text": "May solar ka, pero may Meralco bill ka pa rin?",
+   "gold": [
+    "solar",
+    "bill"
+   ],
+   "pauseAfter": 0.35
+  },
+  {
+   "id": "c02",
+   "scene": "identity",
+   "text": "Hello, SoSmart viewers! Kuya SoLight 'to!",
+   "gold": [
+    "SoSmart",
+    "SoLight"
+   ],
+   "speed": 1.22,
+   "pauseAfter": 0.35,
+   "brandLine": "greeting",
+   "elSpeed": 1.15,
+   "standalone": true
+  },
+  {
+   "id": "c03",
+   "scene": "day",
+   "text": "Sa typical self-consumption setup,",
+   "gold": [
+    "self-consumption"
+   ],
+   "pauseAfter": 0.08,
+   "claims": [
+    "CL-E002-01"
+   ]
+  },
+  {
+   "id": "c04",
+   "scene": "day",
+   "text": "tumutulong ang solar sa daytime electricity use mo.",
+   "gold": [
+    "solar",
+    "daytime"
+   ],
+   "pauseAfter": 0.3,
+   "claims": [
+    "CL-E002-01"
+   ]
+  },
+  {
+   "id": "c05",
+   "scene": "night",
+   "text": "Pero kapag kulang ang solar generation,",
+   "gold": [
+    "kulang"
+   ],
+   "pauseAfter": 0.08,
+   "claims": [
+    "CL-E002-02"
+   ]
+  },
+  {
+   "id": "c06",
+   "scene": "night",
+   "text": "o gabi na at wala kang battery,",
+   "gold": [
+    "gabi",
+    "battery"
+   ],
+   "pauseAfter": 0.08,
+   "claims": [
+    "CL-E002-02"
+   ]
+  },
+  {
+   "id": "c07",
+   "scene": "night",
+   "text": "puwede ka pa ring kumuha ng kuryente sa grid.",
+   "gold": [
+    "grid"
+   ],
+   "pauseAfter": 0.3,
+   "claims": [
+    "CL-E002-02"
+   ]
+  },
+  {
+   "id": "c08",
+   "scene": "charges",
+   "text": "May mga bill charges din na hindi basta nawawala.",
+   "gold": [
+    "charges"
+   ],
+   "pauseAfter": 0.25,
+   "claims": [
+    "CL-E002-03"
+   ]
+  },
+  {
+   "id": "c09",
+   "scene": "nozero",
+   "text": "Kaya hindi dapat mangako ng automatic zero bill.",
+   "gold": [
+    "zero"
+   ],
+   "pauseAfter": 0.4,
+   "claims": [
+    "CL-E002-04"
+   ]
+  },
+  {
+   "id": "c10",
+   "scene": "close",
+   "text": "Dahil ang gusto ni Kuya SoLight… naka-solar ka na, SoSmart ka pa!",
+   "gold": [
+    "SoSmart"
+   ],
+   "pauseAfter": 0.35,
+   "brandLine": "catchphrase"
+  },
+  {
+   "id": "c11",
+   "scene": "endcard",
+   "text": "Life is SoLight with Solar.",
+   "gold": [],
+   "pauseAfter": 0.2,
+   "brandLine": "tagline"
+  }
+ ],
+ "claims": [
+  {
+   "id": "CL-E002-01",
+   "category": "technical",
+   "wording": "In a typical self-consumption setup, solar helps cover the home's daytime electricity use.",
+   "scope": "Grid-connected rooftop PV (net-metered or own-use). Generation only while there is daylight; share of load covered depends on system size and load timing.",
+   "caveats": "Not true for every hour of the day; depends on weather, system size and consumption timing.",
+   "sources": [
+    "SRC-MER-NM"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-24T03:55:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published Tier-1 data instead.",
+    "note": "Consistent with Meralco net-metering page and DOE net-metering programme (system sized to supply daytime consumption)."
+   }
+  },
+  {
+   "id": "CL-E002-02",
+   "category": "technical",
+   "wording": "When solar generation is not enough, or at night without a battery, a grid-connected home still draws electricity from the grid.",
+   "scope": "Grid-connected systems. Battery-equipped systems may cover some night load depending on usable capacity and configuration.",
+   "caveats": "Meralco's residential page states the 'not enough' case; night import is stated explicitly on Meralco's DER page (business framing) and follows from PV physics. DOE DC2026-08-0017 release also references grid support when solar is unavailable.",
+   "sources": [
+    "SRC-MER-NM",
+    "SRC-MER-DER",
+    "SRC-DOE-DC2026"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-24T03:55:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published Tier-1 data instead.",
+    "note": "Meralco DER page states night import; DOE deck frames net-metering customers as monthly net users of grid power."
+   }
+  },
+  {
+   "id": "CL-E002-03",
+   "category": "regulatory",
+   "wording": "Some bill charges do not simply disappear with solar.",
+   "scope": "Meralco residential billing. Net-metering export credits are valued at the monthly blended generation cost (not one-for-one at retail) and are applied to 'eligible bill charges'.",
+   "caveats": "Specific peso amounts are not named on screen. The DOE deck is dated 2017, so it confirms the mechanism, not current rates.",
+   "sources": [
+    "SRC-MER-NM",
+    "SRC-MER-RATES-2026-11",
+    "SRC-DOE-NM-2017"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-24T03:55:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published Tier-1 data instead.",
+    "note": "DOE net-metering deck confirms a PhP/customer/month supply and metering charge applies to net-metered customers, and exports are credited at the blended generation cost rather than the full retail rate, so not every charge is offset. Script stays generic (no peso amounts named)."
+   }
+  },
+  {
+   "id": "CL-E002-04",
+   "category": "commercial",
+   "wording": "Installers should not promise an automatic zero bill.",
+   "scope": "Conclusion from CL-E002-02 and CL-E002-03; also a strict prohibition in the SoLight content policy (spec §8).",
+   "caveats": "Some months a customer's net bill could be very low; the claim is that zero is not automatic or guaranteed.",
+   "sources": [
+    "SRC-MER-NM",
+    "SRC-DOE-NM-2017"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-24T03:55:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published Tier-1 data instead.",
+    "note": "Follows from CL-03: per-customer charges plus lower export crediting mean a zero bill is not automatic."
+   }
+  }
+ ],
+ "sources": [
+  {
+   "id": "SRC-MER-NM",
+   "tier": 1,
+   "publisher": "Manila Electric Company (Meralco)",
+   "title": "Solar and Net Metering",
+   "url": "https://www.meralco.com.ph/residential/energy-solutions/solar-and-renewables/solar-net-metering",
+   "published": null,
+   "retrieved": "2026-11-23",
+   "jurisdiction": "Philippines, Meralco franchise area",
+   "excerpts": [
+    "\"Your system supplies the property first while it is generating.\" (How it works › Generate and use renewable energy)",
+    "\"The Meralco grid supplies the property when renewable generation is not enough.\" (How it works › Import energy when needed)",
+    "\"an exported kilowatt-hour is not exchanged one-for-one at the full retail rate.\" (What is Net Metering?)",
+    "\"The Net Metering peso credit is applied to eligible bill charges under the current rules,\" (Understand your Net Metering bill)",
+    "\"based on the applicable monthly blended generation cost rather than the full retail rate.\" (FAQ 11)"
+   ],
+   "freshness": "regulatory: re-verify before publication"
+  },
+  {
+   "id": "SRC-MER-DER",
+   "tier": 1,
+   "publisher": "Manila Electric Company (Meralco)",
+   "title": "Distributed Energy Resources",
+   "url": "https://www.meralco.com.ph/residential/energy-solutions/solar-and-renewables/distributed-energy-resources",
+   "published": null,
+   "retrieved": "2026-11-23",
+   "jurisdiction": "Philippines, Meralco franchise area (DER Rules, business framing)",
+   "excerpts": [
+    "\"At times when there is no sunlight, or at night,\" … \"the grid will provide electricity to supply the customer’s full power requirements.\" (DER Benefits for Businesses)"
+   ],
+   "freshness": "regulatory: re-verify before publication"
+  },
+  {
+   "id": "SRC-DOE-DC2026",
+   "tier": 1,
+   "publisher": "Department of Energy, Republic of the Philippines",
+   "title": "DOE Simplifies Rules for Own-Use Solar, Expands Access for Filipino Consumers (media release on DC2026-08-0017)",
+   "url": "https://doe.gov.ph/doe-simplifies-rules-for-own-use-solar-expands-access-for-filipino-consumers",
+   "published": "2026-08-20",
+   "retrieved": "2026-11-23",
+   "jurisdiction": "Philippines",
+   "excerpts": [
+    "\"ensuring adequate grid support when solar generation is unavailable or insufficient.\""
+   ],
+   "freshness": "regulatory: re-verify before publication"
+  },
+  {
+   "id": "SRC-MER-RATES-2026-11",
+   "tier": 1,
+   "publisher": "Manila Electric Company (Meralco)",
+   "title": "Summary Schedule of Rates, effective November 2026 billing",
+   "url": "https://www.meralco.com.ph/uploads/documents/regulatory/rates/11-2026-Rate-Schedule-v2.pdf",
+   "published": "2026-11",
+   "retrieved": "2026-11-23",
+   "jurisdiction": "Philippines, Meralco residential",
+   "excerpts": [
+    "Residential rows list per-kWh components (generation, transmission, system loss, distribution, supply, universal charges, FIT-All, lifeline subsidy, etc.). A per-customer-per-month column (likely metering charge) appears; label alignment in the text extraction was ambiguous and must be confirmed by the reviewer."
+   ],
+   "freshness": "electricity rates: valid for November 2026 billing month only"
+  },
+  {
+   "id": "SRC-DOE-NM-2017",
+   "tier": 1,
+   "publisher": "Department of Energy (REMB)",
+   "title": "Net Metering Program presentation (REMB)",
+   "url": "https://legacy.doe.gov.ph/sites/default/files/pdf/announcements/04_remb_net_metering.pdf",
+   "published": "2017-07-13",
+   "retrieved": "2026-11-23",
+   "jurisdiction": "PH",
+   "freshness": "policy (dated 2017; mechanism, not current rates)",
+   "excerpts": [
+    "Net metering charge is equivalent to PhP/customer/month supply and metering rates; plus the ERC-approved PhP/kWh metering rate based on export energy.",
+    "Interim (temporary/provisional) pricing for export energy is the DU's monthly charge based on its blended generation cost.",
+    "If positive: QE shall pay this amount to DU"
+   ]
+  }
+ ],
+ "caption": {
+  "main": "May solar ka na, pero may bill ka pa rin? Normal 'yan sa grid-connected setup. Kapag kulang ang solar o gabi na at walang battery, kumukuha ka pa rin ng kuryente sa grid. At may bill charges na hindi basta nawawala. Kaya ingat sa \"automatic zero bill\" na pangako. ☀️\n\nSoSmart viewers, ano ang solar question n'yo? I-comment lang! 👇",
+  "short": "May solar pero may bill pa rin? Here's why. ☀️ Walang automatic zero bill.",
+  "thumbnailHeadline": "May Solar, May Bill Pa Rin?",
+  "pinnedComment": "Sources: Meralco Solar & Net Metering page and DOE DC2026-08-0017 media release (checked 23 Nov 2026). Iba-iba ang resulta depende sa setup, consumption at utility.",
+  "discussionQuestion": "Ano ang mas mahalaga sa'yo: lower bill o backup?",
+  "hashtags": [
+   "#KuyaSoLight",
+   "#SoSmartViewers",
+   "#SolarPH",
+   "#SolarKlaro",
+   "#SoLightSolarPH"
+  ],
+  "cta": "Ikaw, ano ang solar question mo?"
+ },
+ "demoVoice": {
+  "blend": [
+   [
+    "am_michael",
+    0.6
+   ],
+   [
+    "am_onyx",
+    0.4
+   ]
+  ],
+  "speed": 1.0
+ }
+}

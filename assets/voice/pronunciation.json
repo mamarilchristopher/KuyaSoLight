@@ -1,0 +1,16 @@
+{
+  "note": "Approved pronunciation settings for Kuya SoLight narration. 'locked' entries are brand words whose IPA must never be changed by a voice model or generator without owner approval (V1.1 §7). 'english' lists words read with English rules inside Taglish. 'tagalogStress' gives the stressed syllable counted from the END of the word (1 = last syllable) where it differs from the default penultimate stress.",
+  "version": "0.1-proposed",
+  "locked": {
+    "SoLight": "sˌoʊlˈaɪt",
+    "SoSmart": "sˌoʊsmˈɑːɹt",
+    "Kuya": "kˈuja",
+    "'to": "tˈo",
+    "to": "tˈo",
+    "Meralco": "mɛɾˈalko"
+  },
+  "english": ["solar", "bill", "bills", "grid", "setup", "battery", "batteries", "generation", "daytime", "electricity", "use", "typical", "self-consumption", "charges", "zero", "automatic", "hello", "viewers", "life", "is", "with", "inverter", "hybrid", "net-metering", "export", "import", "kw", "kwh", "kwp", "panels", "panel", "backup", "brownout", "ready", "hybrid-ready", "tip", "of", "the", "day", "question", "week", "smart", "lower", "the"],
+  "tagalogStress": {
+    "tumutulong": 1, "kapag": 1, "gabi": 1, "wala": 1, "kumuha": 1, "hindi": 1, "basta": 1, "nawawala": 1, "kaya": 1, "mangako": 1, "dahil": 1, "kulang": 2, "puwede": 2, "kuryente": 2, "dapat": 2, "gusto": 2, "pero": 2
+  }
+}

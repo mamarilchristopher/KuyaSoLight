@@ -1,0 +1,38 @@
+{
+ "line": "Hello, SoSmart viewers! Kuya SoLight 'to!",
+ "approvedDelivery": "W3-smile",
+ "description": "Warm but bubbly: friendly and upbeat, slightly soft, about 2.4 s of speech.",
+ "demoSettings": {
+  "engine": "kokoro-82m-int8 (demo)",
+  "blend": [
+   [
+    "am_liam",
+    0.5
+   ],
+   [
+    "am_michael",
+    0.5
+   ]
+  ],
+  "speed": 1.26,
+  "pitchSemitones": 1.0,
+  "treble": "+2 dB @ 4 kHz"
+ },
+ "reference": "assets/voice/greeting/W3-smile-reference.mp3",
+ "rejected": [
+  "V1-warm",
+  "V2-bright",
+  "V3-steady"
+ ],
+ "approvedBy": "CHRIS (Owner)",
+ "approvedAt": "2026-11-24T03:43:24+08:00",
+ "note": "Approves the delivery style only. The production voice (actor or licensed TTS) is still to be chosen and should match this energy and pacing.",
+ "productionVoice": {
+  "provider": "ElevenLabs",
+  "name": "Juan",
+  "voiceId": "1ZA0KgPdD0Tns6SR4FVQ",
+  "speed": 1.15,
+  "sample": "/mnt/project-files/kuya-solight/audio/elevenlabs-greeting/E6-juan.mp3",
+  "approvedAt": "2026-11-24T04:19:23+08:00"
+ }
+}

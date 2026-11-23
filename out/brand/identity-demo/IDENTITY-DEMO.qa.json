@@ -1,0 +1,112 @@
+{
+ "episode": "IDENTITY-DEMO",
+ "generatedAt": "2026-11-23T19:34:56.226Z",
+ "file": "out/brand/identity-demo/IDENTITY-DEMO.mp4",
+ "character": "KSL-A1",
+ "verdict": "BLOCKED",
+ "blockingFailures": 4,
+ "checks": [
+  {
+   "id": "SUB-TRANSCRIPT-MATCH",
+   "status": "pass",
+   "detail": "All 69 words of the approved narration appear in the subtitle transcript in order."
+  },
+  {
+   "id": "SUB-NUMBERS-MATCH",
+   "status": "pass",
+   "detail": "No numerical values in narration."
+  },
+  {
+   "id": "BRAND-LINE-EXACT",
+   "status": "pass",
+   "detail": "Exact brand line present: \"Hello, SoSmart viewers! Kuya SoLight 'to!\""
+  },
+  {
+   "id": "BRAND-LINE-EXACT",
+   "status": "pass",
+   "detail": "Exact brand line present: \"Dahil ang gusto ni Kuya SoLight… naka-solar ka na, SoSmart ka pa!\""
+  },
+  {
+   "id": "BRAND-LINE-EXACT",
+   "status": "pass",
+   "detail": "Exact brand line present: \"Life is SoLight with Solar.\""
+  },
+  {
+   "id": "SUB-LINE-LAYOUT",
+   "status": "pass",
+   "detail": "All cues fit ≤2 lines (≈≤30 chars/line)."
+  },
+  {
+   "id": "SUB-READING-SPEED",
+   "status": "pass",
+   "detail": "All cues ≤22 characters/second."
+  },
+  {
+   "id": "SUB-TIMING",
+   "status": "pass",
+   "detail": "Cues are sequential, timed from synthesized audio sample positions."
+  },
+  {
+   "id": "MP4-RESOLUTION",
+   "status": "pass",
+   "detail": "1080x1920 (9:16)"
+  },
+  {
+   "id": "MP4-FPS",
+   "status": "pass",
+   "detail": "30 fps"
+  },
+  {
+   "id": "MP4-CODECS",
+   "status": "pass",
+   "detail": "H.264 video + AAC audio"
+  },
+  {
+   "id": "MP4-DURATION",
+   "status": "pass",
+   "detail": "43.57 s"
+  },
+  {
+   "id": "AUDIO-PRESENT",
+   "status": "pass",
+   "detail": "Mean -23.9 dBFS"
+  },
+  {
+   "id": "AUDIO-CLIPPING",
+   "status": "pass",
+   "detail": "Peak -1.1 dBFS (limiter ceiling −1 dBFS)"
+  },
+  {
+   "id": "LOGO-OFFICIAL",
+   "status": "fail",
+   "blocking": true,
+   "detail": "Official master logo not supplied; frames use the marked placeholder.",
+   "fix": "Owner uploads the master SoLight Solar PH logo file in Brand Settings."
+  },
+  {
+   "id": "CHARACTER-APPROVED",
+   "status": "pass",
+   "detail": "Kuya SoLight v1.0 (KSL-A1), approved by CHRIS (Owner) 2026-11-24T03:22:45+08:00."
+  },
+  {
+   "id": "VOICE-APPROVED",
+   "status": "fail",
+   "blocking": true,
+   "detail": "Demo TTS voice (Kokoro, English voice blend with Tagalog G2P). Not a Filipino-accented voice; not owner-approved.",
+   "fix": "Select and license the production voice; re-render."
+  },
+  {
+   "id": "OWNER-APPROVAL",
+   "status": "fail",
+   "blocking": true,
+   "detail": "Owner approval not yet given."
+  },
+  {
+   "id": "SONIC-APPROVED",
+   "status": "fail",
+   "blocking": true,
+   "detail": "Three sonic logo options shown; owner has not chosen one.",
+   "fix": "Pick a sonic logo in Brand Settings."
+  }
+ ]
+}

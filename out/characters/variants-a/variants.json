@@ -1,0 +1,182 @@
+[
+ {
+  "id": "KSL-A1",
+  "name": "A1 · Original (current)",
+  "version": "0.1-concept",
+  "summary": "The A look you approved: side-part hair, clean-shaven, navy polo with gold collar and sleeve trims.",
+  "strengths": [
+   "Easiest to animate consistently (flat layers, few gradients)",
+   "Reads clearly at phone size",
+   "Warm and approachable without looking childish"
+  ],
+  "risks": [
+   "Can look generic if expressions are under-used",
+   "Needs a disciplined colour/line spec to stay premium"
+  ],
+  "rig": "Layered SVG cut-out rig (this repo): bone angles for arms/legs, 6-viseme mouth set, blink and brow controls. Portable to Rive or Moho later.",
+  "effort": {
+   "setupDays": "3–5 days to lock full bundle",
+   "perEpisode": "Low (code-driven poses)",
+   "reuse": "Very high",
+   "consistency": "Very high (same vector parts every frame)"
+  },
+  "palette": {
+   "skin": "#C98B5E",
+   "hair": "#22160F",
+   "shirt": "#132C4B",
+   "accent": "#EAB82C",
+   "pants": "#3a4658",
+   "shoes": "#2b2b2b"
+  },
+  "head": {
+   "cy": 300,
+   "r": 92,
+   "ry": 100
+  },
+  "footY": 1200
+ },
+ {
+  "id": "KSL-A2",
+  "name": "A2 · Fade & Stubble",
+  "version": "0.1-concept",
+  "summary": "Same friendly A construction with a short textured fade, light stubble and a slightly squarer jaw. Reads a bit older (mid-30s) and more grounded.",
+  "strengths": [
+   "Easiest to animate consistently (flat layers, few gradients)",
+   "Reads clearly at phone size",
+   "Warm and approachable without looking childish"
+  ],
+  "risks": [
+   "Can look generic if expressions are under-used",
+   "Needs a disciplined colour/line spec to stay premium"
+  ],
+  "rig": "Layered SVG cut-out rig (this repo): bone angles for arms/legs, 6-viseme mouth set, blink and brow controls. Portable to Rive or Moho later.",
+  "effort": {
+   "setupDays": "3–5 days to lock full bundle",
+   "perEpisode": "Low (code-driven poses)",
+   "reuse": "Very high",
+   "consistency": "Very high (same vector parts every frame)"
+  },
+  "palette": {
+   "skin": "#C98B5E",
+   "hair": "#22160F",
+   "shirt": "#132C4B",
+   "accent": "#EAB82C",
+   "pants": "#3a4658",
+   "shoes": "#2b2b2b"
+  },
+  "head": {
+   "cy": 300,
+   "r": 92,
+   "ry": 100
+  },
+  "footY": 1200
+ },
+ {
+  "id": "KSL-A3",
+  "name": "A3 · Wavy Hair & Glasses",
+  "version": "0.1-concept",
+  "summary": "Fuller wavy hair swept back and thin round navy glasses. Signals \"knows the tech\" without implying credentials. Glasses are a fixed part of the design.",
+  "strengths": [
+   "Easiest to animate consistently (flat layers, few gradients)",
+   "Reads clearly at phone size",
+   "Warm and approachable without looking childish"
+  ],
+  "risks": [
+   "Can look generic if expressions are under-used",
+   "Needs a disciplined colour/line spec to stay premium"
+  ],
+  "rig": "Layered SVG cut-out rig (this repo): bone angles for arms/legs, 6-viseme mouth set, blink and brow controls. Portable to Rive or Moho later.",
+  "effort": {
+   "setupDays": "3–5 days to lock full bundle",
+   "perEpisode": "Low (code-driven poses)",
+   "reuse": "Very high",
+   "consistency": "Very high (same vector parts every frame)"
+  },
+  "palette": {
+   "skin": "#C98B5E",
+   "hair": "#22160F",
+   "shirt": "#132C4B",
+   "accent": "#EAB82C",
+   "pants": "#3a4658",
+   "shoes": "#2b2b2b"
+  },
+  "head": {
+   "cy": 300,
+   "r": 92,
+   "ry": 100
+  },
+  "footY": 1200
+ },
+ {
+  "id": "KSL-A4",
+  "name": "A4 · Field Shirt",
+  "version": "0.1-concept",
+  "summary": "Original A face and hair with a navy button-down field shirt (sleeves rolled), gold placket piping, khaki trousers and brown shoes. A bit more \"site visit ready\".",
+  "strengths": [
+   "Easiest to animate consistently (flat layers, few gradients)",
+   "Reads clearly at phone size",
+   "Warm and approachable without looking childish"
+  ],
+  "risks": [
+   "Can look generic if expressions are under-used",
+   "Needs a disciplined colour/line spec to stay premium"
+  ],
+  "rig": "Layered SVG cut-out rig (this repo): bone angles for arms/legs, 6-viseme mouth set, blink and brow controls. Portable to Rive or Moho later.",
+  "effort": {
+   "setupDays": "3–5 days to lock full bundle",
+   "perEpisode": "Low (code-driven poses)",
+   "reuse": "Very high",
+   "consistency": "Very high (same vector parts every frame)"
+  },
+  "palette": {
+   "skin": "#C98B5E",
+   "hair": "#22160F",
+   "shirt": "#132C4B",
+   "accent": "#EAB82C",
+   "pants": "#8C7A57",
+   "shoes": "#5b3b22"
+  },
+  "head": {
+   "cy": 300,
+   "r": 92,
+   "ry": 100
+  },
+  "footY": 1200
+ },
+ {
+  "id": "KSL-A5",
+  "name": "A5 · Curly Top",
+  "version": "0.1-concept",
+  "summary": "Short curly top with neat sides and a deeper morena skin tone, same navy polo. Gives the character a more distinctive silhouette in thumbnails.",
+  "strengths": [
+   "Easiest to animate consistently (flat layers, few gradients)",
+   "Reads clearly at phone size",
+   "Warm and approachable without looking childish"
+  ],
+  "risks": [
+   "Can look generic if expressions are under-used",
+   "Needs a disciplined colour/line spec to stay premium"
+  ],
+  "rig": "Layered SVG cut-out rig (this repo): bone angles for arms/legs, 6-viseme mouth set, blink and brow controls. Portable to Rive or Moho later.",
+  "effort": {
+   "setupDays": "3–5 days to lock full bundle",
+   "perEpisode": "Low (code-driven poses)",
+   "reuse": "Very high",
+   "consistency": "Very high (same vector parts every frame)"
+  },
+  "palette": {
+   "skin": "#A86A42",
+   "hair": "#22160F",
+   "shirt": "#132C4B",
+   "accent": "#EAB82C",
+   "pants": "#3a4658",
+   "shoes": "#2b2b2b"
+  },
+  "head": {
+   "cy": 300,
+   "r": 92,
+   "ry": 100
+  },
+  "footY": 1200
+ }
+]

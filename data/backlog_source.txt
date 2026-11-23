@@ -1,0 +1,108 @@
+Q1|SOLAR FUNDAMENTALS AND FIRST-TIME BUYERS
+1|E001|Ano Ba Talaga ang Solar?|Follow sunlight into panels, inverter and a working home.|A
+1|E002|Bakit May Bill Pa Rin Kahit May Solar?|Explain grid consumption, nighttime usage, residual charges and why zero-bill promises are misleading.|B
+2|E003|kW vs kWh: Ano ang Pagkakaiba?|Explain power versus energy using an appliance example.|A
+2|E004|Grid-Tied, Hybrid, Off-Grid|Compare three common arrangements without assuming identical backup capability.|D
+3|E005|Saan Galing ang Kuryente sa Bahay?|Animate solar, grid, battery and household energy paths.|E
+3|E006|Hybrid-Ready Ba, Automatic Backup Na?|Explain what still needs to be verified.|B
+4|E007|Gumagana Ba ang Solar Kapag Maulan?|Explain reduced but sometimes nonzero generation under clouds.|B
+4|E008|Gumagana Ba ang Solar sa Gabi?|Distinguish nighttime solar generation from stored battery energy.|B
+5|E009|6 kWp Solar, 6 kW Inverter: Pareho Ba?|Compare PV DC capacity with inverter AC rating.|E
+5|E010|Bakit Hindi Laging Full Power ang Panels?|Explain test-condition ratings and real operating conditions.|E
+6|E011|Paano Basahin ang Meralco Bill?|Identify energy use, billing period and charges.|C
+6|E012|Total Amount Due vs Current Electricity Use|Explain why previous balances should not be treated as current monthly solar demand.|C
+7|E013|Daytime vs Nighttime Consumption|Show why daily load timing matters.|D
+7|E014|Paano Tinatantiya ang Solar System Size?|Explain preliminary sizing and the limits of bill-only estimates.|C
+8|E015|Panel, Inverter, Battery: Kanya-Kanyang Trabaho|Three core pieces and their functions.|E
+8|E016|Solar Muna, Battery Later?|Explain conditional storage expansion with a compatible hybrid-ready design.|D
+9|E017|Bakit Namatay ang Grid-Tied Solar sa Brownout?|Explain anti-islanding in customer-friendly terms.|F
+9|E018|Ano ang Essential Loads?|Show how to prioritize lights, connectivity and selected appliances.|D
+10|E019|Ano ang Net-Metering?|Explain eligible export energy and bill credits.|A
+10|E020|Same Ba ang Export at Import Electricity Rate?|Explain why the credit basis differs from retail billing.|C
+11|E021|Ano ang Zero-Export Solar?|Explain self-use without exporting surplus electricity.|A
+11|E022|Kailangan Ba ng Net-Metering Para Gumamit ng Solar?|Explain distinct own-use paths and applicable requirements.|D
+12|E023|Paano Malaman Kung Tunay na Hybrid-Ready?|Explain model and specification checks.|E
+12|E024|Bakit Hindi Basta-Basta Compatible ang Batteries?|Discuss voltage, BMS and approved compatibility.|E
+13|E025|5 Solar Questions in 45 Seconds|Short recap of frequent misunderstandings.|B
+13|E026|Anong Solar Question Mo?|Audience question collection with factual answers and comment engagement.|A
+Q2|SAVINGS, SIZING AND BATTERY DECISIONS
+14|E027|₱10,000 ang Monthly Bill: Ilang kWp Kailangan?|Demonstrate a conditional estimate, not a universal answer.|C
+14|E028|Highest Bill o Average Bill?|Explain why multi-month consumption history is helpful.|C
+15|E029|Ilang kWh ang Kaya ng Isang kWp?|Explain generation modeling, seasonal variation and site dependence.|C
+15|E030|Real Solar Data vs Theoretical Estimate|Explain what measured generation can and cannot prove.|C
+16|E031|Bakit Nagbabago ang Solar Production Kada Buwan?|Seasonal irradiance and weather.|E
+16|E032|Isang Puno, Malaking Epekto?|Explain shading and string-level consequences without exaggeration.|E
+17|E033|Kasya Ba ang Solar sa Bubong Mo?|Discuss panel dimensions, usable roof space and setbacks.|D
+17|E034|Best Solar Roof Direction?|Explain azimuth, tilt, shading and actual local roof conditions.|E
+18|E035|Kaya Bang Mag-Aircon Gamit ang Solar?|Explain load, timing and system limitations.|D
+18|E036|Malakas Ba sa Kuryente ang Ref?|Explain energy use, duty cycles and why wattage alone is insufficient.|A
+19|E037|Battery kWh vs Battery kW|Capacity and available power are different.|E
+19|E038|Ilang Oras Tatagal ang Solar Battery?|Explain a load-dependent runtime estimate using usable capacity.|C
+20|E039|Ano ang Ibig Sabihin ng 18 kWh Battery?|Show storage energy and usable capacity.|E
+20|E040|Ano ang Battery SOC?|Explain state of charge, reserve and operating limits.|E
+21|E041|Bakit Mas Mahal ang May Battery?|Explain storage, extra equipment and installation complexity.|C
+21|E042|Worth It Ba ang Battery Kung Tipid ang Goal?|Compare backup value and energy-shifting benefits with honest assumptions.|C
+22|E043|Paano Kinukuwenta ang Solar Payback?|Demonstrate cost divided by defensible estimated annual net savings, with limitations.|C
+22|E044|Ano ang Nakakapagpabago ng ROI?|Loads, rates, system output, maintenance, battery costs and other assumptions.|C
+23|E045|5 Red Flags sa Solar Quotation|Missing models, vague inclusions, unsupported guarantees and unclear warranty terms.|F
+23|E046|Panel, Inverter, Workmanship Warranty|Explain why separate warranty categories matter.|F
+24|E047|Mas Kilalang Brand = Mas Magandang Setup?|Explain evaluation beyond brand reputation.|B
+24|E048|Bakit Mahalaga ang Exact Inverter Model?|Show model-specific limits and compatibility.|E
+25|E049|Mas Malaki ang Panels Kaysa Inverter?|Explain DC/AC ratio and clipping at a high level.|E
+25|E050|Saan Napupunta ang Extra Solar Energy?|Self-consumption, battery charging, curtailment or permitted exports depending on setup.|E
+26|E051|Which Solar Package Fits You?|Goal-based comparison: lower upfront cost, storage, backup and night usage.|D
+26|E052|Solar Buying Checklist|Questions to ask before signing an agreement.|D
+Q3|INSTALLATION, SAFETY AND CUSTOMER TRUST
+27|E053|Ano ang Nangyayari sa Solar Site Visit?|Walk through a realistic assessment.|F
+27|E054|Bakit Kailangan ng Shading Assessment?|Show shade paths and site-specific effects.|F
+28|E055|Pwede Ba ang Solar sa Lumang Bubong?|Explain roof assessment and structural concerns.|F
+28|E056|Solar at Bagyo: Ano ang Dapat Tingnan?|Explain engineer-designed mounting and risk controls; no storm-proof guarantees.|F
+29|E057|Para Saan ang Breakers at Surge Protection?|Simplified component-purpose explanation.|F
+29|E058|Bakit Mahalaga ang Qualified Electrical Professionals?|Safety, plans, testing and documented compliance.|F
+30|E059|Saan Dapat Ilagay ang Inverter?|Access, ventilation, equipment ratings and installation requirements.|F
+30|E060|Saan Ligtas Ilagay ang Solar Batteries?|Manufacturer requirements and applicable fire/electrical codes.|F
+31|E061|Ano ang Tinitingnan sa Electrical Survey?|Load characteristics, panels, service, protection and site constraints.|F
+31|E062|Ano ang Single-Line Diagram?|Explain its purpose without depicting an unapproved installation.|E
+32|E063|Ano ang Nangyayari sa Solar Installation Day?|Authentic, permission-cleared footage plus educational graphics.|G
+32|E064|Bakit May Testing at Commissioning?|Explain verification before service.|F
+33|E065|Paano Basahin ang Solar Monitoring App?|PV generation, grid imports, exports and battery flow.|E
+33|E066|Production vs Consumption vs Grid Import|Explain why different app numbers should not be confused.|E
+34|E067|Kailan Kailangan Linisin ang Panels?|Condition-based guidance with safe cleaning caveats.|F
+34|E068|Maintenance-Free Ba Talaga ang Solar?|Explain inspection and equipment upkeep.|B
+35|E069|May Error ang Solar Inverter: Ano ang Gagawin?|Safe homeowner response and escalation.|F
+35|E070|Ano ang Dapat Gawin Kapag May Brownout?|Explain system-specific operation and safety.|F
+36|E071|Dapat Ba Laging 100% ang Battery?|Explain operating strategy and manufacturer recommendations.|E
+36|E072|Whole-House vs Essential-Load Backup|Explain tradeoffs and power requirements.|D
+37|E073|Bakit Minsan Bumababa ang Solar Output Kahit Maaraw?|Heat, inverter limits, shading or grid conditions.|E
+37|E074|Bakit Nakakaapekto ang Grid Voltage?|Explain possible output limitations and safe escalation.|E
+38|E075|Real SoLight Project: What We Installed|Use only a genuinely documented project and confirmed specifications.|G
+38|E076|Real SoLight Project: What We Learned|Discuss validated lessons without invented performance data.|G
+39|E077|Anong Dapat Kasama sa Aftersales Support?|Monitoring, warranty handling, fault reporting and escalation.|F
+39|E078|Warranty Claim vs Maintenance Concern|Show how to distinguish different service needs.|F
+Q4|SOLAR FOR RESORTS, BUSINESSES AND ADVANCED BUYERS
+40|E079|Bakit Malakas sa Kuryente ang Resorts?|Explain air-conditioning, water pumps, refrigeration and guest patterns.|H
+40|E080|Solar para sa Swimming Pool Pumps|Explore operating hours and daytime load matching.|H
+41|E081|Resort Solar: Daytime vs Overnight Guests|Show the importance of load profiles.|H
+41|E082|Paano Magsimula ng Solar Estimate para sa Resort?|Billing history, circuits, guest capacity and site surveys.|H
+42|E083|Kaya Ba ng Solar Battery ang Buong Resort?|Realistic load and autonomy assessment.|H
+42|E084|Priority Loads Kapag Brownout sa Resort|Practical backup prioritization.|H
+43|E085|Solar para sa Clinics at Small Businesses|Match solar to actual operating loads.|H
+43|E086|Can Solar Replace Critical Backup Power?|Distinguish renewable generation, configured backup and separately required critical-power systems.|H
+44|E087|Bakit Bagay ang Solar sa Daytime Businesses?|Explain consumption overlap.|H
+44|E088|Shift Your Loads, Improve Solar Self-Use?|Demonstrate schedule-dependent benefits without guarantees.|C
+45|E089|Commercial Bill: Energy vs Demand|Introduce concepts only when applicable to the customer's tariff.|H
+45|E090|Commercial Net-Metering o Zero Export?|Compare applicability subject to current rules and project-specific assessment.|H
+46|E091|EV Charging + Solar: Sulit Ba?|Evaluate vehicle charging patterns.|C
+46|E092|EV Muna o Solar Muna?|Present a fair decision framework.|D
+47|E093|Add More Panels or Add Batteries?|Compare two distinct objectives.|D
+47|E094|Peak Load vs Total Daily Consumption|Show why both affect system design.|E
+48|E095|10 Solar Myths in 60 Seconds|Rapid factual recap.|B
+48|E096|7 Questions Every Solar Buyer Should Ask|Product, design, costs and warranty questions.|D
+49|E097|Kailangan Ba Palitan ang Inverter Para Mag-Battery?|Conditional explanation of hybrid-ready benefits.|D
+49|E098|Pwede Bang Magdagdag ng Panels Later?|Design limits, compatibility, permissions and approval of changes.|D
+50|E099|Solar Safety Bago ang Bagyo|Follow manufacturer and official emergency guidance.|F
+50|E100|Solar Safety Pagkatapos ng Bagyo|Avoid damaged or wet electrical equipment; seek qualified inspection.|F
+51|E101|Isang Taon ng Solar: Ano ang Dapat I-review?|Electricity use, generation, imports, faults and maintenance.|G
+51|E102|How to Measure Real Savings|Baselines, weather, changing usage and valid comparisons.|C
+52|E103|Kuya SoLight Answers Your Questions|Select verified audience questions.|A
+52|E104|What We Learned About Solar This Year|Year-end educational recap and brand appreciation.|A

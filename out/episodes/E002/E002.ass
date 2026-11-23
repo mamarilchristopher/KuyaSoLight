@@ -1,0 +1,24 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Kuya,Inter ExtraBold,52,&H00FFFFFF&,&H00FFFFFF&,&H262E1A0B&,&H262E1A0B&,0,0,0,0,100,100,0,0,3,16,0,2,80,150,520
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.25,0:00:02.86,Kuya,,0,0,0,,{\fad(60,60)}May {\c&H000BAEF5&}solar{\c&H00FFFFFF&} ka, pero may\NMeralco {\c&H000BAEF5&}bill{\c&H00FFFFFF&} ka pa rin?
+Dialogue: 0,0:00:03.21,0:00:05.70,Kuya,,0,0,0,,{\fad(60,60)}Hello, {\c&H000BAEF5&}SoSmart{\c&H00FFFFFF&} viewers!\NKuya {\c&H000BAEF5&}SoLight{\c&H00FFFFFF&} 'to!
+Dialogue: 0,0:00:06.05,0:00:08.80,Kuya,,0,0,0,,{\fad(60,60)}Sa typical\N{\c&H000BAEF5&}self-consumption{\c&H00FFFFFF&} setup,
+Dialogue: 0,0:00:08.88,0:00:13.51,Kuya,,0,0,0,,{\fad(60,60)}tumutulong ang {\c&H000BAEF5&}solar{\c&H00FFFFFF&} sa\N{\c&H000BAEF5&}daytime{\c&H00FFFFFF&} electricity use mo.
+Dialogue: 0,0:00:13.81,0:00:16.00,Kuya,,0,0,0,,{\fad(60,60)}Pero kapag {\c&H000BAEF5&}kulang{\c&H00FFFFFF&}\Nang solar generation,
+Dialogue: 0,0:00:16.08,0:00:18.31,Kuya,,0,0,0,,{\fad(60,60)}o {\c&H000BAEF5&}gabi{\c&H00FFFFFF&} na at wala\Nkang {\c&H000BAEF5&}battery,{\c&H00FFFFFF&}
+Dialogue: 0,0:00:18.39,0:00:21.18,Kuya,,0,0,0,,{\fad(60,60)}puwede ka pa ring kumuha\Nng kuryente sa {\c&H000BAEF5&}grid.{\c&H00FFFFFF&}
+Dialogue: 0,0:00:21.48,0:00:24.63,Kuya,,0,0,0,,{\fad(60,60)}May mga bill {\c&H000BAEF5&}charges{\c&H00FFFFFF&} din\Nna hindi basta nawawala.
+Dialogue: 0,0:00:24.88,0:00:28.99,Kuya,,0,0,0,,{\fad(60,60)}Kaya hindi dapat mangako\Nng automatic {\c&H000BAEF5&}zero{\c&H00FFFFFF&} bill.
+Dialogue: 0,0:00:29.39,0:00:34.80,Kuya,,0,0,0,,{\fad(60,60)}Dahil ang gusto ni Kuya SoLight…\Nnaka-solar ka na, {\c&H000BAEF5&}SoSmart{\c&H00FFFFFF&} ka pa!
+Dialogue: 0,0:00:35.15,0:00:37.63,Kuya,,0,0,0,,{\fad(60,60)}Life is SoLight with Solar.
