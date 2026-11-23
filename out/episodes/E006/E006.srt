@@ -1,0 +1,48 @@
+1
+00:00:00,250 --> 00:00:03,880
+Hybrid-ready daw ang inverter
+mo. May backup ka na ba?
+
+2
+00:00:04,230 --> 00:00:07,100
+Hello, SoSmart viewers!
+Kuya SoLight 'to!
+
+3
+00:00:07,450 --> 00:00:11,000
+Hindi pa. Ibig sabihin lang,
+puwede itong lagyan ng battery.
+
+4
+00:00:11,300 --> 00:00:15,010
+Para gumana ang backup, kailangan
+ng compatible na battery,
+
+5
+00:00:15,060 --> 00:00:18,270
+tamang backup wiring o
+critical loads panel,
+
+6
+00:00:18,320 --> 00:00:22,270
+at inverter na naka-set
+up talaga para sa backup.
+
+7
+00:00:22,570 --> 00:00:26,360
+Kung kulang ang mga 'yan,
+puwedeng brownout ka pa rin.
+
+8
+00:00:26,660 --> 00:00:30,350
+Kaya bago bumili, ipa-verify
+ang buong backup setup.
+
+9
+00:00:30,750 --> 00:00:36,500
+Dahil ang gusto ni Kuya SoLight…
+naka-solar ka na, SoSmart ka pa!
+
+10
+00:00:36,850 --> 00:00:39,030
+Life is SoLight with Solar.

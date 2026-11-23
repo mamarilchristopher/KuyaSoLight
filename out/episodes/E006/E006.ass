@@ -1,0 +1,23 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Kuya,Inter ExtraBold,52,&H00FFFFFF&,&H00FFFFFF&,&H262E1A0B&,&H262E1A0B&,0,0,0,0,100,100,0,0,3,16,0,2,80,150,520
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.25,0:00:03.88,Kuya,,0,0,0,,{\fad(60,60)}{\c&H000BAEF5&}Hybrid-ready{\c&H00FFFFFF&} daw ang inverter\Nmo. May {\c&H000BAEF5&}backup{\c&H00FFFFFF&} ka na ba?
+Dialogue: 0,0:00:04.23,0:00:07.10,Kuya,,0,0,0,,{\fad(60,60)}Hello, {\c&H000BAEF5&}SoSmart{\c&H00FFFFFF&} viewers!\NKuya {\c&H000BAEF5&}SoLight{\c&H00FFFFFF&} 'to!
+Dialogue: 0,0:00:07.45,0:00:11.00,Kuya,,0,0,0,,{\fad(60,60)}Hindi pa. Ibig sabihin lang,\Npuwede itong lagyan ng {\c&H000BAEF5&}battery.{\c&H00FFFFFF&}
+Dialogue: 0,0:00:11.30,0:00:15.01,Kuya,,0,0,0,,{\fad(60,60)}Para gumana ang backup, kailangan\Nng compatible na {\c&H000BAEF5&}battery,{\c&H00FFFFFF&}
+Dialogue: 0,0:00:15.06,0:00:18.27,Kuya,,0,0,0,,{\fad(60,60)}tamang backup {\c&H000BAEF5&}wiring{\c&H00FFFFFF&} o\Ncritical loads panel,
+Dialogue: 0,0:00:18.32,0:00:22.27,Kuya,,0,0,0,,{\fad(60,60)}at inverter na naka-set\Nup talaga para sa {\c&H000BAEF5&}backup.{\c&H00FFFFFF&}
+Dialogue: 0,0:00:22.57,0:00:26.36,Kuya,,0,0,0,,{\fad(60,60)}Kung kulang ang mga 'yan,\Npuwedeng {\c&H000BAEF5&}brownout{\c&H00FFFFFF&} ka pa rin.
+Dialogue: 0,0:00:26.66,0:00:30.35,Kuya,,0,0,0,,{\fad(60,60)}Kaya bago bumili, {\c&H000BAEF5&}ipa-verify{\c&H00FFFFFF&}\Nang buong backup setup.
+Dialogue: 0,0:00:30.75,0:00:36.50,Kuya,,0,0,0,,{\fad(60,60)}Dahil ang gusto ni Kuya SoLight…\Nnaka-solar ka na, {\c&H000BAEF5&}SoSmart{\c&H00FFFFFF&} ka pa!
+Dialogue: 0,0:00:36.85,0:00:39.03,Kuya,,0,0,0,,{\fad(60,60)}Life is SoLight with Solar.

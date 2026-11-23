@@ -1,0 +1,308 @@
+{
+ "id": "E006",
+ "title": "Hybrid-Ready Ba, Automatic Backup Na?",
+ "pillar": "B",
+ "template": "T04-myth-check",
+ "audience": "Buyers comparing quotes that say 'hybrid-ready'",
+ "premise": "'Hybrid-ready' means a battery can be added; backup only works with a compatible battery, backup wiring or critical-loads panel, and a backup-configured inverter.",
+ "openingPattern": "A-question-first",
+ "greetingId": "greet-default",
+ "catchphraseId": "close-signature",
+ "scriptBasis": "Claude draft from the 104-episode backlog title/angle, V1.1 brand lines; claims checked online 2026-11-24.",
+ "scriptVersion": 1,
+ "voice": "production",
+ "cover": [
+  "Hybrid-Ready ≠",
+  "Automatic Backup"
+ ],
+ "scenes": {
+  "hook": {
+   "type": "hook",
+   "icon": "inverter",
+   "icon2": "battery",
+   "chip": "\"Hybrid-ready\" daw"
+  },
+  "ne": {
+   "type": "equation",
+   "lines": [
+    {
+     "text": "Hybrid-ready"
+    },
+    {
+     "text": "≠",
+     "color": "gold",
+     "size": 120
+    },
+    {
+     "text": "automatic backup"
+    }
+   ]
+  },
+  "need": {
+   "type": "checklist",
+   "title": "Para may backup",
+   "items": [
+    "Compatible na battery",
+    "Backup wiring / critical loads",
+    "Inverter na naka-set sa backup"
+   ]
+  },
+  "out": {
+   "type": "outage",
+   "backup": "none",
+   "daytime": false,
+   "chip": "Kulang ang setup: brownout pa rin"
+  },
+  "verify": {
+   "type": "cards",
+   "cards": [
+    {
+     "title": "Bago bumili",
+     "lines": [
+      "Ipa-verify sa installer",
+      "ang buong backup setup"
+     ],
+     "tone": "gold"
+    }
+   ]
+  },
+  "close": {
+   "type": "close"
+  },
+  "endcard": {
+   "type": "endcard",
+   "sources": [
+    "Sources: Fronius Backup Power Function; SMA Battery-Backup Function",
+    "manual (checked 24 Nov 2026)"
+   ]
+  }
+ },
+ "cues": [
+  {
+   "id": "c01",
+   "scene": "hook",
+   "text": "Hybrid-ready daw ang inverter mo. May backup ka na ba?",
+   "gold": [
+    "Hybrid-ready",
+    "backup"
+   ],
+   "pauseAfter": 0.35
+  },
+  {
+   "id": "c02",
+   "scene": "identity",
+   "text": "Hello, SoSmart viewers! Kuya SoLight 'to!",
+   "gold": [
+    "SoSmart",
+    "SoLight"
+   ],
+   "pauseAfter": 0.35,
+   "elSpeed": 1.15,
+   "standalone": true
+  },
+  {
+   "id": "c03",
+   "scene": "ne",
+   "text": "Hindi pa. Ibig sabihin lang, puwede itong lagyan ng battery.",
+   "gold": [
+    "battery"
+   ],
+   "pauseAfter": 0.3
+  },
+  {
+   "id": "c04",
+   "scene": "need",
+   "text": "Para gumana ang backup, kailangan ng compatible na battery,",
+   "gold": [
+    "battery"
+   ],
+   "pauseAfter": 0.05
+  },
+  {
+   "id": "c05",
+   "scene": "need",
+   "text": "tamang backup wiring o critical loads panel,",
+   "gold": [
+    "wiring"
+   ],
+   "pauseAfter": 0.05
+  },
+  {
+   "id": "c06",
+   "scene": "need",
+   "text": "at inverter na naka-set up talaga para sa backup.",
+   "gold": [
+    "backup"
+   ],
+   "pauseAfter": 0.3
+  },
+  {
+   "id": "c07",
+   "scene": "out",
+   "text": "Kung kulang ang mga 'yan, puwedeng brownout ka pa rin.",
+   "gold": [
+    "brownout"
+   ],
+   "pauseAfter": 0.3
+  },
+  {
+   "id": "c08",
+   "scene": "verify",
+   "text": "Kaya bago bumili, ipa-verify ang buong backup setup.",
+   "gold": [
+    "ipa-verify"
+   ],
+   "pauseAfter": 0.4
+  },
+  {
+   "id": "cz1",
+   "scene": "close",
+   "text": "Dahil ang gusto ni Kuya SoLight… naka-solar ka na, SoSmart ka pa!",
+   "gold": [
+    "SoSmart"
+   ],
+   "pauseAfter": 0.35
+  },
+  {
+   "id": "cz2",
+   "scene": "endcard",
+   "text": "Life is SoLight with Solar.",
+   "pauseAfter": 0.2
+  }
+ ],
+ "claims": [
+  {
+   "id": "CL-E006-01",
+   "category": "commercial",
+   "wording": "'Hybrid-ready' means a battery can be added; it does not by itself provide backup.",
+   "scope": "Battery-ready / hybrid-ready inverters.",
+   "caveats": "Terminology varies by brand.",
+   "sources": [
+    "SRC-FRONIUS-BU",
+    "SRC-SMA-BU"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-24T05:00:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "Battery-ready inverters run grid-tied until a compatible battery and backup setup are added."
+   }
+  },
+  {
+   "id": "CL-E006-02",
+   "category": "technical",
+   "wording": "Backup needs a compatible battery, backup wiring or a critical-loads panel, and an inverter configured for backup.",
+   "scope": "Hybrid systems.",
+   "caveats": "Exact requirements depend on the model.",
+   "sources": [
+    "SRC-FRONIUS-BU",
+    "SRC-SMA-BU"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-24T05:00:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "Manufacturer docs require battery + backup switching/wiring + backup configuration."
+   }
+  },
+  {
+   "id": "CL-E006-03",
+   "category": "technical",
+   "wording": "Without these, the home can still lose power in a brownout.",
+   "scope": "Grid-connected inverters without functioning backup.",
+   "caveats": "",
+   "sources": [
+    "SRC-PH-ANTIISL",
+    "SRC-ERC-NMIS"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-24T05:00:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "Without backup, anti-islanding shuts the inverter down when the grid fails."
+   }
+  }
+ ],
+ "sources": [
+  {
+   "id": "SRC-ERC-NMIS",
+   "tier": 1,
+   "publisher": "Energy Regulatory Commission / DOE",
+   "title": "Net-Metering Rules and Interconnection Standards (Philippine Distribution Code framework)",
+   "url": "https://doe.gov.ph/electric-power/philippine-distribution-code",
+   "jurisdiction": "Philippines",
+   "excerpts": [
+    "Net-metered systems follow the Philippine Distribution Code and ERC Net-Metering Interconnection Standards, which include islanding protection."
+   ],
+   "published": null,
+   "retrieved": "2026-11-24",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-FRONIUS-BU",
+   "tier": 2,
+   "publisher": "Fronius International (manufacturer documentation)",
+   "title": "Backup power function",
+   "url": "https://www.fronius.com/en-in/india/solar-energy/installers-partners/products-solutions/features/backup-power-function",
+   "jurisdiction": "Manufacturer reference",
+   "excerpts": [
+    "Backup operation requires a compatible battery and the appropriate backup wiring/switching to separate the home circuits from the grid."
+   ],
+   "published": null,
+   "retrieved": "2026-11-24",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-PH-ANTIISL",
+   "tier": 2,
+   "publisher": "CleanTechnica (reporting Philippine distributor guidance)",
+   "title": "Guerilla solar installations need to be controlled, says Philippine power distributor",
+   "url": "https://cleantechnica.com/2026/05/04/guerilla-solar-installations-discovered-need-to-be-controlled-says-philippine-power-distributor/",
+   "jurisdiction": "Philippines",
+   "excerpts": [
+    "In a compliant system, the inverter must immediately disconnect when the grid goes down to prevent backfeeding electricity into power lines."
+   ],
+   "published": null,
+   "retrieved": "2026-11-24",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-SMA-BU",
+   "tier": 2,
+   "publisher": "SMA Solar Technology (manual)",
+   "title": "Battery-backup function",
+   "url": "https://manuals.sma.de/STPHxx-60/en-US/16945435403.html",
+   "jurisdiction": "Manufacturer reference",
+   "excerpts": [
+    "Battery-backup operation must be set up and wired as a backup system; not for loads that need an uninterrupted supply."
+   ],
+   "published": null,
+   "retrieved": "2026-11-24",
+   "freshness": "re-verify before publication"
+  }
+ ],
+ "caption": {
+  "main": "Hybrid-ready ≠ automatic backup. Para may backup sa brownout: compatible na battery, tamang backup wiring o critical loads panel, at inverter na naka-set up para sa backup. 🔌\n\nSoSmart viewers, naka-hybrid-ready ba ang quote n'yo? 👇",
+  "short": "Hybrid-ready ≠ backup. Ipa-verify muna! 🔌",
+  "thumbnailHeadline": "Hybrid-Ready ≠ Backup",
+  "pinnedComment": "Sources: Fronius Backup Power Function; SMA Battery-Backup Function manual (checked 24 Nov 2026). Iba-iba ang requirements depende sa brand at model.",
+  "discussionQuestion": "Ano'ng gusto n'yong tumakbo pag brownout?",
+  "hashtags": [
+   "#KuyaSoLight",
+   "#SoSmartViewers",
+   "#SolarPH",
+   "#SolarKlaro",
+   "#SoLightSolarPH"
+  ],
+  "cta": "I-check ang quote mo!"
+ }
+}

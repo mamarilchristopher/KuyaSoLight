@@ -1,0 +1,338 @@
+{
+ "id": "E004",
+ "title": "Grid-Tied, Hybrid, Off-Grid",
+ "pillar": "D",
+ "template": "T03-comparison",
+ "audience": "Homeowners comparing system types",
+ "premise": "Grid-tied systems shut down in a brownout for safety; hybrid backup depends on battery and wiring; off-grid relies on its own batteries. Their backup capability is not the same.",
+ "openingPattern": "A-question-first",
+ "greetingId": "greet-default",
+ "catchphraseId": "close-signature",
+ "scriptBasis": "Claude draft from the 104-episode backlog title/angle, V1.1 brand lines; claims checked online 2026-11-24.",
+ "scriptVersion": 1,
+ "voice": "production",
+ "cover": [
+  "Grid-Tied, Hybrid,",
+  "o Off-Grid?"
+ ],
+ "scenes": {
+  "hook": {
+   "type": "hook",
+   "icon": "inverter",
+   "chip": "Alin ang para sa'yo?"
+  },
+  "types": {
+   "type": "cards",
+   "cards": [
+    {
+     "title": "Grid-tied",
+     "lines": [
+      "Solar + grid",
+      "Walang battery"
+     ],
+     "tone": "navy",
+     "icon": "grid"
+    },
+    {
+     "title": "Hybrid",
+     "lines": [
+      "Solar + grid + battery"
+     ],
+     "tone": "gold",
+     "icon": "battery"
+    },
+    {
+     "title": "Off-grid",
+     "lines": [
+      "Walang grid",
+      "Battery ang sandalan"
+     ],
+     "tone": "white",
+     "icon": "house"
+    }
+   ]
+  },
+  "gt-out": {
+   "type": "outage",
+   "backup": "none",
+   "daytime": true,
+   "chip": "Brownout: off ang grid-tied"
+  },
+  "hy-out": {
+   "type": "outage",
+   "backup": "battery",
+   "daytime": false,
+   "chip": "Hybrid + battery + backup wiring"
+  },
+  "offgrid": {
+   "type": "sky",
+   "sky": "night",
+   "level": 0,
+   "battery": "discharge",
+   "chip": "Off-grid: battery ang gamit",
+   "barLabel": "solar"
+  },
+  "ask": {
+   "type": "checklist",
+   "title": "Itanong muna",
+   "items": [
+    "Ano'ng loads sa brownout?",
+    "Gaano katagal?",
+    "May battery at backup wiring?"
+   ]
+  },
+  "close": {
+   "type": "close"
+  },
+  "endcard": {
+   "type": "endcard",
+   "sources": [
+    "Sources: ERC/DOE net-metering interconnection framework; Fronius & SMA",
+    "backup documentation; CleanTechnica (May 2026) (checked 24 Nov 2026)"
+   ]
+  }
+ },
+ "cues": [
+  {
+   "id": "c01",
+   "scene": "hook",
+   "text": "Grid-tied, hybrid, o off-grid: alin ang para sa'yo?",
+   "gold": [
+    "hybrid"
+   ],
+   "pauseAfter": 0.35
+  },
+  {
+   "id": "c02",
+   "scene": "identity",
+   "text": "Hello, SoSmart viewers! Kuya SoLight 'to!",
+   "gold": [
+    "SoSmart",
+    "SoLight"
+   ],
+   "pauseAfter": 0.35,
+   "elSpeed": 1.15,
+   "standalone": true
+  },
+  {
+   "id": "c03",
+   "scene": "types",
+   "text": "Grid-tied: solar at grid ang magkatuwang, walang battery.",
+   "gold": [
+    "Grid-tied"
+   ],
+   "pauseAfter": 0.3
+  },
+  {
+   "id": "c04",
+   "scene": "gt-out",
+   "text": "Kapag brownout, kusa itong namamatay para sa safety.",
+   "gold": [
+    "brownout",
+    "safety"
+   ],
+   "pauseAfter": 0.3
+  },
+  {
+   "id": "c05",
+   "scene": "hy-out",
+   "text": "Hybrid: may battery, pero depende sa setup ang backup.",
+   "gold": [
+    "Hybrid",
+    "backup"
+   ],
+   "pauseAfter": 0.3
+  },
+  {
+   "id": "c06",
+   "scene": "offgrid",
+   "text": "Off-grid: walang grid, battery ang sandalan sa gabi.",
+   "gold": [
+    "Off-grid",
+    "battery"
+   ],
+   "pauseAfter": 0.3
+  },
+  {
+   "id": "c07",
+   "scene": "types",
+   "text": "Kaya hindi pare-pareho ang backup ng tatlo.",
+   "gold": [
+    "backup"
+   ],
+   "pauseAfter": 0.3
+  },
+  {
+   "id": "c08",
+   "scene": "ask",
+   "text": "Itanong muna: anong loads ang kailangan sa brownout?",
+   "gold": [
+    "loads"
+   ],
+   "pauseAfter": 0.4
+  },
+  {
+   "id": "cz1",
+   "scene": "close",
+   "text": "Dahil ang gusto ni Kuya SoLight… naka-solar ka na, SoSmart ka pa!",
+   "gold": [
+    "SoSmart"
+   ],
+   "pauseAfter": 0.35
+  },
+  {
+   "id": "cz2",
+   "scene": "endcard",
+   "text": "Life is SoLight with Solar.",
+   "pauseAfter": 0.2
+  }
+ ],
+ "claims": [
+  {
+   "id": "CL-E004-01",
+   "category": "technical",
+   "wording": "A grid-tied system without battery shuts down during a grid outage for safety.",
+   "scope": "Grid-tied PV with compliant (anti-islanding) inverters.",
+   "caveats": "Some special inverters can power limited loads in daytime outages; not typical.",
+   "sources": [
+    "SRC-PH-ANTIISL",
+    "SRC-ERC-NMIS"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-24T05:00:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "Compliant inverters must disconnect when the grid goes down to avoid backfeeding lines where crews work (PH distributor guidance; ERC NMIS islanding requirement)."
+   }
+  },
+  {
+   "id": "CL-E004-02",
+   "category": "technical",
+   "wording": "A hybrid system's backup depends on its battery and backup setup.",
+   "scope": "Hybrid inverters with batteries.",
+   "caveats": "Backup may cover only critical loads.",
+   "sources": [
+    "SRC-FRONIUS-BU",
+    "SRC-SMA-BU"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-24T05:00:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "Manufacturer docs: backup needs compatible battery plus backup wiring/switching; not automatic."
+   }
+  },
+  {
+   "id": "CL-E004-03",
+   "category": "technical",
+   "wording": "An off-grid system has no grid connection and relies on its batteries when there is no sun.",
+   "scope": "Stand-alone systems.",
+   "caveats": "Some use generators as well.",
+   "sources": [
+    "SRC-DOE-STORAGE"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-24T05:00:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "Definition of off-grid; storage supplies loads when PV is not producing."
+   }
+  }
+ ],
+ "sources": [
+  {
+   "id": "SRC-DOE-STORAGE",
+   "tier": 1,
+   "publisher": "U.S. Department of Energy",
+   "title": "Solar-plus-storage / Homeowner's Guide to Going Solar",
+   "url": "https://www.energy.gov/eere/solar/homeowners-guide-going-solar",
+   "jurisdiction": "General technical reference",
+   "excerpts": [
+    "Batteries can store solar energy produced during the day for use at night or during outages, if the system is designed for it."
+   ],
+   "published": null,
+   "retrieved": "2026-11-24",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-ERC-NMIS",
+   "tier": 1,
+   "publisher": "Energy Regulatory Commission / DOE",
+   "title": "Net-Metering Rules and Interconnection Standards (Philippine Distribution Code framework)",
+   "url": "https://doe.gov.ph/electric-power/philippine-distribution-code",
+   "jurisdiction": "Philippines",
+   "excerpts": [
+    "Net-metered systems follow the Philippine Distribution Code and ERC Net-Metering Interconnection Standards, which include islanding protection."
+   ],
+   "published": null,
+   "retrieved": "2026-11-24",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-FRONIUS-BU",
+   "tier": 2,
+   "publisher": "Fronius International (manufacturer documentation)",
+   "title": "Backup power function",
+   "url": "https://www.fronius.com/en-in/india/solar-energy/installers-partners/products-solutions/features/backup-power-function",
+   "jurisdiction": "Manufacturer reference",
+   "excerpts": [
+    "Backup operation requires a compatible battery and the appropriate backup wiring/switching to separate the home circuits from the grid."
+   ],
+   "published": null,
+   "retrieved": "2026-11-24",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-PH-ANTIISL",
+   "tier": 2,
+   "publisher": "CleanTechnica (reporting Philippine distributor guidance)",
+   "title": "Guerilla solar installations need to be controlled, says Philippine power distributor",
+   "url": "https://cleantechnica.com/2026/05/04/guerilla-solar-installations-discovered-need-to-be-controlled-says-philippine-power-distributor/",
+   "jurisdiction": "Philippines",
+   "excerpts": [
+    "In a compliant system, the inverter must immediately disconnect when the grid goes down to prevent backfeeding electricity into power lines."
+   ],
+   "published": null,
+   "retrieved": "2026-11-24",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-SMA-BU",
+   "tier": 2,
+   "publisher": "SMA Solar Technology (manual)",
+   "title": "Battery-backup function",
+   "url": "https://manuals.sma.de/STPHxx-60/en-US/16945435403.html",
+   "jurisdiction": "Manufacturer reference",
+   "excerpts": [
+    "Battery-backup operation must be set up and wired as a backup system; not for loads that need an uninterrupted supply."
+   ],
+   "published": null,
+   "retrieved": "2026-11-24",
+   "freshness": "re-verify before publication"
+  }
+ ],
+ "caption": {
+  "main": "Grid-tied, hybrid, o off-grid? Ang grid-tied ay namamatay sa brownout para sa safety. Ang hybrid backup ay depende sa battery at setup. Ang off-grid ay battery ang sandalan. Hindi pare-pareho ang backup! 🔋\n\nSoSmart viewers, ano'ng appliances ang gusto n'yong tumakbo sa brownout? 👇",
+  "short": "Grid-tied ≠ hybrid ≠ off-grid. 🔋",
+  "thumbnailHeadline": "Grid-Tied, Hybrid, Off-Grid",
+  "pinnedComment": "Sources: ERC/DOE net-metering interconnection framework; Fronius and SMA backup documentation; CleanTechnica May 2026 (checked 24 Nov 2026). Iba-iba ang backup depende sa equipment at wiring.",
+  "discussionQuestion": "Brownout backup o mas mababang bill: alin ang priority mo?",
+  "hashtags": [
+   "#KuyaSoLight",
+   "#SoSmartViewers",
+   "#SolarPH",
+   "#SolarKlaro",
+   "#SoLightSolarPH"
+  ],
+  "cta": "Ano'ng loads ang kailangan mo sa brownout?"
+ }
+}

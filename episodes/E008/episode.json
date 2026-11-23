@@ -1,0 +1,289 @@
+{
+ "id": "E008",
+ "title": "Gumagana Ba ang Solar sa Gabi?",
+ "pillar": "B",
+ "template": "T04-myth-check",
+ "audience": "Prospects",
+ "premise": "Panels need light, so there is no solar generation at night; night-time 'solar' power is stored battery energy from the day, otherwise the grid.",
+ "openingPattern": "A-question-first",
+ "greetingId": "greet-default",
+ "catchphraseId": "close-signature",
+ "scriptBasis": "Claude draft from the 104-episode backlog title/angle, V1.1 brand lines; claims checked online 2026-11-24.",
+ "scriptVersion": 1,
+ "voice": "production",
+ "cover": [
+  "Gumagana Ba",
+  "ang Solar sa Gabi?"
+ ],
+ "scenes": {
+  "hook": {
+   "type": "hook",
+   "icon": "moon",
+   "chip": "Solar sa gabi?"
+  },
+  "nogen": {
+   "type": "sky",
+   "sky": "night",
+   "level": 0,
+   "chip": "Walang araw, walang output",
+   "barLabel": "solar"
+  },
+  "batt": {
+   "type": "sky",
+   "sky": "night",
+   "level": 0,
+   "battery": "discharge",
+   "chip": "Battery: naipon noong araw",
+   "barLabel": "solar",
+   "expr": "smile"
+  },
+  "grid": {
+   "type": "path",
+   "dark": true,
+   "steps": [
+    {
+     "icon": "grid",
+     "label": "Grid"
+    },
+    {
+     "icon": "house",
+     "label": "Gabi"
+    }
+   ],
+   "flowColor": "#7FB8EE",
+   "kuyaLeft": true
+  },
+  "diff": {
+   "type": "cards",
+   "cards": [
+    {
+     "title": "Solar generation",
+     "lines": [
+      "Habang may liwanag"
+     ],
+     "tone": "gold",
+     "icon": "sun"
+    },
+    {
+     "title": "Stored energy",
+     "lines": [
+      "Battery, para sa gabi"
+     ],
+     "tone": "navy",
+     "icon": "battery"
+    }
+   ]
+  },
+  "close": {
+   "type": "close"
+  },
+  "endcard": {
+   "type": "endcard",
+   "sources": [
+    "Sources: U.S. EIA Photovoltaics; U.S. DOE Homeowner's Guide;",
+    "Meralco DER page (checked 24 Nov 2026)"
+   ]
+  }
+ },
+ "cues": [
+  {
+   "id": "c01",
+   "scene": "hook",
+   "text": "Gumagana ba ang solar panels sa gabi?",
+   "gold": [
+    "gabi"
+   ],
+   "pauseAfter": 0.35
+  },
+  {
+   "id": "c02",
+   "scene": "identity",
+   "text": "Hello, SoSmart viewers! Kuya SoLight 'to!",
+   "gold": [
+    "SoSmart",
+    "SoLight"
+   ],
+   "pauseAfter": 0.35,
+   "elSpeed": 1.15,
+   "standalone": true
+  },
+  {
+   "id": "c03",
+   "scene": "nogen",
+   "text": "Hindi. Kailangan ng liwanag para gumawa ng kuryente.",
+   "gold": [
+    "liwanag"
+   ],
+   "pauseAfter": 0.3
+  },
+  {
+   "id": "c04",
+   "scene": "batt",
+   "text": "Kung solar ang gamit mo sa gabi,",
+   "gold": [
+    "solar"
+   ],
+   "pauseAfter": 0.05
+  },
+  {
+   "id": "c05",
+   "scene": "batt",
+   "text": "galing 'yan sa battery na nag-charge noong araw.",
+   "gold": [
+    "battery"
+   ],
+   "pauseAfter": 0.3
+  },
+  {
+   "id": "c06",
+   "scene": "grid",
+   "text": "Kapag wala o ubos na ang battery, grid na ang kukunan.",
+   "gold": [
+    "grid"
+   ],
+   "pauseAfter": 0.3
+  },
+  {
+   "id": "c07",
+   "scene": "diff",
+   "text": "Magkaiba ang solar generation at stored energy.",
+   "gold": [
+    "stored"
+   ],
+   "pauseAfter": 0.4
+  },
+  {
+   "id": "cz1",
+   "scene": "close",
+   "text": "Dahil ang gusto ni Kuya SoLight… naka-solar ka na, SoSmart ka pa!",
+   "gold": [
+    "SoSmart"
+   ],
+   "pauseAfter": 0.35
+  },
+  {
+   "id": "cz2",
+   "scene": "endcard",
+   "text": "Life is SoLight with Solar.",
+   "pauseAfter": 0.2
+  }
+ ],
+ "claims": [
+  {
+   "id": "CL-E008-01",
+   "category": "technical",
+   "wording": "Solar panels do not generate electricity at night.",
+   "scope": "PV modules.",
+   "caveats": "Negligible output from artificial or moonlight.",
+   "sources": [
+    "SRC-EIA-PV"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-24T05:00:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "EIA: PV output depends on sunlight."
+   }
+  },
+  {
+   "id": "CL-E008-02",
+   "category": "technical",
+   "wording": "Night-time solar use comes from a battery charged during the day.",
+   "scope": "Systems with storage.",
+   "caveats": "",
+   "sources": [
+    "SRC-DOE-STORAGE"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-24T05:00:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "DOE: storage holds daytime solar for use later."
+   }
+  },
+  {
+   "id": "CL-E008-03",
+   "category": "technical",
+   "wording": "Without a battery, or when it runs out, a grid-connected home uses the grid at night.",
+   "scope": "Grid-connected homes.",
+   "caveats": "",
+   "sources": [
+    "SRC-MER-DER"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-24T05:00:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "Meralco DER: at night the grid provides electricity."
+   }
+  }
+ ],
+ "sources": [
+  {
+   "id": "SRC-DOE-STORAGE",
+   "tier": 1,
+   "publisher": "U.S. Department of Energy",
+   "title": "Solar-plus-storage / Homeowner's Guide to Going Solar",
+   "url": "https://www.energy.gov/eere/solar/homeowners-guide-going-solar",
+   "jurisdiction": "General technical reference",
+   "excerpts": [
+    "Batteries can store solar energy produced during the day for use at night or during outages, if the system is designed for it."
+   ],
+   "published": null,
+   "retrieved": "2026-11-24",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-EIA-PV",
+   "tier": 1,
+   "publisher": "U.S. Energy Information Administration",
+   "title": "Photovoltaics and electricity",
+   "url": "https://www.eia.gov/energyexplained/solar/photovoltaics-and-electricity.php",
+   "jurisdiction": "General technical reference",
+   "excerpts": [
+    "PV cells convert sunlight directly into electricity (DC); output depends on available sunlight."
+   ],
+   "published": null,
+   "retrieved": "2026-11-24",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-MER-DER",
+   "tier": 1,
+   "publisher": "Manila Electric Company (Meralco)",
+   "title": "Distributed Energy Resources",
+   "url": "https://www.meralco.com.ph/residential/energy-solutions/solar-and-renewables/distributed-energy-resources",
+   "jurisdiction": "Philippines, Meralco franchise area",
+   "excerpts": [
+    "At times when there is no sunlight, or at night, the grid will provide electricity."
+   ],
+   "published": null,
+   "retrieved": "2026-11-24",
+   "freshness": "re-verify before publication"
+  }
+ ],
+ "caption": {
+  "main": "Gumagana ba ang solar sa gabi? Hindi, kailangan ng liwanag. Kung solar ang gamit mo sa gabi, galing 'yan sa battery na nag-charge noong araw. Kapag wala o ubos na, grid ang kukunan. 🌙🔋\n\nSoSmart viewers, may battery ba kayo o grid lang sa gabi? 👇",
+  "short": "Solar sa gabi? Battery 'yan, hindi panels. 🌙",
+  "thumbnailHeadline": "Solar sa Gabi?",
+  "pinnedComment": "Sources: U.S. EIA Photovoltaics; U.S. DOE Homeowner's Guide to Going Solar; Meralco DER page (checked 24 Nov 2026).",
+  "discussionQuestion": "Battery o grid lang sa gabi?",
+  "hashtags": [
+   "#KuyaSoLight",
+   "#SoSmartViewers",
+   "#SolarPH",
+   "#SolarKlaro",
+   "#SoLightSolarPH"
+  ],
+  "cta": "I-tag ang nagtanong nito sa'yo!"
+ }
+}

@@ -1,0 +1,23 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Kuya,Inter ExtraBold,52,&H00FFFFFF&,&H00FFFFFF&,&H262E1A0B&,&H262E1A0B&,0,0,0,0,100,100,0,0,3,16,0,2,80,150,520
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.25,0:00:05.73,Kuya,,0,0,0,,{\fad(60,60)}6 {\c&H000BAEF5&}kWp{\c&H00FFFFFF&} na solar, 6 {\c&H000BAEF5&}kW{\c&H00FFFFFF&} na\Ninverter. Pareho ba 'yan?
+Dialogue: 0,0:00:06.08,0:00:08.95,Kuya,,0,0,0,,{\fad(60,60)}Hello, {\c&H000BAEF5&}SoSmart{\c&H00FFFFFF&} viewers!\NKuya {\c&H000BAEF5&}SoLight{\c&H00FFFFFF&} 'to!
+Dialogue: 0,0:00:09.30,0:00:14.63,Kuya,,0,0,0,,{\fad(60,60)}Hindi. Ang {\c&H000BAEF5&}kWp{\c&H00FFFFFF&} ay {\c&H000BAEF5&}DC{\c&H00FFFFFF&} rating\Nng panels sa test conditions.
+Dialogue: 0,0:00:14.73,0:00:20.35,Kuya,,0,0,0,,{\fad(60,60)}Ang kW ng inverter ay {\c&H000BAEF5&}AC{\c&H00FFFFFF&}\Noutput na kaya nitong ilabas.
+Dialogue: 0,0:00:20.65,0:00:23.24,Kuya,,0,0,0,,{\fad(60,60)}Puwedeng mas malaki ang\Npanels kaysa inverter.
+Dialogue: 0,0:00:23.29,0:00:25.84,Kuya,,0,0,0,,{\fad(60,60)}Tinatawag itong\NDC-to-AC {\c&H000BAEF5&}ratio.{\c&H00FFFFFF&}
+Dialogue: 0,0:00:26.14,0:00:29.49,Kuya,,0,0,0,,{\fad(60,60)}Kapag sobra ang DC sa\Ntanghali, may {\c&H000BAEF5&}clipping.{\c&H00FFFFFF&}
+Dialogue: 0,0:00:29.79,0:00:32.88,Kuya,,0,0,0,,{\fad(60,60)}Normal 'yan, basta tama\Nang {\c&H000BAEF5&}design{\c&H00FFFFFF&} at kalkula.
+Dialogue: 0,0:00:33.28,0:00:37.87,Kuya,,0,0,0,,{\fad(60,60)}Dahil ang gusto ni Kuya SoLight…\Nnaka-solar ka na, {\c&H000BAEF5&}SoSmart{\c&H00FFFFFF&} ka pa!
+Dialogue: 0,0:00:38.22,0:00:40.40,Kuya,,0,0,0,,{\fad(60,60)}Life is SoLight with Solar.

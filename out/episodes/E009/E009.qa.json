@@ -1,0 +1,156 @@
+{
+ "episode": "E009",
+ "generatedAt": "2026-11-23T21:36:17.750Z",
+ "file": "out/episodes/E009/E009.mp4",
+ "character": "KSL-A1",
+ "verdict": "BLOCKED",
+ "blockingFailures": 1,
+ "checks": [
+  {
+   "id": "SUB-TRANSCRIPT-MATCH",
+   "status": "pass",
+   "detail": "All 83 words of the approved narration appear in the subtitle transcript in order."
+  },
+  {
+   "id": "SUB-NUMBERS-MATCH",
+   "status": "pass",
+   "detail": "Numbers match: 6kwp|6kw"
+  },
+  {
+   "id": "BRAND-LINE-EXACT",
+   "status": "pass",
+   "detail": "Exact brand line present: \"Hello, SoSmart viewers! Kuya SoLight 'to!\""
+  },
+  {
+   "id": "BRAND-LINE-EXACT",
+   "status": "pass",
+   "detail": "Exact brand line present: \"Dahil ang gusto ni Kuya SoLight… naka-solar ka na, SoSmart ka pa!\""
+  },
+  {
+   "id": "BRAND-LINE-EXACT",
+   "status": "pass",
+   "detail": "Exact brand line present: \"Life is SoLight with Solar.\""
+  },
+  {
+   "id": "SUB-LINE-LAYOUT",
+   "status": "pass",
+   "detail": "All cues fit ≤2 lines (≈≤30 chars/line)."
+  },
+  {
+   "id": "SUB-READING-SPEED",
+   "status": "pass",
+   "detail": "All cues ≤22 characters/second."
+  },
+  {
+   "id": "SUB-TIMING",
+   "status": "pass",
+   "detail": "Cues are sequential, timed from synthesized audio sample positions."
+  },
+  {
+   "id": "MP4-RESOLUTION",
+   "status": "pass",
+   "detail": "1080x1920 (9:16)"
+  },
+  {
+   "id": "MP4-FPS",
+   "status": "pass",
+   "detail": "30 fps"
+  },
+  {
+   "id": "MP4-CODECS",
+   "status": "pass",
+   "detail": "H.264 video + AAC audio"
+  },
+  {
+   "id": "MP4-DURATION",
+   "status": "pass",
+   "detail": "42.40 s"
+  },
+  {
+   "id": "AUDIO-PRESENT",
+   "status": "pass",
+   "detail": "Mean -24.9 dBFS"
+  },
+  {
+   "id": "AUDIO-CLIPPING",
+   "status": "pass",
+   "detail": "Peak -3.5 dBFS (limiter ceiling −1 dBFS)"
+  },
+  {
+   "id": "LOGO-OFFICIAL",
+   "status": "pass",
+   "detail": "Master logo file placed."
+  },
+  {
+   "id": "CHARACTER-APPROVED",
+   "status": "pass",
+   "detail": "Kuya SoLight v1.0 (KSL-A1), approved by CHRIS (Owner) 2026-11-24T03:22:45+08:00."
+  },
+  {
+   "id": "CLAIM-CL-E009-01",
+   "status": "pass",
+   "detail": "verified: kWp is the panels' DC rating at standard test conditions."
+  },
+  {
+   "id": "SIGNOFF-CL-E009-01",
+   "status": "warn",
+   "detail": "Online fact check (owner waived the human reviewer): Module ratings are DC power at STC."
+  },
+  {
+   "id": "CLAIM-CL-E009-02",
+   "status": "pass",
+   "detail": "verified: An inverter's kW rating is its AC output capacity."
+  },
+  {
+   "id": "SIGNOFF-CL-E009-02",
+   "status": "warn",
+   "detail": "Online fact check (owner waived the human reviewer): NREL: ILR = rated DC / rated AC; inverter rating is AC."
+  },
+  {
+   "id": "CLAIM-CL-E009-03",
+   "status": "pass",
+   "detail": "verified: The array can be larger than the inverter; this is the DC-to-AC ratio."
+  },
+  {
+   "id": "SIGNOFF-CL-E009-03",
+   "status": "warn",
+   "detail": "Online fact check (owner waived the human reviewer): NREL: ILR = rated DC power / rated AC power; designs increasingly use ratios above 1."
+  },
+  {
+   "id": "CLAIM-CL-E009-04",
+   "status": "pass",
+   "detail": "verified: When DC power exceeds the inverter's limit at peak, the excess is clipped; normal if designed correctly."
+  },
+  {
+   "id": "SIGNOFF-CL-E009-04",
+   "status": "warn",
+   "detail": "Online fact check (owner waived the human reviewer): NREL: clipping appears as a flat line at the inverter's AC capacity; small losses at typical ratios."
+  },
+  {
+   "id": "SOURCE-FRESHNESS",
+   "status": "warn",
+   "detail": "Sources retrieved 2026-11-24; policy requires re-verification immediately before publication."
+  },
+  {
+   "id": "VOICE-APPROVED",
+   "status": "pass",
+   "detail": "ElevenLabs eleven_multilingual_v2 · Juan - Clear, Muffled, and Friendly, approved by CHRIS (Owner) 2026-11-24T04:19:23+08:00."
+  },
+  {
+   "id": "OWNER-APPROVAL",
+   "status": "fail",
+   "blocking": true,
+   "detail": "Owner approval not yet given."
+  },
+  {
+   "id": "CONFIDENTIAL-DATA",
+   "status": "pass",
+   "detail": "No prices, customer data, subcontract costs or quotations in script or frames."
+  },
+  {
+   "id": "SAFE-AREA",
+   "status": "pass",
+   "detail": "Captions bottom-aligned at y=1400 with 140px right margin; logo slot and text within safe area (layout constants)."
+  }
+ ]
+}

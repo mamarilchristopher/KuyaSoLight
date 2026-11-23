@@ -1,0 +1,309 @@
+{
+ "id": "E010",
+ "title": "Bakit Hindi Laging Full Power ang Panels?",
+ "pillar": "E",
+ "template": "T02-explainer",
+ "audience": "New solar owners checking their app",
+ "premise": "Panel ratings come from standard test conditions (1000 W/m², 25°C cell). On real roofs panels run hotter, and heat lowers output; shade, dust and sun angle also reduce it, so actual output is normally below the rating.",
+ "openingPattern": "A-question-first",
+ "greetingId": "greet-default",
+ "catchphraseId": "close-signature",
+ "scriptBasis": "Claude draft from the 104-episode backlog title/angle, V1.1 brand lines; claims checked online 2026-11-24.",
+ "scriptVersion": 1,
+ "voice": "production",
+ "cover": [
+  "Bakit Hindi",
+  "Laging Full Power?"
+ ],
+ "scenes": {
+  "hook": {
+   "type": "hook",
+   "icon": "panel",
+   "chip": "Rated watts… pero bakit kulang?"
+  },
+  "stc": {
+   "type": "equation",
+   "lines": [
+    {
+     "text": "STC (lab test)"
+    },
+    {
+     "text": "1000 W/m²",
+     "color": "gold"
+    },
+    {
+     "text": "25°C cell temperature",
+     "size": 60
+    }
+   ]
+  },
+  "hot": {
+   "type": "sky",
+   "sky": "sunny",
+   "level": 0.75,
+   "chip": "Mainit = bawas output"
+  },
+  "factors": {
+   "type": "checklist",
+   "title": "Nakakabawas",
+   "items": [
+    "Init ng panels",
+    "Anino o lilim",
+    "Dumi at alikabok",
+    "Anggulo ng araw"
+   ],
+   "mark": "cross"
+  },
+  "normal": {
+   "type": "cards",
+   "cards": [
+    {
+     "title": "Rating",
+     "lines": [
+      "Sa lab, ideal"
+     ],
+     "tone": "white",
+     "icon": "panel"
+    },
+    {
+     "title": "Aktwal",
+     "lines": [
+      "Sa bubong, normal na mas mababa"
+     ],
+     "tone": "gold",
+     "icon": "sun"
+    }
+   ]
+  },
+  "close": {
+   "type": "close"
+  },
+  "endcard": {
+   "type": "endcard",
+   "sources": [
+    "Sources: NREL STC & PVWatts loss model; Penn State AE 868",
+    "datasheet guide (checked 24 Nov 2026)"
+   ]
+  }
+ },
+ "cues": [
+  {
+   "id": "c01",
+   "scene": "hook",
+   "text": "Bakit hindi umaabot sa rated watts ang panels mo?",
+   "gold": [
+    "rated"
+   ],
+   "pauseAfter": 0.35
+  },
+  {
+   "id": "c02",
+   "scene": "identity",
+   "text": "Hello, SoSmart viewers! Kuya SoLight 'to!",
+   "gold": [
+    "SoSmart",
+    "SoLight"
+   ],
+   "pauseAfter": 0.35,
+   "elSpeed": 1.15,
+   "standalone": true
+  },
+  {
+   "id": "c03",
+   "scene": "stc",
+   "text": "Ang rating ay galing sa lab test: standard test conditions.",
+   "gold": [
+    "standard"
+   ],
+   "pauseAfter": 0.1
+  },
+  {
+   "id": "c04",
+   "scene": "stc",
+   "text": "1000 W/m² na liwanag at 25°C na cell temperature.",
+   "gold": [
+    "1000",
+    "25°C"
+   ],
+   "pauseAfter": 0.3,
+   "say": "One thousand watts per square meter na liwanag, at twenty-five degrees na cell temperature."
+  },
+  {
+   "id": "c05",
+   "scene": "hot",
+   "text": "Sa totoong bubong, mas mainit ang panels,",
+   "gold": [
+    "mainit"
+   ],
+   "pauseAfter": 0.05
+  },
+  {
+   "id": "c06",
+   "scene": "hot",
+   "text": "at kapag mas mainit, bumababa ang output.",
+   "gold": [
+    "bumababa"
+   ],
+   "pauseAfter": 0.3
+  },
+  {
+   "id": "c07",
+   "scene": "factors",
+   "text": "May epekto rin ang anino, alikabok, at anggulo ng araw.",
+   "gold": [
+    "anino",
+    "alikabok"
+   ],
+   "pauseAfter": 0.3
+  },
+  {
+   "id": "c08",
+   "scene": "normal",
+   "text": "Kaya normal na mas mababa ang aktwal kaysa rating.",
+   "gold": [
+    "normal"
+   ],
+   "pauseAfter": 0.4
+  },
+  {
+   "id": "cz1",
+   "scene": "close",
+   "text": "Dahil ang gusto ni Kuya SoLight… naka-solar ka na, SoSmart ka pa!",
+   "gold": [
+    "SoSmart"
+   ],
+   "pauseAfter": 0.35
+  },
+  {
+   "id": "cz2",
+   "scene": "endcard",
+   "text": "Life is SoLight with Solar.",
+   "pauseAfter": 0.2
+  }
+ ],
+ "claims": [
+  {
+   "id": "CL-E010-01",
+   "category": "technical",
+   "wording": "Panel ratings come from standard test conditions: 1000 W/m² irradiance and 25°C cell temperature.",
+   "scope": "PV module datasheets.",
+   "caveats": "STC also specifies AM1.5 spectrum (not named on screen).",
+   "sources": [
+    "SRC-NREL-STC"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-24T05:00:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "NREL / Penn State: STC = 1000 W/m², 25°C cell, AM1.5."
+   }
+  },
+  {
+   "id": "CL-E010-02",
+   "category": "technical",
+   "wording": "Panels on real roofs run hotter than 25°C, and higher temperature lowers output.",
+   "scope": "Crystalline-silicon modules.",
+   "caveats": "No percentage named; depends on temperature coefficient.",
+   "sources": [
+    "SRC-NREL-STC"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-24T05:00:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "Negative temperature coefficient of power (typ. −0.3 to −0.4 %/°C); rooftop cells usually exceed 25°C in sun."
+   }
+  },
+  {
+   "id": "CL-E010-03",
+   "category": "technical",
+   "wording": "Shade, dust and sun angle also reduce output.",
+   "scope": "Rooftop PV.",
+   "caveats": "",
+   "sources": [
+    "SRC-NREL-PVW"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-24T05:00:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "PVWatts loss model includes soiling and shading; irradiance on panel depends on sun angle."
+   }
+  },
+  {
+   "id": "CL-E010-04",
+   "category": "technical",
+   "wording": "Actual output is normally below the nameplate rating.",
+   "scope": "Typical operation.",
+   "caveats": "Brief exceedance possible in cool, very bright conditions.",
+   "sources": [
+    "SRC-NREL-STC",
+    "SRC-NREL-PVW"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-24T05:00:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "Follows from claims 1 to 3."
+   }
+  }
+ ],
+ "sources": [
+  {
+   "id": "SRC-NREL-PVW",
+   "tier": 1,
+   "publisher": "National Renewable Energy Laboratory",
+   "title": "PVWatts Calculator (system losses: soiling, shading, temperature, etc.)",
+   "url": "https://pvwatts.nrel.gov/",
+   "jurisdiction": "General technical reference",
+   "excerpts": [
+    "Default system losses include soiling, shading, wiring, mismatch and others; temperature effects are modelled separately."
+   ],
+   "published": null,
+   "retrieved": "2026-11-24",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-NREL-STC",
+   "tier": 1,
+   "publisher": "National Renewable Energy Laboratory / Penn State AE 868",
+   "title": "PV module ratings at Standard Test Conditions; Interpreting PV manufacturer datasheets",
+   "url": "https://courses.ems.psu.edu/ae868/book/export/html/879",
+   "jurisdiction": "General technical reference",
+   "excerpts": [
+    "STC: 1000 W/m² irradiance, 25°C cell temperature, AM1.5 spectrum.",
+    "Temperature coefficient of power is negative: output falls as cell temperature rises above 25°C."
+   ],
+   "published": null,
+   "retrieved": "2026-11-24",
+   "freshness": "re-verify before publication"
+  }
+ ],
+ "caption": {
+  "main": "Bakit hindi laging full power ang panels? Ang rating ay galing sa lab (STC: 1000 W/m², 25°C cell). Sa bubong, mas mainit ang panels, at may anino, alikabok at anggulo ng araw. Kaya normal na mas mababa ang aktwal. 🌡️☀️\n\nSoSmart viewers, ano'ng peak output na nakita n'yo sa app? 👇",
+  "short": "Rated watts = lab result. Normal na mas mababa sa bubong. 🌡️",
+  "thumbnailHeadline": "Bakit Hindi Full Power?",
+  "pinnedComment": "Sources: NREL STC & PVWatts loss model; Penn State AE 868 datasheet guide (checked 24 Nov 2026).",
+  "discussionQuestion": "Ano'ng peak output na nakita n'yo sa app?",
+  "hashtags": [
+   "#KuyaSoLight",
+   "#SoSmartViewers",
+   "#SolarPH",
+   "#SolarKlaro",
+   "#SoLightSolarPH"
+  ],
+  "cta": "I-share sa bagong may solar!"
+ }
+}

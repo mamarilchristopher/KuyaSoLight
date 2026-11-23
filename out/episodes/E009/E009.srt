@@ -1,0 +1,48 @@
+1
+00:00:00,250 --> 00:00:05,730
+6 kWp na solar, 6 kW na
+inverter. Pareho ba 'yan?
+
+2
+00:00:06,080 --> 00:00:08,950
+Hello, SoSmart viewers!
+Kuya SoLight 'to!
+
+3
+00:00:09,300 --> 00:00:14,630
+Hindi. Ang kWp ay DC rating
+ng panels sa test conditions.
+
+4
+00:00:14,730 --> 00:00:20,350
+Ang kW ng inverter ay AC
+output na kaya nitong ilabas.
+
+5
+00:00:20,650 --> 00:00:23,240
+Puwedeng mas malaki ang
+panels kaysa inverter.
+
+6
+00:00:23,290 --> 00:00:25,840
+Tinatawag itong
+DC-to-AC ratio.
+
+7
+00:00:26,140 --> 00:00:29,490
+Kapag sobra ang DC sa
+tanghali, may clipping.
+
+8
+00:00:29,790 --> 00:00:32,880
+Normal 'yan, basta tama
+ang design at kalkula.
+
+9
+00:00:33,280 --> 00:00:37,870
+Dahil ang gusto ni Kuya SoLight…
+naka-solar ka na, SoSmart ka pa!
+
+10
+00:00:38,220 --> 00:00:40,400
+Life is SoLight with Solar.

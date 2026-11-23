@@ -1,0 +1,24 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Kuya,Inter ExtraBold,52,&H00FFFFFF&,&H00FFFFFF&,&H262E1A0B&,&H262E1A0B&,0,0,0,0,100,100,0,0,3,16,0,2,80,150,520
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.25,0:00:03.74,Kuya,,0,0,0,,{\fad(60,60)}kW at {\c&H000BAEF5&}kWh…{\c&H00FFFFFF&} pareho\Nlang ba 'yan?
+Dialogue: 0,0:00:04.09,0:00:06.96,Kuya,,0,0,0,,{\fad(60,60)}Hello, {\c&H000BAEF5&}SoSmart{\c&H00FFFFFF&} viewers!\NKuya {\c&H000BAEF5&}SoLight{\c&H00FFFFFF&} 'to!
+Dialogue: 0,0:00:07.31,0:00:12.06,Kuya,,0,0,0,,{\fad(60,60)}Ang kW ay {\c&H000BAEF5&}power:{\c&H00FFFFFF&} gaano\Nkabilis gumamit ng kuryente.
+Dialogue: 0,0:00:12.31,0:00:17.38,Kuya,,0,0,0,,{\fad(60,60)}Ang kWh ay {\c&H000BAEF5&}energy:{\c&H00FFFFFF&} gaano\Nkarami ang nagamit.
+Dialogue: 0,0:00:17.68,0:00:21.41,Kuya,,0,0,0,,{\fad(60,60)}Halimbawa, isang\N{\c&H000BAEF5&}100-watt{\c&H00FFFFFF&} na TV.
+Dialogue: 0,0:00:21.51,0:00:23.43,Kuya,,0,0,0,,{\fad(60,60)}Kapag binuksan\Nmo nang {\c&H000BAEF5&}10{\c&H00FFFFFF&} oras,
+Dialogue: 0,0:00:23.48,0:00:25.67,Kuya,,0,0,0,,{\fad(60,60)}1 {\c&H000BAEF5&}kWh{\c&H00FFFFFF&} ang nagamit nito.
+Dialogue: 0,0:00:25.97,0:00:31.18,Kuya,,0,0,0,,{\fad(60,60)}Sa Meralco bill, {\c&H000BAEF5&}kWh{\c&H00FFFFFF&} ang\Nbasehan ng energy charges.
+Dialogue: 0,0:00:31.48,0:00:37.21,Kuya,,0,0,0,,{\fad(60,60)}Kaya bago mag-solar,\Nkilalanin pareho: {\c&H000BAEF5&}kW{\c&H00FFFFFF&} at {\c&H000BAEF5&}kWh.{\c&H00FFFFFF&}
+Dialogue: 0,0:00:37.61,0:00:43.10,Kuya,,0,0,0,,{\fad(60,60)}Dahil ang gusto ni Kuya SoLight…\Nnaka-solar ka na, {\c&H000BAEF5&}SoSmart{\c&H00FFFFFF&} ka pa!
+Dialogue: 0,0:00:43.45,0:00:45.63,Kuya,,0,0,0,,{\fad(60,60)}Life is SoLight with Solar.

@@ -13,6 +13,7 @@
     "seed": "NODE_NO_WARNINGS=1 tsx server/seed.ts",
     "characters": "NODE_NO_WARNINGS=1 tsx pipeline/characters/sheets.ts",
     "render:e002": "NODE_NO_WARNINGS=1 tsx pipeline/render/cli.ts E002",
+    "render:ep": "NODE_NO_WARNINGS=1 tsx pipeline/render/cli.ts",
     "render:identity": "NODE_NO_WARNINGS=1 tsx pipeline/render/cli.ts IDENTITY",
     "sonic": "python3 pipeline/audio/sonic.py",
     "test": "NODE_NO_WARNINGS=1 tsx --test tests/*.test.ts",

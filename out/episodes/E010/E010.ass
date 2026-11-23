@@ -1,0 +1,23 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Kuya,Inter ExtraBold,52,&H00FFFFFF&,&H00FFFFFF&,&H262E1A0B&,&H262E1A0B&,0,0,0,0,100,100,0,0,3,16,0,2,80,150,520
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.25,0:00:02.74,Kuya,,0,0,0,,{\fad(60,60)}Bakit hindi umaabot sa\N{\c&H000BAEF5&}rated{\c&H00FFFFFF&} watts ang panels mo?
+Dialogue: 0,0:00:03.09,0:00:05.96,Kuya,,0,0,0,,{\fad(60,60)}Hello, {\c&H000BAEF5&}SoSmart{\c&H00FFFFFF&} viewers!\NKuya {\c&H000BAEF5&}SoLight{\c&H00FFFFFF&} 'to!
+Dialogue: 0,0:00:06.31,0:00:10.93,Kuya,,0,0,0,,{\fad(60,60)}Ang rating ay galing sa lab\Ntest: {\c&H000BAEF5&}standard{\c&H00FFFFFF&} test conditions.
+Dialogue: 0,0:00:11.03,0:00:17.36,Kuya,,0,0,0,,{\fad(60,60)}{\c&H000BAEF5&}1000{\c&H00FFFFFF&} W/m² na liwanag at\N25°C na cell temperature.
+Dialogue: 0,0:00:17.66,0:00:20.84,Kuya,,0,0,0,,{\fad(60,60)}Sa totoong bubong,\Nmas {\c&H000BAEF5&}mainit{\c&H00FFFFFF&} ang panels,
+Dialogue: 0,0:00:20.89,0:00:24.28,Kuya,,0,0,0,,{\fad(60,60)}at kapag mas mainit,\N{\c&H000BAEF5&}bumababa{\c&H00FFFFFF&} ang output.
+Dialogue: 0,0:00:24.58,0:00:28.61,Kuya,,0,0,0,,{\fad(60,60)}May epekto rin ang {\c&H000BAEF5&}anino,{\c&H00FFFFFF&}\N{\c&H000BAEF5&}alikabok,{\c&H00FFFFFF&} at anggulo ng araw.
+Dialogue: 0,0:00:28.91,0:00:32.46,Kuya,,0,0,0,,{\fad(60,60)}Kaya {\c&H000BAEF5&}normal{\c&H00FFFFFF&} na mas mababa\Nang aktwal kaysa rating.
+Dialogue: 0,0:00:32.86,0:00:38.85,Kuya,,0,0,0,,{\fad(60,60)}Dahil ang gusto ni Kuya SoLight…\Nnaka-solar ka na, {\c&H000BAEF5&}SoSmart{\c&H00FFFFFF&} ka pa!
+Dialogue: 0,0:00:39.20,0:00:41.38,Kuya,,0,0,0,,{\fad(60,60)}Life is SoLight with Solar.

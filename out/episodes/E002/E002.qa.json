@@ -1,6 +1,6 @@
 {
  "episode": "E002",
- "generatedAt": "2026-11-23T20:38:23.573Z",
+ "generatedAt": "2026-11-23T20:44:05.330Z",
  "file": "out/episodes/E002/E002.mp4",
  "character": "KSL-A1",
  "verdict": "BLOCKED",
@@ -64,17 +64,17 @@
   {
    "id": "MP4-DURATION",
    "status": "pass",
-   "detail": "36.03 s"
+   "detail": "35.00 s"
   },
   {
    "id": "AUDIO-PRESENT",
    "status": "pass",
-   "detail": "Mean -23.9 dBFS"
+   "detail": "Mean -24.2 dBFS"
   },
   {
    "id": "AUDIO-CLIPPING",
    "status": "pass",
-   "detail": "Peak -1.5 dBFS (limiter ceiling −1 dBFS)"
+   "detail": "Peak -2.9 dBFS (limiter ceiling −1 dBFS)"
   },
   {
    "id": "LOGO-OFFICIAL",

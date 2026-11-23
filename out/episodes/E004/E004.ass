@@ -1,0 +1,23 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Kuya,Inter ExtraBold,52,&H00FFFFFF&,&H00FFFFFF&,&H262E1A0B&,&H262E1A0B&,0,0,0,0,100,100,0,0,3,16,0,2,80,150,520
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.25,0:00:05.00,Kuya,,0,0,0,,{\fad(60,60)}Grid-tied, {\c&H000BAEF5&}hybrid,{\c&H00FFFFFF&} o\Noff-grid: alin ang para sa'yo?
+Dialogue: 0,0:00:05.35,0:00:08.22,Kuya,,0,0,0,,{\fad(60,60)}Hello, {\c&H000BAEF5&}SoSmart{\c&H00FFFFFF&} viewers!\NKuya {\c&H000BAEF5&}SoLight{\c&H00FFFFFF&} 'to!
+Dialogue: 0,0:00:08.57,0:00:13.34,Kuya,,0,0,0,,{\fad(60,60)}{\c&H000BAEF5&}Grid-tied:{\c&H00FFFFFF&} solar at grid ang\Nmagkatuwang, walang battery.
+Dialogue: 0,0:00:13.64,0:00:17.61,Kuya,,0,0,0,,{\fad(60,60)}Kapag {\c&H000BAEF5&}brownout,{\c&H00FFFFFF&} kusa itong\Nnamamatay para sa {\c&H000BAEF5&}safety.{\c&H00FFFFFF&}
+Dialogue: 0,0:00:17.91,0:00:22.22,Kuya,,0,0,0,,{\fad(60,60)}{\c&H000BAEF5&}Hybrid:{\c&H00FFFFFF&} may battery, pero\Ndepende sa setup ang {\c&H000BAEF5&}backup.{\c&H00FFFFFF&}
+Dialogue: 0,0:00:22.52,0:00:27.25,Kuya,,0,0,0,,{\fad(60,60)}{\c&H000BAEF5&}Off-grid:{\c&H00FFFFFF&} walang grid,\N{\c&H000BAEF5&}battery{\c&H00FFFFFF&} ang sandalan sa gabi.
+Dialogue: 0,0:00:27.55,0:00:31.22,Kuya,,0,0,0,,{\fad(60,60)}Kaya hindi pare-pareho\Nang {\c&H000BAEF5&}backup{\c&H00FFFFFF&} ng tatlo.
+Dialogue: 0,0:00:31.52,0:00:35.67,Kuya,,0,0,0,,{\fad(60,60)}Itanong muna: anong {\c&H000BAEF5&}loads{\c&H00FFFFFF&}\Nang kailangan sa brownout?
+Dialogue: 0,0:00:36.07,0:00:41.56,Kuya,,0,0,0,,{\fad(60,60)}Dahil ang gusto ni Kuya SoLight…\Nnaka-solar ka na, {\c&H000BAEF5&}SoSmart{\c&H00FFFFFF&} ka pa!
+Dialogue: 0,0:00:41.91,0:00:44.03,Kuya,,0,0,0,,{\fad(60,60)}Life is SoLight with Solar.

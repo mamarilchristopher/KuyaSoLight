@@ -9,7 +9,7 @@ import type { TimedCue } from '../subtitles.ts';
 
 type SceneFn = (c: Ctx) => string;
 
-const SCENES: Record<string, SceneFn> = {
+export const SCENES: Record<string, SceneFn> = {
   hook: (c) => {
     let g = bg('cream') + logoSlot(false) + prototypeMark(false);
     g += sun(860, 360, 58, c.t) + house(150, 840, 470, { lit: 1, panelsGlow: 1 });

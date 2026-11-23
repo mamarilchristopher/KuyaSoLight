@@ -1,0 +1,313 @@
+{
+ "id": "E001",
+ "title": "Ano Ba Talaga ang Solar?",
+ "pillar": "A",
+ "template": "T05-energy-flow",
+ "audience": "First-time homeowners curious about rooftop solar",
+ "premise": "Sunlight becomes DC electricity in the panels; the inverter turns it into the AC the home uses; when solar is short, the grid or a battery supplies the rest.",
+ "openingPattern": "A-question-first",
+ "greetingId": "greet-default",
+ "catchphraseId": "close-signature",
+ "scriptBasis": "Claude draft from the 104-episode backlog title/angle, V1.1 brand lines; claims checked online 2026-11-24.",
+ "scriptVersion": 1,
+ "voice": "production",
+ "cover": [
+  "Ano Ba Talaga",
+  "ang Solar?"
+ ],
+ "scenes": {
+  "hook": {
+   "type": "hook",
+   "icon": "panel",
+   "chip": "Paano ba gumagana?"
+  },
+  "chain": {
+   "type": "path",
+   "steps": [
+    {
+     "icon": "sun",
+     "label": "Liwanag"
+    },
+    {
+     "icon": "panel",
+     "label": "DC"
+    },
+    {
+     "icon": "inverter",
+     "label": "DC → AC"
+    },
+    {
+     "icon": "house",
+     "label": "Gamit sa bahay"
+    }
+   ]
+  },
+  "night": {
+   "type": "sky",
+   "sky": "night",
+   "level": 0,
+   "battery": "discharge",
+   "chip": "Grid o battery",
+   "barLabel": "solar"
+  },
+  "recap": {
+   "type": "checklist",
+   "title": "Ang solar system",
+   "items": [
+    "Panels: liwanag → DC",
+    "Inverter: DC → AC",
+    "Grid o battery: pang-backup"
+   ]
+  },
+  "close": {
+   "type": "close"
+  },
+  "endcard": {
+   "type": "endcard",
+   "sources": [
+    "Sources: U.S. DOE & EIA solar basics; Meralco Solar & Net Metering",
+    "(checked 24 Nov 2026)"
+   ]
+  }
+ },
+ "cues": [
+  {
+   "id": "c01",
+   "scene": "hook",
+   "text": "Ano ba talaga ang ginagawa ng solar panels mo?",
+   "gold": [
+    "solar"
+   ],
+   "pauseAfter": 0.35
+  },
+  {
+   "id": "c02",
+   "scene": "identity",
+   "text": "Hello, SoSmart viewers! Kuya SoLight 'to!",
+   "gold": [
+    "SoSmart",
+    "SoLight"
+   ],
+   "pauseAfter": 0.35,
+   "elSpeed": 1.15,
+   "standalone": true
+  },
+  {
+   "id": "c03",
+   "scene": "chain",
+   "text": "Simple lang: liwanag ng araw ang tumatama sa panels.",
+   "gold": [
+    "araw"
+   ],
+   "pauseAfter": 0.1
+  },
+  {
+   "id": "c04",
+   "scene": "chain",
+   "text": "Ginagawa itong DC na kuryente ng solar cells.",
+   "gold": [
+    "DC"
+   ],
+   "pauseAfter": 0.25,
+   "say": "Ginagawa itong D-C na kuryente ng solar cells."
+  },
+  {
+   "id": "c05",
+   "scene": "chain",
+   "text": "Pero AC ang gamit ng appliances sa bahay.",
+   "gold": [
+    "AC"
+   ],
+   "pauseAfter": 0.1,
+   "say": "Pero A-C ang gamit ng appliances sa bahay."
+  },
+  {
+   "id": "c06",
+   "scene": "chain",
+   "text": "Kaya may inverter: ginagawa nitong AC ang DC.",
+   "gold": [
+    "inverter"
+   ],
+   "pauseAfter": 0.25,
+   "say": "Kaya may inverter: ginagawa nitong A-C ang D-C."
+  },
+  {
+   "id": "c07",
+   "scene": "chain",
+   "text": "Habang may araw, solar ang tumutulong sa bahay mo.",
+   "gold": [
+    "solar"
+   ],
+   "pauseAfter": 0.3
+  },
+  {
+   "id": "c08",
+   "scene": "night",
+   "text": "Kapag kulang o gabi na, grid o battery ang sasalo.",
+   "gold": [
+    "grid",
+    "battery"
+   ],
+   "pauseAfter": 0.3
+  },
+  {
+   "id": "c09",
+   "scene": "recap",
+   "text": "Panels, inverter, at tamang setup. 'Yan ang solar!",
+   "gold": [
+    "inverter"
+   ],
+   "pauseAfter": 0.4
+  },
+  {
+   "id": "cz1",
+   "scene": "close",
+   "text": "Dahil ang gusto ni Kuya SoLight… naka-solar ka na, SoSmart ka pa!",
+   "gold": [
+    "SoSmart"
+   ],
+   "pauseAfter": 0.35
+  },
+  {
+   "id": "cz2",
+   "scene": "endcard",
+   "text": "Life is SoLight with Solar.",
+   "pauseAfter": 0.2
+  }
+ ],
+ "claims": [
+  {
+   "id": "CL-E001-01",
+   "category": "technical",
+   "wording": "Solar panels convert sunlight into DC electricity.",
+   "scope": "Photovoltaic modules.",
+   "caveats": "Output depends on sunlight.",
+   "sources": [
+    "SRC-EIA-PV"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-24T05:00:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "EIA: PV cells convert sunlight directly into electricity (direct current)."
+   }
+  },
+  {
+   "id": "CL-E001-02",
+   "category": "technical",
+   "wording": "Home appliances use AC; the inverter converts the panels' DC into AC.",
+   "scope": "Grid-connected homes.",
+   "caveats": "Some DC appliances exist; typical homes use AC.",
+   "sources": [
+    "SRC-DOE-INV"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-24T05:00:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "DOE: inverters change variable DC output of PV into AC for the grid and household use."
+   }
+  },
+  {
+   "id": "CL-E001-03",
+   "category": "technical",
+   "wording": "When solar is not enough or at night, a grid-connected home uses the grid or a battery.",
+   "scope": "Grid-connected systems, with or without battery.",
+   "caveats": "Battery supply depends on capacity and configuration.",
+   "sources": [
+    "SRC-MER-NM",
+    "SRC-MER-DER"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-24T05:00:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "Meralco: grid supplies the property when renewable generation is not enough; at night the grid provides electricity."
+   }
+  }
+ ],
+ "sources": [
+  {
+   "id": "SRC-DOE-INV",
+   "tier": 1,
+   "publisher": "U.S. Department of Energy",
+   "title": "Solar Integration: Inverters and Grid Services Basics",
+   "url": "https://www.energy.gov/eere/solar/solar-integration-inverters-and-grid-services-basics",
+   "jurisdiction": "General technical reference",
+   "excerpts": [
+    "Inverters change the variable direct current (DC) output of PV into alternating current (AC) for the grid and household use."
+   ],
+   "published": null,
+   "retrieved": "2026-11-24",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-EIA-PV",
+   "tier": 1,
+   "publisher": "U.S. Energy Information Administration",
+   "title": "Photovoltaics and electricity",
+   "url": "https://www.eia.gov/energyexplained/solar/photovoltaics-and-electricity.php",
+   "jurisdiction": "General technical reference",
+   "excerpts": [
+    "PV cells convert sunlight directly into electricity (DC); output depends on available sunlight."
+   ],
+   "published": null,
+   "retrieved": "2026-11-24",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-MER-DER",
+   "tier": 1,
+   "publisher": "Manila Electric Company (Meralco)",
+   "title": "Distributed Energy Resources",
+   "url": "https://www.meralco.com.ph/residential/energy-solutions/solar-and-renewables/distributed-energy-resources",
+   "jurisdiction": "Philippines, Meralco franchise area",
+   "excerpts": [
+    "At times when there is no sunlight, or at night, the grid will provide electricity."
+   ],
+   "published": null,
+   "retrieved": "2026-11-24",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-MER-NM",
+   "tier": 1,
+   "publisher": "Manila Electric Company (Meralco)",
+   "title": "Solar and Net Metering",
+   "url": "https://www.meralco.com.ph/residential/energy-solutions/solar-and-renewables/solar-net-metering",
+   "jurisdiction": "Philippines, Meralco franchise area",
+   "excerpts": [
+    "Your system supplies the property first while it is generating.",
+    "The Meralco grid supplies the property when renewable generation is not enough.",
+    "Exported energy is credited under net metering."
+   ],
+   "published": null,
+   "retrieved": "2026-11-24",
+   "freshness": "re-verify before publication"
+  }
+ ],
+ "caption": {
+  "main": "Ano ba talaga ang solar? Liwanag → panels (DC) → inverter (AC) → bahay mo. Kapag kulang o gabi na, grid o battery ang sasalo. ☀️\n\nSoSmart viewers, may tanong kayo sa solar? I-comment lang! 👇",
+  "short": "Solar in 30 seconds: liwanag → DC → AC → bahay. ☀️",
+  "thumbnailHeadline": "Ano Ba Talaga ang Solar?",
+  "pinnedComment": "Sources: U.S. DOE inverter basics, EIA photovoltaics, Meralco Solar & Net Metering (checked 24 Nov 2026).",
+  "discussionQuestion": "Ano ang una mong tanong noong nag-isip kang mag-solar?",
+  "hashtags": [
+   "#KuyaSoLight",
+   "#SoSmartViewers",
+   "#SolarPH",
+   "#SolarKlaro",
+   "#SoLightSolarPH"
+  ],
+  "cta": "Ikaw, ano ang solar question mo?"
+ }
+}

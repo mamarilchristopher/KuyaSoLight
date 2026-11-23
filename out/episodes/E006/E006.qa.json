@@ -1,0 +1,146 @@
+{
+ "episode": "E006",
+ "generatedAt": "2026-11-23T21:29:30.329Z",
+ "file": "out/episodes/E006/E006.mp4",
+ "character": "KSL-A1",
+ "verdict": "BLOCKED",
+ "blockingFailures": 1,
+ "checks": [
+  {
+   "id": "SUB-TRANSCRIPT-MATCH",
+   "status": "pass",
+   "detail": "All 86 words of the approved narration appear in the subtitle transcript in order."
+  },
+  {
+   "id": "SUB-NUMBERS-MATCH",
+   "status": "pass",
+   "detail": "No numerical values in narration."
+  },
+  {
+   "id": "BRAND-LINE-EXACT",
+   "status": "pass",
+   "detail": "Exact brand line present: \"Hello, SoSmart viewers! Kuya SoLight 'to!\""
+  },
+  {
+   "id": "BRAND-LINE-EXACT",
+   "status": "pass",
+   "detail": "Exact brand line present: \"Dahil ang gusto ni Kuya SoLight… naka-solar ka na, SoSmart ka pa!\""
+  },
+  {
+   "id": "BRAND-LINE-EXACT",
+   "status": "pass",
+   "detail": "Exact brand line present: \"Life is SoLight with Solar.\""
+  },
+  {
+   "id": "SUB-LINE-LAYOUT",
+   "status": "pass",
+   "detail": "All cues fit ≤2 lines (≈≤30 chars/line)."
+  },
+  {
+   "id": "SUB-READING-SPEED",
+   "status": "pass",
+   "detail": "All cues ≤22 characters/second."
+  },
+  {
+   "id": "SUB-TIMING",
+   "status": "pass",
+   "detail": "Cues are sequential, timed from synthesized audio sample positions."
+  },
+  {
+   "id": "MP4-RESOLUTION",
+   "status": "pass",
+   "detail": "1080x1920 (9:16)"
+  },
+  {
+   "id": "MP4-FPS",
+   "status": "pass",
+   "detail": "30 fps"
+  },
+  {
+   "id": "MP4-CODECS",
+   "status": "pass",
+   "detail": "H.264 video + AAC audio"
+  },
+  {
+   "id": "MP4-DURATION",
+   "status": "pass",
+   "detail": "41.03 s"
+  },
+  {
+   "id": "AUDIO-PRESENT",
+   "status": "pass",
+   "detail": "Mean -24.8 dBFS"
+  },
+  {
+   "id": "AUDIO-CLIPPING",
+   "status": "pass",
+   "detail": "Peak -3.3 dBFS (limiter ceiling −1 dBFS)"
+  },
+  {
+   "id": "LOGO-OFFICIAL",
+   "status": "pass",
+   "detail": "Master logo file placed."
+  },
+  {
+   "id": "CHARACTER-APPROVED",
+   "status": "pass",
+   "detail": "Kuya SoLight v1.0 (KSL-A1), approved by CHRIS (Owner) 2026-11-24T03:22:45+08:00."
+  },
+  {
+   "id": "CLAIM-CL-E006-01",
+   "status": "pass",
+   "detail": "verified: 'Hybrid-ready' means a battery can be added; it does not by itself provide backup."
+  },
+  {
+   "id": "SIGNOFF-CL-E006-01",
+   "status": "warn",
+   "detail": "Online fact check (owner waived the human reviewer): Battery-ready inverters run grid-tied until a compatible battery and backup setup are added."
+  },
+  {
+   "id": "CLAIM-CL-E006-02",
+   "status": "pass",
+   "detail": "verified: Backup needs a compatible battery, backup wiring or a critical-loads panel, and an inverter configured for backup."
+  },
+  {
+   "id": "SIGNOFF-CL-E006-02",
+   "status": "warn",
+   "detail": "Online fact check (owner waived the human reviewer): Manufacturer docs require battery + backup switching/wiring + backup configuration."
+  },
+  {
+   "id": "CLAIM-CL-E006-03",
+   "status": "pass",
+   "detail": "verified: Without these, the home can still lose power in a brownout."
+  },
+  {
+   "id": "SIGNOFF-CL-E006-03",
+   "status": "warn",
+   "detail": "Online fact check (owner waived the human reviewer): Without backup, anti-islanding shuts the inverter down when the grid fails."
+  },
+  {
+   "id": "SOURCE-FRESHNESS",
+   "status": "warn",
+   "detail": "Sources retrieved 2026-11-24; policy requires re-verification immediately before publication."
+  },
+  {
+   "id": "VOICE-APPROVED",
+   "status": "pass",
+   "detail": "ElevenLabs eleven_multilingual_v2 · Juan - Clear, Muffled, and Friendly, approved by CHRIS (Owner) 2026-11-24T04:19:23+08:00."
+  },
+  {
+   "id": "OWNER-APPROVAL",
+   "status": "fail",
+   "blocking": true,
+   "detail": "Owner approval not yet given."
+  },
+  {
+   "id": "CONFIDENTIAL-DATA",
+   "status": "pass",
+   "detail": "No prices, customer data, subcontract costs or quotations in script or frames."
+  },
+  {
+   "id": "SAFE-AREA",
+   "status": "pass",
+   "detail": "Captions bottom-aligned at y=1400 with 140px right margin; logo slot and text within safe area (layout constants)."
+  }
+ ]
+}

@@ -88,9 +88,16 @@ EL_API = 'https://api.elevenlabs.io/v1/text-to-speech/'
 EL_CACHE = os.path.join(ROOT, '.cache', 'elevenlabs')
 EL_SR = 44100
 
+def el_alias(v, text):
+    """Spoken respellings for brand words (subtitles keep the written form), e.g. SoSmart -> So Smart."""
+    for k, rep in (v.get('aliases') or {}).items():
+        text = re.sub(r'(?<![A-Za-z])' + re.escape(k) + r'(?![a-z])', rep, text)
+    return text
+
 def el_synth(v, text, speed, prev_text, next_text):
     """One ElevenLabs request -> float32 mono at EL_SR. Cached by request hash."""
     import hashlib, subprocess, urllib.request
+    text, prev_text, next_text = el_alias(v, text), el_alias(v, prev_text), el_alias(v, next_text)
     settings = dict(v.get('settings', {}))
     settings['speed'] = round(min(1.2, max(0.7, speed)), 3)
     body = {'text': text, 'model_id': v.get('model', 'eleven_multilingual_v2'), 'voice_settings': settings}

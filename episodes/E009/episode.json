@@ -1,0 +1,326 @@
+{
+ "id": "E009",
+ "title": "6 kWp Solar, 6 kW Inverter: Pareho Ba?",
+ "pillar": "E",
+ "template": "T03-comparison",
+ "audience": "Buyers reading quotes",
+ "premise": "kWp is the panels' DC rating at test conditions; inverter kW is its AC output. Arrays can be larger than the inverter (DC-to-AC ratio); excess at peak is clipped, which is normal if designed correctly.",
+ "openingPattern": "A-question-first",
+ "greetingId": "greet-default",
+ "catchphraseId": "close-signature",
+ "scriptBasis": "Claude draft from the 104-episode backlog title/angle, V1.1 brand lines; claims checked online 2026-11-24.",
+ "scriptVersion": 1,
+ "voice": "production",
+ "cover": [
+  "6 kWp vs 6 kW:",
+  "Pareho Ba?"
+ ],
+ "scenes": {
+  "hook": {
+   "type": "hook",
+   "icon": "panel",
+   "icon2": "inverter",
+   "chip": "6 kWp? 6 kW?"
+  },
+  "two": {
+   "type": "cards",
+   "cards": [
+    {
+     "title": "kWp (panels)",
+     "lines": [
+      "DC rating sa test conditions"
+     ],
+     "tone": "gold",
+     "icon": "panel"
+    },
+    {
+     "title": "kW (inverter)",
+     "lines": [
+      "AC output na kaya nito"
+     ],
+     "tone": "navy",
+     "icon": "inverter"
+    }
+   ]
+  },
+  "ratio": {
+   "type": "equation",
+   "lines": [
+    {
+     "text": "DC-to-AC ratio"
+    },
+    {
+     "text": "kWp ÷ inverter kW",
+     "color": "gold",
+     "size": 64
+    }
+   ]
+  },
+  "clip": {
+   "type": "meter",
+   "appliance": "inverter",
+   "show": "kw",
+   "level": 1.0,
+   "kwLabel": "Abot na sa max ng inverter",
+   "chip": "Clipping"
+  },
+  "ok": {
+   "type": "checklist",
+   "title": "Normal, basta",
+   "items": [
+    "Tama ang ratio",
+    "Swak sa inverter specs",
+    "Tama ang kalkula ng installer"
+   ]
+  },
+  "close": {
+   "type": "close"
+  },
+  "endcard": {
+   "type": "endcard",
+   "sources": [
+    "Sources: NREL TP-5K00-82812 (Inverter Loading Ratio); Penn State",
+    "AE 868 datasheet guide; U.S. DOE inverter basics (checked 24 Nov 2026)"
+   ]
+  }
+ },
+ "cues": [
+  {
+   "id": "c01",
+   "scene": "hook",
+   "text": "6 kWp na solar, 6 kW na inverter. Pareho ba 'yan?",
+   "gold": [
+    "kWp",
+    "kW"
+   ],
+   "pauseAfter": 0.35,
+   "say": "Six kilowatt peak na solar, six kilowatt na inverter. Pareho ba 'yan?"
+  },
+  {
+   "id": "c02",
+   "scene": "identity",
+   "text": "Hello, SoSmart viewers! Kuya SoLight 'to!",
+   "gold": [
+    "SoSmart",
+    "SoLight"
+   ],
+   "pauseAfter": 0.35,
+   "elSpeed": 1.15,
+   "standalone": true
+  },
+  {
+   "id": "c03",
+   "scene": "two",
+   "text": "Hindi. Ang kWp ay DC rating ng panels sa test conditions.",
+   "gold": [
+    "kWp",
+    "DC"
+   ],
+   "pauseAfter": 0.1,
+   "say": "Hindi. Ang kilowatt peak ay D-C rating ng panels sa test conditions."
+  },
+  {
+   "id": "c04",
+   "scene": "two",
+   "text": "Ang kW ng inverter ay AC output na kaya nitong ilabas.",
+   "gold": [
+    "AC"
+   ],
+   "pauseAfter": 0.3,
+   "say": "Ang kilowatt ng inverter ay A-C output na kaya nitong ilabas."
+  },
+  {
+   "id": "c05",
+   "scene": "ratio",
+   "text": "Puwedeng mas malaki ang panels kaysa inverter.",
+   "gold": [
+    "mas malaki"
+   ],
+   "pauseAfter": 0.05
+  },
+  {
+   "id": "c06",
+   "scene": "ratio",
+   "text": "Tinatawag itong DC-to-AC ratio.",
+   "gold": [
+    "ratio"
+   ],
+   "pauseAfter": 0.3,
+   "say": "Tinatawag itong D-C to A-C ratio."
+  },
+  {
+   "id": "c07",
+   "scene": "clip",
+   "text": "Kapag sobra ang DC sa tanghali, may clipping.",
+   "gold": [
+    "clipping"
+   ],
+   "pauseAfter": 0.3,
+   "say": "Kapag sobra ang D-C sa tanghali, may clipping."
+  },
+  {
+   "id": "c08",
+   "scene": "ok",
+   "text": "Normal 'yan, basta tama ang design at kalkula.",
+   "gold": [
+    "design"
+   ],
+   "pauseAfter": 0.4
+  },
+  {
+   "id": "cz1",
+   "scene": "close",
+   "text": "Dahil ang gusto ni Kuya SoLight… naka-solar ka na, SoSmart ka pa!",
+   "gold": [
+    "SoSmart"
+   ],
+   "pauseAfter": 0.35
+  },
+  {
+   "id": "cz2",
+   "scene": "endcard",
+   "text": "Life is SoLight with Solar.",
+   "pauseAfter": 0.2
+  }
+ ],
+ "claims": [
+  {
+   "id": "CL-E009-01",
+   "category": "technical",
+   "wording": "kWp is the panels' DC rating at standard test conditions.",
+   "scope": "PV array nameplate.",
+   "caveats": "",
+   "sources": [
+    "SRC-NREL-STC"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-24T05:00:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "Module ratings are DC power at STC."
+   }
+  },
+  {
+   "id": "CL-E009-02",
+   "category": "technical",
+   "wording": "An inverter's kW rating is its AC output capacity.",
+   "scope": "Inverters.",
+   "caveats": "",
+   "sources": [
+    "SRC-DOE-INV",
+    "SRC-NREL-ILR"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-24T05:00:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "NREL: ILR = rated DC / rated AC; inverter rating is AC."
+   }
+  },
+  {
+   "id": "CL-E009-03",
+   "category": "technical",
+   "wording": "The array can be larger than the inverter; this is the DC-to-AC ratio.",
+   "scope": "System design.",
+   "caveats": "Within manufacturer limits.",
+   "sources": [
+    "SRC-NREL-ILR"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-24T05:00:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "NREL: ILR = rated DC power / rated AC power; designs increasingly use ratios above 1."
+   }
+  },
+  {
+   "id": "CL-E009-04",
+   "category": "technical",
+   "wording": "When DC power exceeds the inverter's limit at peak, the excess is clipped; normal if designed correctly.",
+   "scope": "Oversized arrays.",
+   "caveats": "Excessive ratios lose more energy.",
+   "sources": [
+    "SRC-NREL-ILR"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-24T05:00:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "NREL: clipping appears as a flat line at the inverter's AC capacity; small losses at typical ratios."
+   }
+  }
+ ],
+ "sources": [
+  {
+   "id": "SRC-DOE-INV",
+   "tier": 1,
+   "publisher": "U.S. Department of Energy",
+   "title": "Solar Integration: Inverters and Grid Services Basics",
+   "url": "https://www.energy.gov/eere/solar/solar-integration-inverters-and-grid-services-basics",
+   "jurisdiction": "General technical reference",
+   "excerpts": [
+    "Inverters change the variable direct current (DC) output of PV into alternating current (AC) for the grid and household use."
+   ],
+   "published": null,
+   "retrieved": "2026-11-24",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-NREL-ILR",
+   "tier": 1,
+   "publisher": "National Renewable Energy Laboratory",
+   "title": "The Effect of Inverter Loading Ratio on Energy Estimate Bias (NREL/TP-5K00-82812)",
+   "url": "https://www.nrel.gov/docs/fy22osti/82812.pdf",
+   "jurisdiction": "General technical reference",
+   "excerpts": [
+    "Inverter loading ratio (ILR) = rated DC power / rated AC power.",
+    "Clipping appears as a flat line at or near the inverter's AC capacity when DC power exceeds it."
+   ],
+   "published": null,
+   "retrieved": "2026-11-24",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-NREL-STC",
+   "tier": 1,
+   "publisher": "National Renewable Energy Laboratory / Penn State AE 868",
+   "title": "PV module ratings at Standard Test Conditions; Interpreting PV manufacturer datasheets",
+   "url": "https://courses.ems.psu.edu/ae868/book/export/html/879",
+   "jurisdiction": "General technical reference",
+   "excerpts": [
+    "STC: 1000 W/m² irradiance, 25°C cell temperature, AM1.5 spectrum.",
+    "Temperature coefficient of power is negative: output falls as cell temperature rises above 25°C."
+   ],
+   "published": null,
+   "retrieved": "2026-11-24",
+   "freshness": "re-verify before publication"
+  }
+ ],
+ "caption": {
+  "main": "6 kWp solar, 6 kW inverter: pareho ba? Hindi! Ang kWp ay DC rating ng panels, ang kW ng inverter ay AC output. Puwedeng mas malaki ang panels (DC-to-AC ratio), at normal ang konting clipping basta tama ang design. ⚙️\n\nSoSmart viewers, ano'ng nakasulat sa quote n'yo? 👇",
+  "short": "kWp ≠ inverter kW. ⚙️",
+  "thumbnailHeadline": "6 kWp vs 6 kW",
+  "pinnedComment": "Sources: NREL TP-5K00-82812 (Inverter Loading Ratio); Penn State AE 868 datasheet guide; U.S. DOE inverter basics (checked 24 Nov 2026).",
+  "discussionQuestion": "Ano'ng size ng system sa quote n'yo?",
+  "hashtags": [
+   "#KuyaSoLight",
+   "#SoSmartViewers",
+   "#SolarPH",
+   "#SolarKlaro",
+   "#SoLightSolarPH"
+  ],
+  "cta": "I-check ang quote mo!"
+ }
+}

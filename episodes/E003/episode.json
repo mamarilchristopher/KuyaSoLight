@@ -1,0 +1,326 @@
+{
+ "id": "E003",
+ "title": "kW vs kWh: Ano ang Pagkakaiba?",
+ "pillar": "A",
+ "template": "T02-explainer",
+ "audience": "Homeowners reading quotes and bills",
+ "premise": "kW is power (how fast energy is used); kWh is energy (how much was used). A 100 W TV for 10 hours uses 1 kWh, and the bill counts kWh.",
+ "openingPattern": "A-question-first",
+ "greetingId": "greet-default",
+ "catchphraseId": "close-signature",
+ "scriptBasis": "Claude draft from the 104-episode backlog title/angle, V1.1 brand lines; claims checked online 2026-11-24.",
+ "scriptVersion": 1,
+ "voice": "production",
+ "cover": [
+  "kW vs kWh:",
+  "Ano'ng Pagkakaiba?"
+ ],
+ "scenes": {
+  "hook": {
+   "type": "hook",
+   "icon": "bill",
+   "chip": "kW? kWh?"
+  },
+  "kw": {
+   "type": "meter",
+   "appliance": "ac",
+   "show": "kw",
+   "level": 0.6,
+   "kwLabel": "kW = bilis ng gamit"
+  },
+  "kwh": {
+   "type": "meter",
+   "appliance": "ac",
+   "show": "kwh",
+   "kwhFrom": 0,
+   "kwhTo": 2.4,
+   "kwhLabel": "kWh = dami ng nagamit"
+  },
+  "tv": {
+   "type": "meter",
+   "appliance": "tv",
+   "show": "both",
+   "level": 0.1,
+   "kwhFrom": 0,
+   "kwhTo": 1,
+   "chip": "100 W × 10 oras = 1 kWh"
+  },
+  "bill": {
+   "type": "equation",
+   "lines": [
+    {
+     "text": "Sa bill:"
+    },
+    {
+     "text": "kWh",
+     "color": "gold",
+     "size": 140
+    }
+   ],
+   "icon": "bill"
+  },
+  "recap": {
+   "type": "cards",
+   "cards": [
+    {
+     "title": "kW",
+     "lines": [
+      "Power: gaano kabilis"
+     ],
+     "tone": "navy"
+    },
+    {
+     "title": "kWh",
+     "lines": [
+      "Energy: gaano karami"
+     ],
+     "tone": "gold"
+    }
+   ]
+  },
+  "close": {
+   "type": "close"
+  },
+  "endcard": {
+   "type": "endcard",
+   "sources": [
+    "Sources: U.S. EIA Measuring Electricity & Glossary;",
+    "Meralco schedule of rates (checked 24 Nov 2026)"
+   ]
+  }
+ },
+ "cues": [
+  {
+   "id": "c01",
+   "scene": "hook",
+   "text": "kW at kWh… pareho lang ba 'yan?",
+   "gold": [
+    "kWh"
+   ],
+   "pauseAfter": 0.35,
+   "say": "Kilowatt at kilowatt-hour… pareho lang ba 'yan?"
+  },
+  {
+   "id": "c02",
+   "scene": "identity",
+   "text": "Hello, SoSmart viewers! Kuya SoLight 'to!",
+   "gold": [
+    "SoSmart",
+    "SoLight"
+   ],
+   "pauseAfter": 0.35,
+   "elSpeed": 1.15,
+   "standalone": true
+  },
+  {
+   "id": "c03",
+   "scene": "kw",
+   "text": "Ang kW ay power: gaano kabilis gumamit ng kuryente.",
+   "gold": [
+    "power"
+   ],
+   "pauseAfter": 0.25,
+   "say": "Ang kilowatt ay power: gaano kabilis gumamit ng kuryente."
+  },
+  {
+   "id": "c04",
+   "scene": "kwh",
+   "text": "Ang kWh ay energy: gaano karami ang nagamit.",
+   "gold": [
+    "energy"
+   ],
+   "pauseAfter": 0.3,
+   "say": "Ang kilowatt-hour ay energy: gaano karami ang nagamit."
+  },
+  {
+   "id": "c05",
+   "scene": "tv",
+   "text": "Halimbawa, isang 100-watt na TV.",
+   "gold": [
+    "100-watt"
+   ],
+   "pauseAfter": 0.1,
+   "say": "Halimbawa, isang one hundred watt na TV."
+  },
+  {
+   "id": "c06",
+   "scene": "tv",
+   "text": "Kapag binuksan mo nang 10 oras,",
+   "gold": [
+    "10"
+   ],
+   "pauseAfter": 0.05,
+   "say": "Kapag binuksan mo nang ten hours,"
+  },
+  {
+   "id": "c07",
+   "scene": "tv",
+   "text": "1 kWh ang nagamit nito.",
+   "gold": [
+    "kWh"
+   ],
+   "pauseAfter": 0.3,
+   "say": "one kilowatt-hour ang nagamit nito."
+  },
+  {
+   "id": "c08",
+   "scene": "bill",
+   "text": "Sa Meralco bill, kWh ang basehan ng energy charges.",
+   "gold": [
+    "kWh"
+   ],
+   "pauseAfter": 0.3,
+   "say": "Sa Meralco bill, kilowatt-hours ang basehan ng energy charges."
+  },
+  {
+   "id": "c09",
+   "scene": "recap",
+   "text": "Kaya bago mag-solar, kilalanin pareho: kW at kWh.",
+   "gold": [
+    "kW",
+    "kWh"
+   ],
+   "pauseAfter": 0.4,
+   "say": "Kaya bago mag-solar, kilalanin pareho: kilowatt at kilowatt-hour."
+  },
+  {
+   "id": "cz1",
+   "scene": "close",
+   "text": "Dahil ang gusto ni Kuya SoLight… naka-solar ka na, SoSmart ka pa!",
+   "gold": [
+    "SoSmart"
+   ],
+   "pauseAfter": 0.35
+  },
+  {
+   "id": "cz2",
+   "scene": "endcard",
+   "text": "Life is SoLight with Solar.",
+   "pauseAfter": 0.2
+  }
+ ],
+ "claims": [
+  {
+   "id": "CL-E003-01",
+   "category": "technical",
+   "wording": "kW is a unit of power (rate of energy use).",
+   "scope": "Electrical units.",
+   "caveats": "",
+   "sources": [
+    "SRC-EIA-UNITS"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-24T05:00:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "EIA glossary: kilowatt = 1,000 watts, unit of power."
+   }
+  },
+  {
+   "id": "CL-E003-02",
+   "category": "technical",
+   "wording": "kWh is a unit of energy: 1 kW used for 1 hour.",
+   "scope": "Electrical units.",
+   "caveats": "",
+   "sources": [
+    "SRC-EIA-UNITS"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-24T05:00:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "EIA glossary: kilowatthour = one kilowatt of power expended for one hour."
+   }
+  },
+  {
+   "id": "CL-E003-03",
+   "category": "technical",
+   "wording": "A 100 W TV used for 10 hours uses 1 kWh.",
+   "scope": "Arithmetic example at constant 100 W draw.",
+   "caveats": "Real TV draw varies by model and brightness.",
+   "sources": [
+    "SRC-EIA-UNITS"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-24T05:00:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "100 W × 10 h = 1,000 Wh = 1 kWh (definition)."
+   }
+  },
+  {
+   "id": "CL-E003-04",
+   "category": "regulatory",
+   "wording": "Meralco energy charges are billed per kWh.",
+   "scope": "Meralco residential bills (generation, transmission, system loss, distribution).",
+   "caveats": "Some charges are per customer, not per kWh (see E002).",
+   "sources": [
+    "SRC-MER-RATES"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-24T05:00:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "Meralco schedule of rates lists these components in PhP/kWh."
+   }
+  }
+ ],
+ "sources": [
+  {
+   "id": "SRC-EIA-UNITS",
+   "tier": 1,
+   "publisher": "U.S. Energy Information Administration",
+   "title": "Measuring electricity; Glossary: kilowatt, kilowatthour",
+   "url": "https://www.eia.gov/energyexplained/electricity/measuring-electricity.php",
+   "jurisdiction": "General technical reference",
+   "excerpts": [
+    "Kilowatt: 1,000 watts (unit of power).",
+    "Kilowatthour: one kilowatt of power expended for one hour (unit of energy)."
+   ],
+   "published": null,
+   "retrieved": "2026-11-24",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-MER-RATES",
+   "tier": 1,
+   "publisher": "Manila Electric Company (Meralco)",
+   "title": "Schedule of rates (residential), November 2026",
+   "url": "https://www.meralco.com.ph/consumer-information/rates-archives",
+   "jurisdiction": "Philippines, Meralco franchise area",
+   "excerpts": [
+    "Generation, transmission, system loss and distribution charges are billed per kWh."
+   ],
+   "published": null,
+   "retrieved": "2026-11-24",
+   "freshness": "re-verify before publication"
+  }
+ ],
+ "caption": {
+  "main": "kW vs kWh? Ang kW ay power (gaano kabilis), ang kWh ay energy (gaano karami). Ang 100-watt na TV na bukas nang 10 oras = 1 kWh. At kWh ang binibilang sa energy charges ng bill mo. ⚡\n\nSoSmart viewers, ilang kWh ang bill n'yo last month? 👇",
+  "short": "kW = bilis. kWh = dami. ⚡",
+  "thumbnailHeadline": "kW vs kWh",
+  "pinnedComment": "Sources: U.S. EIA Measuring Electricity & Glossary; Meralco schedule of rates (checked 24 Nov 2026).",
+  "discussionQuestion": "Ilang kWh ang monthly consumption n'yo?",
+  "hashtags": [
+   "#KuyaSoLight",
+   "#SoSmartViewers",
+   "#SolarPH",
+   "#SolarKlaro",
+   "#SoLightSolarPH"
+  ],
+  "cta": "Tingnan ang kWh sa bill mo!"
+ }
+}

@@ -1,0 +1,48 @@
+1
+00:00:00,250 --> 00:00:02,740
+Bakit hindi umaabot sa
+rated watts ang panels mo?
+
+2
+00:00:03,090 --> 00:00:05,960
+Hello, SoSmart viewers!
+Kuya SoLight 'to!
+
+3
+00:00:06,310 --> 00:00:10,930
+Ang rating ay galing sa lab
+test: standard test conditions.
+
+4
+00:00:11,030 --> 00:00:17,360
+1000 W/m² na liwanag at
+25°C na cell temperature.
+
+5
+00:00:17,660 --> 00:00:20,840
+Sa totoong bubong,
+mas mainit ang panels,
+
+6
+00:00:20,890 --> 00:00:24,280
+at kapag mas mainit,
+bumababa ang output.
+
+7
+00:00:24,580 --> 00:00:28,610
+May epekto rin ang anino,
+alikabok, at anggulo ng araw.
+
+8
+00:00:28,910 --> 00:00:32,460
+Kaya normal na mas mababa
+ang aktwal kaysa rating.
+
+9
+00:00:32,860 --> 00:00:38,850
+Dahil ang gusto ni Kuya SoLight…
+naka-solar ka na, SoSmart ka pa!
+
+10
+00:00:39,200 --> 00:00:41,380
+Life is SoLight with Solar.

@@ -1,0 +1,156 @@
+{
+ "episode": "E010",
+ "generatedAt": "2026-11-23T21:38:47.096Z",
+ "file": "out/episodes/E010/E010.mp4",
+ "character": "KSL-A1",
+ "verdict": "BLOCKED",
+ "blockingFailures": 1,
+ "checks": [
+  {
+   "id": "SUB-TRANSCRIPT-MATCH",
+   "status": "pass",
+   "detail": "All 86 words of the approved narration appear in the subtitle transcript in order."
+  },
+  {
+   "id": "SUB-NUMBERS-MATCH",
+   "status": "pass",
+   "detail": "Numbers match: 1000w|25"
+  },
+  {
+   "id": "BRAND-LINE-EXACT",
+   "status": "pass",
+   "detail": "Exact brand line present: \"Hello, SoSmart viewers! Kuya SoLight 'to!\""
+  },
+  {
+   "id": "BRAND-LINE-EXACT",
+   "status": "pass",
+   "detail": "Exact brand line present: \"Dahil ang gusto ni Kuya SoLight… naka-solar ka na, SoSmart ka pa!\""
+  },
+  {
+   "id": "BRAND-LINE-EXACT",
+   "status": "pass",
+   "detail": "Exact brand line present: \"Life is SoLight with Solar.\""
+  },
+  {
+   "id": "SUB-LINE-LAYOUT",
+   "status": "pass",
+   "detail": "All cues fit ≤2 lines (≈≤30 chars/line)."
+  },
+  {
+   "id": "SUB-READING-SPEED",
+   "status": "pass",
+   "detail": "All cues ≤22 characters/second."
+  },
+  {
+   "id": "SUB-TIMING",
+   "status": "pass",
+   "detail": "Cues are sequential, timed from synthesized audio sample positions."
+  },
+  {
+   "id": "MP4-RESOLUTION",
+   "status": "pass",
+   "detail": "1080x1920 (9:16)"
+  },
+  {
+   "id": "MP4-FPS",
+   "status": "pass",
+   "detail": "30 fps"
+  },
+  {
+   "id": "MP4-CODECS",
+   "status": "pass",
+   "detail": "H.264 video + AAC audio"
+  },
+  {
+   "id": "MP4-DURATION",
+   "status": "pass",
+   "detail": "43.38 s"
+  },
+  {
+   "id": "AUDIO-PRESENT",
+   "status": "pass",
+   "detail": "Mean -25.7 dBFS"
+  },
+  {
+   "id": "AUDIO-CLIPPING",
+   "status": "pass",
+   "detail": "Peak -3.6 dBFS (limiter ceiling −1 dBFS)"
+  },
+  {
+   "id": "LOGO-OFFICIAL",
+   "status": "pass",
+   "detail": "Master logo file placed."
+  },
+  {
+   "id": "CHARACTER-APPROVED",
+   "status": "pass",
+   "detail": "Kuya SoLight v1.0 (KSL-A1), approved by CHRIS (Owner) 2026-11-24T03:22:45+08:00."
+  },
+  {
+   "id": "CLAIM-CL-E010-01",
+   "status": "pass",
+   "detail": "verified: Panel ratings come from standard test conditions: 1000 W/m² irradiance and 25°C cell temperature."
+  },
+  {
+   "id": "SIGNOFF-CL-E010-01",
+   "status": "warn",
+   "detail": "Online fact check (owner waived the human reviewer): NREL / Penn State: STC = 1000 W/m², 25°C cell, AM1.5."
+  },
+  {
+   "id": "CLAIM-CL-E010-02",
+   "status": "pass",
+   "detail": "verified: Panels on real roofs run hotter than 25°C, and higher temperature lowers output."
+  },
+  {
+   "id": "SIGNOFF-CL-E010-02",
+   "status": "warn",
+   "detail": "Online fact check (owner waived the human reviewer): Negative temperature coefficient of power (typ. −0.3 to −0.4 %/°C); rooftop cells usually exceed 25°C in sun."
+  },
+  {
+   "id": "CLAIM-CL-E010-03",
+   "status": "pass",
+   "detail": "verified: Shade, dust and sun angle also reduce output."
+  },
+  {
+   "id": "SIGNOFF-CL-E010-03",
+   "status": "warn",
+   "detail": "Online fact check (owner waived the human reviewer): PVWatts loss model includes soiling and shading; irradiance on panel depends on sun angle."
+  },
+  {
+   "id": "CLAIM-CL-E010-04",
+   "status": "pass",
+   "detail": "verified: Actual output is normally below the nameplate rating."
+  },
+  {
+   "id": "SIGNOFF-CL-E010-04",
+   "status": "warn",
+   "detail": "Online fact check (owner waived the human reviewer): Follows from claims 1 to 3."
+  },
+  {
+   "id": "SOURCE-FRESHNESS",
+   "status": "warn",
+   "detail": "Sources retrieved 2026-11-24; policy requires re-verification immediately before publication."
+  },
+  {
+   "id": "VOICE-APPROVED",
+   "status": "pass",
+   "detail": "ElevenLabs eleven_multilingual_v2 · Juan - Clear, Muffled, and Friendly, approved by CHRIS (Owner) 2026-11-24T04:19:23+08:00."
+  },
+  {
+   "id": "OWNER-APPROVAL",
+   "status": "fail",
+   "blocking": true,
+   "detail": "Owner approval not yet given."
+  },
+  {
+   "id": "CONFIDENTIAL-DATA",
+   "status": "pass",
+   "detail": "No prices, customer data, subcontract costs or quotations in script or frames."
+  },
+  {
+   "id": "SAFE-AREA",
+   "status": "pass",
+   "detail": "Captions bottom-aligned at y=1400 with 140px right margin; logo slot and text within safe area (layout constants)."
+  }
+ ]
+}

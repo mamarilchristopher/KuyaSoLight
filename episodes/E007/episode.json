@@ -1,0 +1,271 @@
+{
+ "id": "E007",
+ "title": "Gumagana Ba ang Solar Kapag Maulan?",
+ "pillar": "B",
+ "template": "T04-myth-check",
+ "audience": "Prospects worried about rainy season",
+ "premise": "Clouds and rain reduce output, sometimes a lot, but generation is often not zero because diffuse light still reaches the panels; judge by monthly kWh.",
+ "openingPattern": "A-question-first",
+ "greetingId": "greet-default",
+ "catchphraseId": "close-signature",
+ "scriptBasis": "Claude draft from the 104-episode backlog title/angle, V1.1 brand lines; claims checked online 2026-11-24.",
+ "scriptVersion": 1,
+ "voice": "production",
+ "cover": [
+  "Gumagana Ba",
+  "Kapag Maulan?"
+ ],
+ "scenes": {
+  "hook": {
+   "type": "hook",
+   "icon": "cloud",
+   "chip": "Tag-ulan na!"
+  },
+  "sunny": {
+   "type": "sky",
+   "sky": "sunny",
+   "level": 0.9,
+   "chip": "Maaraw"
+  },
+  "cloudy": {
+   "type": "sky",
+   "sky": "cloudy",
+   "level": 0.4,
+   "chip": "Maulap: bawas"
+  },
+  "rain": {
+   "type": "sky",
+   "sky": "rain",
+   "level": 0.2,
+   "chip": "Maulan: mas bawas"
+  },
+  "diffuse": {
+   "type": "sky",
+   "sky": "cloudy",
+   "level": 0.25,
+   "chip": "Diffuse light: hindi zero"
+  },
+  "month": {
+   "type": "meter",
+   "appliance": "house",
+   "show": "kwh",
+   "kwhFrom": 0,
+   "kwhTo": 300,
+   "kwhLabel": "tingnan ang buong buwan"
+  },
+  "close": {
+   "type": "close"
+  },
+  "endcard": {
+   "type": "endcard",
+   "sources": [
+    "Sources: U.S. DOE Office of Science; NOAA SciJinks",
+    "\"Solar energy and clouds\" (checked 24 Nov 2026)"
+   ]
+  }
+ },
+ "cues": [
+  {
+   "id": "c01",
+   "scene": "hook",
+   "text": "Umuulan. May silbi pa ba ang solar mo?",
+   "gold": [
+    "Umuulan"
+   ],
+   "pauseAfter": 0.35
+  },
+  {
+   "id": "c02",
+   "scene": "identity",
+   "text": "Hello, SoSmart viewers! Kuya SoLight 'to!",
+   "gold": [
+    "SoSmart",
+    "SoLight"
+   ],
+   "pauseAfter": 0.35,
+   "elSpeed": 1.15,
+   "standalone": true
+  },
+  {
+   "id": "c03",
+   "scene": "sunny",
+   "text": "Oo, pero mas mahina ang output.",
+   "gold": [
+    "mahina"
+   ],
+   "pauseAfter": 0.25
+  },
+  {
+   "id": "c04",
+   "scene": "cloudy",
+   "text": "Kapag maulap, nababawasan ang liwanag sa panels.",
+   "gold": [
+    "maulap"
+   ],
+   "pauseAfter": 0.1
+  },
+  {
+   "id": "c05",
+   "scene": "rain",
+   "text": "Kaya bumababa ang output, minsan malaki ang bawas.",
+   "gold": [
+    "bumababa"
+   ],
+   "pauseAfter": 0.3
+  },
+  {
+   "id": "c06",
+   "scene": "diffuse",
+   "text": "Pero madalas hindi zero, dahil may diffuse light pa rin.",
+   "gold": [
+    "diffuse"
+   ],
+   "pauseAfter": 0.3
+  },
+  {
+   "id": "c07",
+   "scene": "month",
+   "text": "Ang tamang tingin: kWh sa buong buwan, hindi isang araw.",
+   "gold": [
+    "kWh"
+   ],
+   "pauseAfter": 0.4,
+   "say": "Ang tamang tingin: kilowatt-hours sa buong buwan, hindi isang araw."
+  },
+  {
+   "id": "cz1",
+   "scene": "close",
+   "text": "Dahil ang gusto ni Kuya SoLight… naka-solar ka na, SoSmart ka pa!",
+   "gold": [
+    "SoSmart"
+   ],
+   "pauseAfter": 0.35
+  },
+  {
+   "id": "cz2",
+   "scene": "endcard",
+   "text": "Life is SoLight with Solar.",
+   "pauseAfter": 0.2
+  }
+ ],
+ "claims": [
+  {
+   "id": "CL-E007-01",
+   "category": "technical",
+   "wording": "Clouds and rain reduce solar output, sometimes substantially.",
+   "scope": "PV in overcast conditions.",
+   "caveats": "Reduction varies with cloud thickness; no percentage named.",
+   "sources": [
+    "SRC-DOE-CLOUD",
+    "SRC-NOAA-CLOUD"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-24T05:00:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "DOE: cloudy days hamper production; NOAA: clouds reduce sunlight reaching panels."
+   }
+  },
+  {
+   "id": "CL-E007-02",
+   "category": "technical",
+   "wording": "Output is often not zero under clouds because diffuse light still reaches the panels.",
+   "scope": "Daytime overcast conditions.",
+   "caveats": "Very heavy cloud can bring output close to zero.",
+   "sources": [
+    "SRC-NOAA-CLOUD"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-24T05:00:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "NOAA SciJinks: clouds reduce but don't completely block sunlight; diffuse light still reaches panels."
+   }
+  },
+  {
+   "id": "CL-E007-03",
+   "category": "commercial",
+   "wording": "Judge solar performance by monthly kWh rather than a single day.",
+   "scope": "Performance expectations.",
+   "caveats": "Advice, not a technical claim.",
+   "sources": [
+    "SRC-EIA-UNITS"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-24T05:00:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "Billing and production are measured in kWh over the billing period."
+   }
+  }
+ ],
+ "sources": [
+  {
+   "id": "SRC-DOE-CLOUD",
+   "tier": 1,
+   "publisher": "U.S. Department of Energy, Office of Science",
+   "title": "5 Ways to Get Sunshine on a Cloudy Day",
+   "url": "https://www.energy.gov/science/articles/5-ways-get-sunshine-cloudy-day",
+   "jurisdiction": "General technical reference",
+   "excerpts": [
+    "Cloudy days can hamper solar panels' ability to produce electricity."
+   ],
+   "published": null,
+   "retrieved": "2026-11-24",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-EIA-UNITS",
+   "tier": 1,
+   "publisher": "U.S. Energy Information Administration",
+   "title": "Measuring electricity; Glossary: kilowatt, kilowatthour",
+   "url": "https://www.eia.gov/energyexplained/electricity/measuring-electricity.php",
+   "jurisdiction": "General technical reference",
+   "excerpts": [
+    "Kilowatt: 1,000 watts (unit of power).",
+    "Kilowatthour: one kilowatt of power expended for one hour (unit of energy)."
+   ],
+   "published": null,
+   "retrieved": "2026-11-24",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-NOAA-CLOUD",
+   "tier": 1,
+   "publisher": "NOAA SciJinks",
+   "title": "Solar energy and clouds",
+   "url": "https://scijinks.gov/solar-energy-and-clouds",
+   "jurisdiction": "General technical reference",
+   "excerpts": [
+    "Clouds reduce, but do not completely block, the sunlight reaching solar panels; diffuse light still reaches them."
+   ],
+   "published": null,
+   "retrieved": "2026-11-24",
+   "freshness": "re-verify before publication"
+  }
+ ],
+ "caption": {
+  "main": "Gumagana ba ang solar kapag maulan? Oo, pero mas mahina. Madalas hindi zero dahil may diffuse light pa rin. Ang tamang tingin: kWh sa buong buwan. 🌧️☀️\n\nSoSmart viewers, kumusta ang solar n'yo nitong tag-ulan? 👇",
+  "short": "Maulan? Bawas, pero madalas hindi zero. 🌧️",
+  "thumbnailHeadline": "Solar Kapag Maulan?",
+  "pinnedComment": "Sources: U.S. DOE Office of Science; NOAA SciJinks 'Solar energy and clouds' (checked 24 Nov 2026). Iba-iba ang bawas depende sa kapal ng ulap.",
+  "discussionQuestion": "Kumusta ang solar n'yo nitong tag-ulan?",
+  "hashtags": [
+   "#KuyaSoLight",
+   "#SoSmartViewers",
+   "#SolarPH",
+   "#SolarKlaro",
+   "#SoLightSolarPH"
+  ],
+  "cta": "I-share sa nagtatanong tungkol sa tag-ulan!"
+ }
+}

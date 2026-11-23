@@ -1,0 +1,313 @@
+{
+ "id": "E005",
+ "title": "Saan Galing ang Kuryente sa Bahay?",
+ "pillar": "E",
+ "template": "T05-energy-flow",
+ "audience": "Solar owners and prospects",
+ "premise": "Daytime: solar supplies the home first; surplus can be exported under net metering or charge a battery. At night: battery or grid.",
+ "openingPattern": "A-question-first",
+ "greetingId": "greet-default",
+ "catchphraseId": "close-signature",
+ "scriptBasis": "Claude draft from the 104-episode backlog title/angle, V1.1 brand lines; claims checked online 2026-11-24.",
+ "scriptVersion": 1,
+ "voice": "production",
+ "cover": [
+  "Saan Galing",
+  "ang Kuryente?"
+ ],
+ "scenes": {
+  "hook": {
+   "type": "hook",
+   "icon": "house",
+   "chip": "Solar? Grid? Battery?"
+  },
+  "day": {
+   "type": "path",
+   "steps": [
+    {
+     "icon": "sun",
+     "label": "Araw"
+    },
+    {
+     "icon": "panel",
+     "label": "Solar"
+    },
+    {
+     "icon": "house",
+     "label": "Gamit muna ng bahay"
+    }
+   ]
+  },
+  "export": {
+   "type": "path",
+   "steps": [
+    {
+     "icon": "house",
+     "label": "Sobra"
+    },
+    {
+     "icon": "grid",
+     "label": "Export (net metering)"
+    }
+   ],
+   "kuyaLeft": true
+  },
+  "charge": {
+   "type": "sky",
+   "sky": "sunny",
+   "level": 0.9,
+   "battery": "charge",
+   "chip": "Kung may battery: charge"
+  },
+  "night": {
+   "type": "sky",
+   "sky": "night",
+   "level": 0,
+   "battery": "discharge",
+   "chip": "Gabi: battery o grid",
+   "barLabel": "solar"
+  },
+  "recap": {
+   "type": "checklist",
+   "title": "Saan galing?",
+   "items": [
+    "Araw: solar muna",
+    "Sobra: export o battery",
+    "Gabi: battery o grid"
+   ]
+  },
+  "close": {
+   "type": "close"
+  },
+  "endcard": {
+   "type": "endcard",
+   "sources": [
+    "Sources: Meralco Solar & Net Metering and DER pages;",
+    "U.S. DOE Homeowner's Guide to Going Solar (checked 24 Nov 2026)"
+   ]
+  }
+ },
+ "cues": [
+  {
+   "id": "c01",
+   "scene": "hook",
+   "text": "Saan nga ba galing ang kuryente sa bahay mo?",
+   "gold": [
+    "kuryente"
+   ],
+   "pauseAfter": 0.35
+  },
+  {
+   "id": "c02",
+   "scene": "identity",
+   "text": "Hello, SoSmart viewers! Kuya SoLight 'to!",
+   "gold": [
+    "SoSmart",
+    "SoLight"
+   ],
+   "pauseAfter": 0.35,
+   "elSpeed": 1.15,
+   "standalone": true
+  },
+  {
+   "id": "c03",
+   "scene": "day",
+   "text": "Habang may araw, solar ang unang sumusuplay sa bahay.",
+   "gold": [
+    "solar"
+   ],
+   "pauseAfter": 0.3
+  },
+  {
+   "id": "c04",
+   "scene": "export",
+   "text": "Kapag sobra, puwedeng i-export sa grid kung naka-net metering.",
+   "gold": [
+    "net metering"
+   ],
+   "pauseAfter": 0.3
+  },
+  {
+   "id": "c05",
+   "scene": "charge",
+   "text": "Kung may battery, puwede rin itong mag-charge.",
+   "gold": [
+    "battery"
+   ],
+   "pauseAfter": 0.3
+  },
+  {
+   "id": "c06",
+   "scene": "night",
+   "text": "Sa gabi, battery o grid na ang nagsu-supply.",
+   "gold": [
+    "battery",
+    "grid"
+   ],
+   "pauseAfter": 0.3
+  },
+  {
+   "id": "c07",
+   "scene": "recap",
+   "text": "Kapag alam mo ang daloy, mas madaling magtipid.",
+   "gold": [
+    "magtipid"
+   ],
+   "pauseAfter": 0.4
+  },
+  {
+   "id": "cz1",
+   "scene": "close",
+   "text": "Dahil ang gusto ni Kuya SoLight… naka-solar ka na, SoSmart ka pa!",
+   "gold": [
+    "SoSmart"
+   ],
+   "pauseAfter": 0.35
+  },
+  {
+   "id": "cz2",
+   "scene": "endcard",
+   "text": "Life is SoLight with Solar.",
+   "pauseAfter": 0.2
+  }
+ ],
+ "claims": [
+  {
+   "id": "CL-E005-01",
+   "category": "technical",
+   "wording": "While generating, a solar system supplies the home first.",
+   "scope": "Grid-connected self-consumption systems (Meralco area).",
+   "caveats": "Depends on load at that moment.",
+   "sources": [
+    "SRC-MER-NM"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-24T05:00:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "Meralco: 'Your system supplies the property first while it is generating.'"
+   }
+  },
+  {
+   "id": "CL-E005-02",
+   "category": "regulatory",
+   "wording": "Surplus solar can be exported to the grid under net metering.",
+   "scope": "Net-metered customers in the Meralco franchise area.",
+   "caveats": "Requires an approved net-metering application; export credit is not one-for-one at retail.",
+   "sources": [
+    "SRC-MER-NM"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-24T05:00:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "Meralco net-metering page describes export and peso credits."
+   }
+  },
+  {
+   "id": "CL-E005-03",
+   "category": "technical",
+   "wording": "A battery can store daytime solar for use at night.",
+   "scope": "Systems with storage.",
+   "caveats": "Capacity and configuration limit how much.",
+   "sources": [
+    "SRC-DOE-STORAGE"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-24T05:00:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "DOE: storage lets solar energy be used later, e.g. at night."
+   }
+  },
+  {
+   "id": "CL-E005-04",
+   "category": "technical",
+   "wording": "At night, supply comes from the battery or the grid.",
+   "scope": "Grid-connected systems.",
+   "caveats": "",
+   "sources": [
+    "SRC-MER-DER"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-24T05:00:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "Meralco DER: at night the grid provides electricity."
+   }
+  }
+ ],
+ "sources": [
+  {
+   "id": "SRC-DOE-STORAGE",
+   "tier": 1,
+   "publisher": "U.S. Department of Energy",
+   "title": "Solar-plus-storage / Homeowner's Guide to Going Solar",
+   "url": "https://www.energy.gov/eere/solar/homeowners-guide-going-solar",
+   "jurisdiction": "General technical reference",
+   "excerpts": [
+    "Batteries can store solar energy produced during the day for use at night or during outages, if the system is designed for it."
+   ],
+   "published": null,
+   "retrieved": "2026-11-24",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-MER-DER",
+   "tier": 1,
+   "publisher": "Manila Electric Company (Meralco)",
+   "title": "Distributed Energy Resources",
+   "url": "https://www.meralco.com.ph/residential/energy-solutions/solar-and-renewables/distributed-energy-resources",
+   "jurisdiction": "Philippines, Meralco franchise area",
+   "excerpts": [
+    "At times when there is no sunlight, or at night, the grid will provide electricity."
+   ],
+   "published": null,
+   "retrieved": "2026-11-24",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-MER-NM",
+   "tier": 1,
+   "publisher": "Manila Electric Company (Meralco)",
+   "title": "Solar and Net Metering",
+   "url": "https://www.meralco.com.ph/residential/energy-solutions/solar-and-renewables/solar-net-metering",
+   "jurisdiction": "Philippines, Meralco franchise area",
+   "excerpts": [
+    "Your system supplies the property first while it is generating.",
+    "The Meralco grid supplies the property when renewable generation is not enough.",
+    "Exported energy is credited under net metering."
+   ],
+   "published": null,
+   "retrieved": "2026-11-24",
+   "freshness": "re-verify before publication"
+  }
+ ],
+ "caption": {
+  "main": "Saan galing ang kuryente sa bahay? Araw: solar muna. Sobra: export sa grid (net metering) o charge ng battery. Gabi: battery o grid. 🏠☀️\n\nSoSmart viewers, net metering o battery: alin ang mas bagay sa inyo? 👇",
+  "short": "Solar → bahay → grid/battery. Simple! 🏠",
+  "thumbnailHeadline": "Saan Galing ang Kuryente?",
+  "pinnedComment": "Sources: Meralco Solar & Net Metering and DER pages; U.S. DOE Homeowner's Guide to Going Solar (checked 24 Nov 2026).",
+  "discussionQuestion": "Net metering o battery: alin ang mas bagay sa inyo?",
+  "hashtags": [
+   "#KuyaSoLight",
+   "#SoSmartViewers",
+   "#SolarPH",
+   "#SolarKlaro",
+   "#SoLightSolarPH"
+  ],
+  "cta": "I-share sa may solar na kakilala!"
+ }
+}

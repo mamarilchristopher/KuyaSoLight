@@ -4,6 +4,8 @@ import { spawnSync } from 'node:child_process';
 import { join } from 'node:path';
 import { buildE002 } from './scenes/e002.ts';
 import { buildIdentity } from './scenes/identity.ts';
+import { buildEpisode } from './scenes/generic.ts';
+import { existsSync } from 'node:fs';
 import { renderFrames, finalize, mediaQA, contactSheet, Composition } from './compose.ts';
 import { subtitleQA, QACheck } from './subtitles.ts';
 import { BRAND_LINES, masterLogoPath } from '../brand/brand.ts';
@@ -40,9 +42,13 @@ function governanceQA(ep: any): QACheck[] {
     if (c.technicalSignoff === 'online-checked') out.push({ id: `SIGNOFF-${c.id}`, status: 'warn', detail: `Online fact check (owner waived the human reviewer): ${c.onlineCheck?.note ?? ''}` });
     else if (c.technicalSignoff !== 'approved') out.push({ id: `SIGNOFF-${c.id}`, status: 'fail', blocking: true, detail: 'Technical reviewer sign-off pending.', fix: 'Technical Reviewer approves in Fact Check Center.' });
   }
-  out.push({ id: 'SOURCE-FRESHNESS', status: 'warn', detail: 'Regulatory sources retrieved 2026-11-23; policy requires re-verification immediately before publication.' });
+  const retrieved = (ep.sources ?? []).map((x: any) => x.retrieved).filter(Boolean).sort();
+  out.push({ id: 'SOURCE-FRESHNESS', status: 'warn', detail: `Sources retrieved ${retrieved[0] ?? 'n/a'}${retrieved.length && retrieved[retrieved.length - 1] !== retrieved[0] ? ' to ' + retrieved[retrieved.length - 1] : ''}; policy requires re-verification immediately before publication.` });
   out.push(voiceQA(ep.voice));
-  out.push({ id: 'OWNER-APPROVAL', status: 'fail', blocking: true, detail: 'Owner approval not yet given.' });
+  const oa = ep.ownerApproval;
+  out.push(oa?.status === 'approved' ? { id: 'OWNER-APPROVAL', status: 'pass', detail: `Approved by ${oa.by} ${oa.at}.` }
+    : oa?.status === 'conditional' ? { id: 'OWNER-APPROVAL', status: 'fail', blocking: true, detail: `Conditionally approved by ${oa.by} ${oa.at}: ${oa.condition}`, fix: 'Owner confirms the condition is met.' }
+    : { id: 'OWNER-APPROVAL', status: 'fail', blocking: true, detail: 'Owner approval not yet given.' });
   out.push({ id: 'CONFIDENTIAL-DATA', status: 'pass', detail: 'No prices, customer data, subcontract costs or quotations in script or frames.' });
   out.push({ id: 'SAFE-AREA', status: 'pass', detail: 'Captions bottom-aligned at y=1400 with 140px right margin; logo slot and text within safe area (layout constants).' });
   return out;
@@ -70,10 +76,23 @@ async function produce(comp: Composition, outDir: string, ep: any, approvedNarra
   return report;
 }
 
-if (which === 'E002') {
+const VOICE = () => { const pv = JSON.parse(readFileSync('assets/voice/production.json', 'utf8')); return { engine: 'elevenlabs', name: pv.selected.name, voiceId: pv.selected.voiceId, model: pv.model, settings: pv.settings, seed: pv.seed, speed: pv.speed ?? 1.0, aliases: pv.aliases }; };
+const cueJob = (c: any) => ({ id: c.id, text: c.text, pauseAfter: c.pauseAfter, ...(c.speed ? { speed: c.speed } : {}), ...(c.elSpeed ? { elSpeed: c.elSpeed } : {}), ...(c.standalone ? { standalone: true } : {}), ...(c.say ? { say: c.say } : {}) });
+const coverOverlay = (l1: string, l2: string) => `<rect x="70" y="1150" width="870" height="230" rx="28" fill="#0B3B7A"/><text x="505" y="1250" font-family="Inter" font-weight="900" font-size="${l1.length > 20 ? 56 : 68}" fill="#F5AE0B" text-anchor="middle">${l1.replace(/&/g, '&amp;')}</text><text x="505" y="1335" font-family="Inter" font-weight="900" font-size="${l2.length > 20 ? 56 : 68}" fill="#fff" text-anchor="middle">${l2.replace(/&/g, '&amp;')}</text>`;
+
+if (which !== 'E002' && which !== 'IDENTITY' && existsSync(`episodes/${which}/episode.json`)) {
+  const ep = JSON.parse(readFileSync(`episodes/${which}/episode.json`, 'utf8'));
+  if (!ep.voice || ep.voice === 'production') ep.voice = VOICE();
+  const out = `out/episodes/${which}`; mkdirSync(out, { recursive: true });
+  const timings = tts({ voice: ep.voice, fps: 30, leadIn: 0.25, tail: 1.8, cues: ep.cues.map(cueJob) }, out);
+  const comp = buildEpisode(ep, timings, style, { narration: join(out, 'narration.wav'), sting: `${SON}/sonic-2-sosmart-spark.wav`, stingEnd: `${SON}/sonic-2-sosmart-spark-end.wav`, bed: `${SON}/bed-c-major-100bpm.wav` });
+  await produce(comp, out, ep, ep.cues.map((c: any) => c.text).join(' '), [BRAND_LINES.greetings['greet-default'], BRAND_LINES.catchphrases[(ep.catchphraseId ?? 'close-signature') as 'close-signature'], BRAND_LINES.tagline]);
+  const tc = (comp.cues[0].end - 0.2);
+  writeFileSync(join(out, `${which}-cover.png`), svgToPng(comp.frame(tc, Math.round(tc * 30)).replace('</svg>', coverOverlay(ep.cover?.[0] ?? '', ep.cover?.[1] ?? '') + '</svg>')));
+} else if (which === 'E002') {
   const ep = JSON.parse(readFileSync('episodes/E002/episode.json', 'utf8'));
   const out = 'out/episodes/E002'; mkdirSync(out, { recursive: true });
-  const timings = tts({ voice: ep.voice, fps: 30, leadIn: 0.25, tail: 1.8, cues: ep.cues.map((c: any) => ({ id: c.id, text: c.text, pauseAfter: c.pauseAfter, ...(c.speed ? { speed: c.speed } : {}), ...(c.elSpeed ? { elSpeed: c.elSpeed } : {}), ...(c.standalone ? { standalone: true } : {}) })) }, out);
+  const timings = tts({ voice: ep.voice, fps: 30, leadIn: 0.25, tail: 1.8, cues: ep.cues.map((c: any) => ({ id: c.id, text: c.text, pauseAfter: c.pauseAfter, ...(c.speed ? { speed: c.speed } : {}), ...(c.elSpeed ? { elSpeed: c.elSpeed } : {}), ...(c.standalone ? { standalone: true } : {}), ...(c.say ? { say: c.say } : {}) })) }, out);
   const comp = buildE002(ep, timings, style, { narration: join(out, 'narration.wav'), sting: `${SON}/sonic-2-sosmart-spark.wav`, stingEnd: `${SON}/sonic-2-sosmart-spark-end.wav`, bed: `${SON}/bed-c-major-100bpm.wav` });
   await produce(comp, out, ep, ep.cues.map((c: any) => c.text).join(' '), [BRAND_LINES.greetings['greet-default'], BRAND_LINES.catchphrases['close-signature'], BRAND_LINES.tagline]);
   // cover / thumbnail
