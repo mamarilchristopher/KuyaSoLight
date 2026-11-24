@@ -8,7 +8,9 @@ A Claude cloud routine runs this at every posting slot (default Mon, Wed, Fri at
 
 1. Get the code and the latest approvals:
    `unzip -o /mnt/project-files/kuya-solight/kuya-solight-studio-source.zip -d /home/claude/kuya-solight-studio`
-   (or pull the studio repo once it is on GitHub).
+   or, preferably, check out the studio branch `claude/project-thread-4y29lq` of
+   this repo into `/home/claude/kuya-solight-studio` (approvals live in
+   `episodes/E0xx/episode.json`).
 2. Make sure the next episode's approved video is hosted: if
    `media/E00x/<file>` is missing for the episode the plan names, copy it from
    `E00x/post/`, commit and push (Facebook and YouTube download it from
