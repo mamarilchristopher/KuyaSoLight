@@ -13,7 +13,7 @@
     "time": "19:00",
     "grace_hours": 6
   },
-  "media_url_template": "",
+  "media_url_template": "https://raw.githubusercontent.com/mamarilchristopher/kuyasolight/claude/project-thread-8iyyro/media/{episode}/{file}",
   "media_url_overrides": {},
   "platforms": {
     "facebook": {

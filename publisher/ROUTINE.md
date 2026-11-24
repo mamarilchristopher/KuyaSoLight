@@ -9,7 +9,11 @@ A Claude cloud routine runs this at every posting slot (default Mon, Wed, Fri at
 1. Get the code and the latest approvals:
    `unzip -o /mnt/project-files/kuya-solight/kuya-solight-studio-source.zip -d /home/claude/kuya-solight-studio`
    (or pull the studio repo once it is on GitHub).
-2. `python3 publisher/publisher.py plan` and read the JSON.
+2. Make sure the next episode's approved video is hosted: if
+   `media/E00x/<file>` is missing for the episode the plan names, copy it from
+   `E00x/post/`, commit and push (Facebook and YouTube download it from
+   `media_url_template`). Check the raw link returns the same sha256 as the plan.
+3. `python3 publisher/publisher.py plan` and read the JSON.
    * `ready` false: post nothing. If `blockers` names something the owner must
      do (approval, a missing file, a sign-in), tell them once in the project thread.
    * `ready` true: for each action whose own `blockers` list is empty, in order
@@ -25,7 +29,7 @@ A Claude cloud routine runs this at every posting slot (default Mon, Wed, Fri at
      * Right after each success, save it:
        `python3 publisher/publisher.py record E00x <platform> --id <post id> --url <url> --video-sha256 <plan.video.sha256>`
        If a call fails, do not retry it in the same run and do not record it.
-3. Post a short note in the project thread: episode, links per platform, anything
+4. Post a short note in the project thread: episode, links per platform, anything
    that failed. Facebook has no pinned-comment action yet, so include the plan's
    `pinned_comment` text for the owner to paste.
 
