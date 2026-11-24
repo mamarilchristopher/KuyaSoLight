@@ -1,0 +1,467 @@
+{
+ "id": "P001",
+ "title": "3 Solar Myths",
+ "pillar": "A",
+ "template": "T-myth-buster",
+ "purpose": "Pinned Facebook post and paid brand-awareness/reach ads",
+ "audience": "Filipino homeowners curious about solar",
+ "premise": "Three common solar myths, each busted with a checked fact, plus a follow call to action.",
+ "openingPattern": "A-question-first",
+ "greetingId": "greet-default",
+ "catchphraseId": "close-signature",
+ "scriptBasis": "Claude draft, owner picked concept C (3 Solar Myths) 2026-11-24 14:07 Manila; claims checked online 2026-11-24.",
+ "scriptVersion": 1,
+ "voice": "production",
+ "cover": [
+  "3 Solar Myths",
+  "na Mali Pala!"
+ ],
+ "scenes": {
+  "hook": {
+   "type": "hook",
+   "icon": "panel",
+   "icon2": "cloud",
+   "chip": "3 Solar Myths"
+  },
+  "m1": {
+   "type": "myth",
+   "n": 1,
+   "of": 3,
+   "lines": [
+    "Hindi gumagana",
+    "ang solar",
+    "kapag maulap."
+   ],
+   "stampAt": 1.6
+  },
+  "f1": {
+   "type": "sky",
+   "sky": "cloudy",
+   "level": 0.35,
+   "chip": "FACT: bawas, pero hindi zero"
+  },
+  "m2": {
+   "type": "myth",
+   "n": 2,
+   "of": 3,
+   "lines": [
+    "Kailangan laging",
+    "may battery."
+   ],
+   "stampAt": 1.3
+  },
+  "f2": {
+   "type": "path",
+   "steps": [
+    {
+     "icon": "sun",
+     "label": "araw"
+    },
+    {
+     "icon": "panel",
+     "label": "solar panels"
+    },
+    {
+     "icon": "inverter",
+     "label": "inverter"
+    },
+    {
+     "icon": "house",
+     "label": "sa gamit mo"
+    }
+   ],
+   "kuyaLeft": true
+  },
+  "m3": {
+   "type": "myth",
+   "n": 3,
+   "of": 3,
+   "lines": [
+    "Basta may solar,",
+    "may kuryente",
+    "kahit brownout."
+   ],
+   "stampAt": 1.7
+  },
+  "f3": {
+   "type": "outage",
+   "backup": "none",
+   "daytime": true,
+   "chip": "FACT: grid-tied = off sa brownout"
+  },
+  "f3b": {
+   "type": "outage",
+   "backup": "battery",
+   "daytime": false,
+   "chip": "Battery + backup wiring"
+  },
+  "follow": {
+   "type": "equation",
+   "lines": [
+    {
+     "text": "I-follow si"
+    },
+    {
+     "text": "Kuya SoLight",
+     "color": "gold",
+     "size": 88
+    },
+    {
+     "text": "para tama ang",
+     "size": 60
+    },
+    {
+     "text": "solar info mo!",
+     "size": 60
+    }
+   ],
+   "icon": "panel"
+  },
+  "close": {
+   "type": "close"
+  },
+  "endcard": {
+   "type": "endcard",
+   "sources": [
+    "Sources: U.S. DOE; NOAA; Meralco net metering & DER; ERC/DOE",
+    "interconnection standards; Fronius & SMA backup docs (checked 24 Nov 2026)"
+   ]
+  }
+ },
+ "cues": [
+  {
+   "id": "c01",
+   "scene": "hook",
+   "text": "Naniniwala ka pa ba sa tatlong solar myth na 'to?",
+   "gold": [
+    "solar",
+    "myth"
+   ],
+   "pauseAfter": 0.35,
+   "elSettings": {
+    "stability": 0.25,
+    "style": 0.9
+   },
+   "standalone": true
+  },
+  {
+   "id": "c02",
+   "scene": "identity",
+   "text": "Hello, SoSmart viewers! Kuya SoLight 'to!",
+   "gold": [
+    "SoSmart",
+    "SoLight"
+   ],
+   "pauseAfter": 0.35,
+   "elSpeed": 1.15,
+   "standalone": true
+  },
+  {
+   "id": "c03",
+   "scene": "m1",
+   "text": "Myth number one: hindi raw gumagana ang solar kapag maulap.",
+   "gold": [
+    "maulap"
+   ],
+   "pauseAfter": 0.25
+  },
+  {
+   "id": "c04",
+   "scene": "f1",
+   "text": "Mali! Bumababa ang output, pero may kuryente pa rin mula sa liwanag.",
+   "gold": [
+    "Mali!",
+    "may kuryente pa rin"
+   ],
+   "pauseAfter": 0.3
+  },
+  {
+   "id": "c05",
+   "scene": "m2",
+   "text": "Myth number two: kailangan daw laging may battery.",
+   "gold": [
+    "battery"
+   ],
+   "pauseAfter": 0.25
+  },
+  {
+   "id": "c06",
+   "scene": "f2",
+   "text": "Mali! Ang grid-tied, gumagana kahit walang battery, diretso sa gamit mo sa araw.",
+   "gold": [
+    "Mali!",
+    "walang battery"
+   ],
+   "pauseAfter": 0.3
+  },
+  {
+   "id": "c07",
+   "scene": "m3",
+   "text": "Myth number three: basta may solar, may kuryente ka raw kahit brownout.",
+   "gold": [
+    "brownout"
+   ],
+   "pauseAfter": 0.25
+  },
+  {
+   "id": "c08",
+   "scene": "f3",
+   "text": "Mali! Kusang namamatay ang grid-tied kapag brownout, para sa safety.",
+   "gold": [
+    "Mali!",
+    "safety"
+   ],
+   "pauseAfter": 0.25
+  },
+  {
+   "id": "c09",
+   "scene": "f3b",
+   "text": "Para may ilaw, kailangan ng battery at tamang backup wiring.",
+   "gold": [
+    "battery",
+    "backup wiring"
+   ],
+   "pauseAfter": 0.35
+  },
+  {
+   "id": "c10",
+   "scene": "follow",
+   "text": "I-follow si Kuya SoLight para laging tama ang solar info mo!",
+   "gold": [
+    "Kuya SoLight"
+   ],
+   "pauseAfter": 0.35
+  },
+  {
+   "id": "cz1",
+   "scene": "close",
+   "text": "Dahil ang gusto ni Kuya SoLight… naka-solar ka na, SoSmart ka pa!",
+   "gold": [
+    "SoSmart"
+   ],
+   "pauseAfter": 0.35,
+   "audioFile": "assets/voice/locked/outro-catchphrase-O3.wav"
+  },
+  {
+   "id": "cz2",
+   "scene": "endcard",
+   "text": "Life is SoLight with Solar.",
+   "pauseAfter": 0.2,
+   "audioFile": "assets/voice/locked/outro-tagline-O3.wav"
+  }
+ ],
+ "claims": [
+  {
+   "id": "CL-P001-01",
+   "category": "technical",
+   "wording": "Clouds reduce solar output but panels still produce some electricity from diffuse light.",
+   "scope": "PV in overcast conditions.",
+   "caveats": "No percentage named; reduction varies.",
+   "sources": [
+    "SRC-DOE-CLOUD",
+    "SRC-NOAA-CLOUD"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-24T14:20:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "DOE: cloudy days hamper but do not stop production; NOAA: some light still passes through clouds."
+   }
+  },
+  {
+   "id": "CL-P001-02",
+   "category": "technical",
+   "wording": "A grid-tied system works without a battery: daytime solar powers home loads directly, and excess can be exported under net metering.",
+   "scope": "Grid-tied residential PV in Meralco franchise.",
+   "caveats": "Night use comes from the grid.",
+   "sources": [
+    "SRC-MER-NM",
+    "SRC-MER-DER",
+    "SRC-DOE-STORAGE"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-24T14:20:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "Meralco net metering/DER pages describe on-grid solar without storage; DOE guide treats batteries as optional."
+   }
+  },
+  {
+   "id": "CL-P001-03",
+   "category": "technical",
+   "wording": "A compliant grid-tied inverter shuts down when the grid goes down (anti-islanding), for safety.",
+   "scope": "Grid-tied systems without backup.",
+   "caveats": "Applies to compliant installs.",
+   "sources": [
+    "SRC-ERC-NMIS",
+    "SRC-PH-ANTIISL"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-24T14:20:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "ERC interconnection standards include islanding protection; distributor guidance: inverter must disconnect immediately."
+   }
+  },
+  {
+   "id": "CL-P001-04",
+   "category": "technical",
+   "wording": "Backup power during a brownout needs a compatible battery and proper backup wiring.",
+   "scope": "Hybrid/backup systems.",
+   "caveats": "Backup may cover only selected loads.",
+   "sources": [
+    "SRC-FRONIUS-BU",
+    "SRC-SMA-BU",
+    "SRC-DOE-STORAGE"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-24T14:20:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "Manufacturer docs: backup requires battery plus backup wiring/switching."
+   }
+  }
+ ],
+ "sources": [
+  {
+   "id": "SRC-DOE-CLOUD",
+   "tier": 1,
+   "publisher": "U.S. Department of Energy, Office of Science",
+   "title": "5 Ways to Get Sunshine on a Cloudy Day",
+   "url": "https://www.energy.gov/science/articles/5-ways-get-sunshine-cloudy-day",
+   "jurisdiction": "General technical reference",
+   "excerpts": [
+    "Cloudy days can hamper solar panels' ability to produce electricity."
+   ],
+   "published": null,
+   "retrieved": "2026-11-24",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-DOE-STORAGE",
+   "tier": 1,
+   "publisher": "U.S. Department of Energy",
+   "title": "Solar-plus-storage / Homeowner's Guide to Going Solar",
+   "url": "https://www.energy.gov/eere/solar/homeowners-guide-going-solar",
+   "jurisdiction": "General technical reference",
+   "excerpts": [
+    "Batteries can store solar energy produced during the day for use at night or during outages, if the system is designed for it."
+   ],
+   "published": null,
+   "retrieved": "2026-11-24",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-ERC-NMIS",
+   "tier": 1,
+   "publisher": "Energy Regulatory Commission / DOE",
+   "title": "Net-Metering Rules and Interconnection Standards (Philippine Distribution Code framework)",
+   "url": "https://doe.gov.ph/electric-power/philippine-distribution-code",
+   "jurisdiction": "Philippines",
+   "excerpts": [
+    "Net-metered systems follow the Philippine Distribution Code and ERC Net-Metering Interconnection Standards, which include islanding protection."
+   ],
+   "published": null,
+   "retrieved": "2026-11-24",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-FRONIUS-BU",
+   "tier": 2,
+   "publisher": "Fronius International (manufacturer documentation)",
+   "title": "Backup power function",
+   "url": "https://www.fronius.com/en-in/india/solar-energy/installers-partners/products-solutions/features/backup-power-function",
+   "jurisdiction": "Manufacturer reference",
+   "excerpts": [
+    "Backup operation requires a compatible battery and the appropriate backup wiring/switching to separate the home circuits from the grid."
+   ],
+   "published": null,
+   "retrieved": "2026-11-24",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-MER-DER",
+   "tier": 1,
+   "publisher": "Manila Electric Company (Meralco)",
+   "title": "Distributed Energy Resources",
+   "url": "https://www.meralco.com.ph/residential/energy-solutions/solar-and-renewables/distributed-energy-resources",
+   "jurisdiction": "Philippines, Meralco franchise area",
+   "excerpts": [
+    "At times when there is no sunlight, or at night, the grid will provide electricity."
+   ],
+   "published": null,
+   "retrieved": "2026-11-24",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-MER-NM",
+   "tier": 1,
+   "publisher": "Manila Electric Company (Meralco)",
+   "title": "Solar and Net Metering",
+   "url": "https://www.meralco.com.ph/residential/energy-solutions/solar-and-renewables/solar-net-metering",
+   "jurisdiction": "Philippines, Meralco franchise area",
+   "excerpts": [
+    "Your system supplies the property first while it is generating.",
+    "The Meralco grid supplies the property when renewable generation is not enough.",
+    "Exported energy is credited under net metering."
+   ],
+   "published": null,
+   "retrieved": "2026-11-24",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-NOAA-CLOUD",
+   "tier": 1,
+   "publisher": "NOAA SciJinks",
+   "title": "Solar energy and clouds",
+   "url": "https://scijinks.gov/solar-energy-and-clouds",
+   "jurisdiction": "General technical reference",
+   "excerpts": [
+    "Clouds reduce, but do not completely block, the sunlight reaching solar panels; diffuse light still reaches them."
+   ],
+   "published": null,
+   "retrieved": "2026-11-24",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-PH-ANTIISL",
+   "tier": 2,
+   "publisher": "CleanTechnica (reporting Philippine distributor guidance)",
+   "title": "Guerilla solar installations need to be controlled, says Philippine power distributor",
+   "url": "https://cleantechnica.com/2026/05/04/guerilla-solar-installations-discovered-need-to-be-controlled-says-philippine-power-distributor/",
+   "jurisdiction": "Philippines",
+   "excerpts": [
+    "In a compliant system, the inverter must immediately disconnect when the grid goes down to prevent backfeeding electricity into power lines."
+   ],
+   "published": null,
+   "retrieved": "2026-11-24",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-SMA-BU",
+   "tier": 2,
+   "publisher": "SMA Solar Technology (manual)",
+   "title": "Battery-backup function",
+   "url": "https://manuals.sma.de/STPHxx-60/en-US/16945435403.html",
+   "jurisdiction": "Manufacturer reference",
+   "excerpts": [
+    "Battery-backup operation must be set up and wired as a backup system; not for loads that need an uninterrupted supply."
+   ],
+   "published": null,
+   "retrieved": "2026-11-24",
+   "freshness": "re-verify before publication"
+  }
+ ]
+}

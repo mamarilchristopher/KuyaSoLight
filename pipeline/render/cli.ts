@@ -87,7 +87,7 @@ if (which !== 'E002' && which !== 'IDENTITY' && existsSync(`episodes/${which}/ep
   const out = `out/episodes/${which}`; mkdirSync(out, { recursive: true });
   const timings = tts({ voice: ep.voice, fps: 30, leadIn: 0.25, tail: 1.8, cues: ep.cues.map(cueJob) }, out);
   const comp = buildEpisode(ep, timings, style, { narration: join(out, 'narration.wav'), sting: `${SON}/sonic-2-sosmart-spark.wav`, stingEnd: `${SON}/sonic-2-sosmart-spark-end.wav`, bed: `${SON}/bed-c-major-100bpm.wav` });
-  await produce(comp, out, ep, ep.cues.map((c: any) => c.text).join(' '), [BRAND_LINES.greetings['greet-default'], BRAND_LINES.catchphrases[(ep.catchphraseId ?? 'close-signature') as 'close-signature'], BRAND_LINES.tagline]);
+  await produce(comp, out, ep, ep.cues.map((c: any) => c.text).join(' '), [BRAND_LINES.greetings['greet-default'], ...(ep.adCut ? [] : [BRAND_LINES.catchphrases[(ep.catchphraseId ?? 'close-signature') as 'close-signature']]), BRAND_LINES.tagline]); // ad cutdowns end on the tagline only
   const tc = (comp.cues[0].end - 0.2);
   writeFileSync(join(out, `${which}-cover.png`), svgToPng(comp.frame(tc, Math.round(tc * 30)).replace('</svg>', coverOverlay(ep.cover?.[0] ?? '', ep.cover?.[1] ?? '') + '</svg>')));
 } else if (which === 'E002') {

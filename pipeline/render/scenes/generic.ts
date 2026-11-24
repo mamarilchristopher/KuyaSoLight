@@ -215,6 +215,25 @@ export const TYPES: Record<string, SceneFn> = {
     g += kuya(c, 820, 1220, 170, POSES.idle, p.backup === 'battery' ? 'smile' : 'concerned');
     return g;
   },
+  /** Myth-buster card: "MYTH n/N" tag, quoted myth lines, then a red "MALI!" stamp slams in. */
+  myth: (c, p) => {
+    let g = frame(false);
+    const tag = easeOutBack(ramp(c.lt, 0.05, 0.4));
+    g += `<g transform="translate(540 300) scale(${tag}) translate(-540 -300)"><rect x="330" y="248" width="420" height="104" rx="52" fill="#D9534F"/>${txt(540, 320, p.tag ?? `MYTH #${p.n}${p.of ? ` / ${p.of}` : ''}`, 56, '#fff', 900)}</g>`;
+    const lines: string[] = p.lines;
+    const a = ease(ramp(c.lt, 0.2, 0.6));
+    const h = 120 + lines.length * 78;
+    g += `<g opacity="${a}" transform="translate(0 ${(1 - a) * 40})"><rect x="90" y="420" width="900" height="${h}" rx="32" fill="#fff" stroke="${P.navy}" stroke-width="6"/>` +
+      txt(150, 520, '\u201C', 120, P.gold, 900, 'start') +
+      lines.map((l, i) => txt(540, 520 + i * 78, l, 58, P.navy, 900)).join('') + '</g>';
+    const st = ramp(c.lt, p.stampAt ?? 1.5, (p.stampAt ?? 1.5) + 0.22);
+    if (st > 0) {
+      const sc = 1.9 - 0.9 * ease(st);
+      g += `<g opacity="${clamp(st * 1.6)}" transform="translate(720 ${420 + h - 10}) rotate(-12) scale(${sc})"><rect x="-190" y="-70" width="380" height="140" rx="22" fill="none" stroke="#D9534F" stroke-width="14"/>${txt(0, 34, 'MALI!', 104, '#D9534F', 900)}</g>`;
+    }
+    g += kuya(c, 280, 1170, 230, { ...POSES.concerned, headTilt: Math.sin(c.t * 7) * (st > 0 ? 5 : 1.5) }, st > 0 ? 'smile' : 'concerned', 'threeQuarter', 0.4);
+    return g;
+  },
   identity: (c) => E002.identity(c),
   close: (c) => E002.close(c),
   endcard: (c, p) => {
