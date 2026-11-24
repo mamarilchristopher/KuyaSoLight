@@ -1,10 +1,10 @@
 {
  "episode": "E002",
- "generatedAt": "2026-11-23T20:44:05.330Z",
+ "generatedAt": "2026-11-24T05:03:54.787Z",
  "file": "out/episodes/E002/E002.mp4",
  "character": "KSL-A1",
- "verdict": "BLOCKED",
- "blockingFailures": 1,
+ "verdict": "PASS",
+ "blockingFailures": 0,
  "checks": [
   {
    "id": "SUB-TRANSCRIPT-MATCH",
@@ -129,7 +129,7 @@
   {
    "id": "SOURCE-FRESHNESS",
    "status": "warn",
-   "detail": "Regulatory sources retrieved 2026-11-23; policy requires re-verification immediately before publication."
+   "detail": "Sources retrieved 2026-11-23; policy requires re-verification immediately before publication."
   },
   {
    "id": "VOICE-APPROVED",
@@ -138,9 +138,8 @@
   },
   {
    "id": "OWNER-APPROVAL",
-   "status": "fail",
-   "blocking": true,
-   "detail": "Owner approval not yet given."
+   "status": "pass",
+   "detail": "Approved by CHRIS (Owner) 2026-11-24T13:01:37+08:00."
   },
   {
    "id": "CONFIDENTIAL-DATA",
