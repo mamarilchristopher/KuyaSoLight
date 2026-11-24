@@ -1,5 +1,5 @@
 {
-  "live": false,
+  "live": true,
   "episodes_root": "/mnt/project-files/kuya-solight",
   "ledger": "/mnt/project-files/kuya-solight/publisher/ledger.json",
   "approvals": {
@@ -9,7 +9,11 @@
   "start_from_episode": "E001",
   "schedule": {
     "timezone": "Asia/Manila",
-    "days": ["mon", "wed", "fri"],
+    "days": [
+      "mon",
+      "wed",
+      "fri"
+    ],
     "time": "19:00",
     "grace_hours": 6
   },
@@ -36,5 +40,8 @@
       "privacy_level": "PUBLIC_TO_EVERYONE",
       "is_aigc": true
     }
+  },
+  "cover_time_overrides": {
+    "E001": 2.0
   }
 }

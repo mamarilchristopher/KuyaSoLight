@@ -372,6 +372,8 @@ def plan(cfg: dict, now: dt.datetime, ignore_schedule: bool = False) -> dict:
             a["blockers"].append("no TikTok access token in environment")
         result["actions"].append(a)
 
+    thumb = Path(os.path.expandvars(cfg["episodes_root"])) / ep / "post" / f"{ep}-thumbnail.jpg"
+    result["cover"] = {"path": str(thumb), "exists": thumb.exists()}
     result["video"] = b.get("video")
     if b.get("pinned_comment"):
         result["pinned_comment"] = b["pinned_comment"]
@@ -452,6 +454,43 @@ def tiktok_post(cfg: dict, ep: str, live: bool) -> dict:
             "video_sha256": b["video"]["sha256"]}
 
 
+# --------------------------------------------------------------------------- cover / thumbnail
+
+def pick_cover_time(timings: dict) -> float:
+    """Best frame of the opening question card (owner rule, 24 Nov 2026).
+
+    The question subtitle (first cue) is on screen and the scene props have
+    animated in during its second half. Inside that stretch, take the frame
+    where Kuya's mouth is most closed, preferring frames near 75% of the cue.
+    """
+    cue = timings["cues"][0]
+    fps = timings.get("fps", 30)
+    mouth = timings.get("mouth") or []
+    start, end = cue["start"], cue["end"]
+    lo, hi = start + 0.5 * (end - start), end - 0.15
+    target = start + 0.75 * (end - start)
+    frames = [f for f in range(int(lo * fps), int(hi * fps) + 1) if f < len(mouth)]
+    if not frames:
+        return round(target, 3)
+    best = min(frames, key=lambda f: (round(mouth[f], 2), abs(f / fps - target)))
+    return round(best / fps, 3)
+
+
+def make_cover(cfg: dict, ep: str, at: float | None = None) -> dict:
+    root = Path(os.path.expandvars(cfg["episodes_root"])) / ep
+    override = cfg.get("cover_time_overrides", {}).get(ep)
+    if at is None:
+        at = override if override is not None else pick_cover_time(
+            json.loads((root / f"{ep}-timings.json").read_text()))
+    videos = sorted((root / "post").glob("*.mp4"))
+    if len(videos) != 1:
+        raise SystemExit(f"{ep}: expected one video in post/")
+    out = root / "post" / f"{ep}-thumbnail.jpg"
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", f"{at:.3f}", "-i", str(videos[0]),
+                    "-frames:v", "1", "-q:v", "2", str(out)], check=True)
+    return {"episode": ep, "time": at, "timestamp": f"0:{at:05.2f}", "path": str(out)}
+
+
 # --------------------------------------------------------------------------- status
 
 def status(cfg: dict) -> list[dict]:
@@ -481,6 +520,8 @@ def main(argv: list[str] | None = None) -> int:
     sr.add_argument("episode"); sr.add_argument("platform", choices=PLATFORMS)
     sr.add_argument("--id", required=True); sr.add_argument("--url")
     sr.add_argument("--video-sha256")
+    sc = sub.add_parser("cover", help="extract the question-card cover frame to post/E0xx-thumbnail.jpg")
+    sc.add_argument("episode"); sc.add_argument("--at", type=float)
     st = sub.add_parser("tiktok", help="post one episode to TikTok (dry run unless --live)")
     st.add_argument("episode"); st.add_argument("--live", action="store_true")
     args = ap.parse_args(argv)
@@ -496,6 +537,8 @@ def main(argv: list[str] | None = None) -> int:
     elif args.cmd == "record":
         record(cfg, args.episode, args.platform, args.id, args.url, args.video_sha256)
         print(f"recorded {args.episode} on {args.platform}")
+    elif args.cmd == "cover":
+        print(json.dumps(make_cover(cfg, args.episode, args.at), indent=2))
     elif args.cmd == "tiktok":
         print(json.dumps(tiktok_post(cfg, args.episode, args.live), indent=2, ensure_ascii=False))
     return 0

@@ -15,7 +15,14 @@ A Claude cloud routine runs this at every posting slot (default Mon, Wed, Fri at
    `media/E00x/<file>` is missing for the episode the plan names, copy it from
    `E00x/post/`, commit and push (Facebook and YouTube download it from
    `media_url_template`). Check the raw link returns the same sha256 as the plan.
-3. `python3 publisher/publisher.py plan` and read the JSON.
+3. Cover (owner rule, 24 Nov 2026): use the studio's `E00x/post/E00x-cover.png`
+   (built from the opening-question frame) when present; otherwise run `python3 publisher/publisher.py cover E00x`
+   and look at `post/E00x-thumbnail.jpg`. It must show the opening question
+   subtitle with Kuya's eyes open and every prop in place; if not, pick a better
+   time inside the first cue, set `cover_time_overrides` and run it again.
+   Windsor can't set covers, so send the owner the image with the post links to
+   set it as the Reel cover, the YouTube Shorts thumbnail and the TikTok cover.
+4. `python3 publisher/publisher.py plan` and read the JSON.
    * `ready` false: post nothing. If `blockers` names something the owner must
      do (approval, a missing file, a sign-in), tell them once in the project thread.
    * `ready` true: for each action whose own `blockers` list is empty, in order
@@ -31,9 +38,15 @@ A Claude cloud routine runs this at every posting slot (default Mon, Wed, Fri at
      * Right after each success, save it:
        `python3 publisher/publisher.py record E00x <platform> --id <post id> --url <url> --video-sha256 <plan.video.sha256>`
        If a call fails, do not retry it in the same run and do not record it.
-4. Post a short note in the project thread: episode, links per platform, anything
+5. Post a short note in the project thread: episode, links per platform, anything
    that failed. Facebook has no pinned-comment action yet, so include the plan's
    `pinned_comment` text for the owner to paste.
+
+## Every message to the owner about a post (owner rule, 24 Nov 2026)
+
+Link the episode's upload pack folder (`E00x/post/`) and give copy-paste-ready
+captions in code blocks for every platform involved: Facebook caption, TikTok
+caption, YouTube title / description / tags. Attach the video and cover.
 
 ## Rules that never bend
 
