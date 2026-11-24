@@ -23,7 +23,8 @@
     },
     "youtube": {
       "enabled": true,
-      "channel_id": "",
+      "channel_id": "119891",
+      "windsor_account_name": "solight.solarph@gmail.com (SoLight Solar PH channel)",
       "category_id": "27",
       "made_for_kids": false,
       "privacy_status": "public"
