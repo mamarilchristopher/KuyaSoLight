@@ -1,0 +1,38 @@
+{
+  "live": false,
+  "episodes_root": "/mnt/project-files/kuya-solight",
+  "ledger": "/mnt/project-files/kuya-solight/publisher/ledger.json",
+  "approvals": {
+    "studio_dir": "/home/claude/kuya-solight-studio",
+    "studio_zip": "/mnt/project-files/kuya-solight/kuya-solight-studio-source.zip"
+  },
+  "start_from_episode": "E001",
+  "schedule": {
+    "timezone": "Asia/Manila",
+    "days": ["mon", "wed", "fri"],
+    "time": "19:00",
+    "grace_hours": 6
+  },
+  "media_url_template": "",
+  "media_url_overrides": {},
+  "platforms": {
+    "facebook": {
+      "enabled": true,
+      "page_name": "SoLight Solar PH",
+      "page_id": "1513282125194947"
+    },
+    "youtube": {
+      "enabled": true,
+      "channel_id": "",
+      "category_id": "27",
+      "made_for_kids": false,
+      "privacy_status": "public"
+    },
+    "tiktok": {
+      "enabled": true,
+      "token_env": "TIKTOK_ACCESS_TOKEN",
+      "privacy_level": "PUBLIC_TO_EVERYONE",
+      "is_aigc": true
+    }
+  }
+}
