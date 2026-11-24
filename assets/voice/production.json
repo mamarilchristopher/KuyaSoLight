@@ -73,7 +73,10 @@
  "speed": 1.12,
  "energyNote": "2026-11-24 04:32 Manila: owner asked for more energy; raised from stability 0.4/style 0.35/speed 1.0 to level L2 (0.28/0.7/1.12). Options L1-L3 in /mnt/project-files/kuya-solight/audio/juan-energy/.",
  "aliases": {
-  "SoSmart": "So Smart"
+  "SoSmart": "So Smart",
+  "SoLight": "So Light",
+  "'to!": "toh!"
  },
- "aliasNote": "2026-11-24 04:40 Manila: owner said SoSmart was read wrong; spoken as \"So Smart\" (subtitles keep SoSmart). Owner confirmed option A on 2026-11-24 13:01 Manila."
+ "aliasNote": "2026-11-24 04:40 Manila: owner said SoSmart was read wrong; spoken as \"So Smart\" (subtitles keep SoSmart). Owner confirmed option A on 2026-11-24 13:01 Manila.",
+ "aliasNote2": "2026-11-24 13:07 Manila: owner chose option C for the greeting: SoLight spoken 'So Light', 'to spoken 'toh' (subtitles unchanged)."
 }

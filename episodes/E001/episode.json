@@ -309,5 +309,11 @@
    "#SoLightSolarPH"
   ],
   "cta": "Ikaw, ano ang solar question mo?"
+ },
+ "ownerApproval": {
+  "status": "approved",
+  "by": "CHRIS (Owner)",
+  "at": "2026-11-24T13:20:22+08:00",
+  "note": "Approved with greeting take C."
  }
 }

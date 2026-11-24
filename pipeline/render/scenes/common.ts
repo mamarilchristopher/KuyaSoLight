@@ -28,7 +28,7 @@ export function blinkAt(t: number) {
   return ph < 0.06 ? ph / 0.06 : ph < 0.13 ? 1 - (ph - 0.06) / 0.07 : 0;
 }
 
-export const prototypeMark = (dark: boolean) => `<g><rect x="660" y="132" width="290" height="44" rx="22" fill="${dark ? '#ffffff1a' : '#13294b14'}"/><text x="805" y="161" font-family="Inter" font-weight="700" font-size="20" fill="${dark ? '#ffffffb0' : '#13294bb0'}" text-anchor="middle">PROTOTYPE · not for posting</text></g>`;
+export const prototypeMark = (dark: boolean) => process.env.KSL_FINAL === '1' ? '' : `<g><rect x="660" y="132" width="290" height="44" rx="22" fill="${dark ? '#ffffff1a' : '#13294b14'}"/><text x="805" y="161" font-family="Inter" font-weight="700" font-size="20" fill="${dark ? '#ffffffb0' : '#13294bb0'}" text-anchor="middle">PROTOTYPE · not for posting</text></g>`;
 
 export const chip = (x: number, y: number, text: string, opts: { fill?: string; color?: string; size?: number; anchor?: 'start' | 'middle' } = {}) => {
   const size = opts.size ?? 34, w = text.length * size * 0.56 + 48, h = size * 1.7;

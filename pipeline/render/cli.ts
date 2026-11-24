@@ -83,6 +83,7 @@ const coverOverlay = (l1: string, l2: string) => `<rect x="70" y="1150" width="8
 if (which !== 'E002' && which !== 'IDENTITY' && existsSync(`episodes/${which}/episode.json`)) {
   const ep = JSON.parse(readFileSync(`episodes/${which}/episode.json`, 'utf8'));
   if (!ep.voice || ep.voice === 'production') ep.voice = VOICE();
+  if (ep.ownerApproval?.status === 'approved') process.env.KSL_FINAL = '1'; // owner-approved: drop the PROTOTYPE mark
   const out = `out/episodes/${which}`; mkdirSync(out, { recursive: true });
   const timings = tts({ voice: ep.voice, fps: 30, leadIn: 0.25, tail: 1.8, cues: ep.cues.map(cueJob) }, out);
   const comp = buildEpisode(ep, timings, style, { narration: join(out, 'narration.wav'), sting: `${SON}/sonic-2-sosmart-spark.wav`, stingEnd: `${SON}/sonic-2-sosmart-spark-end.wav`, bed: `${SON}/bed-c-major-100bpm.wav` });
@@ -91,6 +92,7 @@ if (which !== 'E002' && which !== 'IDENTITY' && existsSync(`episodes/${which}/ep
   writeFileSync(join(out, `${which}-cover.png`), svgToPng(comp.frame(tc, Math.round(tc * 30)).replace('</svg>', coverOverlay(ep.cover?.[0] ?? '', ep.cover?.[1] ?? '') + '</svg>')));
 } else if (which === 'E002') {
   const ep = JSON.parse(readFileSync('episodes/E002/episode.json', 'utf8'));
+  if (ep.ownerApproval?.status === 'approved') process.env.KSL_FINAL = '1';
   const out = 'out/episodes/E002'; mkdirSync(out, { recursive: true });
   const timings = tts({ voice: ep.voice, fps: 30, leadIn: 0.25, tail: 1.8, cues: ep.cues.map((c: any) => ({ id: c.id, text: c.text, pauseAfter: c.pauseAfter, ...(c.speed ? { speed: c.speed } : {}), ...(c.elSpeed ? { elSpeed: c.elSpeed } : {}), ...(c.standalone ? { standalone: true } : {}), ...(c.say ? { say: c.say } : {}) })) }, out);
   const comp = buildE002(ep, timings, style, { narration: join(out, 'narration.wav'), sting: `${SON}/sonic-2-sosmart-spark.wav`, stingEnd: `${SON}/sonic-2-sosmart-spark-end.wav`, bed: `${SON}/bed-c-major-100bpm.wav` });

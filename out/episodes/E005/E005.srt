@@ -4,40 +4,40 @@ Saan nga ba galing ang
 kuryente sa bahay mo?
 
 2
-00:00:02,960 --> 00:00:05,830
+00:00:02,960 --> 00:00:05,730
 Hello, SoSmart viewers!
 Kuya SoLight 'to!
 
 3
-00:00:06,180 --> 00:00:09,770
+00:00:06,080 --> 00:00:09,590
 Habang may araw, solar ang
 unang sumusuplay sa bahay.
 
 4
-00:00:10,070 --> 00:00:14,840
+00:00:09,890 --> 00:00:14,660
 Kapag sobra, puwedeng i-export
 sa grid kung naka-net metering.
 
 5
-00:00:15,140 --> 00:00:18,450
+00:00:14,960 --> 00:00:18,270
 Kung may battery, puwede
 rin itong mag-charge.
 
 6
-00:00:18,750 --> 00:00:22,740
+00:00:18,570 --> 00:00:22,560
 Sa gabi, battery o grid
 na ang nagsu-supply.
 
 7
-00:00:23,040 --> 00:00:26,430
+00:00:22,860 --> 00:00:27,190
 Kapag alam mo ang daloy,
 mas madaling magtipid.
 
 8
-00:00:26,830 --> 00:00:31,980
+00:00:27,590 --> 00:00:33,140
 Dahil ang gusto ni Kuya SoLight…
 naka-solar ka na, SoSmart ka pa!
 
 9
-00:00:32,330 --> 00:00:34,510
+00:00:33,490 --> 00:00:35,950
 Life is SoLight with Solar.

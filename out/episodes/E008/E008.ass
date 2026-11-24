@@ -11,12 +11,12 @@ Style: Kuya,Inter ExtraBold,52,&H00FFFFFF&,&H00FFFFFF&,&H262E1A0B&,&H262E1A0B&,0
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.25,0:00:02.58,Kuya,,0,0,0,,{\fad(60,60)}Gumagana ba ang\Nsolar panels sa {\c&H000BAEF5&}gabi?{\c&H00FFFFFF&}
-Dialogue: 0,0:00:02.93,0:00:05.80,Kuya,,0,0,0,,{\fad(60,60)}Hello, {\c&H000BAEF5&}SoSmart{\c&H00FFFFFF&} viewers!\NKuya {\c&H000BAEF5&}SoLight{\c&H00FFFFFF&} 'to!
-Dialogue: 0,0:00:06.15,0:00:10.30,Kuya,,0,0,0,,{\fad(60,60)}Hindi. Kailangan ng {\c&H000BAEF5&}liwanag{\c&H00FFFFFF&}\Npara gumawa ng kuryente.
-Dialogue: 0,0:00:10.60,0:00:12.43,Kuya,,0,0,0,,{\fad(60,60)}Kung {\c&H000BAEF5&}solar{\c&H00FFFFFF&} ang\Ngamit mo sa gabi,
-Dialogue: 0,0:00:12.48,0:00:16.14,Kuya,,0,0,0,,{\fad(60,60)}galing 'yan sa {\c&H000BAEF5&}battery{\c&H00FFFFFF&}\Nna nag-charge noong araw.
-Dialogue: 0,0:00:16.44,0:00:20.83,Kuya,,0,0,0,,{\fad(60,60)}Kapag wala o ubos na ang\Nbattery, {\c&H000BAEF5&}grid{\c&H00FFFFFF&} na ang kukunan.
-Dialogue: 0,0:00:21.13,0:00:24.32,Kuya,,0,0,0,,{\fad(60,60)}Magkaiba ang solar\Ngeneration at {\c&H000BAEF5&}stored{\c&H00FFFFFF&} energy.
-Dialogue: 0,0:00:24.72,0:00:30.61,Kuya,,0,0,0,,{\fad(60,60)}Dahil ang gusto ni Kuya SoLight…\Nnaka-solar ka na, {\c&H000BAEF5&}SoSmart{\c&H00FFFFFF&} ka pa!
-Dialogue: 0,0:00:30.96,0:00:33.14,Kuya,,0,0,0,,{\fad(60,60)}Life is SoLight with Solar.
+Dialogue: 0,0:00:00.25,0:00:02.54,Kuya,,0,0,0,,{\fad(60,60)}Gumagana ba ang\Nsolar panels sa {\c&H000BAEF5&}gabi?{\c&H00FFFFFF&}
+Dialogue: 0,0:00:02.89,0:00:05.66,Kuya,,0,0,0,,{\fad(60,60)}Hello, {\c&H000BAEF5&}SoSmart{\c&H00FFFFFF&} viewers!\NKuya {\c&H000BAEF5&}SoLight{\c&H00FFFFFF&} 'to!
+Dialogue: 0,0:00:06.01,0:00:10.43,Kuya,,0,0,0,,{\fad(60,60)}Hindi. Kailangan ng {\c&H000BAEF5&}liwanag{\c&H00FFFFFF&}\Npara gumawa ng kuryente.
+Dialogue: 0,0:00:10.73,0:00:12.56,Kuya,,0,0,0,,{\fad(60,60)}Kung {\c&H000BAEF5&}solar{\c&H00FFFFFF&} ang\Ngamit mo sa gabi,
+Dialogue: 0,0:00:12.61,0:00:16.27,Kuya,,0,0,0,,{\fad(60,60)}galing 'yan sa {\c&H000BAEF5&}battery{\c&H00FFFFFF&}\Nna nag-charge noong araw.
+Dialogue: 0,0:00:16.57,0:00:20.96,Kuya,,0,0,0,,{\fad(60,60)}Kapag wala o ubos na ang\Nbattery, {\c&H000BAEF5&}grid{\c&H00FFFFFF&} na ang kukunan.
+Dialogue: 0,0:00:21.26,0:00:26.57,Kuya,,0,0,0,,{\fad(60,60)}Magkaiba ang solar\Ngeneration at {\c&H000BAEF5&}stored{\c&H00FFFFFF&} energy.
+Dialogue: 0,0:00:26.97,0:00:32.18,Kuya,,0,0,0,,{\fad(60,60)}Dahil ang gusto ni Kuya SoLight…\Nnaka-solar ka na, {\c&H000BAEF5&}SoSmart{\c&H00FFFFFF&} ka pa!
+Dialogue: 0,0:00:32.53,0:00:34.99,Kuya,,0,0,0,,{\fad(60,60)}Life is SoLight with Solar.

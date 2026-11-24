@@ -1,10 +1,10 @@
 {
  "episode": "E001",
- "generatedAt": "2026-11-23T21:19:21.069Z",
+ "generatedAt": "2026-11-24T05:23:13.187Z",
  "file": "out/episodes/E001/E001.mp4",
  "character": "KSL-A1",
- "verdict": "BLOCKED",
- "blockingFailures": 1,
+ "verdict": "PASS",
+ "blockingFailures": 0,
  "checks": [
   {
    "id": "SUB-TRANSCRIPT-MATCH",
@@ -64,17 +64,17 @@
   {
    "id": "MP4-DURATION",
    "status": "pass",
-   "detail": "45.90 s"
+   "detail": "47.53 s"
   },
   {
    "id": "AUDIO-PRESENT",
    "status": "pass",
-   "detail": "Mean -24.4 dBFS"
+   "detail": "Mean -25.4 dBFS"
   },
   {
    "id": "AUDIO-CLIPPING",
    "status": "pass",
-   "detail": "Peak -3 dBFS (limiter ceiling −1 dBFS)"
+   "detail": "Peak -4 dBFS (limiter ceiling −1 dBFS)"
   },
   {
    "id": "LOGO-OFFICIAL",
@@ -128,9 +128,8 @@
   },
   {
    "id": "OWNER-APPROVAL",
-   "status": "fail",
-   "blocking": true,
-   "detail": "Owner approval not yet given."
+   "status": "pass",
+   "detail": "Approved by CHRIS (Owner) 2026-11-24T13:20:22+08:00."
   },
   {
    "id": "CONFIDENTIAL-DATA",

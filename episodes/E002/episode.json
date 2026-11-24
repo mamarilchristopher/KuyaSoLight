@@ -40,7 +40,9 @@
   "seed": 4242,
   "speed": 1.12,
   "aliases": {
-   "SoSmart": "So Smart"
+   "SoSmart": "So Smart",
+   "SoLight": "So Light",
+   "'to!": "toh!"
   }
  },
  "cues": [
