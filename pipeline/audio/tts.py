@@ -105,7 +105,7 @@ def el_synth(v, text, speed, prev_text, next_text, override=None):
     if prev_text: body['previous_text'] = prev_text
     if next_text: body['next_text'] = next_text
     if v.get('languageCode'): body['language_code'] = v['languageCode']
-    seed = v.get('seed')
+    seed = settings.pop('seed', None) or v.get('seed')  # per-cue seed picks a different take
     if seed is not None: body['seed'] = seed
     key = hashlib.sha256(json.dumps([v['voiceId'], body], sort_keys=True).encode()).hexdigest()[:24]
     os.makedirs(EL_CACHE, exist_ok=True)

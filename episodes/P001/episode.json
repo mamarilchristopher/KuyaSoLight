@@ -10,7 +10,7 @@
  "greetingId": "greet-default",
  "catchphraseId": "close-signature",
  "scriptBasis": "Claude draft, owner picked concept C (3 Solar Myths) 2026-11-24 14:07 Manila; claims checked online 2026-11-24.",
- "scriptVersion": 1,
+ "scriptVersion": 2,
  "voice": "production",
  "cover": [
   "3 Solar Myths",
@@ -159,7 +159,7 @@
   {
    "id": "c03",
    "scene": "m1",
-   "text": "Myth number one: hindi raw gumagana ang solar kapag maulap.",
+   "text": "Unang myth, hindi raw gumagana ang solar kapag maulap.",
    "gold": [
     "maulap"
    ],
@@ -168,28 +168,32 @@
   {
    "id": "c04",
    "scene": "f1",
-   "text": "Mali! Bumababa ang output, pero may kuryente pa rin mula sa liwanag.",
+   "text": "Ang totoo, bumababa lang ang output, pero may kuryente pa rin.",
    "gold": [
-    "Mali!",
     "may kuryente pa rin"
    ],
-   "pauseAfter": 0.3
+   "pauseAfter": 0.3,
+   "elSettings": {
+    "seed": 555
+   }
   },
   {
    "id": "c05",
    "scene": "m2",
-   "text": "Myth number two: kailangan daw laging may battery.",
+   "text": "Pangalawang myth, kailangan daw laging may battery.",
    "gold": [
     "battery"
    ],
-   "pauseAfter": 0.25
+   "pauseAfter": 0.25,
+   "elSettings": {
+    "seed": 2024
+   }
   },
   {
    "id": "c06",
    "scene": "f2",
-   "text": "Mali! Ang grid-tied, gumagana kahit walang battery, diretso sa gamit mo sa araw.",
+   "text": "Ang totoo, gumagana ang grid-tied kahit walang battery.",
    "gold": [
-    "Mali!",
     "walang battery"
    ],
    "pauseAfter": 0.3
@@ -197,26 +201,31 @@
   {
    "id": "c07",
    "scene": "m3",
-   "text": "Myth number three: basta may solar, may kuryente ka raw kahit brownout.",
+   "text": "Pangatlong myth, may kuryente ka raw kahit brownout.",
    "gold": [
     "brownout"
    ],
-   "pauseAfter": 0.25
+   "pauseAfter": 0.25,
+   "elSettings": {
+    "seed": 7
+   }
   },
   {
    "id": "c08",
    "scene": "f3",
-   "text": "Mali! Kusang namamatay ang grid-tied kapag brownout, para sa safety.",
+   "text": "Ang totoo, kusang namamatay ang grid-tied kapag brownout.",
    "gold": [
-    "Mali!",
-    "safety"
+    "namamatay"
    ],
-   "pauseAfter": 0.25
+   "pauseAfter": 0.25,
+   "elSettings": {
+    "seed": 555
+   }
   },
   {
    "id": "c09",
    "scene": "f3b",
-   "text": "Para may ilaw, kailangan ng battery at tamang backup wiring.",
+   "text": "Para may ilaw, kailangan ng battery at backup wiring.",
    "gold": [
     "battery",
     "backup wiring"
@@ -230,7 +239,10 @@
    "gold": [
     "Kuya SoLight"
    ],
-   "pauseAfter": 0.35
+   "pauseAfter": 0.35,
+   "elSettings": {
+    "seed": 555
+   }
   },
   {
    "id": "cz1",

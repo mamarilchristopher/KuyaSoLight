@@ -10,7 +10,7 @@
  "greetingId": "greet-default",
  "catchphraseId": "close-signature",
  "scriptBasis": "Claude draft, owner picked concept C (3 Solar Myths) 2026-11-24 14:07 Manila; claims checked online 2026-11-24.",
- "scriptVersion": 1,
+ "scriptVersion": 2,
  "voice": "production",
  "cover": [
   "May Solar = May Kuryente",
@@ -159,32 +159,31 @@
   {
    "id": "c08",
    "scene": "f3",
-   "text": "Mali! Kusang namamatay ang grid-tied kapag brownout.",
+   "text": "Ang totoo, kusang namamatay ang grid-tied kapag brownout.",
    "gold": [
-    "Mali!",
-    "safety"
+    "namamatay"
    ],
    "pauseAfter": 0.25,
-   "standalone": true
+   "elSettings": {
+    "seed": 555
+   }
   },
   {
    "id": "c09",
    "scene": "f3b",
-   "text": "Para may ilaw, kailangan ng battery at tamang backup wiring.",
+   "text": "Para may ilaw, kailangan ng battery at backup wiring.",
    "gold": [
     "battery",
     "backup wiring"
    ],
-   "pauseAfter": 0.35,
-   "standalone": true
+   "pauseAfter": 0.35
   },
   {
    "id": "cz2",
    "scene": "endcard",
    "text": "Life is SoLight with Solar.",
    "pauseAfter": 0.2,
-   "audioFile": "assets/voice/locked/outro-tagline-O3.wav",
-   "standalone": true
+   "audioFile": "assets/voice/locked/outro-tagline-O3.wav"
   }
  ],
  "claims": [

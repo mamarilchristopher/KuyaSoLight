@@ -34,23 +34,27 @@ scenes = {
 cues = [
     {"id": "c01", "scene": "hook", "text": "Naniniwala ka pa ba sa tatlong solar myth na 'to?", "gold": ["solar", "myth"], "pauseAfter": 0.35, "elSettings": H1, "standalone": True},
     {"id": "c02", "scene": "identity", "text": "Hello, SoSmart viewers! Kuya SoLight 'to!", "gold": ["SoSmart", "SoLight"], "pauseAfter": 0.35, "elSpeed": 1.15, "standalone": True},
-    {"id": "c03", "scene": "m1", "text": "Myth number one: hindi raw gumagana ang solar kapag maulap.", "gold": ["maulap"], "pauseAfter": 0.25},
-    {"id": "c04", "scene": "f1", "text": "Mali! Bumababa ang output, pero may kuryente pa rin mula sa liwanag.", "gold": ["Mali!", "may kuryente pa rin"], "pauseAfter": 0.3},
-    {"id": "c05", "scene": "m2", "text": "Myth number two: kailangan daw laging may battery.", "gold": ["battery"], "pauseAfter": 0.25},
-    {"id": "c06", "scene": "f2", "text": "Mali! Ang grid-tied, gumagana kahit walang battery, diretso sa gamit mo sa araw.", "gold": ["Mali!", "walang battery"], "pauseAfter": 0.3},
-    {"id": "c07", "scene": "m3", "text": "Myth number three: basta may solar, may kuryente ka raw kahit brownout.", "gold": ["brownout"], "pauseAfter": 0.25},
-    {"id": "c08", "scene": "f3", "text": "Mali! Kusang namamatay ang grid-tied kapag brownout, para sa safety.", "gold": ["Mali!", "safety"], "pauseAfter": 0.25},
-    {"id": "c09", "scene": "f3b", "text": "Para may ilaw, kailangan ng battery at tamang backup wiring.", "gold": ["battery", "backup wiring"], "pauseAfter": 0.35},
+    {"id": "c03", "scene": "m1", "text": "Unang myth, hindi raw gumagana ang solar kapag maulap.", "gold": ["maulap"], "pauseAfter": 0.25},
+    {"id": "c04", "scene": "f1", "text": "Ang totoo, bumababa lang ang output, pero may kuryente pa rin.", "gold": ["may kuryente pa rin"], "pauseAfter": 0.3},
+    {"id": "c05", "scene": "m2", "text": "Pangalawang myth, kailangan daw laging may battery.", "gold": ["battery"], "pauseAfter": 0.25},
+    {"id": "c06", "scene": "f2", "text": "Ang totoo, gumagana ang grid-tied kahit walang battery.", "gold": ["walang battery"], "pauseAfter": 0.3},
+    {"id": "c07", "scene": "m3", "text": "Pangatlong myth, may kuryente ka raw kahit brownout.", "gold": ["brownout"], "pauseAfter": 0.25},
+    {"id": "c08", "scene": "f3", "text": "Ang totoo, kusang namamatay ang grid-tied kapag brownout.", "gold": ["namamatay"], "pauseAfter": 0.25},
+    {"id": "c09", "scene": "f3b", "text": "Para may ilaw, kailangan ng battery at backup wiring.", "gold": ["battery", "backup wiring"], "pauseAfter": 0.35},
     {"id": "c10", "scene": "follow", "text": "I-follow si Kuya SoLight para laging tama ang solar info mo!", "gold": ["Kuya SoLight"], "pauseAfter": 0.35},
     {"id": "cz1", "scene": "close", "text": "Dahil ang gusto ni Kuya SoLight… naka-solar ka na, SoSmart ka pa!", "gold": ["SoSmart"], "pauseAfter": 0.35, "audioFile": "assets/voice/locked/outro-catchphrase-O3.wav"},
     {"id": "cz2", "scene": "endcard", "text": "Life is SoLight with Solar.", "pauseAfter": 0.2, "audioFile": "assets/voice/locked/outro-tagline-O3.wav"},
 ]
+# Take picked per line (out of 5 seeds) for the steadiest pacing and no long mid-line pauses, v2 2026-11-24.
+SEEDS = {"c04": 555, "c05": 2024, "c07": 7, "c08": 555, "c10": 555}
+for c in cues:
+    if c['id'] in SEEDS: c['elSettings'] = dict(c.get('elSettings') or {}, seed=SEEDS[c['id']])
 used = sorted({s for c in claims for s in c['sources']})
 ep = {"id": "P001", "title": "3 Solar Myths", "pillar": "A", "template": "T-myth-buster", "purpose": "Pinned Facebook post and paid brand-awareness/reach ads",
       "audience": "Filipino homeowners curious about solar", "premise": "Three common solar myths, each busted with a checked fact, plus a follow call to action.",
       "openingPattern": "A-question-first", "greetingId": "greet-default", "catchphraseId": "close-signature",
       "scriptBasis": "Claude draft, owner picked concept C (3 Solar Myths) 2026-11-24 14:07 Manila; claims checked online 2026-11-24.",
-      "scriptVersion": 1, "voice": "production", "cover": ["3 Solar Myths", "na Mali Pala!"], "scenes": scenes, "cues": cues,
+      "scriptVersion": 2, "voice": "production", "cover": ["3 Solar Myths", "na Mali Pala!"], "scenes": scenes, "cues": cues,
       "claims": claims, "sources": [SRC[s] for s in used]}
 import os
 old = 'episodes/P001/episode.json'
@@ -62,8 +66,6 @@ json.dump(ep, open(old, 'w'), ensure_ascii=False, indent=1)
 ad = copy.deepcopy(ep); ad['id'] = 'P001-AD20'; ad['title'] = '3 Solar Myths (20 s ad cut)'; ad['purpose'] = 'Paid ads cutdown of P001'; ad['adCut'] = True
 keep = ['c02', 'c08', 'c09', 'cz2']
 ad['cues'] = [{"id": "c01", "scene": "m3", "text": "Basta may solar, may kuryente ka na kahit brownout?", "gold": ["brownout"], "pauseAfter": 0.3, "elSettings": H1, "standalone": True}] + [c for c in ad['cues'] if c['id'] in keep]
-for c in ad['cues']: c['standalone'] = True  # same takes regardless of neighbours
-ad['cues'][2]['text'] = "Mali! Kusang namamatay ang grid-tied kapag brownout."
 ad['scenes']['m3'] = dict(ad['scenes']['m3'], tag="SOLAR MYTH", stampAt=2.2)
 ad['claims'] = [c for c in claims if c['id'] in ('CL-P001-03', 'CL-P001-04')]
 ad['sources'] = [SRC[s] for s in ['SRC-ERC-NMIS', 'SRC-PH-ANTIISL', 'SRC-FRONIUS-BU', 'SRC-SMA-BU', 'SRC-DOE-STORAGE']]
