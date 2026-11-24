@@ -77,7 +77,7 @@ async function produce(comp: Composition, outDir: string, ep: any, approvedNarra
 }
 
 const VOICE = () => { const pv = JSON.parse(readFileSync('assets/voice/production.json', 'utf8')); return { engine: 'elevenlabs', name: pv.selected.name, voiceId: pv.selected.voiceId, model: pv.model, settings: pv.settings, seed: pv.seed, speed: pv.speed ?? 1.0, aliases: pv.aliases }; };
-const cueJob = (c: any) => ({ id: c.id, text: c.text, pauseAfter: c.pauseAfter, ...(c.speed ? { speed: c.speed } : {}), ...(c.elSpeed ? { elSpeed: c.elSpeed } : {}), ...(c.standalone ? { standalone: true } : {}), ...(c.say ? { say: c.say } : {}) });
+const cueJob = (c: any) => ({ id: c.id, text: c.text, pauseAfter: c.pauseAfter, ...(c.speed ? { speed: c.speed } : {}), ...(c.elSpeed ? { elSpeed: c.elSpeed } : {}), ...(c.standalone ? { standalone: true } : {}), ...(c.say ? { say: c.say } : {}), ...(c.elSettings ? { elSettings: c.elSettings } : {}), ...(c.audioFile ? { audioFile: c.audioFile } : {}) });
 const coverOverlay = (l1: string, l2: string) => `<rect x="70" y="1150" width="870" height="230" rx="28" fill="#0B3B7A"/><text x="505" y="1250" font-family="Inter" font-weight="900" font-size="${l1.length > 20 ? 56 : 68}" fill="#F5AE0B" text-anchor="middle">${l1.replace(/&/g, '&amp;')}</text><text x="505" y="1335" font-family="Inter" font-weight="900" font-size="${l2.length > 20 ? 56 : 68}" fill="#fff" text-anchor="middle">${l2.replace(/&/g, '&amp;')}</text>`;
 
 if (which !== 'E002' && which !== 'IDENTITY' && existsSync(`episodes/${which}/episode.json`)) {
@@ -94,7 +94,7 @@ if (which !== 'E002' && which !== 'IDENTITY' && existsSync(`episodes/${which}/ep
   const ep = JSON.parse(readFileSync('episodes/E002/episode.json', 'utf8'));
   if (ep.ownerApproval?.status === 'approved') process.env.KSL_FINAL = '1';
   const out = 'out/episodes/E002'; mkdirSync(out, { recursive: true });
-  const timings = tts({ voice: ep.voice, fps: 30, leadIn: 0.25, tail: 1.8, cues: ep.cues.map((c: any) => ({ id: c.id, text: c.text, pauseAfter: c.pauseAfter, ...(c.speed ? { speed: c.speed } : {}), ...(c.elSpeed ? { elSpeed: c.elSpeed } : {}), ...(c.standalone ? { standalone: true } : {}), ...(c.say ? { say: c.say } : {}) })) }, out);
+  const timings = tts({ voice: ep.voice, fps: 30, leadIn: 0.25, tail: 1.8, cues: ep.cues.map(cueJob) }, out);
   const comp = buildE002(ep, timings, style, { narration: join(out, 'narration.wav'), sting: `${SON}/sonic-2-sosmart-spark.wav`, stingEnd: `${SON}/sonic-2-sosmart-spark-end.wav`, bed: `${SON}/bed-c-major-100bpm.wav` });
   await produce(comp, out, ep, ep.cues.map((c: any) => c.text).join(' '), [BRAND_LINES.greetings['greet-default'], BRAND_LINES.catchphrases['close-signature'], BRAND_LINES.tagline]);
   // cover / thumbnail

@@ -6,8 +6,8 @@ import json, os
 AT = '2026-11-24T05:00:00+08:00'
 POLICY = "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead."
 GREET = {"id": "c02", "scene": "identity", "text": "Hello, SoSmart viewers! Kuya SoLight 'to!", "gold": ["SoSmart", "SoLight"], "pauseAfter": 0.35, "elSpeed": 1.15, "standalone": True}
-CLOSE = [{"id": "cz1", "scene": "close", "text": "Dahil ang gusto ni Kuya SoLight… naka-solar ka na, SoSmart ka pa!", "gold": ["SoSmart"], "pauseAfter": 0.35},
-         {"id": "cz2", "scene": "endcard", "text": "Life is SoLight with Solar.", "pauseAfter": 0.2}]
+CLOSE = [{"id": "cz1", "scene": "close", "text": "Dahil ang gusto ni Kuya SoLight… naka-solar ka na, SoSmart ka pa!", "gold": ["SoSmart"], "pauseAfter": 0.35, "audioFile": "assets/voice/locked/outro-catchphrase-O3.wav"},
+         {"id": "cz2", "scene": "endcard", "text": "Life is SoLight with Solar.", "pauseAfter": 0.2, "audioFile": "assets/voice/locked/outro-tagline-O3.wav"}]
 TAGS = ['#KuyaSoLight', '#SoSmartViewers', '#SolarPH', '#SolarKlaro', '#SoLightSolarPH']
 
 SRC = {
@@ -36,6 +36,7 @@ def claim(ep, n, cat, wording, scope, caveats, sources, note):
 def cue(i, scene, text, gold=(), say=None, pause=0.25):
     c = {"id": f"c{i:02d}", "scene": scene, "text": text, "gold": list(gold), "pauseAfter": pause}
     if say: c["say"] = say
+    if i == 1: c.update({"standalone": True, "elSettings": {"stability": 0.25, "style": 0.9}})  # locked H1 hook style
     return c
 
 EP = {}

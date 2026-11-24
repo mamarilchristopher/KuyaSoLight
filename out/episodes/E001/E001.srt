@@ -1,53 +1,53 @@
 1
-00:00:00,250 --> 00:00:03,424
+00:00:00,250 --> 00:00:02,880
 Ano ba talaga ang ginagawa
 ng solar panels mo?
 
 2
-00:00:03,774 --> 00:00:06,544
+00:00:03,230 --> 00:00:06,000
 Hello, SoSmart viewers!
 Kuya SoLight 'to!
 
 3
-00:00:06,894 --> 00:00:10,864
+00:00:06,350 --> 00:00:10,320
 Simple lang: liwanag ng
 araw ang tumatama sa panels.
 
 4
-00:00:10,964 --> 00:00:13,574
+00:00:10,420 --> 00:00:13,030
 Ginagawa itong DC na
 kuryente ng solar cells.
 
 5
-00:00:13,824 --> 00:00:17,074
+00:00:13,280 --> 00:00:16,530
 Pero AC ang gamit ng
 appliances sa bahay.
 
 6
-00:00:17,174 --> 00:00:21,584
+00:00:16,630 --> 00:00:21,040
 Kaya may inverter:
 ginagawa nitong AC ang DC.
 
 7
-00:00:21,834 --> 00:00:25,724
+00:00:21,290 --> 00:00:25,180
 Habang may araw, solar ang
 tumutulong sa bahay mo.
 
 8
-00:00:26,024 --> 00:00:30,134
+00:00:25,480 --> 00:00:29,590
 Kapag kulang o gabi na,
 grid o battery ang sasalo.
 
 9
-00:00:30,434 --> 00:00:36,464
+00:00:29,890 --> 00:00:35,920
 Panels, inverter, at tamang
 setup. 'Yan ang solar!
 
 10
-00:00:36,864 --> 00:00:42,714
+00:00:36,320 --> 00:00:41,800
 Dahil ang gusto ni Kuya SoLight…
 naka-solar ka na, SoSmart ka pa!
 
 11
-00:00:43,064 --> 00:00:45,524
+00:00:42,150 --> 00:00:43,560
 Life is SoLight with Solar.

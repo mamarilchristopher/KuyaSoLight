@@ -94,11 +94,12 @@ def el_alias(v, text):
         text = re.sub(r'(?<![A-Za-z])' + re.escape(k) + r'(?![a-z])', rep, text)
     return text
 
-def el_synth(v, text, speed, prev_text, next_text):
+def el_synth(v, text, speed, prev_text, next_text, override=None):
     """One ElevenLabs request -> float32 mono at EL_SR. Cached by request hash."""
     import hashlib, subprocess, urllib.request
     text, prev_text, next_text = el_alias(v, text), el_alias(v, prev_text), el_alias(v, next_text)
     settings = dict(v.get('settings', {}))
+    settings.update(override or {})  # per-cue delivery preset (e.g. energetic hook / outro)
     settings['speed'] = round(min(1.2, max(0.7, speed)), 3)
     body = {'text': text, 'model_id': v.get('model', 'eleven_multilingual_v2'), 'voice_settings': settings}
     if prev_text: body['previous_text'] = prev_text
@@ -140,10 +141,16 @@ def main(job_path, out_dir):
     t = lead
     cues = []
     for i, c in enumerate(job['cues']):
-        if eleven:
+        if c.get('audioFile'):
+            # locked, owner-approved recording (identical in every episode)
+            import soundfile as _sf, subprocess as _sp
+            ph = None
+            pcm = _sp.run(['ffmpeg', '-v', 'error', '-i', os.path.join(ROOT, c['audioFile']), '-f', 'f32le', '-ac', '1', '-ar', str(sr), '-'], capture_output=True, check=True).stdout
+            a = np.frombuffer(pcm, dtype=np.float32).copy()
+        elif eleven:
             ph = None
             ctx = not c.get('standalone')  # standalone cues reproduce an approved take exactly (no neighbour context)
-            a, sr = el_synth(v, texts[i], c.get('elSpeed', speed), ' '.join(texts[max(0, i - 2):i]) if ctx else '', ' '.join(texts[i + 1:i + 3]) if ctx else '')
+            a, sr = el_synth(v, texts[i], c.get('elSpeed', speed), ' '.join(texts[max(0, i - 2):i]) if ctx else '', ' '.join(texts[i + 1:i + 3]) if ctx else '', c.get('elSettings'))
         else:
             ph = to_phonemes(c['say'] if 'say' in c else c['text'])
             a, sr = k.create(ph, voice=style, speed=c.get('speed', speed), is_phonemes=True)

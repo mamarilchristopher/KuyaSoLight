@@ -1,6 +1,6 @@
 {
  "episode": "E001",
- "generatedAt": "2026-11-24T05:23:13.187Z",
+ "generatedAt": "2026-11-24T05:45:30.805Z",
  "file": "out/episodes/E001/E001.mp4",
  "character": "KSL-A1",
  "verdict": "PASS",
@@ -64,17 +64,17 @@
   {
    "id": "MP4-DURATION",
    "status": "pass",
-   "detail": "47.53 s"
+   "detail": "45.57 s"
   },
   {
    "id": "AUDIO-PRESENT",
    "status": "pass",
-   "detail": "Mean -25.4 dBFS"
+   "detail": "Mean -25 dBFS"
   },
   {
    "id": "AUDIO-CLIPPING",
    "status": "pass",
-   "detail": "Peak -4 dBFS (limiter ceiling −1 dBFS)"
+   "detail": "Peak -3.4 dBFS (limiter ceiling −1 dBFS)"
   },
   {
    "id": "LOGO-OFFICIAL",

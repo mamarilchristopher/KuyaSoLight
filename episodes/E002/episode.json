@@ -54,7 +54,12 @@
     "solar",
     "bill"
    ],
-   "pauseAfter": 0.35
+   "pauseAfter": 0.35,
+   "elSettings": {
+    "stability": 0.25,
+    "style": 0.9
+   },
+   "standalone": true
   },
   {
    "id": "c02",
@@ -164,7 +169,8 @@
     "SoSmart"
    ],
    "pauseAfter": 0.35,
-   "brandLine": "catchphrase"
+   "brandLine": "catchphrase",
+   "audioFile": "assets/voice/locked/outro-catchphrase-O3.wav"
   },
   {
    "id": "c11",
@@ -172,7 +178,8 @@
    "text": "Life is SoLight with Solar.",
    "gold": [],
    "pauseAfter": 0.2,
-   "brandLine": "tagline"
+   "brandLine": "tagline",
+   "audioFile": "assets/voice/locked/outro-tagline-O3.wav"
   }
  ],
  "claims": [

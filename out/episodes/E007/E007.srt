@@ -1,43 +1,43 @@
 1
-00:00:00,250 --> 00:00:03,000
+00:00:00,250 --> 00:00:02,960
 Umuulan. May silbi
 pa ba ang solar mo?
 
 2
-00:00:03,350 --> 00:00:06,120
+00:00:03,310 --> 00:00:06,080
 Hello, SoSmart viewers!
 Kuya SoLight 'to!
 
 3
-00:00:06,470 --> 00:00:08,560
+00:00:06,430 --> 00:00:08,520
 Oo, pero mas
 mahina ang output.
 
 4
-00:00:08,810 --> 00:00:12,600
+00:00:08,770 --> 00:00:12,560
 Kapag maulap, nababawasan
 ang liwanag sa panels.
 
 5
-00:00:12,700 --> 00:00:16,390
+00:00:12,660 --> 00:00:16,350
 Kaya bumababa ang output,
 minsan malaki ang bawas.
 
 6
-00:00:16,690 --> 00:00:20,160
+00:00:16,650 --> 00:00:20,120
 Pero madalas hindi zero, dahil
 may diffuse light pa rin.
 
 7
-00:00:20,460 --> 00:00:25,970
+00:00:20,420 --> 00:00:25,930
 Ang tamang tingin: kWh sa
 buong buwan, hindi isang araw.
 
 8
-00:00:26,370 --> 00:00:32,220
+00:00:26,330 --> 00:00:31,810
 Dahil ang gusto ni Kuya SoLight…
 naka-solar ka na, SoSmart ka pa!
 
 9
-00:00:32,570 --> 00:00:35,030
+00:00:32,160 --> 00:00:33,570
 Life is SoLight with Solar.

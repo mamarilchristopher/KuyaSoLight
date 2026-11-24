@@ -1,48 +1,48 @@
 1
-00:00:00,250 --> 00:00:04,140
+00:00:00,250 --> 00:00:03,520
 Grid-tied, hybrid, o
 off-grid: alin ang para sa'yo?
 
 2
-00:00:04,490 --> 00:00:07,260
+00:00:03,870 --> 00:00:06,640
 Hello, SoSmart viewers!
 Kuya SoLight 'to!
 
 3
-00:00:07,610 --> 00:00:11,440
+00:00:06,990 --> 00:00:10,820
 Grid-tied: solar at grid ang
 magkatuwang, walang battery.
 
 4
-00:00:11,740 --> 00:00:15,710
+00:00:11,120 --> 00:00:15,090
 Kapag brownout, kusa itong
 namamatay para sa safety.
 
 5
-00:00:16,010 --> 00:00:20,320
+00:00:15,390 --> 00:00:19,700
 Hybrid: may battery, pero
 depende sa setup ang backup.
 
 6
-00:00:20,620 --> 00:00:25,350
+00:00:20,000 --> 00:00:24,730
 Off-grid: walang grid,
 battery ang sandalan sa gabi.
 
 7
-00:00:25,650 --> 00:00:29,320
+00:00:25,030 --> 00:00:28,700
 Kaya hindi pare-pareho
 ang backup ng tatlo.
 
 8
-00:00:29,620 --> 00:00:33,510
+00:00:29,000 --> 00:00:32,890
 Itanong muna: anong loads
 ang kailangan sa brownout?
 
 9
-00:00:33,910 --> 00:00:38,740
+00:00:33,290 --> 00:00:38,770
 Dahil ang gusto ni Kuya SoLight…
 naka-solar ka na, SoSmart ka pa!
 
 10
-00:00:39,090 --> 00:00:41,490
+00:00:39,120 --> 00:00:40,530
 Life is SoLight with Solar.

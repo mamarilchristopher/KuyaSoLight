@@ -11,14 +11,14 @@ Style: Kuya,Inter ExtraBold,52,&H00FFFFFF&,&H00FFFFFF&,&H262E1A0B&,&H262E1A0B&,0
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.25,0:00:04.04,Kuya,,0,0,0,,{\fad(60,60)}kW at {\c&H000BAEF5&}kWh…{\c&H00FFFFFF&} pareho\Nlang ba 'yan?
-Dialogue: 0,0:00:04.39,0:00:07.16,Kuya,,0,0,0,,{\fad(60,60)}Hello, {\c&H000BAEF5&}SoSmart{\c&H00FFFFFF&} viewers!\NKuya {\c&H000BAEF5&}SoLight{\c&H00FFFFFF&} 'to!
-Dialogue: 0,0:00:07.51,0:00:12.60,Kuya,,0,0,0,,{\fad(60,60)}Ang kW ay {\c&H000BAEF5&}power:{\c&H00FFFFFF&} gaano\Nkabilis gumamit ng kuryente.
-Dialogue: 0,0:00:12.85,0:00:17.92,Kuya,,0,0,0,,{\fad(60,60)}Ang kWh ay {\c&H000BAEF5&}energy:{\c&H00FFFFFF&} gaano\Nkarami ang nagamit.
-Dialogue: 0,0:00:18.22,0:00:21.95,Kuya,,0,0,0,,{\fad(60,60)}Halimbawa, isang\N{\c&H000BAEF5&}100-watt{\c&H00FFFFFF&} na TV.
-Dialogue: 0,0:00:22.05,0:00:23.97,Kuya,,0,0,0,,{\fad(60,60)}Kapag binuksan\Nmo nang {\c&H000BAEF5&}10{\c&H00FFFFFF&} oras,
-Dialogue: 0,0:00:24.02,0:00:26.21,Kuya,,0,0,0,,{\fad(60,60)}1 {\c&H000BAEF5&}kWh{\c&H00FFFFFF&} ang nagamit nito.
-Dialogue: 0,0:00:26.51,0:00:31.81,Kuya,,0,0,0,,{\fad(60,60)}Sa Meralco bill, {\c&H000BAEF5&}kWh{\c&H00FFFFFF&} ang\Nbasehan ng energy charges.
-Dialogue: 0,0:00:32.11,0:00:38.24,Kuya,,0,0,0,,{\fad(60,60)}Kaya bago mag-solar,\Nkilalanin pareho: {\c&H000BAEF5&}kW{\c&H00FFFFFF&} at {\c&H000BAEF5&}kWh.{\c&H00FFFFFF&}
-Dialogue: 0,0:00:38.64,0:00:43.91,Kuya,,0,0,0,,{\fad(60,60)}Dahil ang gusto ni Kuya SoLight…\Nnaka-solar ka na, {\c&H000BAEF5&}SoSmart{\c&H00FFFFFF&} ka pa!
-Dialogue: 0,0:00:44.26,0:00:46.66,Kuya,,0,0,0,,{\fad(60,60)}Life is SoLight with Solar.
+Dialogue: 0,0:00:00.25,0:00:03.76,Kuya,,0,0,0,,{\fad(60,60)}kW at {\c&H000BAEF5&}kWh…{\c&H00FFFFFF&} pareho\Nlang ba 'yan?
+Dialogue: 0,0:00:04.11,0:00:06.88,Kuya,,0,0,0,,{\fad(60,60)}Hello, {\c&H000BAEF5&}SoSmart{\c&H00FFFFFF&} viewers!\NKuya {\c&H000BAEF5&}SoLight{\c&H00FFFFFF&} 'to!
+Dialogue: 0,0:00:07.23,0:00:12.32,Kuya,,0,0,0,,{\fad(60,60)}Ang kW ay {\c&H000BAEF5&}power:{\c&H00FFFFFF&} gaano\Nkabilis gumamit ng kuryente.
+Dialogue: 0,0:00:12.57,0:00:17.64,Kuya,,0,0,0,,{\fad(60,60)}Ang kWh ay {\c&H000BAEF5&}energy:{\c&H00FFFFFF&} gaano\Nkarami ang nagamit.
+Dialogue: 0,0:00:17.94,0:00:21.67,Kuya,,0,0,0,,{\fad(60,60)}Halimbawa, isang\N{\c&H000BAEF5&}100-watt{\c&H00FFFFFF&} na TV.
+Dialogue: 0,0:00:21.77,0:00:23.69,Kuya,,0,0,0,,{\fad(60,60)}Kapag binuksan\Nmo nang {\c&H000BAEF5&}10{\c&H00FFFFFF&} oras,
+Dialogue: 0,0:00:23.74,0:00:25.93,Kuya,,0,0,0,,{\fad(60,60)}1 {\c&H000BAEF5&}kWh{\c&H00FFFFFF&} ang nagamit nito.
+Dialogue: 0,0:00:26.23,0:00:31.53,Kuya,,0,0,0,,{\fad(60,60)}Sa Meralco bill, {\c&H000BAEF5&}kWh{\c&H00FFFFFF&} ang\Nbasehan ng energy charges.
+Dialogue: 0,0:00:31.83,0:00:37.96,Kuya,,0,0,0,,{\fad(60,60)}Kaya bago mag-solar,\Nkilalanin pareho: {\c&H000BAEF5&}kW{\c&H00FFFFFF&} at {\c&H000BAEF5&}kWh.{\c&H00FFFFFF&}
+Dialogue: 0,0:00:38.36,0:00:43.84,Kuya,,0,0,0,,{\fad(60,60)}Dahil ang gusto ni Kuya SoLight…\Nnaka-solar ka na, {\c&H000BAEF5&}SoSmart{\c&H00FFFFFF&} ka pa!
+Dialogue: 0,0:00:44.19,0:00:45.60,Kuya,,0,0,0,,{\fad(60,60)}Life is SoLight with Solar.

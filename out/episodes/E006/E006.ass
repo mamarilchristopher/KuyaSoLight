@@ -11,13 +11,13 @@ Style: Kuya,Inter ExtraBold,52,&H00FFFFFF&,&H00FFFFFF&,&H262E1A0B&,&H262E1A0B&,0
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.25,0:00:03.96,Kuya,,0,0,0,,{\fad(60,60)}{\c&H000BAEF5&}Hybrid-ready{\c&H00FFFFFF&} daw ang inverter\Nmo. May {\c&H000BAEF5&}backup{\c&H00FFFFFF&} ka na ba?
-Dialogue: 0,0:00:04.31,0:00:07.08,Kuya,,0,0,0,,{\fad(60,60)}Hello, {\c&H000BAEF5&}SoSmart{\c&H00FFFFFF&} viewers!\NKuya {\c&H000BAEF5&}SoLight{\c&H00FFFFFF&} 'to!
-Dialogue: 0,0:00:07.43,0:00:11.70,Kuya,,0,0,0,,{\fad(60,60)}Hindi pa. Ibig sabihin lang,\Npuwede itong lagyan ng {\c&H000BAEF5&}battery.{\c&H00FFFFFF&}
-Dialogue: 0,0:00:12.00,0:00:15.71,Kuya,,0,0,0,,{\fad(60,60)}Para gumana ang backup, kailangan\Nng compatible na {\c&H000BAEF5&}battery,{\c&H00FFFFFF&}
-Dialogue: 0,0:00:15.76,0:00:18.97,Kuya,,0,0,0,,{\fad(60,60)}tamang backup {\c&H000BAEF5&}wiring{\c&H00FFFFFF&} o\Ncritical loads panel,
-Dialogue: 0,0:00:19.02,0:00:22.97,Kuya,,0,0,0,,{\fad(60,60)}at inverter na naka-set\Nup talaga para sa {\c&H000BAEF5&}backup.{\c&H00FFFFFF&}
-Dialogue: 0,0:00:23.27,0:00:27.06,Kuya,,0,0,0,,{\fad(60,60)}Kung kulang ang mga 'yan,\Npuwedeng {\c&H000BAEF5&}brownout{\c&H00FFFFFF&} ka pa rin.
-Dialogue: 0,0:00:27.36,0:00:31.03,Kuya,,0,0,0,,{\fad(60,60)}Kaya bago bumili, {\c&H000BAEF5&}ipa-verify{\c&H00FFFFFF&}\Nang buong backup setup.
-Dialogue: 0,0:00:31.43,0:00:36.94,Kuya,,0,0,0,,{\fad(60,60)}Dahil ang gusto ni Kuya SoLight…\Nnaka-solar ka na, {\c&H000BAEF5&}SoSmart{\c&H00FFFFFF&} ka pa!
-Dialogue: 0,0:00:37.29,0:00:39.75,Kuya,,0,0,0,,{\fad(60,60)}Life is SoLight with Solar.
+Dialogue: 0,0:00:00.25,0:00:03.86,Kuya,,0,0,0,,{\fad(60,60)}{\c&H000BAEF5&}Hybrid-ready{\c&H00FFFFFF&} daw ang inverter\Nmo. May {\c&H000BAEF5&}backup{\c&H00FFFFFF&} ka na ba?
+Dialogue: 0,0:00:04.21,0:00:06.98,Kuya,,0,0,0,,{\fad(60,60)}Hello, {\c&H000BAEF5&}SoSmart{\c&H00FFFFFF&} viewers!\NKuya {\c&H000BAEF5&}SoLight{\c&H00FFFFFF&} 'to!
+Dialogue: 0,0:00:07.33,0:00:11.60,Kuya,,0,0,0,,{\fad(60,60)}Hindi pa. Ibig sabihin lang,\Npuwede itong lagyan ng {\c&H000BAEF5&}battery.{\c&H00FFFFFF&}
+Dialogue: 0,0:00:11.90,0:00:15.61,Kuya,,0,0,0,,{\fad(60,60)}Para gumana ang backup, kailangan\Nng compatible na {\c&H000BAEF5&}battery,{\c&H00FFFFFF&}
+Dialogue: 0,0:00:15.66,0:00:18.87,Kuya,,0,0,0,,{\fad(60,60)}tamang backup {\c&H000BAEF5&}wiring{\c&H00FFFFFF&} o\Ncritical loads panel,
+Dialogue: 0,0:00:18.92,0:00:22.87,Kuya,,0,0,0,,{\fad(60,60)}at inverter na naka-set\Nup talaga para sa {\c&H000BAEF5&}backup.{\c&H00FFFFFF&}
+Dialogue: 0,0:00:23.17,0:00:26.96,Kuya,,0,0,0,,{\fad(60,60)}Kung kulang ang mga 'yan,\Npuwedeng {\c&H000BAEF5&}brownout{\c&H00FFFFFF&} ka pa rin.
+Dialogue: 0,0:00:27.26,0:00:30.93,Kuya,,0,0,0,,{\fad(60,60)}Kaya bago bumili, {\c&H000BAEF5&}ipa-verify{\c&H00FFFFFF&}\Nang buong backup setup.
+Dialogue: 0,0:00:31.33,0:00:36.81,Kuya,,0,0,0,,{\fad(60,60)}Dahil ang gusto ni Kuya SoLight…\Nnaka-solar ka na, {\c&H000BAEF5&}SoSmart{\c&H00FFFFFF&} ka pa!
+Dialogue: 0,0:00:37.16,0:00:38.57,Kuya,,0,0,0,,{\fad(60,60)}Life is SoLight with Solar.

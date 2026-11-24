@@ -1,43 +1,43 @@
 1
-00:00:00,250 --> 00:00:02,540
+00:00:00,250 --> 00:00:02,940
 Gumagana ba ang
 solar panels sa gabi?
 
 2
-00:00:02,890 --> 00:00:05,660
+00:00:03,290 --> 00:00:06,060
 Hello, SoSmart viewers!
 Kuya SoLight 'to!
 
 3
-00:00:06,010 --> 00:00:10,430
+00:00:06,410 --> 00:00:10,830
 Hindi. Kailangan ng liwanag
 para gumawa ng kuryente.
 
 4
-00:00:10,730 --> 00:00:12,560
+00:00:11,130 --> 00:00:12,960
 Kung solar ang
 gamit mo sa gabi,
 
 5
-00:00:12,610 --> 00:00:16,270
+00:00:13,010 --> 00:00:16,670
 galing 'yan sa battery
 na nag-charge noong araw.
 
 6
-00:00:16,570 --> 00:00:20,960
+00:00:16,970 --> 00:00:21,360
 Kapag wala o ubos na ang
 battery, grid na ang kukunan.
 
 7
-00:00:21,260 --> 00:00:26,570
+00:00:21,660 --> 00:00:26,970
 Magkaiba ang solar
 generation at stored energy.
 
 8
-00:00:26,970 --> 00:00:32,180
+00:00:27,370 --> 00:00:32,850
 Dahil ang gusto ni Kuya SoLight…
 naka-solar ka na, SoSmart ka pa!
 
 9
-00:00:32,530 --> 00:00:34,990
+00:00:33,200 --> 00:00:34,610
 Life is SoLight with Solar.

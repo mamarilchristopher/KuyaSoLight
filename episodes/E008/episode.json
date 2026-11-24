@@ -93,7 +93,12 @@
    "gold": [
     "gabi"
    ],
-   "pauseAfter": 0.35
+   "pauseAfter": 0.35,
+   "elSettings": {
+    "stability": 0.25,
+    "style": 0.9
+   },
+   "standalone": true
   },
   {
    "id": "c02",
@@ -159,13 +164,15 @@
    "gold": [
     "SoSmart"
    ],
-   "pauseAfter": 0.35
+   "pauseAfter": 0.35,
+   "audioFile": "assets/voice/locked/outro-catchphrase-O3.wav"
   },
   {
    "id": "cz2",
    "scene": "endcard",
    "text": "Life is SoLight with Solar.",
-   "pauseAfter": 0.2
+   "pauseAfter": 0.2,
+   "audioFile": "assets/voice/locked/outro-tagline-O3.wav"
   }
  ],
  "claims": [

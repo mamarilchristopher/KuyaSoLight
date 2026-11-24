@@ -11,12 +11,12 @@ Style: Kuya,Inter ExtraBold,52,&H00FFFFFF&,&H00FFFFFF&,&H262E1A0B&,&H262E1A0B&,0
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.25,0:00:02.61,Kuya,,0,0,0,,{\fad(60,60)}Saan nga ba galing ang\N{\c&H000BAEF5&}kuryente{\c&H00FFFFFF&} sa bahay mo?
-Dialogue: 0,0:00:02.96,0:00:05.73,Kuya,,0,0,0,,{\fad(60,60)}Hello, {\c&H000BAEF5&}SoSmart{\c&H00FFFFFF&} viewers!\NKuya {\c&H000BAEF5&}SoLight{\c&H00FFFFFF&} 'to!
-Dialogue: 0,0:00:06.08,0:00:09.59,Kuya,,0,0,0,,{\fad(60,60)}Habang may araw, {\c&H000BAEF5&}solar{\c&H00FFFFFF&} ang\Nunang sumusuplay sa bahay.
-Dialogue: 0,0:00:09.89,0:00:14.66,Kuya,,0,0,0,,{\fad(60,60)}Kapag sobra, puwedeng i-export\Nsa grid kung naka-net metering.
-Dialogue: 0,0:00:14.96,0:00:18.27,Kuya,,0,0,0,,{\fad(60,60)}Kung may {\c&H000BAEF5&}battery,{\c&H00FFFFFF&} puwede\Nrin itong mag-charge.
-Dialogue: 0,0:00:18.57,0:00:22.56,Kuya,,0,0,0,,{\fad(60,60)}Sa gabi, {\c&H000BAEF5&}battery{\c&H00FFFFFF&} o {\c&H000BAEF5&}grid{\c&H00FFFFFF&}\Nna ang nagsu-supply.
-Dialogue: 0,0:00:22.86,0:00:27.19,Kuya,,0,0,0,,{\fad(60,60)}Kapag alam mo ang daloy,\Nmas madaling {\c&H000BAEF5&}magtipid.{\c&H00FFFFFF&}
-Dialogue: 0,0:00:27.59,0:00:33.14,Kuya,,0,0,0,,{\fad(60,60)}Dahil ang gusto ni Kuya SoLight…\Nnaka-solar ka na, {\c&H000BAEF5&}SoSmart{\c&H00FFFFFF&} ka pa!
-Dialogue: 0,0:00:33.49,0:00:35.95,Kuya,,0,0,0,,{\fad(60,60)}Life is SoLight with Solar.
+Dialogue: 0,0:00:00.25,0:00:02.75,Kuya,,0,0,0,,{\fad(60,60)}Saan nga ba galing ang\N{\c&H000BAEF5&}kuryente{\c&H00FFFFFF&} sa bahay mo?
+Dialogue: 0,0:00:03.10,0:00:05.87,Kuya,,0,0,0,,{\fad(60,60)}Hello, {\c&H000BAEF5&}SoSmart{\c&H00FFFFFF&} viewers!\NKuya {\c&H000BAEF5&}SoLight{\c&H00FFFFFF&} 'to!
+Dialogue: 0,0:00:06.22,0:00:09.73,Kuya,,0,0,0,,{\fad(60,60)}Habang may araw, {\c&H000BAEF5&}solar{\c&H00FFFFFF&} ang\Nunang sumusuplay sa bahay.
+Dialogue: 0,0:00:10.03,0:00:14.80,Kuya,,0,0,0,,{\fad(60,60)}Kapag sobra, puwedeng i-export\Nsa grid kung naka-net metering.
+Dialogue: 0,0:00:15.10,0:00:18.41,Kuya,,0,0,0,,{\fad(60,60)}Kung may {\c&H000BAEF5&}battery,{\c&H00FFFFFF&} puwede\Nrin itong mag-charge.
+Dialogue: 0,0:00:18.71,0:00:22.70,Kuya,,0,0,0,,{\fad(60,60)}Sa gabi, {\c&H000BAEF5&}battery{\c&H00FFFFFF&} o {\c&H000BAEF5&}grid{\c&H00FFFFFF&}\Nna ang nagsu-supply.
+Dialogue: 0,0:00:23.00,0:00:27.33,Kuya,,0,0,0,,{\fad(60,60)}Kapag alam mo ang daloy,\Nmas madaling {\c&H000BAEF5&}magtipid.{\c&H00FFFFFF&}
+Dialogue: 0,0:00:27.73,0:00:33.21,Kuya,,0,0,0,,{\fad(60,60)}Dahil ang gusto ni Kuya SoLight…\Nnaka-solar ka na, {\c&H000BAEF5&}SoSmart{\c&H00FFFFFF&} ka pa!
+Dialogue: 0,0:00:33.56,0:00:34.97,Kuya,,0,0,0,,{\fad(60,60)}Life is SoLight with Solar.
