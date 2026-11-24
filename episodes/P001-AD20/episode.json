@@ -301,5 +301,10 @@
    "freshness": "re-verify before publication"
   }
  ],
- "adCut": true
+ "adCut": true,
+ "ownerApproval": {
+  "status": "approved",
+  "by": "CHRIS (Owner)",
+  "at": "2026-11-24T14:51:52+08:00"
+ }
 }

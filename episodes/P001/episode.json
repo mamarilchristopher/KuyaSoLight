@@ -475,5 +475,10 @@
    "retrieved": "2026-11-24",
    "freshness": "re-verify before publication"
   }
- ]
+ ],
+ "ownerApproval": {
+  "status": "approved",
+  "by": "CHRIS (Owner)",
+  "at": "2026-11-24T14:51:52+08:00"
+ }
 }
