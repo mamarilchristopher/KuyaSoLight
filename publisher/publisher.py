@@ -240,7 +240,7 @@ def slot_open(cfg: dict, ledger: dict, now: dt.datetime) -> tuple[bool, str]:
     for ep, epdata in ledger["episodes"].items():
         first = epdata.get("first_posted_at")
         if first and dt.datetime.fromisoformat(first) >= slot:
-            in_flight = [p for p in enabled_platforms(cfg) if p not in epdata.get("platforms", {})]
+            in_flight = [p for p in auto_platforms(cfg) if p not in epdata.get("platforms", {})]
             if not in_flight:
                 return False, f"{ep} already went out in the {slot.isoformat()} slot"
     return True, f"slot {slot.isoformat()} open"
@@ -248,6 +248,15 @@ def slot_open(cfg: dict, ledger: dict, now: dt.datetime) -> tuple[bool, str]:
 
 def enabled_platforms(cfg: dict) -> list[str]:
     return [p for p in PLATFORMS if cfg["platforms"][p].get("enabled")]
+
+
+def is_manual(cfg: dict, plat: str) -> bool:
+    """A manual platform is posted by the owner from a ready package we send them."""
+    return cfg["platforms"][plat].get("mode") == "manual"
+
+
+def auto_platforms(cfg: dict) -> list[str]:
+    return [p for p in enabled_platforms(cfg) if not is_manual(cfg, p)]
 
 
 # --------------------------------------------------------------------------- planning
@@ -283,6 +292,12 @@ def build_action(cfg: dict, plat: str, b: dict, url: str | None) -> dict:
                            "tags": yt["tags"], "category_id": pc.get("category_id", "27"),
                            "made_for_kids": bool(pc.get("made_for_kids", False)),
                            "privacy_status": pc.get("privacy_status", "public")}}
+    if is_manual(cfg, plat):
+        return {"platform": plat, "via": "owner",
+                "package": {"video_path": b["video"]["path"], "video_file": b["video"]["file"],
+                            "caption": b[plat]["caption"],
+                            "how": "Send the owner this video and caption in the project thread to upload "
+                                   "themselves, then record it as handed off."}}
     return {"platform": "tiktok", "via": "cli",
             "command": f"python3 publisher/publisher.py tiktok {b['episode']} --live"}
 
@@ -307,7 +322,8 @@ def plan(cfg: dict, now: dt.datetime, ignore_schedule: bool = False) -> dict:
     ids = [e for e in ids if e >= start_from]
     bundles: dict[str, dict] = {}
     targets: dict[str, str] = {}
-    for plat in plats:
+    queue_plats = auto_platforms(cfg) or plats
+    for plat in queue_plats:
         for ep in ids:
             done = ledger["episodes"].get(ep, {}).get("platforms", {}).get(plat)
             if done:
@@ -339,8 +355,12 @@ def plan(cfg: dict, now: dt.datetime, ignore_schedule: bool = False) -> dict:
         return result
 
     url = media_url(cfg, b)
+    posted_here = ledger["episodes"].get(ep, {}).get("platforms", {})
     for plat in plats:
-        if targets.get(plat) != ep:
+        if is_manual(cfg, plat) and plat not in queue_plats:
+            if plat in posted_here:
+                continue
+        elif targets.get(plat) != ep:
             continue
         a = build_action(cfg, plat, b, url)
         a["blockers"] = []
@@ -348,7 +368,7 @@ def plan(cfg: dict, now: dt.datetime, ignore_schedule: bool = False) -> dict:
             a["blockers"].append("no public video URL (set media_url_template)")
         if plat == "youtube" and not cfg["platforms"]["youtube"].get("channel_id"):
             a["blockers"].append("YouTube not connected in Windsor")
-        if plat == "tiktok" and not os.environ.get(cfg["platforms"]["tiktok"].get("token_env", "TIKTOK_ACCESS_TOKEN")):
+        if plat == "tiktok" and not is_manual(cfg, plat) and not os.environ.get(cfg["platforms"]["tiktok"].get("token_env", "TIKTOK_ACCESS_TOKEN")):
             a["blockers"].append("no TikTok access token in environment")
         result["actions"].append(a)
 

@@ -30,6 +30,7 @@
     },
     "tiktok": {
       "enabled": true,
+      "mode": "manual",
       "token_env": "TIKTOK_ACCESS_TOKEN",
       "privacy_level": "PUBLIC_TO_EVERYONE",
       "is_aigc": true

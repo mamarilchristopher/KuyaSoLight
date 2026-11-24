@@ -137,6 +137,21 @@ class PublisherTest(unittest.TestCase):
         r = P.plan(self.cfg, WED_7PM)
         self.assertFalse(r["ready"])
 
+    def test_manual_tiktok_gets_package_and_does_not_hold_queue(self):
+        self.cfg["live"] = True
+        self.cfg["platforms"]["tiktok"] = {"enabled": True, "mode": "manual"}
+        r = P.plan(self.cfg, WED_7PM)
+        tt = [a for a in r["actions"] if a["platform"] == "tiktok"][0]
+        self.assertEqual(tt["via"], "owner")
+        self.assertEqual(tt["package"]["caption"], "tt E001")
+        self.assertEqual(tt["blockers"], [])
+        self.assertTrue(r["ready"])
+        # Facebook + YouTube done: the slot is used, and TikTok never holds the queue.
+        self.post_all("E001")
+        self.assertEqual(P.plan(self.cfg, WED_7PM + dt.timedelta(minutes=30))["actions"], [])
+        r = P.plan(self.cfg, FRI_7PM)
+        self.assertEqual(r["episode"], "E002")
+
     def test_tiktok_dry_run_sends_nothing(self):
         out = P.tiktok_post(self.cfg, "E001", live=True)   # config live false + tiktok disabled
         self.assertTrue(out["dry_run"])

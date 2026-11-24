@@ -16,7 +16,12 @@ A Claude cloud routine runs this at every posting slot (default Mon, Wed, Fri at
      Facebook, YouTube, TikTok:
      * `via: windsor`: call Windsor.ai `execute_action` with exactly the
        `connector`, `account`, `action` and `params` given. Do not edit captions.
-     * `via: cli`: run the `command` (TikTok; needs `TIKTOK_ACCESS_TOKEN`).
+     * `via: owner` (TikTok, owner posts it): post one message in the project
+       thread with the video attached (`package.video_path`) and the TikTok
+       caption in a code block, ready to paste. Then record it with
+       `--id handed-off`. It never holds back the next episode.
+     * `via: cli`: run the `command` (only if TikTok is later switched to
+       automatic; needs `TIKTOK_ACCESS_TOKEN`).
      * Right after each success, save it:
        `python3 publisher/publisher.py record E00x <platform> --id <post id> --url <url> --video-sha256 <plan.video.sha256>`
        If a call fails, do not retry it in the same run and do not record it.

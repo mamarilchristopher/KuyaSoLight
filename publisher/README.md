@@ -28,7 +28,7 @@ cd publisher && python3 -m unittest test_publisher
 |---|---|---|
 | Facebook Reel | Windsor.ai `facebook_organic` → `create_reel` | Page connected (done), public video URL |
 | YouTube Short | Windsor.ai `youtube` → `upload_video` (category Education, not for kids, public) | YouTube connected in Windsor, public video URL |
-| TikTok | TikTok Content Posting API, Direct Post with file upload | TikTok developer app + access token; posts are private until TikTok audits the app |
+| TikTok | Owner posts it (`"mode": "manual"`, CHRIS's choice 24 Nov 2026): at each slot the routine sends the video and TikTok caption ready to upload | Nothing. Automatic Direct Post code is kept for later (needs a TikTok developer app) |
 
 Public video URL: Facebook and YouTube download the video from a link. The repo is
 public, so once the Claude GitHub App can push to it, approved videos go under
