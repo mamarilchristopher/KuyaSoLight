@@ -1,0 +1,419 @@
+{
+ "id": "E015",
+ "title": "Panel, Inverter, Battery: Kanya-Kanyang Trabaho",
+ "pillar": "E",
+ "template": "T-explainer",
+ "audience": "First-time solar buyers",
+ "premise": "Panels make DC from light, the inverter converts it to AC for the home, the battery stores energy for later and is optional.",
+ "openingPattern": "A-question-first",
+ "greetingId": "greet-default",
+ "catchphraseId": "close-signature",
+ "scriptBasis": "Claude draft from the episode plan (data/episodes.json) title/angle, V1.1 brand lines; claims checked online 2026-11-25.",
+ "scriptVersion": 1,
+ "voice": "production",
+ "cover": [
+  "Panel, Inverter,",
+  "Battery: Ano ang Trabaho?"
+ ],
+ "scenes": {
+  "hook": {
+   "type": "hook",
+   "icon": "panel",
+   "icon2": "battery",
+   "chip": "Sino ang gumagawa ng ano?"
+  },
+  "panel": {
+   "type": "cards",
+   "cards": [
+    {
+     "title": "Panel",
+     "lines": [
+      "Gumagawa ng kuryente",
+      "mula sa liwanag"
+     ],
+     "tone": "navy",
+     "icon": "panel"
+    }
+   ]
+  },
+  "inv": {
+   "type": "cards",
+   "cards": [
+    {
+     "title": "Panel",
+     "lines": [
+      "Gumagawa ng kuryente"
+     ],
+     "tone": "navy",
+     "icon": "panel"
+    },
+    {
+     "title": "Inverter",
+     "lines": [
+      "DC → AC para sa bahay"
+     ],
+     "tone": "gold",
+     "icon": "inverter"
+    }
+   ]
+  },
+  "bat": {
+   "type": "cards",
+   "cards": [
+    {
+     "title": "Panel",
+     "lines": [
+      "Gumagawa ng kuryente"
+     ],
+     "tone": "navy",
+     "icon": "panel"
+    },
+    {
+     "title": "Inverter",
+     "lines": [
+      "DC → AC para sa bahay"
+     ],
+     "tone": "gold",
+     "icon": "inverter"
+    },
+    {
+     "title": "Battery",
+     "lines": [
+      "Nag-iimbak para mamaya"
+     ],
+     "tone": "white",
+     "icon": "battery"
+    }
+   ]
+  },
+  "opt": {
+   "type": "path",
+   "steps": [
+    {
+     "icon": "sun",
+     "label": "araw"
+    },
+    {
+     "icon": "panel",
+     "label": "panel"
+    },
+    {
+     "icon": "inverter",
+     "label": "inverter"
+    },
+    {
+     "icon": "house",
+     "label": "bahay"
+    }
+   ],
+   "kuyaLeft": true
+  },
+  "recap": {
+   "type": "checklist",
+   "title": "Tandaan",
+   "items": [
+    "Panel: gumagawa",
+    "Inverter: nagpapalit",
+    "Battery: nag-iimbak (optional)"
+   ]
+  },
+  "close": {
+   "type": "close"
+  },
+  "endcard": {
+   "type": "endcard",
+   "sources": [
+    "Sources: U.S. EIA & DOE solar and inverter basics; U.S. DOE",
+    "solar-plus-storage; Meralco Solar & Net Metering (checked 25 Nov 2026)"
+   ]
+  }
+ },
+ "cues": [
+  {
+   "id": "c01",
+   "scene": "hook",
+   "text": "Ano ba ang trabaho ng panel, inverter, at battery?",
+   "gold": [
+    "panel",
+    "inverter",
+    "battery"
+   ],
+   "pauseAfter": 0.4,
+   "standalone": true,
+   "elSettings": {
+    "stability": 0.25,
+    "style": 0.9
+   }
+  },
+  {
+   "id": "c02",
+   "scene": "identity",
+   "text": "Hello, SoSmart viewers! Kuya SoLight 'to!",
+   "gold": [
+    "SoSmart",
+    "SoLight"
+   ],
+   "pauseAfter": 0.35,
+   "elSpeed": 1.15,
+   "standalone": true
+  },
+  {
+   "id": "c03",
+   "scene": "panel",
+   "text": "Ang panel ang gumagawa ng kuryente mula sa liwanag.",
+   "gold": [
+    "panel"
+   ],
+   "pauseAfter": 0.55,
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "c04",
+   "scene": "inv",
+   "text": "Ang inverter ang nagpapalit nito para magamit sa bahay.",
+   "gold": [
+    "inverter"
+   ],
+   "pauseAfter": 0.55,
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "c05",
+   "scene": "bat",
+   "text": "Ang battery naman ang nag-iimbak para magamit mamaya.",
+   "gold": [
+    "battery"
+   ],
+   "pauseAfter": 0.55,
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "c06",
+   "scene": "opt",
+   "text": "Puwedeng walang battery, pero sa araw mo lang direktang magagamit ang solar.",
+   "gold": [
+    "walang battery"
+   ],
+   "pauseAfter": 0.55,
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "c07",
+   "scene": "recap",
+   "text": "Panel ang gumagawa, inverter ang nagpapalit, battery ang nag-iimbak.",
+   "gold": [
+    "gumagawa",
+    "nagpapalit",
+    "nag-iimbak"
+   ],
+   "pauseAfter": 0.55,
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "cz1",
+   "scene": "close",
+   "text": "Dahil ang gusto ni Kuya SoLight… naka-solar ka na, SoSmart ka pa!",
+   "gold": [
+    "SoSmart"
+   ],
+   "pauseAfter": 0.35,
+   "audioFile": "assets/voice/locked/outro-catchphrase-O3.wav"
+  },
+  {
+   "id": "cz2",
+   "scene": "endcard",
+   "text": "Life is SoLight with Solar.",
+   "pauseAfter": 0.2,
+   "audioFile": "assets/voice/locked/outro-tagline-O3.wav"
+  }
+ ],
+ "claims": [
+  {
+   "id": "CL-E015-01",
+   "category": "technical",
+   "wording": "Solar panels convert light into electricity (DC).",
+   "scope": "PV modules.",
+   "caveats": "",
+   "sources": [
+    "SRC-EIA-PV"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-25T05:45:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "EIA."
+   }
+  },
+  {
+   "id": "CL-E015-02",
+   "category": "technical",
+   "wording": "The inverter converts DC into the AC used at home.",
+   "scope": "Residential PV.",
+   "caveats": "",
+   "sources": [
+    "SRC-DOE-INV"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-25T05:45:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "DOE inverter basics."
+   }
+  },
+  {
+   "id": "CL-E015-03",
+   "category": "technical",
+   "wording": "A battery stores energy for later use.",
+   "scope": "Solar-plus-storage.",
+   "caveats": "",
+   "sources": [
+    "SRC-DOE-STORAGE"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-25T05:45:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "DOE: batteries store daytime solar for night or outages."
+   }
+  },
+  {
+   "id": "CL-E015-04",
+   "category": "technical",
+   "wording": "A battery is optional; without it, solar is used directly only while it generates (daytime).",
+   "scope": "Grid-tied systems.",
+   "caveats": "",
+   "sources": [
+    "SRC-MER-NM",
+    "SRC-MER-DER"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-25T05:45:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "Meralco: system supplies the property while generating; grid supplies at night."
+   }
+  }
+ ],
+ "sources": [
+  {
+   "id": "SRC-DOE-INV",
+   "tier": 1,
+   "publisher": "U.S. Department of Energy",
+   "title": "Solar Integration: Inverters and Grid Services Basics",
+   "url": "https://www.energy.gov/eere/solar/solar-integration-inverters-and-grid-services-basics",
+   "jurisdiction": "General technical reference",
+   "excerpts": [
+    "Inverters change the variable direct current (DC) output of PV into alternating current (AC) for the grid and household use."
+   ],
+   "published": null,
+   "retrieved": "2026-11-25",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-DOE-STORAGE",
+   "tier": 1,
+   "publisher": "U.S. Department of Energy",
+   "title": "Homeowner's Guide to Going Solar (solar-plus-storage)",
+   "url": "https://www.energy.gov/eere/solar/homeowners-guide-going-solar",
+   "jurisdiction": "General technical reference",
+   "excerpts": [
+    "Batteries can store solar energy produced during the day for use at night or during outages, if the system is designed for it."
+   ],
+   "published": null,
+   "retrieved": "2026-11-25",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-EIA-PV",
+   "tier": 1,
+   "publisher": "U.S. Energy Information Administration",
+   "title": "Photovoltaics and electricity",
+   "url": "https://www.eia.gov/energyexplained/solar/photovoltaics-and-electricity.php",
+   "jurisdiction": "General technical reference",
+   "excerpts": [
+    "PV cells convert sunlight directly into electricity (DC); output depends on available sunlight."
+   ],
+   "published": null,
+   "retrieved": "2026-11-25",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-MER-DER",
+   "tier": 1,
+   "publisher": "Manila Electric Company (Meralco)",
+   "title": "Distributed Energy Resources",
+   "url": "https://www.meralco.com.ph/residential/energy-solutions/solar-and-renewables/distributed-energy-resources",
+   "jurisdiction": "Philippines, Meralco franchise area",
+   "excerpts": [
+    "At times when there is no sunlight, or at night, the grid will provide electricity."
+   ],
+   "published": null,
+   "retrieved": "2026-11-25",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-MER-NM",
+   "tier": 1,
+   "publisher": "Manila Electric Company (Meralco)",
+   "title": "Solar and Net Metering",
+   "url": "https://www.meralco.com.ph/residential/energy-solutions/solar-and-renewables/solar-net-metering",
+   "jurisdiction": "Philippines, Meralco franchise area",
+   "excerpts": [
+    "Your system supplies the property first while it is generating.",
+    "The Meralco grid supplies the property when renewable generation is not enough.",
+    "an exported kilowatt-hour is not exchanged one-for-one at the full retail rate.",
+    "The Net Metering peso credit is applied to eligible bill charges under the current rules,",
+    "based on the applicable monthly blended generation cost rather than the full retail rate. (FAQ 11)"
+   ],
+   "published": null,
+   "retrieved": "2026-11-25",
+   "freshness": "re-verify before publication"
+  }
+ ],
+ "caption": {
+  "main": "Panel, inverter, battery: alam mo ba ang trabaho ng bawat isa? 🔧",
+  "short": "Panel = gumagawa, inverter = nagpapalit, battery = nag-iimbak 🔋",
+  "thumbnailHeadline": "Panel, Inverter, Battery: Ano ang Trabaho?",
+  "discussionQuestion": "SoSmart viewers, may battery ba ang solar n'yo o wala? 👇",
+  "hashtags": [
+   "#KuyaSoLight",
+   "#SoSmartViewers",
+   "#SolarPH",
+   "#SolarKlaro",
+   "#SoLightSolarPH"
+  ],
+  "cta": "I-follow si Kuya SoLight"
+ }
+}

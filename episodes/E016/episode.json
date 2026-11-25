@@ -1,0 +1,377 @@
+{
+ "id": "E016",
+ "title": "Solar Muna, Battery Later?",
+ "pillar": "D",
+ "template": "T-explainer",
+ "audience": "Homeowners on a budget planning storage later",
+ "premise": "Adding a battery later is easiest with a hybrid inverter and a compatible battery; a grid-tied-only inverter needs an extra battery inverter (AC-coupled).",
+ "openingPattern": "A-question-first",
+ "greetingId": "greet-default",
+ "catchphraseId": "close-signature",
+ "scriptBasis": "Claude draft from the episode plan (data/episodes.json) title/angle, V1.1 brand lines; claims checked online 2026-11-25.",
+ "scriptVersion": 1,
+ "voice": "production",
+ "cover": [
+  "Solar Muna,",
+  "Battery Later?"
+ ],
+ "scenes": {
+  "hook": {
+   "type": "hook",
+   "icon": "battery",
+   "chip": "Battery sa susunod?"
+  },
+  "hybrid": {
+   "type": "cards",
+   "cards": [
+    {
+     "title": "Hybrid inverter",
+     "lines": [
+      "Puwedeng dagdagan",
+      "ng compatible na battery"
+     ],
+     "tone": "gold",
+     "icon": "inverter"
+    }
+   ]
+  },
+  "compat": {
+   "type": "cards",
+   "cards": [
+    {
+     "title": "Hybrid inverter",
+     "lines": [
+      "Puwedeng dagdagan",
+      "ng compatible na battery"
+     ],
+     "tone": "gold",
+     "icon": "inverter"
+    },
+    {
+     "title": "Compatible ba?",
+     "lines": [
+      "Brand at model ng battery"
+     ],
+     "tone": "white",
+     "icon": "battery"
+    }
+   ]
+  },
+  "ac": {
+   "type": "cards",
+   "cards": [
+    {
+     "title": "Grid-tied inverter lang",
+     "lines": [
+      "Kailangan ng dagdag",
+      "na battery inverter"
+     ],
+     "tone": "navy",
+     "icon": "inverter"
+    }
+   ]
+  },
+  "ask": {
+   "type": "checklist",
+   "title": "Itanong sa installer",
+   "items": [
+    "Hybrid ba ang inverter?",
+    "Anong battery ang compatible?",
+    "Handa na ba ang backup wiring?"
+   ]
+  },
+  "plan": {
+   "type": "equation",
+   "lines": [
+    {
+     "text": "Plano ngayon"
+    },
+    {
+     "text": "= tipid mamaya",
+     "color": "gold",
+     "size": 80
+    }
+   ],
+   "icon": "battery"
+  },
+  "close": {
+   "type": "close"
+  },
+  "endcard": {
+   "type": "endcard",
+   "sources": [
+    "Sources: EnergySage battery retrofit guide; SolarQuotes \"battery ready\"",
+    "guide; Fronius & SMA backup docs (checked 25 Nov 2026)"
+   ]
+  }
+ },
+ "cues": [
+  {
+   "id": "c01",
+   "scene": "hook",
+   "text": "Puwede bang solar muna, tapos battery na lang sa susunod?",
+   "gold": [
+    "battery"
+   ],
+   "pauseAfter": 0.4,
+   "standalone": true,
+   "elSettings": {
+    "stability": 0.25,
+    "style": 0.9
+   }
+  },
+  {
+   "id": "c02",
+   "scene": "identity",
+   "text": "Hello, SoSmart viewers! Kuya SoLight 'to!",
+   "gold": [
+    "SoSmart",
+    "SoLight"
+   ],
+   "pauseAfter": 0.35,
+   "elSpeed": 1.15,
+   "standalone": true
+  },
+  {
+   "id": "c03",
+   "scene": "hybrid",
+   "text": "Puwede, lalo na kung hybrid inverter ang ilalagay mo ngayon.",
+   "gold": [
+    "hybrid inverter"
+   ],
+   "pauseAfter": 0.55,
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "c04",
+   "scene": "compat",
+   "text": "Siguraduhin lang na compatible ito sa battery na balak mo.",
+   "gold": [
+    "compatible"
+   ],
+   "pauseAfter": 0.55,
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "c05",
+   "scene": "ac",
+   "text": "Kung grid-tied inverter lang, puwede pa rin, pero may dagdag na battery inverter.",
+   "gold": [
+    "dagdag"
+   ],
+   "pauseAfter": 0.55,
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "c06",
+   "scene": "ask",
+   "text": "Itanong din kung handa na ang wiring para sa backup.",
+   "gold": [
+    "backup"
+   ],
+   "pauseAfter": 0.55,
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "c07",
+   "scene": "plan",
+   "text": "Planuhin na ngayon, para hindi ka magpalit ng inverter sa susunod.",
+   "gold": [
+    "Planuhin"
+   ],
+   "pauseAfter": 0.55,
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "cz1",
+   "scene": "close",
+   "text": "Dahil ang gusto ni Kuya SoLight… naka-solar ka na, SoSmart ka pa!",
+   "gold": [
+    "SoSmart"
+   ],
+   "pauseAfter": 0.35,
+   "audioFile": "assets/voice/locked/outro-catchphrase-O3.wav"
+  },
+  {
+   "id": "cz2",
+   "scene": "endcard",
+   "text": "Life is SoLight with Solar.",
+   "pauseAfter": 0.2,
+   "audioFile": "assets/voice/locked/outro-tagline-O3.wav"
+  }
+ ],
+ "claims": [
+  {
+   "id": "CL-E016-01",
+   "category": "technical",
+   "wording": "With a hybrid inverter, a compatible battery can usually be added later.",
+   "scope": "Residential PV.",
+   "caveats": "Depends on brand compatibility.",
+   "sources": [
+    "SRC-ES-RETRO",
+    "SRC-SQ-READY"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-25T05:45:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "EnergySage: compatible DC-coupled battery on hybrid inverter; SolarQuotes: adding batteries later requires hybrid inverter."
+   }
+  },
+  {
+   "id": "CL-E016-02",
+   "category": "technical",
+   "wording": "Battery compatibility with the inverter must be confirmed.",
+   "scope": "Residential PV.",
+   "caveats": "",
+   "sources": [
+    "SRC-SQ-READY",
+    "SRC-FRONIUS-BU"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-25T05:45:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "SolarQuotes: 'battery ready' used loosely; Fronius: compatible battery required."
+   }
+  },
+  {
+   "id": "CL-E016-03",
+   "category": "technical",
+   "wording": "With a grid-tied-only inverter, a battery can still be added via an AC-coupled battery with its own battery inverter.",
+   "scope": "Residential PV.",
+   "caveats": "Less efficient than DC-coupled (not on screen).",
+   "sources": [
+    "SRC-ES-RETRO"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-25T05:45:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "EnergySage: AC coupling adds a battery inverter."
+   }
+  },
+  {
+   "id": "CL-E016-04",
+   "category": "technical",
+   "wording": "Backup during outages needs proper backup wiring.",
+   "scope": "Hybrid/backup systems.",
+   "caveats": "",
+   "sources": [
+    "SRC-FRONIUS-BU",
+    "SRC-SMA-BU"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-25T05:45:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "Manufacturer docs."
+   }
+  }
+ ],
+ "sources": [
+  {
+   "id": "SRC-ES-RETRO",
+   "tier": 2,
+   "publisher": "EnergySage",
+   "title": "Adding a battery to a solar system: can you do it?",
+   "url": "https://www.energysage.com/energy-storage/adding-battery-to-solar-energy-system-as-retrofit/",
+   "jurisdiction": "General technical reference",
+   "excerpts": [
+    "With a hybrid inverter, a compatible battery can usually be added (DC-coupled).",
+    "With a standard inverter, an AC-coupled battery adds its own battery inverter."
+   ],
+   "published": null,
+   "retrieved": "2026-11-25",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-FRONIUS-BU",
+   "tier": 2,
+   "publisher": "Fronius International (manufacturer documentation)",
+   "title": "Backup power function",
+   "url": "https://www.fronius.com/en-in/india/solar-energy/installers-partners/products-solutions/features/backup-power-function",
+   "jurisdiction": "Manufacturer reference",
+   "excerpts": [
+    "Backup operation requires a compatible battery and the appropriate backup wiring/switching to separate the home circuits from the grid."
+   ],
+   "published": null,
+   "retrieved": "2026-11-25",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-SMA-BU",
+   "tier": 2,
+   "publisher": "SMA Solar Technology (manual)",
+   "title": "Battery-backup function",
+   "url": "https://manuals.sma.de/STPHxx-60/en-US/16945435403.html",
+   "jurisdiction": "Manufacturer reference",
+   "excerpts": [
+    "Battery-backup operation must be set up and wired as a backup system."
+   ],
+   "published": null,
+   "retrieved": "2026-11-25",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-SQ-READY",
+   "tier": 2,
+   "publisher": "SolarQuotes",
+   "title": "\"Battery Ready\" Solar Systems, And How To Buy One",
+   "url": "https://www.solarquotes.com.au/battery-storage/battery-ready/",
+   "jurisdiction": "General technical reference",
+   "excerpts": [
+    "\"Battery ready\" is used loosely; being able to simply add batteries later requires a hybrid inverter, so confirm what the seller means."
+   ],
+   "published": null,
+   "retrieved": "2026-11-25",
+   "freshness": "re-verify before publication"
+  }
+ ],
+ "caption": {
+  "main": "Solar muna, battery later? 🔋 Puwede, basta tama ang plano ngayon!",
+  "short": "Solar muna, battery later? Puwede, kung hybrid inverter at compatible ang battery 🔋",
+  "thumbnailHeadline": "Solar Muna, Battery Later?",
+  "discussionQuestion": "SoSmart viewers, balak n'yo bang magdagdag ng battery sa susunod? 👇",
+  "hashtags": [
+   "#KuyaSoLight",
+   "#SoSmartViewers",
+   "#SolarPH",
+   "#SolarKlaro",
+   "#SoLightSolarPH"
+  ],
+  "cta": "I-follow si Kuya SoLight"
+ }
+}

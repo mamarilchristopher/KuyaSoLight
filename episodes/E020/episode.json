@@ -1,0 +1,381 @@
+{
+ "id": "E020",
+ "title": "Same Ba ang Export at Import Electricity Rate?",
+ "pillar": "C",
+ "template": "T-explainer",
+ "audience": "Net-metering customers and buyers sizing for export",
+ "premise": "Imports are billed at the full retail rate; export credit is based on the blended generation cost, so each exported kWh is worth less than an imported one.",
+ "openingPattern": "A-question-first",
+ "greetingId": "greet-default",
+ "catchphraseId": "close-signature",
+ "scriptBasis": "Claude draft from the episode plan (data/episodes.json) title/angle, V1.1 brand lines; claims checked online 2026-11-25.",
+ "scriptVersion": 1,
+ "voice": "production",
+ "cover": [
+  "Same Ba ang Export",
+  "at Import Rate?"
+ ],
+ "scenes": {
+  "hook": {
+   "type": "hook",
+   "icon": "bill",
+   "icon2": "grid",
+   "chip": "Pareho ba?"
+  },
+  "imp": {
+   "type": "cards",
+   "cards": [
+    {
+     "title": "Import (binibili)",
+     "lines": [
+      "Buong retail rate",
+      "Generation, transmission at iba pa"
+     ],
+     "tone": "navy",
+     "icon": "grid"
+    }
+   ]
+  },
+  "exp": {
+   "type": "cards",
+   "cards": [
+    {
+     "title": "Import (binibili)",
+     "lines": [
+      "Buong retail rate"
+     ],
+     "tone": "navy",
+     "icon": "grid"
+    },
+    {
+     "title": "Export (credit)",
+     "lines": [
+      "Blended generation cost"
+     ],
+     "tone": "gold",
+     "icon": "panel"
+    }
+   ]
+  },
+  "less": {
+   "type": "equation",
+   "lines": [
+    {
+     "text": "Export credit"
+    },
+    {
+     "text": "<",
+     "color": "gold",
+     "size": 96
+    },
+    {
+     "text": "Retail rate"
+    }
+   ]
+  },
+  "day": {
+   "type": "sky",
+   "sky": "sunny",
+   "level": 0.9,
+   "chip": "Gamitin habang may araw"
+  },
+  "size": {
+   "type": "checklist",
+   "title": "Para mas sulit",
+   "items": [
+    "Gamitin ang solar sa araw",
+    "Tamang laki ng system",
+    "Huwag umasa sa export lang"
+   ]
+  },
+  "close": {
+   "type": "close"
+  },
+  "endcard": {
+   "type": "endcard",
+   "sources": [
+    "Sources: Meralco Solar & Net Metering (FAQ 11); Meralco schedule of",
+    "rates (Nov 2026); DOE REMB Net Metering (checked 25 Nov 2026)"
+   ]
+  }
+ },
+ "cues": [
+  {
+   "id": "c01",
+   "scene": "hook",
+   "text": "Pareho ba ang presyo ng kuryenteng binibili at ine-export mo?",
+   "gold": [
+    "binibili",
+    "ine-export"
+   ],
+   "pauseAfter": 0.4,
+   "standalone": true,
+   "elSettings": {
+    "stability": 0.25,
+    "style": 0.9
+   }
+  },
+  {
+   "id": "c02",
+   "scene": "identity",
+   "text": "Hello, SoSmart viewers! Kuya SoLight 'to!",
+   "gold": [
+    "SoSmart",
+    "SoLight"
+   ],
+   "pauseAfter": 0.35,
+   "elSpeed": 1.15,
+   "standalone": true
+  },
+  {
+   "id": "c03",
+   "scene": "imp",
+   "text": "Ang binibili mo sa grid, buong retail rate ang singil.",
+   "gold": [
+    "retail rate"
+   ],
+   "pauseAfter": 0.55,
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "c04",
+   "scene": "exp",
+   "text": "Ang ine-export mo, blended generation cost ang basehan ng credit.",
+   "gold": [
+    "blended generation cost"
+   ],
+   "pauseAfter": 0.55,
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "c05",
+   "scene": "less",
+   "text": "Kaya mas mababa ang credit kada kWh kaysa sa binabayaran mo.",
+   "gold": [
+    "mas mababa"
+   ],
+   "pauseAfter": 0.55,
+   "say": "Kaya mas mababa ang credit kada kilowatt-hour kaysa sa binabayaran mo.",
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "c06",
+   "scene": "day",
+   "text": "Kaya mas sulit gamitin ang solar habang may araw.",
+   "gold": [
+    "mas sulit"
+   ],
+   "pauseAfter": 0.55,
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "c07",
+   "scene": "size",
+   "text": "Tamang laki ng system ang susi, hindi puro export.",
+   "gold": [
+    "Tamang laki"
+   ],
+   "pauseAfter": 0.55,
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "cz1",
+   "scene": "close",
+   "text": "Dahil ang gusto ni Kuya SoLight… naka-solar ka na, SoSmart ka pa!",
+   "gold": [
+    "SoSmart"
+   ],
+   "pauseAfter": 0.35,
+   "audioFile": "assets/voice/locked/outro-catchphrase-O3.wav"
+  },
+  {
+   "id": "cz2",
+   "scene": "endcard",
+   "text": "Life is SoLight with Solar.",
+   "pauseAfter": 0.2,
+   "audioFile": "assets/voice/locked/outro-tagline-O3.wav"
+  }
+ ],
+ "claims": [
+  {
+   "id": "CL-E020-01",
+   "category": "technical",
+   "wording": "Electricity imported from the grid is billed at the full retail rate (all bill components).",
+   "scope": "Meralco residential.",
+   "caveats": "",
+   "sources": [
+    "SRC-MER-RATES",
+    "SRC-MER-NM"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-25T05:45:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "Rate schedule lists all per-kWh components."
+   }
+  },
+  {
+   "id": "CL-E020-02",
+   "category": "technical",
+   "wording": "Export credit is based on the blended generation cost.",
+   "scope": "Meralco net metering.",
+   "caveats": "Current rules; may change.",
+   "sources": [
+    "SRC-MER-NM",
+    "SRC-DOE-NM-2017"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-25T05:45:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "Meralco FAQ 11; DOE REMB: blended generation cost."
+   }
+  },
+  {
+   "id": "CL-E020-03",
+   "category": "technical",
+   "wording": "So each exported kWh is credited at less than an imported kWh costs.",
+   "scope": "Meralco net metering.",
+   "caveats": "No peso figures named.",
+   "sources": [
+    "SRC-MER-NM"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-25T05:45:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "Meralco: exported kWh not exchanged one-for-one at the full retail rate."
+   }
+  },
+  {
+   "id": "CL-E020-04",
+   "category": "technical",
+   "wording": "Using solar directly during the day is worth more than exporting it.",
+   "scope": "Net-metered homes.",
+   "caveats": "",
+   "sources": [
+    "SRC-MER-NM"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-25T05:45:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "Follows from claims 1-3."
+   }
+  },
+  {
+   "id": "CL-E020-05",
+   "category": "technical",
+   "wording": "Right-sizing the system matters more than relying on export.",
+   "scope": "Net-metered homes.",
+   "caveats": "Advice framing.",
+   "sources": [
+    "SRC-MER-NM"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-25T05:45:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "Follows from claims 1-3."
+   }
+  }
+ ],
+ "sources": [
+  {
+   "id": "SRC-DOE-NM-2017",
+   "tier": 1,
+   "publisher": "Department of Energy (REMB)",
+   "title": "Net Metering Program presentation",
+   "url": "https://legacy.doe.gov.ph/sites/default/files/pdf/announcements/04_remb_net_metering.pdf",
+   "jurisdiction": "Philippines",
+   "excerpts": [
+    "Qualified end-users apply with their distribution utility; net-metering uses metering that records both import and export energy.",
+    "Interim pricing for export energy is the DU's monthly blended generation cost."
+   ],
+   "published": null,
+   "retrieved": "2026-11-25",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-MER-NM",
+   "tier": 1,
+   "publisher": "Manila Electric Company (Meralco)",
+   "title": "Solar and Net Metering",
+   "url": "https://www.meralco.com.ph/residential/energy-solutions/solar-and-renewables/solar-net-metering",
+   "jurisdiction": "Philippines, Meralco franchise area",
+   "excerpts": [
+    "Your system supplies the property first while it is generating.",
+    "The Meralco grid supplies the property when renewable generation is not enough.",
+    "an exported kilowatt-hour is not exchanged one-for-one at the full retail rate.",
+    "The Net Metering peso credit is applied to eligible bill charges under the current rules,",
+    "based on the applicable monthly blended generation cost rather than the full retail rate. (FAQ 11)"
+   ],
+   "published": null,
+   "retrieved": "2026-11-25",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-MER-RATES",
+   "tier": 1,
+   "publisher": "Manila Electric Company (Meralco)",
+   "title": "Summary Schedule of Rates, November 2026 billing",
+   "url": "https://www.meralco.com.ph/uploads/documents/regulatory/rates/11-2026-Rate-Schedule-v2.pdf",
+   "jurisdiction": "Philippines, Meralco franchise area",
+   "excerpts": [
+    "Residential rows list per-kWh components: generation, transmission, system loss, distribution, supply, universal charges, FIT-All, lifeline subsidy, etc."
+   ],
+   "published": null,
+   "retrieved": "2026-11-25",
+   "freshness": "re-verify before publication"
+  }
+ ],
+ "caption": {
+  "main": "Pareho ba ang presyo ng kuryenteng binibili mo at ine-export ng solar mo? 🤔 Hindi!",
+  "short": "Export rate ≠ import rate! Mas mababa ang credit ng sobrang solar 📉",
+  "thumbnailHeadline": "Same Ba ang Export at Import Rate?",
+  "discussionQuestion": "SoSmart viewers, magkano ang net-metering credit n'yo last month? 👇",
+  "hashtags": [
+   "#KuyaSoLight",
+   "#SoSmartViewers",
+   "#SolarPH",
+   "#SolarKlaro",
+   "#SoLightSolarPH"
+  ],
+  "cta": "I-follow si Kuya SoLight"
+ }
+}

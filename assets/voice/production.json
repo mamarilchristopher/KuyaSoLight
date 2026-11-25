@@ -104,5 +104,12 @@
  },
  "aliasNotes": {
   "'to": "Any \"'to\" (e.g. \"na 'to?\") is read 'toh', same as the approved greeting take C (owner, 2026-11-24 14:41 Manila)."
+ },
+ "bodyDelivery": {
+  "stability": 0.4,
+  "style": 0.45,
+  "speed": 1.0,
+  "pause": 0.55,
+  "approved": "CHRIS picked B1 calmer 2026-11-25 20:01 Manila (E013 sample). Hook keeps H1; greeting/outro locked."
  }
 }

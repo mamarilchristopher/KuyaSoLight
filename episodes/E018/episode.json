@@ -1,0 +1,363 @@
+{
+ "id": "E018",
+ "title": "Ano ang Essential Loads?",
+ "pillar": "D",
+ "template": "T-explainer",
+ "audience": "Homeowners planning battery backup",
+ "premise": "Essential loads are the must-run items during an outage (a few lights, internet, fridge); big loads like aircon drain a battery fast, so backup is usually a separate circuit.",
+ "openingPattern": "A-question-first",
+ "greetingId": "greet-default",
+ "catchphraseId": "close-signature",
+ "scriptBasis": "Claude draft from the episode plan (data/episodes.json) title/angle, V1.1 brand lines; claims checked online 2026-11-25.",
+ "scriptVersion": 1,
+ "voice": "production",
+ "cover": [
+  "Ano ang",
+  "Essential Loads?"
+ ],
+ "scenes": {
+  "hook": {
+   "type": "hook",
+   "icon": "battery",
+   "chip": "Brownout: ano ang bukas?"
+  },
+  "ess": {
+   "type": "checklist",
+   "title": "Essential loads",
+   "items": [
+    "Ilang ilaw",
+    "Wi-Fi router",
+    "Ref"
+   ]
+  },
+  "big": {
+   "type": "cards",
+   "cards": [
+    {
+     "title": "Malalaking load",
+     "lines": [
+      "Aircon at iba pa",
+      "Mabilis umubos ng battery"
+     ],
+     "tone": "navy",
+     "icon": "ac"
+    }
+   ]
+  },
+  "panel": {
+   "type": "outage",
+   "backup": "battery",
+   "daytime": false,
+   "chip": "Hiwalay na backup circuit"
+  },
+  "list": {
+   "type": "checklist",
+   "title": "Ilista muna",
+   "items": [
+    "Anong gamit?",
+    "Ilang oras?",
+    "Gaano kalakas?"
+   ]
+  },
+  "close": {
+   "type": "close"
+  },
+  "endcard": {
+   "type": "endcard",
+   "sources": [
+    "Sources: EnergySage critical load panels guide; Fronius & SMA",
+    "backup docs; U.S. DOE solar-plus-storage (checked 25 Nov 2026)"
+   ]
+  }
+ },
+ "cues": [
+  {
+   "id": "c01",
+   "scene": "hook",
+   "text": "Brownout na! Ano ang dapat manatiling bukas sa bahay mo?",
+   "gold": [
+    "brownout"
+   ],
+   "pauseAfter": 0.4,
+   "standalone": true,
+   "elSettings": {
+    "stability": 0.25,
+    "style": 0.9
+   }
+  },
+  {
+   "id": "c02",
+   "scene": "identity",
+   "text": "Hello, SoSmart viewers! Kuya SoLight 'to!",
+   "gold": [
+    "SoSmart",
+    "SoLight"
+   ],
+   "pauseAfter": 0.35,
+   "elSpeed": 1.15,
+   "standalone": true
+  },
+  {
+   "id": "c03",
+   "scene": "ess",
+   "text": "Essential loads ang tawag sa mga gamit na pinaka-kailangan mo.",
+   "gold": [
+    "Essential loads"
+   ],
+   "pauseAfter": 0.55,
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "c04",
+   "scene": "ess",
+   "text": "Kadalasan, ilang ilaw, Wi-Fi, at ref.",
+   "gold": [
+    "ilaw",
+    "Wi-Fi",
+    "ref"
+   ],
+   "pauseAfter": 0.55,
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "c05",
+   "scene": "big",
+   "text": "Ang malalaking load tulad ng aircon, mabilis umubos ng battery.",
+   "gold": [
+    "aircon"
+   ],
+   "pauseAfter": 0.55,
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "c06",
+   "scene": "panel",
+   "text": "Kaya madalas, hiwalay na circuit ang ginagawa para sa backup.",
+   "gold": [
+    "hiwalay na circuit"
+   ],
+   "pauseAfter": 0.55,
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "c07",
+   "scene": "list",
+   "text": "Ilista muna ang gamit at ilang oras mo kailangan, bago pumili ng battery.",
+   "gold": [
+    "Ilista"
+   ],
+   "pauseAfter": 0.55,
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "cz1",
+   "scene": "close",
+   "text": "Dahil ang gusto ni Kuya SoLight… naka-solar ka na, SoSmart ka pa!",
+   "gold": [
+    "SoSmart"
+   ],
+   "pauseAfter": 0.35,
+   "audioFile": "assets/voice/locked/outro-catchphrase-O3.wav"
+  },
+  {
+   "id": "cz2",
+   "scene": "endcard",
+   "text": "Life is SoLight with Solar.",
+   "pauseAfter": 0.2,
+   "audioFile": "assets/voice/locked/outro-tagline-O3.wav"
+  }
+ ],
+ "claims": [
+  {
+   "id": "CL-E018-01",
+   "category": "technical",
+   "wording": "Essential (critical) loads are the circuits you most need during an outage.",
+   "scope": "Battery backup.",
+   "caveats": "",
+   "sources": [
+    "SRC-ES-CRIT"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-25T05:45:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "EnergySage critical loads guide."
+   }
+  },
+  {
+   "id": "CL-E018-02",
+   "category": "technical",
+   "wording": "Typical essential loads include some lights, internet equipment and the refrigerator.",
+   "scope": "Battery backup.",
+   "caveats": "Varies by home.",
+   "sources": [
+    "SRC-ES-CRIT"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-25T05:45:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "EnergySage: refrigeration, lights, internet equipment."
+   }
+  },
+  {
+   "id": "CL-E018-03",
+   "category": "technical",
+   "wording": "Large loads like air-conditioning drain a battery quickly; leaving them out makes backup last longer.",
+   "scope": "Battery backup.",
+   "caveats": "",
+   "sources": [
+    "SRC-ES-CRIT"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-25T05:45:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "EnergySage: excluding large HVAC loads extends backup."
+   }
+  },
+  {
+   "id": "CL-E018-04",
+   "category": "technical",
+   "wording": "Backup is often wired as a separate circuit or subpanel.",
+   "scope": "Battery backup.",
+   "caveats": "",
+   "sources": [
+    "SRC-ES-CRIT",
+    "SRC-FRONIUS-BU",
+    "SRC-SMA-BU"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-25T05:45:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "Critical loads subpanel; manufacturer backup wiring."
+   }
+  },
+  {
+   "id": "CL-E018-05",
+   "category": "technical",
+   "wording": "List the loads and hours needed before choosing a battery.",
+   "scope": "Battery sizing.",
+   "caveats": "",
+   "sources": [
+    "SRC-ES-CRIT",
+    "SRC-DOE-STORAGE"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-25T05:45:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "Sizing depends on selected loads and backup duration."
+   }
+  }
+ ],
+ "sources": [
+  {
+   "id": "SRC-DOE-STORAGE",
+   "tier": 1,
+   "publisher": "U.S. Department of Energy",
+   "title": "Homeowner's Guide to Going Solar (solar-plus-storage)",
+   "url": "https://www.energy.gov/eere/solar/homeowners-guide-going-solar",
+   "jurisdiction": "General technical reference",
+   "excerpts": [
+    "Batteries can store solar energy produced during the day for use at night or during outages, if the system is designed for it."
+   ],
+   "published": null,
+   "retrieved": "2026-11-25",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-ES-CRIT",
+   "tier": 2,
+   "publisher": "EnergySage",
+   "title": "Critical load panels, explained",
+   "url": "https://www.energysage.com/energy-storage/what-are-critical-load-panels/",
+   "jurisdiction": "General technical reference",
+   "excerpts": [
+    "Batteries are often wired to a separate critical loads subpanel.",
+    "Typical essential loads: refrigeration, lights, internet equipment, selected outlets; leaving out large air-conditioning/heating loads makes backup last longer."
+   ],
+   "published": null,
+   "retrieved": "2026-11-25",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-FRONIUS-BU",
+   "tier": 2,
+   "publisher": "Fronius International (manufacturer documentation)",
+   "title": "Backup power function",
+   "url": "https://www.fronius.com/en-in/india/solar-energy/installers-partners/products-solutions/features/backup-power-function",
+   "jurisdiction": "Manufacturer reference",
+   "excerpts": [
+    "Backup operation requires a compatible battery and the appropriate backup wiring/switching to separate the home circuits from the grid."
+   ],
+   "published": null,
+   "retrieved": "2026-11-25",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-SMA-BU",
+   "tier": 2,
+   "publisher": "SMA Solar Technology (manual)",
+   "title": "Battery-backup function",
+   "url": "https://manuals.sma.de/STPHxx-60/en-US/16945435403.html",
+   "jurisdiction": "Manufacturer reference",
+   "excerpts": [
+    "Battery-backup operation must be set up and wired as a backup system."
+   ],
+   "published": null,
+   "retrieved": "2026-11-25",
+   "freshness": "re-verify before publication"
+  }
+ ],
+ "caption": {
+  "main": "Kapag brownout, ano ang dapat manatiling bukas sa bahay mo? 🔋",
+  "short": "Essential loads: ilaw, Wi-Fi, ref. Aircon? Mabilis umubos ng battery! 🔋",
+  "thumbnailHeadline": "Ano ang Essential Loads?",
+  "discussionQuestion": "SoSmart viewers, ano ang number one na gusto n'yong bukas tuwing brownout? 👇",
+  "hashtags": [
+   "#KuyaSoLight",
+   "#SoSmartViewers",
+   "#SolarPH",
+   "#SolarKlaro",
+   "#SoLightSolarPH"
+  ],
+  "cta": "I-follow si Kuya SoLight"
+ }
+}

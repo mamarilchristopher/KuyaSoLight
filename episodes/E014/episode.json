@@ -1,0 +1,351 @@
+{
+ "id": "E014",
+ "title": "Paano Tinatantiya ang Solar System Size?",
+ "pillar": "C",
+ "template": "T-explainer",
+ "audience": "Homeowners comparing solar quotes",
+ "premise": "Preliminary size = daily kWh divided by local sun hours; it is only an estimate until roof, shade and load timing are checked.",
+ "openingPattern": "A-question-first",
+ "greetingId": "greet-default",
+ "catchphraseId": "close-signature",
+ "scriptBasis": "Claude draft from the episode plan (data/episodes.json) title/angle, V1.1 brand lines; claims checked online 2026-11-25.",
+ "scriptVersion": 1,
+ "voice": "production",
+ "cover": [
+  "Ilang kW ang",
+  "Solar na Kailangan Mo?"
+ ],
+ "scenes": {
+  "hook": {
+   "type": "hook",
+   "icon": "panel",
+   "chip": "Ilang kW?"
+  },
+  "meter": {
+   "type": "meter",
+   "appliance": "house",
+   "show": "kwh",
+   "kwhFrom": 0,
+   "kwhTo": 300,
+   "kwhLabel": "kWh kada buwan"
+  },
+  "math": {
+   "type": "equation",
+   "lines": [
+    {
+     "text": "kWh kada araw"
+    },
+    {
+     "text": "÷ sun hours"
+    },
+    {
+     "text": "= tantiyang kWp",
+     "color": "gold",
+     "size": 80
+    }
+   ]
+  },
+  "est": {
+   "type": "cards",
+   "cards": [
+    {
+     "title": "Tantiya lang",
+     "lines": [
+      "Galing lang sa bill"
+     ],
+     "tone": "gold",
+     "icon": "bill"
+    }
+   ]
+  },
+  "check": {
+   "type": "checklist",
+   "title": "Titingnan pa",
+   "items": [
+    "Laki at direksyon ng bubong",
+    "Anino ng puno o gusali",
+    "Kailan ka gumagamit"
+   ]
+  },
+  "visit": {
+   "type": "cards",
+   "cards": [
+    {
+     "title": "Site visit",
+     "lines": [
+      "Bago ang final quote"
+     ],
+     "tone": "navy",
+     "icon": "house"
+    }
+   ]
+  },
+  "close": {
+   "type": "close"
+  },
+  "endcard": {
+   "type": "endcard",
+   "sources": [
+    "Sources: UMD & Illinois Extension solar sizing guides; NREL PVWatts;",
+    "Meralco Solar & Net Metering (checked 25 Nov 2026)"
+   ]
+  }
+ },
+ "cues": [
+  {
+   "id": "c01",
+   "scene": "hook",
+   "text": "Paano malalaman kung ilang kW ang solar na kailangan mo?",
+   "gold": [
+    "kW"
+   ],
+   "pauseAfter": 0.4,
+   "say": "Paano malalaman kung ilang kilowatt ang solar na kailangan mo?",
+   "standalone": true,
+   "elSettings": {
+    "stability": 0.25,
+    "style": 0.9
+   }
+  },
+  {
+   "id": "c02",
+   "scene": "identity",
+   "text": "Hello, SoSmart viewers! Kuya SoLight 'to!",
+   "gold": [
+    "SoSmart",
+    "SoLight"
+   ],
+   "pauseAfter": 0.35,
+   "elSpeed": 1.15,
+   "standalone": true
+  },
+  {
+   "id": "c03",
+   "scene": "meter",
+   "text": "Nagsisimula 'yan sa kWh na nagamit mo kada buwan.",
+   "gold": [
+    "kWh"
+   ],
+   "pauseAfter": 0.55,
+   "say": "Nagsisimula 'yan sa kilowatt-hour na nagamit mo kada buwan.",
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "c04",
+   "scene": "math",
+   "text": "Gawin itong kada araw, tapos hatiin sa sun hours ng lugar mo.",
+   "gold": [
+    "sun hours"
+   ],
+   "pauseAfter": 0.55,
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "c05",
+   "scene": "est",
+   "text": "Pero tantiya lang 'yan, kasi galing lang sa bill.",
+   "gold": [
+    "tantiya lang"
+   ],
+   "pauseAfter": 0.55,
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "c06",
+   "scene": "check",
+   "text": "Titingnan pa ang bubong, ang anino, at kung kailan ka gumagamit.",
+   "gold": [
+    "bubong",
+    "anino"
+   ],
+   "pauseAfter": 0.55,
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "c07",
+   "scene": "visit",
+   "text": "Kaya mahalaga ang site visit bago ang final na quote.",
+   "gold": [
+    "site visit"
+   ],
+   "pauseAfter": 0.55,
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "cz1",
+   "scene": "close",
+   "text": "Dahil ang gusto ni Kuya SoLight… naka-solar ka na, SoSmart ka pa!",
+   "gold": [
+    "SoSmart"
+   ],
+   "pauseAfter": 0.35,
+   "audioFile": "assets/voice/locked/outro-catchphrase-O3.wav"
+  },
+  {
+   "id": "cz2",
+   "scene": "endcard",
+   "text": "Life is SoLight with Solar.",
+   "pauseAfter": 0.2,
+   "audioFile": "assets/voice/locked/outro-tagline-O3.wav"
+  }
+ ],
+ "claims": [
+  {
+   "id": "CL-E014-01",
+   "category": "technical",
+   "wording": "Preliminary sizing starts from monthly kWh use.",
+   "scope": "Residential PV.",
+   "caveats": "",
+   "sources": [
+    "SRC-UMD-SIZE",
+    "SRC-UIL-SIZE"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-25T05:45:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "Extension guides."
+   }
+  },
+  {
+   "id": "CL-E014-02",
+   "category": "technical",
+   "wording": "Rough size = daily kWh divided by local peak sun hours.",
+   "scope": "Preliminary sizing.",
+   "caveats": "Real designs add a derate for losses; not named on screen.",
+   "sources": [
+    "SRC-UMD-SIZE",
+    "SRC-UIL-SIZE"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-25T05:45:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "Extension guides: energy use / peak sun hours (with efficiency factor)."
+   }
+  },
+  {
+   "id": "CL-E014-03",
+   "category": "technical",
+   "wording": "A bill-only figure is only an estimate; roof size and direction, shading and load timing affect the final design.",
+   "scope": "Residential PV.",
+   "caveats": "",
+   "sources": [
+    "SRC-UMD-SIZE",
+    "SRC-NREL-PVW",
+    "SRC-MER-NM"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-25T05:45:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "UMD: first estimate before site-specific design; PVWatts: orientation and shading change output."
+   }
+  }
+ ],
+ "sources": [
+  {
+   "id": "SRC-MER-NM",
+   "tier": 1,
+   "publisher": "Manila Electric Company (Meralco)",
+   "title": "Solar and Net Metering",
+   "url": "https://www.meralco.com.ph/residential/energy-solutions/solar-and-renewables/solar-net-metering",
+   "jurisdiction": "Philippines, Meralco franchise area",
+   "excerpts": [
+    "Your system supplies the property first while it is generating.",
+    "The Meralco grid supplies the property when renewable generation is not enough.",
+    "an exported kilowatt-hour is not exchanged one-for-one at the full retail rate.",
+    "The Net Metering peso credit is applied to eligible bill charges under the current rules,",
+    "based on the applicable monthly blended generation cost rather than the full retail rate. (FAQ 11)"
+   ],
+   "published": null,
+   "retrieved": "2026-11-25",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-NREL-PVW",
+   "tier": 1,
+   "publisher": "National Renewable Energy Laboratory",
+   "title": "PVWatts Calculator (system losses: soiling, shading, orientation)",
+   "url": "https://pvwatts.nrel.gov/",
+   "jurisdiction": "General technical reference",
+   "excerpts": [
+    "Output depends on location, tilt, azimuth (direction), shading and other system losses."
+   ],
+   "published": null,
+   "retrieved": "2026-11-25",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-UIL-SIZE",
+   "tier": 1,
+   "publisher": "University of Illinois Extension",
+   "title": "Estimate system size and cost",
+   "url": "https://extension.illinois.edu/energy/estimate-system-size-and-cost",
+   "jurisdiction": "General technical reference",
+   "excerpts": [
+    "Average your monthly kWh from past bills, then divide by local sun hours to estimate system size."
+   ],
+   "published": null,
+   "retrieved": "2026-11-25",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-UMD-SIZE",
+   "tier": 1,
+   "publisher": "University of Maryland Extension",
+   "title": "Working on Solar: Design and System Sizing (FS-2023-0655)",
+   "url": "https://extension.umd.edu/resource/working-solar-design-and-system-sizing-fs-2023-0655",
+   "jurisdiction": "General technical reference",
+   "excerpts": [
+    "Preliminary size: energy use divided by peak sun hours; use 12-24 months of kWh history; treat as a first estimate before site-specific design."
+   ],
+   "published": null,
+   "retrieved": "2026-11-25",
+   "freshness": "re-verify before publication"
+  }
+ ],
+ "caption": {
+  "main": "Ilang kW ba talaga ang solar na kailangan mo? ☀️ Heto ang mabilis na paraan para tantiyahin.",
+  "short": "Paano tantiyahin ang laki ng solar mo: kWh ÷ sun hours ☀️ Pero site visit pa rin!",
+  "thumbnailHeadline": "Ilang kW ang Solar na Kailangan Mo?",
+  "discussionQuestion": "SoSmart viewers, ilang kW ang na-quote sa inyo? 👇",
+  "hashtags": [
+   "#KuyaSoLight",
+   "#SoSmartViewers",
+   "#SolarPH",
+   "#SolarKlaro",
+   "#SoLightSolarPH"
+  ],
+  "cta": "I-follow si Kuya SoLight"
+ }
+}

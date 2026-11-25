@@ -1,0 +1,403 @@
+{
+ "id": "E017",
+ "title": "Bakit Namatay ang Grid-Tied Solar sa Brownout?",
+ "pillar": "F",
+ "template": "T-explainer",
+ "audience": "Grid-tied solar owners surprised by outages",
+ "premise": "Grid-tied inverters must stop exporting when the grid is down (anti-islanding) to protect line workers; backup needs a battery and backup setup.",
+ "openingPattern": "A-question-first",
+ "greetingId": "greet-default",
+ "catchphraseId": "close-signature",
+ "scriptBasis": "Claude draft from the episode plan (data/episodes.json) title/angle, V1.1 brand lines; claims checked online 2026-11-25.",
+ "scriptVersion": 1,
+ "voice": "production",
+ "cover": [
+  "Bakit Namatay ang",
+  "Solar sa Brownout?"
+ ],
+ "scenes": {
+  "hook": {
+   "type": "hook",
+   "icon": "grid",
+   "icon2": "panel",
+   "chip": "Brownout!"
+  },
+  "off": {
+   "type": "outage",
+   "backup": "none",
+   "daytime": true,
+   "chip": "Grid-tied: off sa brownout"
+  },
+  "anti": {
+   "type": "cards",
+   "cards": [
+    {
+     "title": "Anti-islanding",
+     "lines": [
+      "Kusang patay",
+      "kapag walang grid"
+     ],
+     "tone": "navy",
+     "icon": "inverter"
+    }
+   ]
+  },
+  "back": {
+   "type": "cards",
+   "cards": [
+    {
+     "title": "Anti-islanding",
+     "lines": [
+      "Kusang patay",
+      "kapag walang grid"
+     ],
+     "tone": "navy",
+     "icon": "inverter"
+    },
+    {
+     "title": "Walang balik-kuryente",
+     "lines": [
+      "sa linya ng Meralco"
+     ],
+     "tone": "gold",
+     "icon": "grid"
+    }
+   ]
+  },
+  "safe": {
+   "type": "equation",
+   "lines": [
+    {
+     "text": "Safety"
+    },
+    {
+     "text": "ng nag-aayos",
+     "color": "gold",
+     "size": 80
+    },
+    {
+     "text": "ng linya"
+    }
+   ],
+   "icon": "grid"
+  },
+  "bat": {
+   "type": "outage",
+   "backup": "battery",
+   "daytime": false,
+   "chip": "Battery + backup setup"
+  },
+  "close": {
+   "type": "close"
+  },
+  "endcard": {
+   "type": "endcard",
+   "sources": [
+    "Sources: ERC/DOE interconnection standards; NREL IEEE 1547 islanding",
+    "report; CleanTechnica (May 2026); Fronius & SMA (checked 25 Nov 2026)"
+   ]
+  }
+ },
+ "cues": [
+  {
+   "id": "c01",
+   "scene": "hook",
+   "text": "Bakit namatay ang solar mo noong nag-brownout?",
+   "gold": [
+    "brownout"
+   ],
+   "pauseAfter": 0.4,
+   "standalone": true,
+   "elSettings": {
+    "stability": 0.25,
+    "style": 0.9
+   }
+  },
+  {
+   "id": "c02",
+   "scene": "identity",
+   "text": "Hello, SoSmart viewers! Kuya SoLight 'to!",
+   "gold": [
+    "SoSmart",
+    "SoLight"
+   ],
+   "pauseAfter": 0.35,
+   "elSpeed": 1.15,
+   "standalone": true
+  },
+  {
+   "id": "c03",
+   "scene": "off",
+   "text": "Kapag nawala ang grid, kusang namamatay ang grid-tied inverter.",
+   "gold": [
+    "namamatay"
+   ],
+   "pauseAfter": 0.55,
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "c04",
+   "scene": "anti",
+   "text": "Tawag dito, anti-islanding.",
+   "gold": [
+    "anti-islanding"
+   ],
+   "pauseAfter": 0.55,
+   "say": "Tawag dito, anti-islanding.",
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "c05",
+   "scene": "back",
+   "text": "Para walang kuryenteng dumaloy pabalik sa linya.",
+   "gold": [
+    "pabalik"
+   ],
+   "pauseAfter": 0.55,
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "c06",
+   "scene": "safe",
+   "text": "Proteksyon ito sa mga nag-aayos ng linya.",
+   "gold": [
+    "Proteksyon"
+   ],
+   "pauseAfter": 0.55,
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "c07",
+   "scene": "bat",
+   "text": "Para may kuryente sa brownout, kailangan ng battery at backup setup.",
+   "gold": [
+    "battery",
+    "backup"
+   ],
+   "pauseAfter": 0.55,
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "cz1",
+   "scene": "close",
+   "text": "Dahil ang gusto ni Kuya SoLight… naka-solar ka na, SoSmart ka pa!",
+   "gold": [
+    "SoSmart"
+   ],
+   "pauseAfter": 0.35,
+   "audioFile": "assets/voice/locked/outro-catchphrase-O3.wav"
+  },
+  {
+   "id": "cz2",
+   "scene": "endcard",
+   "text": "Life is SoLight with Solar.",
+   "pauseAfter": 0.2,
+   "audioFile": "assets/voice/locked/outro-tagline-O3.wav"
+  }
+ ],
+ "claims": [
+  {
+   "id": "CL-E017-01",
+   "category": "technical",
+   "wording": "When the grid goes down, a compliant grid-tied inverter shuts down.",
+   "scope": "Grid-tied PV.",
+   "caveats": "",
+   "sources": [
+    "SRC-ERC-NMIS",
+    "SRC-PH-ANTIISL"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-25T05:45:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "ERC standards include islanding protection; inverter must disconnect immediately."
+   }
+  },
+  {
+   "id": "CL-E017-02",
+   "category": "technical",
+   "wording": "This behaviour is called anti-islanding.",
+   "scope": "Grid-tied PV.",
+   "caveats": "",
+   "sources": [
+    "SRC-NREL-ISL"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-25T05:45:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "NREL IEEE 1547 islanding report."
+   }
+  },
+  {
+   "id": "CL-E017-03",
+   "category": "technical",
+   "wording": "It prevents electricity from flowing back into the power lines.",
+   "scope": "Grid-tied PV.",
+   "caveats": "",
+   "sources": [
+    "SRC-PH-ANTIISL"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-25T05:45:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "Prevents backfeeding into power lines."
+   }
+  },
+  {
+   "id": "CL-E017-04",
+   "category": "technical",
+   "wording": "It protects people working on the lines.",
+   "scope": "Grid-tied PV.",
+   "caveats": "",
+   "sources": [
+    "SRC-NREL-ISL"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-25T05:45:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "NREL: personnel safety is a key reason for anti-islanding."
+   }
+  },
+  {
+   "id": "CL-E017-05",
+   "category": "technical",
+   "wording": "Power during outages needs a battery and a backup setup.",
+   "scope": "Hybrid/backup systems.",
+   "caveats": "",
+   "sources": [
+    "SRC-FRONIUS-BU",
+    "SRC-SMA-BU"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-25T05:45:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "Manufacturer docs."
+   }
+  }
+ ],
+ "sources": [
+  {
+   "id": "SRC-ERC-NMIS",
+   "tier": 1,
+   "publisher": "Energy Regulatory Commission / DOE",
+   "title": "Net-Metering Rules and Interconnection Standards (Philippine Distribution Code framework)",
+   "url": "https://doe.gov.ph/electric-power/philippine-distribution-code",
+   "jurisdiction": "Philippines",
+   "excerpts": [
+    "Net-metered systems follow the Philippine Distribution Code and ERC Net-Metering Interconnection Standards, which include islanding protection."
+   ],
+   "published": null,
+   "retrieved": "2026-11-25",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-FRONIUS-BU",
+   "tier": 2,
+   "publisher": "Fronius International (manufacturer documentation)",
+   "title": "Backup power function",
+   "url": "https://www.fronius.com/en-in/india/solar-energy/installers-partners/products-solutions/features/backup-power-function",
+   "jurisdiction": "Manufacturer reference",
+   "excerpts": [
+    "Backup operation requires a compatible battery and the appropriate backup wiring/switching to separate the home circuits from the grid."
+   ],
+   "published": null,
+   "retrieved": "2026-11-25",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-NREL-ISL",
+   "tier": 1,
+   "publisher": "National Renewable Energy Laboratory",
+   "title": "Unintentional islanding requirement of IEEE Std 1547-2018 (NREL/TP-5D00-77782)",
+   "url": "https://www.nrel.gov/docs/fy22osti/77782.pdf",
+   "jurisdiction": "General technical reference",
+   "excerpts": [
+    "Anti-islanding requires inverters to stop energizing a de-energized grid section; a key reason is personnel (line worker) safety."
+   ],
+   "published": null,
+   "retrieved": "2026-11-25",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-PH-ANTIISL",
+   "tier": 2,
+   "publisher": "CleanTechnica (reporting Philippine distributor guidance)",
+   "title": "Guerilla solar installations need to be controlled, says Philippine power distributor",
+   "url": "https://cleantechnica.com/2026/05/04/guerilla-solar-installations-discovered-need-to-be-controlled-says-philippine-power-distributor/",
+   "jurisdiction": "Philippines",
+   "excerpts": [
+    "In a compliant system, the inverter must immediately disconnect when the grid goes down to prevent backfeeding electricity into power lines."
+   ],
+   "published": null,
+   "retrieved": "2026-11-25",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-SMA-BU",
+   "tier": 2,
+   "publisher": "SMA Solar Technology (manual)",
+   "title": "Battery-backup function",
+   "url": "https://manuals.sma.de/STPHxx-60/en-US/16945435403.html",
+   "jurisdiction": "Manufacturer reference",
+   "excerpts": [
+    "Battery-backup operation must be set up and wired as a backup system."
+   ],
+   "published": null,
+   "retrieved": "2026-11-25",
+   "freshness": "re-verify before publication"
+  }
+ ],
+ "caption": {
+  "main": "Nag-brownout, pero bakit namatay din ang solar mo? ⚡ Hindi sira 'yan!",
+  "short": "Bakit namatay ang solar sa brownout? Anti-islanding, para sa safety ⚡",
+  "thumbnailHeadline": "Bakit Namatay ang Solar sa Brownout?",
+  "discussionQuestion": "SoSmart viewers, nangyari na ba 'to sa solar n'yo? 👇",
+  "hashtags": [
+   "#KuyaSoLight",
+   "#SoSmartViewers",
+   "#SolarPH",
+   "#SolarKlaro",
+   "#SoLightSolarPH"
+  ],
+  "cta": "I-follow si Kuya SoLight"
+ }
+}

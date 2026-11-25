@@ -1,0 +1,368 @@
+{
+ "id": "E013-B1",
+ "title": "Daytime vs Nighttime Consumption",
+ "pillar": "D",
+ "template": "T-explainer",
+ "audience": "Homeowners planning solar savings",
+ "premise": "Solar produces only in daylight; night use comes from grid or battery, so load timing changes how much solar you use directly.",
+ "openingPattern": "A-question-first",
+ "greetingId": "greet-default",
+ "catchphraseId": "close-signature",
+ "scriptBasis": "Claude draft from the episode plan (data/episodes.json) title/angle, V1.1 brand lines; claims checked online 2026-11-25.",
+ "scriptVersion": 1,
+ "voice": "production",
+ "cover": [
+  "Araw o Gabi:",
+  "Kailan Ka Gumagamit?"
+ ],
+ "scenes": {
+  "hook": {
+   "type": "hook",
+   "icon": "sun",
+   "icon2": "moon",
+   "chip": "Araw o gabi?"
+  },
+  "day": {
+   "type": "sky",
+   "sky": "sunny",
+   "level": 0.9,
+   "chip": "Solar: araw lang"
+  },
+  "dayuse": {
+   "type": "path",
+   "steps": [
+    {
+     "icon": "sun",
+     "label": "araw"
+    },
+    {
+     "icon": "panel",
+     "label": "solar"
+    },
+    {
+     "icon": "house",
+     "label": "gamit ngayon"
+    }
+   ]
+  },
+  "night": {
+   "type": "sky",
+   "sky": "night",
+   "level": 0,
+   "chip": "Gabi: grid o battery",
+   "barLabel": "solar"
+  },
+  "loads": {
+   "type": "cards",
+   "cards": [
+    {
+     "title": "Araw",
+     "lines": [
+      "Ref, electric fan, labada"
+     ],
+     "tone": "gold",
+     "icon": "sun"
+    },
+    {
+     "title": "Gabi",
+     "lines": [
+      "Aircon, ilaw, TV"
+     ],
+     "tone": "navy",
+     "icon": "moon"
+    }
+   ]
+  },
+  "shift": {
+   "type": "checklist",
+   "title": "Para mas sulit",
+   "items": [
+    "Alamin kung kailan ka gumagamit",
+    "Ilipat sa araw ang kaya",
+    "Tulad ng labada at plantsa"
+   ]
+  },
+  "close": {
+   "type": "close"
+  },
+  "endcard": {
+   "type": "endcard",
+   "sources": [
+    "Sources: U.S. EIA solar basics; Meralco Solar & Net Metering",
+    "and DER pages; U.S. DOE (checked 25 Nov 2026)"
+   ]
+  }
+ },
+ "cues": [
+  {
+   "id": "c01",
+   "scene": "hook",
+   "text": "Kailan ka mas gumagamit ng kuryente? Sa araw, o sa gabi?",
+   "gold": [
+    "araw",
+    "gabi"
+   ],
+   "pauseAfter": 0.35,
+   "standalone": true,
+   "elSettings": {
+    "stability": 0.25,
+    "style": 0.9
+   }
+  },
+  {
+   "id": "c02",
+   "scene": "identity",
+   "text": "Hello, SoSmart viewers! Kuya SoLight 'to!",
+   "gold": [
+    "SoSmart",
+    "SoLight"
+   ],
+   "pauseAfter": 0.35,
+   "elSpeed": 1.15,
+   "standalone": true
+  },
+  {
+   "id": "c03",
+   "scene": "day",
+   "text": "Sa araw lang gumagawa ng kuryente ang solar.",
+   "gold": [
+    "araw lang"
+   ],
+   "pauseAfter": 0.55,
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "c04",
+   "scene": "dayuse",
+   "text": "Kaya pinakasulit ito kapag ginagamit mo habang may araw.",
+   "gold": [
+    "pinakasulit"
+   ],
+   "pauseAfter": 0.55,
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "c05",
+   "scene": "night",
+   "text": "Sa gabi, galing sa grid o battery ang kuryente mo.",
+   "gold": [
+    "grid",
+    "battery"
+   ],
+   "pauseAfter": 0.55,
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "c06",
+   "scene": "loads",
+   "text": "Kaya mahalagang alamin kung kailan tumatakbo ang appliances mo.",
+   "gold": [
+    "kailan"
+   ],
+   "pauseAfter": 0.55,
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "c07",
+   "scene": "shift",
+   "text": "Puwede mo ring ilipat sa araw ang ilang gawain, tulad ng labada.",
+   "gold": [
+    "labada"
+   ],
+   "pauseAfter": 0.55,
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "cz1",
+   "scene": "close",
+   "text": "Dahil ang gusto ni Kuya SoLight… naka-solar ka na, SoSmart ka pa!",
+   "gold": [
+    "SoSmart"
+   ],
+   "pauseAfter": 0.35,
+   "audioFile": "assets/voice/locked/outro-catchphrase-O3.wav"
+  },
+  {
+   "id": "cz2",
+   "scene": "endcard",
+   "text": "Life is SoLight with Solar.",
+   "pauseAfter": 0.2,
+   "audioFile": "assets/voice/locked/outro-tagline-O3.wav"
+  }
+ ],
+ "claims": [
+  {
+   "id": "CL-E013-01",
+   "category": "technical",
+   "wording": "Solar panels produce electricity only when there is sunlight.",
+   "scope": "PV generation.",
+   "caveats": "",
+   "sources": [
+    "SRC-EIA-PV"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-25T05:45:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "EIA: PV converts sunlight into electricity."
+   }
+  },
+  {
+   "id": "CL-E013-02",
+   "category": "technical",
+   "wording": "Solar supplies the home first while it is generating, so daytime use gets the most direct benefit.",
+   "scope": "Grid-connected homes.",
+   "caveats": "",
+   "sources": [
+    "SRC-MER-NM"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-25T05:45:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "Meralco: system supplies the property first while generating."
+   }
+  },
+  {
+   "id": "CL-E013-03",
+   "category": "technical",
+   "wording": "At night, power comes from the grid or a battery.",
+   "scope": "Grid-connected homes.",
+   "caveats": "Battery only if installed.",
+   "sources": [
+    "SRC-MER-DER",
+    "SRC-DOE-STORAGE"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-25T05:45:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "Meralco DER: at night the grid provides electricity; DOE: batteries store daytime solar."
+   }
+  },
+  {
+   "id": "CL-E013-04",
+   "category": "technical",
+   "wording": "Shifting some loads like laundry to daytime increases direct solar use.",
+   "scope": "Self-consumption.",
+   "caveats": "Example only; savings depend on setup.",
+   "sources": [
+    "SRC-MER-NM"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-25T05:45:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "Follows from claim 2."
+   }
+  }
+ ],
+ "sources": [
+  {
+   "id": "SRC-DOE-STORAGE",
+   "tier": 1,
+   "publisher": "U.S. Department of Energy",
+   "title": "Homeowner's Guide to Going Solar (solar-plus-storage)",
+   "url": "https://www.energy.gov/eere/solar/homeowners-guide-going-solar",
+   "jurisdiction": "General technical reference",
+   "excerpts": [
+    "Batteries can store solar energy produced during the day for use at night or during outages, if the system is designed for it."
+   ],
+   "published": null,
+   "retrieved": "2026-11-25",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-EIA-PV",
+   "tier": 1,
+   "publisher": "U.S. Energy Information Administration",
+   "title": "Photovoltaics and electricity",
+   "url": "https://www.eia.gov/energyexplained/solar/photovoltaics-and-electricity.php",
+   "jurisdiction": "General technical reference",
+   "excerpts": [
+    "PV cells convert sunlight directly into electricity (DC); output depends on available sunlight."
+   ],
+   "published": null,
+   "retrieved": "2026-11-25",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-MER-DER",
+   "tier": 1,
+   "publisher": "Manila Electric Company (Meralco)",
+   "title": "Distributed Energy Resources",
+   "url": "https://www.meralco.com.ph/residential/energy-solutions/solar-and-renewables/distributed-energy-resources",
+   "jurisdiction": "Philippines, Meralco franchise area",
+   "excerpts": [
+    "At times when there is no sunlight, or at night, the grid will provide electricity."
+   ],
+   "published": null,
+   "retrieved": "2026-11-25",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-MER-NM",
+   "tier": 1,
+   "publisher": "Manila Electric Company (Meralco)",
+   "title": "Solar and Net Metering",
+   "url": "https://www.meralco.com.ph/residential/energy-solutions/solar-and-renewables/solar-net-metering",
+   "jurisdiction": "Philippines, Meralco franchise area",
+   "excerpts": [
+    "Your system supplies the property first while it is generating.",
+    "The Meralco grid supplies the property when renewable generation is not enough.",
+    "an exported kilowatt-hour is not exchanged one-for-one at the full retail rate.",
+    "The Net Metering peso credit is applied to eligible bill charges under the current rules,",
+    "based on the applicable monthly blended generation cost rather than the full retail rate. (FAQ 11)"
+   ],
+   "published": null,
+   "retrieved": "2026-11-25",
+   "freshness": "re-verify before publication"
+  }
+ ],
+ "caption": {
+  "main": "Araw o gabi: kailan ka mas gumagamit ng kuryente? ☀️🌙 Malaking bagay 'to sa solar!",
+  "short": "Solar = araw lang! Kaya alamin kung kailan ka gumagamit ng kuryente ☀️🌙",
+  "thumbnailHeadline": "Araw o Gabi: Kailan Ka Gumagamit?",
+  "discussionQuestion": "SoSmart viewers, mas malakas ba kayo sa kuryente sa araw o sa gabi? 👇",
+  "hashtags": [
+   "#KuyaSoLight",
+   "#SoSmartViewers",
+   "#SolarPH",
+   "#SolarKlaro",
+   "#SoLightSolarPH"
+  ],
+  "cta": "I-follow si Kuya SoLight"
+ }
+}

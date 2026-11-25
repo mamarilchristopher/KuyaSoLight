@@ -118,7 +118,7 @@ export const TYPES: Record<string, SceneFn> = {
   cards: (c, p) => {
     let g = frame(false);
     const cards: { title: string; lines: string[]; tone?: string }[] = p.cards;
-    const n = cards.length, top = 290, avail = 760, gap = 26, h = (avail - gap * (n - 1)) / n;
+    const n = cards.length, top = n === 1 ? 400 : 290, avail = n === 1 ? 440 : 760, gap = 26, h = (avail - gap * (n - 1)) / n; // a lone card stays card-sized
     cards.forEach((cd, i) => {
       const a = stepIn(c, i, n, 0.05);
       const y = top + i * (h + gap);

@@ -1,0 +1,357 @@
+{
+ "id": "E019",
+ "title": "Ano ang Net-Metering?",
+ "pillar": "A",
+ "template": "T-explainer",
+ "audience": "Homeowners considering grid-connected solar",
+ "premise": "Solar supplies the home first; excess goes to the grid and earns a peso credit on the bill under net-metering, which needs an application with the utility.",
+ "openingPattern": "A-question-first",
+ "greetingId": "greet-default",
+ "catchphraseId": "close-signature",
+ "scriptBasis": "Claude draft from the episode plan (data/episodes.json) title/angle, V1.1 brand lines; claims checked online 2026-11-25.",
+ "scriptVersion": 1,
+ "voice": "production",
+ "cover": [
+  "Ano ang",
+  "Net-Metering?"
+ ],
+ "scenes": {
+  "hook": {
+   "type": "hook",
+   "icon": "grid",
+   "icon2": "panel",
+   "chip": "Net-metering?"
+  },
+  "first": {
+   "type": "sky",
+   "sky": "sunny",
+   "level": 0.9,
+   "chip": "Solar muna sa bahay"
+  },
+  "export": {
+   "type": "path",
+   "steps": [
+    {
+     "icon": "panel",
+     "label": "solar"
+    },
+    {
+     "icon": "house",
+     "label": "bahay muna"
+    },
+    {
+     "icon": "grid",
+     "label": "sobra → grid"
+    }
+   ]
+  },
+  "credit": {
+   "type": "equation",
+   "lines": [
+    {
+     "text": "Sobrang kWh"
+    },
+    {
+     "text": "→ credit sa bill",
+     "color": "gold",
+     "size": 80
+    }
+   ],
+   "icon": "bill"
+  },
+  "apply": {
+   "type": "checklist",
+   "title": "Kailangan",
+   "items": [
+    "Application sa Meralco",
+    "Metro na nagbabasa ng import at export"
+   ]
+  },
+  "next": {
+   "type": "cards",
+   "cards": [
+    {
+     "title": "Credit rate",
+     "lines": [
+      "Iba sa binabayaran mo",
+      "Abangan sa susunod!"
+     ],
+     "tone": "gold",
+     "icon": "bill"
+    }
+   ]
+  },
+  "close": {
+   "type": "close"
+  },
+  "endcard": {
+   "type": "endcard",
+   "sources": [
+    "Sources: Meralco Solar & Net Metering; DOE REMB Net Metering",
+    "Program (checked 25 Nov 2026)"
+   ]
+  }
+ },
+ "cues": [
+  {
+   "id": "c01",
+   "scene": "hook",
+   "text": "Ano ba talaga ang net-metering?",
+   "gold": [
+    "net-metering"
+   ],
+   "pauseAfter": 0.4,
+   "standalone": true,
+   "elSettings": {
+    "stability": 0.25,
+    "style": 0.9
+   }
+  },
+  {
+   "id": "c02",
+   "scene": "identity",
+   "text": "Hello, SoSmart viewers! Kuya SoLight 'to!",
+   "gold": [
+    "SoSmart",
+    "SoLight"
+   ],
+   "pauseAfter": 0.35,
+   "elSpeed": 1.15,
+   "standalone": true
+  },
+  {
+   "id": "c03",
+   "scene": "first",
+   "text": "Habang may araw, solar muna ang nagsu-supply sa bahay mo.",
+   "gold": [
+    "solar muna"
+   ],
+   "pauseAfter": 0.55,
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "c04",
+   "scene": "export",
+   "text": "Kapag may sobra, napupunta ito sa grid.",
+   "gold": [
+    "sobra"
+   ],
+   "pauseAfter": 0.55,
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "c05",
+   "scene": "credit",
+   "text": "Sa net-metering, may credit ka sa bill para sa sobrang 'yon.",
+   "gold": [
+    "credit"
+   ],
+   "pauseAfter": 0.55,
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "c06",
+   "scene": "apply",
+   "text": "Kailangan mag-apply sa Meralco at magpakabit ng tamang metro.",
+   "gold": [
+    "mag-apply"
+   ],
+   "pauseAfter": 0.55,
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "c07",
+   "scene": "next",
+   "text": "Pero iba ang rate ng credit, at 'yan ang pag-uusapan natin sa susunod.",
+   "gold": [
+    "iba ang rate"
+   ],
+   "pauseAfter": 0.55,
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "cz1",
+   "scene": "close",
+   "text": "Dahil ang gusto ni Kuya SoLight… naka-solar ka na, SoSmart ka pa!",
+   "gold": [
+    "SoSmart"
+   ],
+   "pauseAfter": 0.35,
+   "audioFile": "assets/voice/locked/outro-catchphrase-O3.wav"
+  },
+  {
+   "id": "cz2",
+   "scene": "endcard",
+   "text": "Life is SoLight with Solar.",
+   "pauseAfter": 0.2,
+   "audioFile": "assets/voice/locked/outro-tagline-O3.wav"
+  }
+ ],
+ "claims": [
+  {
+   "id": "CL-E019-01",
+   "category": "technical",
+   "wording": "While generating, the solar system supplies the home first.",
+   "scope": "Net-metered homes.",
+   "caveats": "",
+   "sources": [
+    "SRC-MER-NM"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-25T05:45:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "Meralco: system supplies the property first."
+   }
+  },
+  {
+   "id": "CL-E019-02",
+   "category": "technical",
+   "wording": "Excess solar energy is exported to the grid.",
+   "scope": "Net-metered homes.",
+   "caveats": "",
+   "sources": [
+    "SRC-MER-NM"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-25T05:45:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "Meralco net metering page."
+   }
+  },
+  {
+   "id": "CL-E019-03",
+   "category": "technical",
+   "wording": "Under net-metering, exported energy earns a peso credit applied to the bill.",
+   "scope": "Meralco net metering.",
+   "caveats": "Applied to eligible charges.",
+   "sources": [
+    "SRC-MER-NM"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-25T05:45:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "Meralco: peso credit applied to eligible bill charges."
+   }
+  },
+  {
+   "id": "CL-E019-04",
+   "category": "technical",
+   "wording": "Net-metering requires an application with the utility and metering that records import and export.",
+   "scope": "Philippines.",
+   "caveats": "",
+   "sources": [
+    "SRC-MER-NM",
+    "SRC-DOE-NM-2017"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-25T05:45:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "DOE REMB program; Meralco application process."
+   }
+  },
+  {
+   "id": "CL-E019-05",
+   "category": "technical",
+   "wording": "The export credit rate differs from the retail rate.",
+   "scope": "Meralco net metering.",
+   "caveats": "Detailed in E020.",
+   "sources": [
+    "SRC-MER-NM"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-25T05:45:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "Meralco FAQ 11: blended generation cost, not full retail rate."
+   }
+  }
+ ],
+ "sources": [
+  {
+   "id": "SRC-DOE-NM-2017",
+   "tier": 1,
+   "publisher": "Department of Energy (REMB)",
+   "title": "Net Metering Program presentation",
+   "url": "https://legacy.doe.gov.ph/sites/default/files/pdf/announcements/04_remb_net_metering.pdf",
+   "jurisdiction": "Philippines",
+   "excerpts": [
+    "Qualified end-users apply with their distribution utility; net-metering uses metering that records both import and export energy.",
+    "Interim pricing for export energy is the DU's monthly blended generation cost."
+   ],
+   "published": null,
+   "retrieved": "2026-11-25",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-MER-NM",
+   "tier": 1,
+   "publisher": "Manila Electric Company (Meralco)",
+   "title": "Solar and Net Metering",
+   "url": "https://www.meralco.com.ph/residential/energy-solutions/solar-and-renewables/solar-net-metering",
+   "jurisdiction": "Philippines, Meralco franchise area",
+   "excerpts": [
+    "Your system supplies the property first while it is generating.",
+    "The Meralco grid supplies the property when renewable generation is not enough.",
+    "an exported kilowatt-hour is not exchanged one-for-one at the full retail rate.",
+    "The Net Metering peso credit is applied to eligible bill charges under the current rules,",
+    "based on the applicable monthly blended generation cost rather than the full retail rate. (FAQ 11)"
+   ],
+   "published": null,
+   "retrieved": "2026-11-25",
+   "freshness": "re-verify before publication"
+  }
+ ],
+ "caption": {
+  "main": "Ano ba talaga ang net-metering? ⚡ Simpleng explanation in 1 minute!",
+  "short": "Net-metering in 1 minute: solar muna sa bahay, sobra → grid → credit sa bill ⚡",
+  "thumbnailHeadline": "Ano ang Net-Metering?",
+  "discussionQuestion": "SoSmart viewers, naka-net-metering na ba kayo? 👇",
+  "hashtags": [
+   "#KuyaSoLight",
+   "#SoSmartViewers",
+   "#SolarPH",
+   "#SolarKlaro",
+   "#SoLightSolarPH"
+  ],
+  "cta": "I-follow si Kuya SoLight"
+ }
+}

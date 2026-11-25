@@ -1,0 +1,326 @@
+{
+ "id": "E012",
+ "title": "Total Amount Due vs Current Electricity Use",
+ "pillar": "C",
+ "template": "T-explainer",
+ "audience": "Homeowners preparing bill data for a solar quote",
+ "premise": "Total amount due can include previous balances; size solar from monthly kWh history, ideally 12 months.",
+ "openingPattern": "A-question-first",
+ "greetingId": "greet-default",
+ "catchphraseId": "close-signature",
+ "scriptBasis": "Claude draft from the episode plan (data/episodes.json) title/angle, V1.1 brand lines; claims checked online 2026-11-25.",
+ "scriptVersion": 1,
+ "voice": "production",
+ "cover": [
+  "Total Amount Due",
+  "o Current Use?"
+ ],
+ "scenes": {
+  "hook": {
+   "type": "hook",
+   "icon": "bill",
+   "chip": "Total amount due?"
+  },
+  "two": {
+   "type": "cards",
+   "cards": [
+    {
+     "title": "Current charges",
+     "lines": [
+      "Nagamit ngayong buwan"
+     ],
+     "tone": "navy",
+     "icon": "house"
+    },
+    {
+     "title": "Previous balance",
+     "lines": [
+      "Hindi pa nabayaran dati"
+     ],
+     "tone": "white",
+     "icon": "bill"
+    }
+   ]
+  },
+  "meter": {
+   "type": "meter",
+   "appliance": "house",
+   "show": "kwh",
+   "kwhFrom": 0,
+   "kwhTo": 300,
+   "kwhLabel": "kWh kada buwan"
+  },
+  "year": {
+   "type": "checklist",
+   "title": "Para sa solar quote",
+   "items": [
+    "kWh ng 12 buwan",
+    "Average kada buwan",
+    "Hindi ang total amount due"
+   ]
+  },
+  "fit": {
+   "type": "equation",
+   "lines": [
+    {
+     "text": "Tamang data"
+    },
+    {
+     "text": "= tamang laki",
+     "color": "gold",
+     "size": 80
+    },
+    {
+     "text": "ng solar"
+    }
+   ],
+   "icon": "panel"
+  },
+  "close": {
+   "type": "close"
+  },
+  "endcard": {
+   "type": "endcard",
+   "sources": [
+    "Sources: Moneymax & FilipiKnow Meralco bill guides; UMD and",
+    "Illinois Extension solar sizing guides (checked 25 Nov 2026)"
+   ]
+  }
+ },
+ "cues": [
+  {
+   "id": "c01",
+   "scene": "hook",
+   "text": "Total amount due ba ang basehan ng solar mo?",
+   "gold": [
+    "Total amount due"
+   ],
+   "pauseAfter": 0.4,
+   "standalone": true,
+   "elSettings": {
+    "stability": 0.25,
+    "style": 0.9
+   }
+  },
+  {
+   "id": "c02",
+   "scene": "identity",
+   "text": "Hello, SoSmart viewers! Kuya SoLight 'to!",
+   "gold": [
+    "SoSmart",
+    "SoLight"
+   ],
+   "pauseAfter": 0.35,
+   "elSpeed": 1.15,
+   "standalone": true
+  },
+  {
+   "id": "c03",
+   "scene": "two",
+   "text": "Minsan, kasama sa total ang hindi pa nabayarang balance.",
+   "gold": [
+    "balance"
+   ],
+   "pauseAfter": 0.55,
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "c04",
+   "scene": "two",
+   "text": "Kaya puwedeng mas malaki ito kaysa sa nagamit mo ngayong buwan.",
+   "gold": [
+    "mas malaki"
+   ],
+   "pauseAfter": 0.55,
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "c05",
+   "scene": "meter",
+   "text": "Ang dapat tingnan, ang kWh na nagamit kada buwan.",
+   "gold": [
+    "kWh"
+   ],
+   "pauseAfter": 0.55,
+   "say": "Ang dapat tingnan, ang kilowatt-hour na nagamit kada buwan.",
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "c06",
+   "scene": "year",
+   "text": "Mas maganda kung may kWh ka ng isang taon, para kita ang average.",
+   "gold": [
+    "isang taon"
+   ],
+   "pauseAfter": 0.55,
+   "say": "Mas maganda kung may kilowatt-hour ka ng isang taon, para kita ang average.",
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "c07",
+   "scene": "fit",
+   "text": "Para tama ang laki ng solar na irerekomenda sa'yo.",
+   "gold": [
+    "tama"
+   ],
+   "pauseAfter": 0.55,
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "cz1",
+   "scene": "close",
+   "text": "Dahil ang gusto ni Kuya SoLight… naka-solar ka na, SoSmart ka pa!",
+   "gold": [
+    "SoSmart"
+   ],
+   "pauseAfter": 0.35,
+   "audioFile": "assets/voice/locked/outro-catchphrase-O3.wav"
+  },
+  {
+   "id": "cz2",
+   "scene": "endcard",
+   "text": "Life is SoLight with Solar.",
+   "pauseAfter": 0.2,
+   "audioFile": "assets/voice/locked/outro-tagline-O3.wav"
+  }
+ ],
+ "claims": [
+  {
+   "id": "CL-E012-01",
+   "category": "technical",
+   "wording": "The amount due can include a remaining balance from a previous bill.",
+   "scope": "Meralco residential bills.",
+   "caveats": "",
+   "sources": [
+    "SRC-MM-BILL"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-25T05:45:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "Bill guide: amount to pay includes remaining balance from previous bill."
+   }
+  },
+  {
+   "id": "CL-E012-02",
+   "category": "technical",
+   "wording": "So the total due can be higher than the current month's use.",
+   "scope": "Meralco residential bills.",
+   "caveats": "",
+   "sources": [
+    "SRC-MM-BILL"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-25T05:45:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "Follows from claim 1."
+   }
+  },
+  {
+   "id": "CL-E012-03",
+   "category": "technical",
+   "wording": "Solar sizing should start from monthly kWh use, ideally averaged over about a year.",
+   "scope": "Preliminary sizing.",
+   "caveats": "Guides suggest 12-24 months.",
+   "sources": [
+    "SRC-UMD-SIZE",
+    "SRC-UIL-SIZE"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-25T05:45:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "Extension guides: average 12-24 months of kWh."
+   }
+  }
+ ],
+ "sources": [
+  {
+   "id": "SRC-MM-BILL",
+   "tier": 2,
+   "publisher": "Moneymax",
+   "title": "How to Compute Meralco Bill",
+   "url": "https://www.moneymax.ph/personal-finance/articles/meralco-bill-computation",
+   "jurisdiction": "Philippines, Meralco franchise area",
+   "excerpts": [
+    "The bill lists generation, transmission, system loss, distribution and other charges.",
+    "The amount to pay can include remaining balance from a previous bill, so it can be higher than current charges alone."
+   ],
+   "published": null,
+   "retrieved": "2026-11-25",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-UIL-SIZE",
+   "tier": 1,
+   "publisher": "University of Illinois Extension",
+   "title": "Estimate system size and cost",
+   "url": "https://extension.illinois.edu/energy/estimate-system-size-and-cost",
+   "jurisdiction": "General technical reference",
+   "excerpts": [
+    "Average your monthly kWh from past bills, then divide by local sun hours to estimate system size."
+   ],
+   "published": null,
+   "retrieved": "2026-11-25",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-UMD-SIZE",
+   "tier": 1,
+   "publisher": "University of Maryland Extension",
+   "title": "Working on Solar: Design and System Sizing (FS-2023-0655)",
+   "url": "https://extension.umd.edu/resource/working-solar-design-and-system-sizing-fs-2023-0655",
+   "jurisdiction": "General technical reference",
+   "excerpts": [
+    "Preliminary size: energy use divided by peak sun hours; use 12-24 months of kWh history; treat as a first estimate before site-specific design."
+   ],
+   "published": null,
+   "retrieved": "2026-11-25",
+   "freshness": "re-verify before publication"
+  }
+ ],
+ "caption": {
+  "main": "Total amount due ba ang ginagamit mong basehan para sa solar? 🤔 Baka mali ang laki ng mabili mo!",
+  "short": "Total amount due ≠ nagamit mong kuryente! kWh ang basehan ng solar 🧾",
+  "thumbnailHeadline": "Total Amount Due o Current Use?",
+  "discussionQuestion": "SoSmart viewers, alam n'yo ba ang average kWh n'yo kada buwan? 👇",
+  "hashtags": [
+   "#KuyaSoLight",
+   "#SoSmartViewers",
+   "#SolarPH",
+   "#SolarKlaro",
+   "#SoLightSolarPH"
+  ],
+  "cta": "I-follow si Kuya SoLight"
+ }
+}

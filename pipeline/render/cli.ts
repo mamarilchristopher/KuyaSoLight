@@ -102,6 +102,7 @@ if (which !== 'E002' && which !== 'IDENTITY' && existsSync(`episodes/${which}/ep
   if (ep.ownerApproval?.status === 'approved') process.env.KSL_FINAL = '1'; // owner-approved: drop the PROTOTYPE mark
   const out = `out/episodes/${which}`; mkdirSync(out, { recursive: true });
   const timings = tts({ voice: ep.voice, fps: 30, leadIn: 0.25, tail: 1.8, cues: ep.cues.map(cueJob) }, out);
+  if (process.env.TTS_ONLY) { console.log('  TTS only: timings written'); process.exit(0); }
   const comp = buildEpisode(ep, timings, style, { narration: join(out, 'narration.wav'), sting: `${SON}/sonic-2-sosmart-spark.wav`, stingEnd: `${SON}/sonic-2-sosmart-spark-end.wav`, bed: `${SON}/bed-c-major-100bpm.wav` });
   await produce(comp, out, ep, ep.cues.map((c: any) => c.text).join(' '), [BRAND_LINES.greetings['greet-default'], ...(ep.adCut ? [] : [BRAND_LINES.catchphrases[(ep.catchphraseId ?? 'close-signature') as 'close-signature']]), BRAND_LINES.tagline]); // ad cutdowns end on the tagline only
   questionCover(comp, timings, out, which);

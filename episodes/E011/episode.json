@@ -1,0 +1,382 @@
+{
+ "id": "E011",
+ "title": "Paano Basahin ang Meralco Bill?",
+ "pillar": "C",
+ "template": "T-explainer",
+ "audience": "Homeowners reading their bill before asking for a solar quote",
+ "premise": "Billing period, kWh from meter readings, and itemised charges: the kWh figure is what matters for solar planning.",
+ "openingPattern": "A-question-first",
+ "greetingId": "greet-default",
+ "catchphraseId": "close-signature",
+ "scriptBasis": "Claude draft from the episode plan (data/episodes.json) title/angle, V1.1 brand lines; claims checked online 2026-11-25.",
+ "scriptVersion": 1,
+ "voice": "production",
+ "cover": [
+  "Paano Basahin",
+  "ang Meralco Bill?"
+ ],
+ "scenes": {
+  "hook": {
+   "type": "hook",
+   "icon": "bill",
+   "chip": "Meralco bill"
+  },
+  "period": {
+   "type": "cards",
+   "cards": [
+    {
+     "title": "Billing period",
+     "lines": [
+      "Mga isang buwan",
+      "Petsa ng simula at tapos"
+     ],
+     "tone": "navy",
+     "icon": "bill"
+    }
+   ]
+  },
+  "kwh": {
+   "type": "equation",
+   "lines": [
+    {
+     "text": "Present reading"
+    },
+    {
+     "text": "− Previous reading"
+    },
+    {
+     "text": "= kWh na nagamit",
+     "color": "gold",
+     "size": 80
+    }
+   ]
+  },
+  "meter": {
+   "type": "meter",
+   "appliance": "house",
+   "show": "kwh",
+   "kwhFrom": 0,
+   "kwhTo": 250,
+   "kwhLabel": "dami ng nagamit"
+  },
+  "charges": {
+   "type": "checklist",
+   "title": "Mga charges",
+   "items": [
+    "Generation",
+    "Transmission",
+    "Distribution",
+    "System loss at iba pa"
+   ]
+  },
+  "focus": {
+   "type": "cards",
+   "cards": [
+    {
+     "title": "kWh",
+     "lines": [
+      "Basehan ng solar plan"
+     ],
+     "tone": "gold",
+     "icon": "panel"
+    }
+   ]
+  },
+  "close": {
+   "type": "close"
+  },
+  "endcard": {
+   "type": "endcard",
+   "sources": [
+    "Sources: Meralco schedule of rates (Nov 2026); FilipiKnow & Moneymax",
+    "Meralco bill guides; UMD Extension sizing guide (checked 25 Nov 2026)"
+   ]
+  }
+ },
+ "cues": [
+  {
+   "id": "c01",
+   "scene": "hook",
+   "text": "Alam mo ba kung paano basahin ang Meralco bill mo?",
+   "gold": [
+    "Meralco bill"
+   ],
+   "pauseAfter": 0.4,
+   "standalone": true,
+   "elSettings": {
+    "stability": 0.25,
+    "style": 0.9
+   }
+  },
+  {
+   "id": "c02",
+   "scene": "identity",
+   "text": "Hello, SoSmart viewers! Kuya SoLight 'to!",
+   "gold": [
+    "SoSmart",
+    "SoLight"
+   ],
+   "pauseAfter": 0.35,
+   "elSpeed": 1.15,
+   "standalone": true
+  },
+  {
+   "id": "c03",
+   "scene": "period",
+   "text": "Una, tingnan ang billing period, mga isang buwan 'yan.",
+   "gold": [
+    "billing period"
+   ],
+   "pauseAfter": 0.55,
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "c04",
+   "scene": "kwh",
+   "text": "Ikalawa, ang kWh: present reading bawas previous reading.",
+   "gold": [
+    "kWh"
+   ],
+   "pauseAfter": 0.55,
+   "say": "Ikalawa, ang kilowatt-hour: present reading, bawas previous reading.",
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "c05",
+   "scene": "meter",
+   "text": "'Yan ang totoong dami ng kuryenteng nagamit mo.",
+   "gold": [
+    "nagamit"
+   ],
+   "pauseAfter": 0.55,
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "c06",
+   "scene": "charges",
+   "text": "Ikatlo, ang mga charges: generation, transmission, distribution, at iba pa.",
+   "gold": [
+    "charges"
+   ],
+   "pauseAfter": 0.55,
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "c07",
+   "scene": "focus",
+   "text": "Sa solar, ang kWh ang mahalagang basehan, hindi lang ang piso.",
+   "gold": [
+    "kWh"
+   ],
+   "pauseAfter": 0.55,
+   "say": "Sa solar, ang kilowatt-hour ang mahalagang basehan, hindi lang ang piso.",
+   "elSettings": {
+    "stability": 0.4,
+    "style": 0.45
+   },
+   "elSpeed": 1.0
+  },
+  {
+   "id": "cz1",
+   "scene": "close",
+   "text": "Dahil ang gusto ni Kuya SoLight… naka-solar ka na, SoSmart ka pa!",
+   "gold": [
+    "SoSmart"
+   ],
+   "pauseAfter": 0.35,
+   "audioFile": "assets/voice/locked/outro-catchphrase-O3.wav"
+  },
+  {
+   "id": "cz2",
+   "scene": "endcard",
+   "text": "Life is SoLight with Solar.",
+   "pauseAfter": 0.2,
+   "audioFile": "assets/voice/locked/outro-tagline-O3.wav"
+  }
+ ],
+ "claims": [
+  {
+   "id": "CL-E011-01",
+   "category": "technical",
+   "wording": "The billing period is the date range covered by the bill, about one month.",
+   "scope": "Meralco residential bills.",
+   "caveats": "Exact days vary.",
+   "sources": [
+    "SRC-FK-BILL"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-25T05:45:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "Bill guides: billing period ~30 days between meter reading dates."
+   }
+  },
+  {
+   "id": "CL-E011-02",
+   "category": "technical",
+   "wording": "kWh consumption equals present reading minus previous reading (times the meter multiplier, usually 1).",
+   "scope": "Meralco residential bills.",
+   "caveats": "Multiplier not mentioned on screen; usually 1 for homes.",
+   "sources": [
+    "SRC-FK-BILL",
+    "SRC-MM-BILL"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-25T05:45:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "Bill guides: registered kWh = (present - previous) x multiplier."
+   }
+  },
+  {
+   "id": "CL-E011-03",
+   "category": "technical",
+   "wording": "The bill itemises charges such as generation, transmission, distribution and system loss.",
+   "scope": "Meralco residential bills.",
+   "caveats": "Full list longer; 'at iba pa' covers the rest.",
+   "sources": [
+    "SRC-MER-RATES",
+    "SRC-MM-BILL"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-25T05:45:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "Rate schedule lists these per-kWh components."
+   }
+  },
+  {
+   "id": "CL-E011-04",
+   "category": "technical",
+   "wording": "For solar planning, monthly kWh use is the key basis.",
+   "scope": "Preliminary solar sizing.",
+   "caveats": "",
+   "sources": [
+    "SRC-UMD-SIZE",
+    "SRC-UIL-SIZE"
+   ],
+   "status": "verified",
+   "verifiedBy": null,
+   "technicalSignoff": "online-checked",
+   "onlineCheck": {
+    "by": "Claude (online fact check)",
+    "at": "2026-11-25T05:45:00+08:00",
+    "policy": "Owner (CHRIS) waived the human technical reviewer for now on 2026-11-24; claims checked online against published data instead.",
+    "note": "Extension guides size systems from kWh history."
+   }
+  }
+ ],
+ "sources": [
+  {
+   "id": "SRC-FK-BILL",
+   "tier": 2,
+   "publisher": "FilipiKnow",
+   "title": "How to Compute Your Meralco Bill",
+   "url": "https://filipiknow.net/how-to-compute-meralco-bill/",
+   "jurisdiction": "Philippines, Meralco franchise area",
+   "excerpts": [
+    "Billing period: the date range of the bill, about 30 days.",
+    "kWh consumption = present reading minus previous reading (times the multiplier, usually 1)."
+   ],
+   "published": null,
+   "retrieved": "2026-11-25",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-MER-RATES",
+   "tier": 1,
+   "publisher": "Manila Electric Company (Meralco)",
+   "title": "Summary Schedule of Rates, November 2026 billing",
+   "url": "https://www.meralco.com.ph/uploads/documents/regulatory/rates/11-2026-Rate-Schedule-v2.pdf",
+   "jurisdiction": "Philippines, Meralco franchise area",
+   "excerpts": [
+    "Residential rows list per-kWh components: generation, transmission, system loss, distribution, supply, universal charges, FIT-All, lifeline subsidy, etc."
+   ],
+   "published": null,
+   "retrieved": "2026-11-25",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-MM-BILL",
+   "tier": 2,
+   "publisher": "Moneymax",
+   "title": "How to Compute Meralco Bill",
+   "url": "https://www.moneymax.ph/personal-finance/articles/meralco-bill-computation",
+   "jurisdiction": "Philippines, Meralco franchise area",
+   "excerpts": [
+    "The bill lists generation, transmission, system loss, distribution and other charges.",
+    "The amount to pay can include remaining balance from a previous bill, so it can be higher than current charges alone."
+   ],
+   "published": null,
+   "retrieved": "2026-11-25",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-UIL-SIZE",
+   "tier": 1,
+   "publisher": "University of Illinois Extension",
+   "title": "Estimate system size and cost",
+   "url": "https://extension.illinois.edu/energy/estimate-system-size-and-cost",
+   "jurisdiction": "General technical reference",
+   "excerpts": [
+    "Average your monthly kWh from past bills, then divide by local sun hours to estimate system size."
+   ],
+   "published": null,
+   "retrieved": "2026-11-25",
+   "freshness": "re-verify before publication"
+  },
+  {
+   "id": "SRC-UMD-SIZE",
+   "tier": 1,
+   "publisher": "University of Maryland Extension",
+   "title": "Working on Solar: Design and System Sizing (FS-2023-0655)",
+   "url": "https://extension.umd.edu/resource/working-solar-design-and-system-sizing-fs-2023-0655",
+   "jurisdiction": "General technical reference",
+   "excerpts": [
+    "Preliminary size: energy use divided by peak sun hours; use 12-24 months of kWh history; treat as a first estimate before site-specific design."
+   ],
+   "published": null,
+   "retrieved": "2026-11-25",
+   "freshness": "re-verify before publication"
+  }
+ ],
+ "caption": {
+  "main": "Marunong ka bang magbasa ng Meralco bill mo? 🧾",
+  "short": "Paano basahin ang Meralco bill: billing period, kWh at charges 🧾",
+  "thumbnailHeadline": "Paano Basahin ang Meralco Bill?",
+  "discussionQuestion": "SoSmart viewers, ilang kWh ang nagamit n'yo last month? 👇",
+  "hashtags": [
+   "#KuyaSoLight",
+   "#SoSmartViewers",
+   "#SolarPH",
+   "#SolarKlaro",
+   "#SoLightSolarPH"
+  ],
+  "cta": "I-follow si Kuya SoLight"
+ }
+}
