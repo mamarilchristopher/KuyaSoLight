@@ -127,7 +127,7 @@ export const TYPES: Record<string, SceneFn> = {
       g += `<g opacity="${a}" transform="translate(${(1 - a) * 80} 0)"><rect x="80" y="${y}" width="920" height="${h}" rx="28" fill="${fill}" stroke="${P.navy}" stroke-width="${cd.tone === 'white' ? 5 : 0}"/>`;
       if (cd.icon) g += `<circle cx="210" cy="${y + h / 2}" r="${Math.min(95, h * 0.42)}" fill="#ffffff" opacity="0.9"/>` + icon(cd.icon, 210, y + h / 2, Math.min(130, h * 0.5), c.t);
       const tx = cd.icon ? 335 : 130;
-      const ts = Math.min(64, h * 0.2), ls = Math.min(42, h * 0.13), block = ts + cd.lines.length * ls * 1.3;
+      const ts = Math.min(64, h * 0.2, (960 - tx) / (cd.title.length * 0.6)), ls = Math.min(42, h * 0.13, (960 - tx) / (Math.max(1, ...cd.lines.map((l) => l.length)) * 0.5)), block = ts + cd.lines.length * ls * 1.3;
       const ty = y + (h - block) / 2 + ts * 0.85;
       g += txt(tx, ty, cd.title, ts, fg, 900, 'start');
       cd.lines.forEach((l, j) => { g += txt(tx, ty + ts * 0.35 + (j + 1) * ls * 1.3, l, ls, fg, 600, 'start'); });
