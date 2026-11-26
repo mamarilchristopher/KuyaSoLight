@@ -123,19 +123,21 @@ def shirt():
     for col, kind in [('navy-shirt', 'logo-horizontal-reversed'), ('white-shirt', 'logo-horizontal-full-color')]:
         w = 90; lw, lh = logo_size(kind, w=w)
         emit_print('03-apparel-drifit', f'front-left-chest-90mm-{col}', w + 4, lh + 4, logo(kind, 2, 2, w=w), 0, 0, transparent=True)
-        # back print 300 x 350 mm
+        # option: large centre-chest logo, 250 mm wide
+        w = 250; lw, lh = logo_size(kind, w=w)
+        emit_print('03-apparel-drifit', f'front-center-chest-250mm-{col}', w + 4, lh + 4, logo(kind, 2, 2, w=w), 0, 0, transparent=True)
+        # back print 300 x 400 mm: Kuya SoLight + contact details (no company logo on the back)
         dark = col == 'navy-shirt'
-        W, H = 300, 350
+        W, H = 300, 400
+        fg = WHITE if dark else NAVY
         b = rays(W / 2, 140, 118, 148, 15, opacity=1, start=160, sweep=220)
         b += bust('idle', W / 2, 140, 112)
-        b += f'<rect x="20" y="236" width="{W-40}" height="18" fill="{GOLD}"/>' if False else ''
         b += show_title(W / 2, 296, 44, on_dark=dark, anchor='middle')
-        b += T(W / 2, 322, TAGLINE, 17, GOLD if dark else NAVY, 800, 'middle')
-        b += logo(kind, W / 2, 330, h=18, anchor='middle')
-        emit_print('03-apparel-drifit', f'back-print-300x350mm-{col}', W, H, b, 0, 0, transparent=True)
-        # sleeve: mark 70 mm
-        k2 = 'mark-reversed' if dark else 'mark-full-color'
-        emit_print('03-apparel-drifit', f'sleeve-mark-70mm-{col}', 74, 74, logo(k2, 2, 2, w=70), 0, 0, transparent=True)
+        b += T(W / 2, 320, TAGLINE, 16, GOLD if dark else NAVY, 800, 'middle')
+        b += pill(30, 334, W - 60, 30, GOLD, CONTACT['phone'], 19, NAVY, 900)
+        b += T(W / 2, 381, f'FB / YouTube: {CONTACT["page"]}', 11.5, fg, 700, 'middle')
+        b += T(W / 2, 396, f'TikTok: {CONTACT["handle"]}', 11.5, fg, 700, 'middle')
+        emit_print('03-apparel-drifit', f'back-print-300x400mm-{col}', W, H, b, 0, 0, transparent=True)
 
 def shirt_mockup():
     from lib import _load
@@ -150,16 +152,16 @@ def shirt_mockup():
         k = w / vb[2]
         return f'<g transform="translate({x} {y}) scale({k})">{inner}</g>'
     sv = f'{ROOT}/03-apparel-drifit/svg'
-    body = '<rect width="1300" height="1460" fill="#eef1f5"/>'
+    body = '<rect width="1920" height="1460" fill="#eef1f5"/>'
     for i, (col, fill) in enumerate([('navy-shirt', NAVY), ('white-shirt', '#fbfbfb')]):
         y0 = 60 + i * 700
         # 1 mm ~ 1.13 px at this mockup scale (shirt body ~ 340px ~ 52 cm chest)
         k = 340 / 520
-        body += tee(30, y0, fill, place_svg(f'{sv}/front-left-chest-90mm-{col}.svg', 30 + 345, y0 + 140, 94 * k) +
-                    place_svg(f'{sv}/sleeve-mark-70mm-{col}.svg', 30 + 515 - 74 * k * 0.45, y0 + 85, 74 * k * 0.9))
-        body += tee(650, y0, fill, place_svg(f'{sv}/back-print-300x350mm-{col}.svg', 650 + 300 - 150 * k * 1.0 * 1, y0 + 120, 300 * k))
-        body += T(330, y0 + 660, f'FRONT ({col.replace("-", " ")})', 22, CHARCOAL, 800, 'middle') + T(950, y0 + 660, 'BACK', 22, CHARCOAL, 800, 'middle')
-    p = f'{out}/drifit-mockup.svg'; write(p, svg(1300, 1460, body)); png(p, f'{out}/drifit-mockup.png', width=1300); os.remove(p)
+        body += tee(30, y0, fill, place_svg(f'{sv}/front-left-chest-90mm-{col}.svg', 30 + 345, y0 + 140, 94 * k))
+        body += tee(650, y0, fill, place_svg(f'{sv}/back-print-300x400mm-{col}.svg', 650 + 300 - 150 * k, y0 + 110, 300 * k))
+        body += tee(1270, y0, fill, place_svg(f'{sv}/front-center-chest-250mm-{col}.svg', 1270 + 300 - 127 * k, y0 + 160, 254 * k))
+        body += T(330, y0 + 660, f'FRONT: left chest ({col.replace("-", " ")})', 22, CHARCOAL, 800, 'middle') + T(950, y0 + 660, 'BACK', 22, CHARCOAL, 800, 'middle') + T(1570, y0 + 660, 'FRONT option: centre chest', 22, CHARCOAL, 800, 'middle')
+    p = f'{out}/drifit-mockup.svg'; write(p, svg(1920, 1460, body)); png(p, f'{out}/drifit-mockup.png', width=1920); os.remove(p)
     PREV.append(('drifit-mockup', f'{out}/drifit-mockup.png'))
 
 # ---------------- Mitsubishi L300 aluminium close van ----------------

@@ -77,10 +77,11 @@ The PDFs are vector and DeviceCMYK, so they stay sharp at any size. Tarp and sta
 ### 03-apparel-drifit (transparent PNG at 300 dpi + CMYK PDF + SVG)
 | Placement | Print size | Files |
 |---|---|---|
-| Front left chest | 90 mm wide | `front-left-chest-90mm-navy-shirt` / `-white-shirt` |
-| Back | 300 × 350 mm | `back-print-300x350mm-navy-shirt` / `-white-shirt` |
-| Sleeve | 70 mm | `sleeve-mark-70mm-navy-shirt` / `-white-shirt` |
+| Front: left chest (default) | 90 mm wide | `front-left-chest-90mm-navy-shirt` / `-white-shirt` (SoLight Solar PH logo only) |
+| Front: centre chest (option) | 250 mm wide | `front-center-chest-250mm-navy-shirt` / `-white-shirt` (SoLight Solar PH logo only) |
+| Back | 300 × 400 mm | `back-print-300x400mm-navy-shirt` / `-white-shirt` (Kuya SoLight, tagline, phone, FB/YouTube page, TikTok handle) |
 
+Layout rule (CHRIS, 26 Nov 2026): the front carries only the SoLight brand, and the back carries Kuya SoLight with the contact details. There's no sleeve print.
 - Use the `navy-shirt` files on navy or dark dri-fit and the `white-shirt` files on white or light shirts.
 - Best methods are DTF or sublimation (on white or light polyester). Screen printing works too, but the back print has full-colour skin tones, so it needs CMYK or simulated-process screens.
 - `mockups/drifit-mockup.png` shows the placement on the shirt.
