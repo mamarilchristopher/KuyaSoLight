@@ -177,6 +177,10 @@ def main(job_path, out_dir):
     tail = float(job.get('tail', 0.6))
     audio.append(np.zeros(int(tail * sr), dtype=np.float32))
     y = np.concatenate(audio)
+    if eleven and job.get('denoise', True):
+        # the recorded-style ElevenLabs voice carries a steady hiss (~-50 dBFS) that switched on/off with each line
+        from denoise import denoise
+        y = denoise(y, sr)
     y = y / (np.max(np.abs(y)) + 1e-9) * 0.89  # -1 dBFS peak
     sf.write(os.path.join(out_dir, 'narration.wav'), y, sr)
     fps = job.get('fps', 30)

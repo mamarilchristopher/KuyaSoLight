@@ -14,7 +14,7 @@ Production pipeline and content-management app for **SoLight Solar PH**'s educat
 ## Run it
 ```bash
 npm install
-pip install kokoro-onnx soundfile            # demo TTS
+pip install kokoro-onnx soundfile noisereduce scipy   # TTS + hiss removal (noisereduce)
 # demo voice model (Apache-2.0):
 mkdir -p .models && cd .models && \
   curl -LO https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.int8.onnx && \
