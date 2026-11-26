@@ -30,16 +30,19 @@ Use mostly navy, with gold for accents (about 60% navy, 30% white or cream, 10% 
 The "Kuya SoLight" show title is set in Inter Black, with **Kuya** in gold and **SoLight** in white (on navy) or navy (on light backgrounds).
 The PDFs already have the fonts embedded. To edit the SVG templates, install Inter first.
 
-## 3. Logo use
+## 3. Logo use (v2, SOLAR PH gold bar)
 
-- **Logo files:** `00-logos/SVG` (vector), `00-logos/PNG`, `00-logos/Icons`. These are the official files. Never redraw, recolor, stretch or add effects to them.
+- **Logo v2 (from 26 Nov 2026):** "SOLAR PH" now sits on a gold bar so it stands out. The mark and the "SoLight" wordmark are unchanged from the original official logo, which is kept in `00-logos/original-v1-official`. Every file in this package uses v2.
+- **Files:** `00-logos/SVG` (vector, outlined), `PNG`, `PDF-print-CMYK`, `EPS-sign-shops`, `Icons`. For other projects, use the standalone `SoLight-Solar-PH-Logo-Kit-v2.zip`.
 - **Which version to use:**
-  - Full colour (navy and gold) on white or cream.
-  - Reversed (white and gold) on navy.
-  - One-colour white, navy or black for single-colour printing, embroidery or vinyl cut.
-- **Layouts:** horizontal (the default), stacked (square spaces) and mark only (profile pictures, sleeves, favicons).
-- **Clear space:** leave space around the logo at least as tall as one solar square in the mark.
-- **Minimum size:** horizontal logo 30 mm wide in print or 160 px on screen. Mark only: 10 mm or 32 px.
+  - Full colour (navy wordmark, gold bar) on white or cream.
+  - Reversed (white wordmark, gold bar) on navy.
+  - One-colour navy, black or white (SOLAR PH knocked out of the bar) for single-colour printing, embroidery and vinyl cut.
+- **Layouts:** horizontal (the default), stacked (square spaces) and mark only (profile photos, icons).
+- **Rules:**
+  - Don't redraw, stretch, recolour or add effects.
+  - Leave clear space around the logo at least as wide as one solar square of the mark.
+  - Minimum sizes: horizontal 30 mm / 160 px, stacked 20 mm / 110 px, mark 10 mm / 32 px.
 - **Character:** use Kuya SoLight A1 exactly as provided in `00-logos/character-A1`, with no changes to his face, colors or outfit. When he points, it's an open palm, never a single extended finger.
 
 ## 4. What's in the package

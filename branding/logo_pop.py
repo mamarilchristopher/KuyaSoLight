@@ -84,3 +84,42 @@ if __name__ == '__main__':
                                  output_width=2400 if lay == 'logo-horizontal' else 1600)
                 made.append(p)
     print(len(made))
+
+
+# ---------- PRIMARY LOGO SET (CHRIS picked option 2 · Gold bar, 26 Nov 2026 18:21 Manila) ----------
+PRIMARY = '/home/claude/brand/logo-primary/SVG'
+
+def text_d(s, x0, x1, cap_h, base_y):
+    p = text_path(s, x0, x1, cap_h, base_y, '#000')
+    return re.search(r' d="([^"]+)"', p).group(1)
+
+def primary(name, box):
+    body, vb = load(name)
+    x0, y0, x1, y1 = box
+    h = (y1 - y0) * 2.5; top = y0 - (y1 - y0) * 0.3; grow = top + h - y1; cap = h * 0.6; r = h * 0.22
+    td = text_d('SOLAR PH', x0 + h * 0.35, x1 - h * 0.35, cap, top + h / 2 + cap / 2)
+    if name.endswith('full-color') or name.endswith('reversed'):
+        extra = f'<rect x="{x0}" y="{top}" width="{x1-x0}" height="{h}" rx="{r}" fill="{GOLD}"/><path fill="{NAVY}" d="{td}"/>'
+    else:  # one-colour: bar in the single colour with SOLAR PH knocked out
+        col = {'navy': NAVY, 'black': '#000000', 'white': WHITE}[name.rsplit('-', 1)[1]]
+        rect = (f'M{x0+r},{top} H{x1-r} A{r},{r} 0 0 1 {x1},{top+r} V{top+h-r} A{r},{r} 0 0 1 {x1-r},{top+h} '
+                f'H{x0+r} A{r},{r} 0 0 1 {x0},{top+h-r} V{top+r} A{r},{r} 0 0 1 {x0+r},{top} Z ')
+        extra = f'<path fill="{col}" fill-rule="evenodd" d="{rect}{td}"/>'
+    H2 = vb[3] + max(grow, 0) + 2
+    body = re.sub(r'viewBox="[^"]+"', f'viewBox="{vb[0]:.2f} {vb[1]:.2f} {vb[2]:.2f} {H2:.2f}"', body, count=1)
+    body = re.sub(r'width="[^"]+" height="[^"]+"', f'width="{vb[2]:.2f}" height="{H2:.2f}"', body, count=1)
+    return body.replace('</svg>', extra + '</svg>')
+
+def build_primary():
+    import shutil, cairosvg
+    os.makedirs(PRIMARY, exist_ok=True)
+    pngdir = PRIMARY.replace('/SVG', '/PNG')
+    for lay in ['logo-horizontal', 'logo-stacked']:
+        for col in ['full-color', 'reversed', 'one-color-navy', 'one-color-black', 'one-color-white']:
+            n = f'solight-{lay}-{col}'
+            p = f'{PRIMARY}/{n}.svg'; open(p, 'w').write(primary(n, BOX[lay]))
+            os.makedirs(f'{pngdir}/{lay.split("-")[1]}', exist_ok=True)
+            for w in ([1200, 2400] if lay == 'logo-horizontal' else [800, 1600]):
+                cairosvg.svg2png(url=p, write_to=f'{pngdir}/{lay.split("-")[1]}/{n}-{w}w.png', output_width=w)
+    for col in ['full-color', 'reversed', 'one-color-navy', 'one-color-black', 'one-color-white']:  # mark unchanged
+        shutil.copy(f'{SRC}/solight-mark-{col}.svg', f'{PRIMARY}/solight-mark-{col}.svg')

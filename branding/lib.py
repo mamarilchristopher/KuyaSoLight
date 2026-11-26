@@ -3,7 +3,7 @@ inlined unchanged (only wrapped in a positioning <g>); character A1 comes from t
 studio rig export in /home/claude/brand/char."""
 import re, os, subprocess, cairosvg
 
-LOGO = '/home/claude/kuya-solight-studio/assets/brand/logo/official/SVG'
+LOGO = '/home/claude/brand/logo-primary/SVG'  # v2 primary logo: SOLAR PH gold bar (CHRIS, 26 Nov 2026)
 CHAR = '/home/claude/brand/char'
 NAVY, GOLD, WHITE, CREAM, CHARCOAL = '#0B3B7A', '#F5AE0B', '#FFFFFF', '#FFF8E8', '#243443'
 NAVY_D = '#082C5C'  # darker navy for depth (tint of brand navy)
