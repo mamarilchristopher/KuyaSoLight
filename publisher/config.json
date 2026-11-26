@@ -3,7 +3,7 @@
   "episodes_root": "/mnt/project-files/kuya-solight",
   "ledger": "/mnt/project-files/kuya-solight/publisher/ledger.json",
   "approvals": {
-    "studio_dir": "/home/claude/kuya-solight-studio",
+    "studio_dir": "/home/claude/studio-src",
     "studio_zip": "/mnt/project-files/kuya-solight/kuya-solight-studio-source.zip"
   },
   "start_from_episode": "E001",
@@ -31,7 +31,8 @@
       "windsor_account_name": "solight.solarph@gmail.com (SoLight Solar PH channel)",
       "category_id": "27",
       "made_for_kids": false,
-      "privacy_status": "public"
+      "privacy_status": "public",
+      "route": "direct"
     },
     "tiktok": {
       "enabled": true,

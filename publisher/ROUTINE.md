@@ -8,8 +8,8 @@ A Claude cloud routine runs this at every posting slot (default Mon, Wed, Fri at
 
 1. Get the code and the latest approvals:
    `unzip -o /mnt/project-files/kuya-solight/kuya-solight-studio-source.zip -d /home/claude/kuya-solight-studio`
-   or, preferably, check out the studio branch `claude/project-thread-4y29lq` of
-   this repo into `/home/claude/kuya-solight-studio` (approvals live in
+   or, preferably, `git clone --depth 1 -b claude/project-thread-4y29lq` this repo
+   into `/home/claude/studio-src` (approvals live in
    `episodes/E0xx/episode.json`).
 2. Make sure the next episode's approved video is hosted: if
    `media/E00x/<file>` is missing for the episode the plan names, copy it from
@@ -27,7 +27,9 @@ A Claude cloud routine runs this at every posting slot (default Mon, Wed, Fri at
      do (approval, a missing file, a sign-in), tell them once in the project thread.
    * `ready` true: for each action whose own `blockers` list is empty, in order
      Facebook, YouTube, TikTok:
-     * `via: windsor`: call Windsor.ai `execute_action` with exactly the
+     * YouTube: run `python3 publisher/youtube_direct.py E00x --live` (own OAuth;
+       Windsor's YouTube upload is broken, support ref 56246904). It records itself.
+     * `via: windsor` (Facebook): call Windsor.ai `execute_action` with exactly the
        `connector`, `account`, `action` and `params` given. Do not edit captions.
      * `via: owner` (TikTok, owner posts it): post one message in the project
        thread with the video attached (`package.video_path`) and the TikTok
