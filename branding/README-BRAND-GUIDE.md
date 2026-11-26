@@ -90,22 +90,22 @@ Layout rule (CHRIS, 26 Nov 2026): the front carries only the SoLight brand, and 
 - `mockups/drifit-mockup.png` shows the placement on the shirt.
 - Before a bulk order, ask the printer for one sample shirt.
 
-### 04-vehicle-L300-decal
-**Assumed vehicle:** Mitsubishi L300 aluminium close van. The published overall size is 4,440 L × 1,695 W × 1,915 H mm.
-**Assumed decal areas** (the decal shop must measure the actual unit and scale or adjust the layout to fit):
+### 04-vehicle-L300-decal: FINAL = `FINAL-B-Sunrise/`
+CHRIS chose **Option B · Sunrise** on 26 Nov 2026. The design is drafted on CHRIS's own L300 FB-body photo (passenger body with two side windows).
 
-| File | Panel size (trim) | Notes |
+| File | Size (trim, +25 mm bleed in the PDF) | Notes |
 |---|---|---|
-| L300-side-LEFT-driver-2750x1300mm | 2,750 × 1,300 mm | Driver side. The character sits at the cab end. |
-| L300-side-RIGHT-2750x1300mm | 2,750 × 1,300 mm | Mirror layout: character at the cab end, text reads normally |
-| L300-rear-doors-1600x1300mm | 1,600 × 1,300 mm | Spans both doors. Cut the vinyl at the centre gap. |
-| L300-cab-door-750x450mm-x2 | 750 × 450 mm | Print two, one per cab door (transparent background, for a white cab) |
-| L300-windshield-strip-1400x180mm | 1,400 × 180 mm | Optional top windshield strip in perforated vinyl. Check LTO rules first. |
+| L300-sunrise-side-LEFT | ~2,680 × 1,365 mm | Driver side. The sun rises at the rear and Kuya sits at the cab end. |
+| L300-sunrise-side-RIGHT | ~2,680 × 1,365 mm | Mirror layout. Text reads normally. |
+| L300-sunrise-rear | 1,500 × 650 mm (assumed) | Rear door panel below the window. Needs a rear photo to confirm. |
+| L300-cab-door-logo (print ×2) | ~1,030 × 275 mm | Logo goes on each cab door, below the handle. |
 
-- The PDFs are full-scale vector CMYK files with 25 mm bleed. The `-72dpi.png` files are full-size raster previews.
-- `L300-layout-overview.png` shows where each piece goes.
-- Suggested material: cast vinyl with UV laminate for the panels, and perforated (one-way vision) vinyl for any glass.
-- Keep text away from door handles, hinges, lights and rivet lines.
+- The side sizes are estimated from the photo, scaled to the published L300 FB length of 4,260 mm (about 6.26 mm per photo pixel).
+- Windows and wheel arches are marked as cut-outs with magenta dashed lines. Don't print inside them.
+- **The decal shop must measure the actual van and adjust before printing.**
+- `L300-SUNRISE-FINAL-OVERVIEW.jpg` shows both sides on the photo and the rear panel.
+- The other options are in `FB-body-options/`. The first generic aluminium-van layout is in `zz-old-aluminium-van-assumption/` and is no longer used.
+- Material: cast vinyl with UV laminate.
 
 ## 5. Placeholders to replace before printing
 The contact details below are placeholders until CHRIS confirms them: phone `0917 XXX XXXX`, email `hello@solight.ph`, TikTok handle, and the name and title on the business card ("Juan Dela Cruz / Solar Consultant"). The flyer also has a QR-code box. Once the details are confirmed, every file can be regenerated in one step with `build.sh` (source code in the repo under `branding/`).
