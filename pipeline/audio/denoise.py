@@ -41,13 +41,31 @@ def denoise(y, sr, noise=None, strength=1.0):
     return out.astype(np.float32)
 
 
+
+
+def denoise_mix(y, sr, split_hz=1200.0):
+    """De-hiss a finished mix (voice + music bed) when no voice-only track exists.
+
+    The C-major bed has almost no energy above ~1.2 kHz while the hiss lives at
+    1-10 kHz, so only the band above split_hz is cleaned. low + high == y exactly
+    (zero-phase split), so the music below the split is untouched.
+    """
+    from scipy.signal import butter, sosfiltfilt
+    y = np.asarray(y, dtype=np.float32)
+    low = sosfiltfilt(butter(4, split_hz, 'low', fs=sr, output='sos'), y).astype(np.float32)
+    high = y - low
+    prof = noise_profile(high, sr, lo_db=-60.0, hi_db=-28.0)
+    return low + denoise(high, sr, prof)
+
+
 if __name__ == '__main__':
+    # usage: denoise.py IN.wav OUT.wav [--mix]   (--mix: finished mix with music, clean only above 1.2 kHz)
     import soundfile as sf
     y, sr = sf.read(sys.argv[1], dtype='float32')
-    mono = y if y.ndim == 1 else y.mean(1)
-    prof = noise_profile(mono, sr)
-    if y.ndim == 1:
-        z = denoise(y, sr, prof)
+    ch = [y] if y.ndim == 1 else [y[:, c] for c in range(y.shape[1])]
+    if '--mix' in sys.argv:
+        z = [denoise_mix(c, sr) for c in ch]
     else:
-        z = np.stack([denoise(y[:, c], sr, prof) for c in range(y.shape[1])], 1)
-    sf.write(sys.argv[2], z, sr)
+        prof = noise_profile(np.mean(ch, 0), sr)
+        z = [denoise(c, sr, prof) for c in ch]
+    sf.write(sys.argv[2], z[0] if len(z) == 1 else np.stack(z, 1), sr, subtype='FLOAT')
